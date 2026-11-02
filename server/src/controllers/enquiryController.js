@@ -1,6 +1,13 @@
 const { SHEET_NAMES, appendToSheet } = require('../services/googleSheetsService');
 const { generateSubmissionId, getCurrentTimestamp } = require('../utils/idGenerator');
 const { isGoogleSheetsConfigured } = require('../config/googleSheets');
+const { isDatabaseConfigured } = require('../config/database');
+const {
+  saveEventEnquiry,
+  saveCateringEnquiry,
+  saveWeddingEnquiry,
+  saveContactEnquiry,
+} = require('../services/databaseService');
 
 /**
  * Format array or string values into clean readable string for Google Sheets cells
@@ -86,11 +93,20 @@ async function handleEventEnquiry(req, res, next) {
 
     const result = await appendToSheet(SHEET_NAMES.EVENT, rowData, submissionId);
 
+    // Save to PostgreSQL if connected
+    let dbRecord = null;
+    try {
+      dbRecord = await saveEventEnquiry(req.body, submissionId);
+    } catch (dbErr) {
+      console.error('[PostgreSQL] Could not persist event enquiry:', dbErr.message);
+    }
+
     return res.status(201).json({
       success: true,
       message: 'Your event management enquiry has been submitted and recorded successfully.',
       submissionId,
       storage: result.storage,
+      databaseStored: Boolean(dbRecord),
       note: result.note,
     });
   } catch (error) {
@@ -150,11 +166,20 @@ async function handleCateringEnquiry(req, res, next) {
 
     const result = await appendToSheet(SHEET_NAMES.CATERING, rowData, submissionId);
 
+    // Save to PostgreSQL if connected
+    let dbRecord = null;
+    try {
+      dbRecord = await saveCateringEnquiry(req.body, submissionId);
+    } catch (dbErr) {
+      console.error('[PostgreSQL] Could not persist catering enquiry:', dbErr.message);
+    }
+
     return res.status(201).json({
       success: true,
       message: 'Your catering enquiry has been submitted and recorded successfully.',
       submissionId,
       storage: result.storage,
+      databaseStored: Boolean(dbRecord),
       note: result.note,
     });
   } catch (error) {
@@ -274,11 +299,20 @@ async function handleWeddingEnquiry(req, res, next) {
 
     const result = await appendToSheet(SHEET_NAMES.WEDDING, rowData, submissionId);
 
+    // Save to PostgreSQL if connected
+    let dbRecord = null;
+    try {
+      dbRecord = await saveWeddingEnquiry(req.body, submissionId);
+    } catch (dbErr) {
+      console.error('[PostgreSQL] Could not persist wedding enquiry:', dbErr.message);
+    }
+
     return res.status(201).json({
       success: true,
       message: 'Your wedding planner enquiry has been submitted and recorded successfully.',
       submissionId,
       storage: result.storage,
+      databaseStored: Boolean(dbRecord),
       note: result.note,
     });
   } catch (error) {
@@ -309,11 +343,20 @@ async function handleContactEnquiry(req, res, next) {
 
     const result = await appendToSheet(SHEET_NAMES.CONTACT, rowData, submissionId);
 
+    // Save to PostgreSQL if connected
+    let dbRecord = null;
+    try {
+      dbRecord = await saveContactEnquiry(req.body, submissionId);
+    } catch (dbErr) {
+      console.error('[PostgreSQL] Could not persist contact enquiry:', dbErr.message);
+    }
+
     return res.status(201).json({
       success: true,
       message: 'Your message has been received. Our leadership team will contact you shortly.',
       submissionId,
       storage: result.storage,
+      databaseStored: Boolean(dbRecord),
       note: result.note,
     });
   } catch (error) {
@@ -327,6 +370,7 @@ async function handleContactEnquiry(req, res, next) {
  */
 function getHealthStatus(req, res) {
   const gSheetsConfigured = isGoogleSheetsConfigured();
+  const databaseConnected = isDatabaseConfigured();
   const appsScriptConfigured = Boolean(
     process.env.GOOGLE_APPS_SCRIPT_URL &&
     process.env.GOOGLE_APPS_SCRIPT_URL.trim().startsWith('https://script.google.com/macros/s/')
@@ -340,11 +384,17 @@ function getHealthStatus(req, res) {
     integration: {
       appsScriptConfigured,
       googleSheetsApiConfigured: gSheetsConfigured,
-      activeMode: appsScriptConfigured
-        ? 'Google Apps Script Web App'
-        : gSheetsConfigured
-        ? 'Google Sheets API v4'
-        : 'Local JSON Backup (Offline/Dev)',
+      postgresConfigured: databaseConnected,
+      activeMode: [
+        databaseConnected ? 'Vercel Postgres (Neon)' : null,
+        appsScriptConfigured
+          ? 'Google Apps Script Web App'
+          : gSheetsConfigured
+          ? 'Google Sheets API v4'
+          : 'Local JSON Backup (Offline/Dev)',
+      ]
+        .filter(Boolean)
+        .join(' + '),
     },
   });
 }
