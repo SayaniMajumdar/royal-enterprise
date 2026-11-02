@@ -2,8 +2,19 @@ const { Pool } = require('pg');
 
 let pool = null;
 
+function getConnectionString() {
+  return (
+    process.env.POSTGRES_URL ||
+    process.env.DATABASE_URL ||
+    process.env.STORAGE_URL ||
+    process.env.NEON_DATABASE_URL ||
+    process.env.POSTGRES_PRISMA_URL ||
+    null
+  );
+}
+
 function isDatabaseConfigured() {
-  return Boolean(process.env.POSTGRES_URL || process.env.DATABASE_URL);
+  return Boolean(getConnectionString());
 }
 
 function getPool() {
@@ -11,7 +22,7 @@ function getPool() {
     return null;
   }
   if (!pool) {
-    const connectionString = process.env.POSTGRES_URL || process.env.DATABASE_URL;
+    const connectionString = getConnectionString();
     pool = new Pool({
       connectionString,
       ssl: connectionString.includes('localhost') ? false : { rejectUnauthorized: false },
