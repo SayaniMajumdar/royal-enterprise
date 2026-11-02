@@ -78,7 +78,7 @@ const SHEET_HEADERS = {
   ],
 };
 
-const BACKUP_DIR = path.resolve(__dirname, '../../data');
+const BACKUP_DIR = process.env.VERCEL ? path.join('/tmp', 'data') : path.resolve(__dirname, '../../data');
 const BACKUP_FILE = path.join(BACKUP_DIR, 'submissions_backup.json');
 
 /**
