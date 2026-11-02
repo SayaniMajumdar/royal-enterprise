@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy-950 text-slate-100 font-sans selection:bg-gold-500 selection:text-navy-950;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #FFF3D6 0%, #D4AF37 50%, #A37C1E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .border-gold-glow {
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+  }
+
+  .bg-glass {
+    background: rgba(15, 23, 44, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .bg-glass-card {
+    background: rgba(18, 27, 58, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.18);
+  }
+
+  .bg-glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .bg-glass-card-hover:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.15);
+    transform: translateY(-4px);
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060A13;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A3B72;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C59B46;
+}
