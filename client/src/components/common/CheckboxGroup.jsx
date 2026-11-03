@@ -27,7 +27,7 @@ const CheckboxGroup = ({
   return (
     <div className={`w-full ${className}`}>
       {label && (
-        <label className="block text-xs font-medium text-slate-300 uppercase tracking-wider mb-2">
+        <label className="block text-[11px] font-medium text-slate-300 uppercase tracking-[0.14em] mb-2.5">
           {label}
         </label>
       )}
@@ -42,15 +42,15 @@ const CheckboxGroup = ({
               key={val}
               type="button"
               onClick={() => toggleOption(val)}
-              className={`flex items-center text-left p-2.5 rounded-sm border transition-all duration-200 text-xs md:text-sm ${
+              className={`flex items-center text-left p-2.5 rounded-[2px] border transition-all duration-200 text-xs md:text-sm ${
                 isChecked
-                  ? 'border-gold-400 bg-gold-500/10 text-gold-200 font-medium'
+                  ? 'border-gold-400/60 bg-gold-500/10 text-gold-200 font-medium'
                   : 'border-slate-800 bg-navy-900/60 text-slate-300 hover:border-slate-700'
               }`}
             >
               <div
-                className={`w-4 h-4 rounded-sm mr-2.5 flex items-center justify-center border transition-colors ${
-                  isChecked ? 'border-gold-400 bg-gold-500 text-navy-950' : 'border-slate-600 bg-navy-950'
+                className={`w-4 h-4 rounded-[2px] mr-2.5 flex items-center justify-center border transition-colors ${
+                  isChecked ? 'border-gold-400 bg-gold-500 text-navy-950' : 'border-slate-700 bg-navy-950'
                 }`}
               >
                 {isChecked && <Check className="w-3 h-3 stroke-[3]" />}

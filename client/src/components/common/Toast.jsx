@@ -37,7 +37,7 @@ const Toast = ({ message, type = 'success', onClose }) => {
   return (
     <div className="fixed bottom-6 right-6 z-50 max-w-md w-full animate-in fade-in slide-in-from-bottom-5 duration-300">
       <div
-        className={`flex items-start p-4 rounded-md shadow-2xl backdrop-blur-md border ${typeConfig.border} ${typeConfig.bg}`}
+        className={`flex items-start p-4 rounded-[2px] shadow-2xl backdrop-blur-md border ${typeConfig.border} ${typeConfig.bg}`}
       >
         <div className="mr-3 mt-0.5">{typeConfig.icon}</div>
         <div className="flex-1 mr-2">

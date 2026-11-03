@@ -208,32 +208,32 @@ const WeddingPlanner = () => {
       {/* ========================================================================= */}
       {/* HERO BANNER */}
       {/* ========================================================================= */}
-      <section className="relative py-24 sm:py-32 overflow-hidden border-b border-gold-500/20">
+      <section className="relative py-24 sm:py-32 overflow-hidden border-b border-gold-500/15">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80"
             alt="Royal Enterprise Wedding Planner Hero"
-            className="w-full h-full object-cover filter brightness-35 scale-105"
+            className="w-full h-full object-cover filter brightness-[0.32] contrast-[1.05] scale-[1.02]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/75 to-navy-950/85" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center space-x-2 bg-navy-900/90 border border-gold-400/40 px-4 py-1.5 rounded-full mb-6 backdrop-blur-md shadow-gold-glow">
-            <Crown className="w-4 h-4 text-gold-400" />
-            <span className="text-xs uppercase tracking-widest text-gold-300 font-semibold">
+          <div className="inline-flex items-center space-x-2.5 bg-[#090E1B]/85 border border-gold-400/30 px-4 py-1.5 rounded-[2px] mb-7 shadow-sm">
+            <Crown className="w-3.5 h-3.5 text-gold-400" />
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-gold-300 font-semibold">
               Division III • Turnkey Royal Wedding Planning
             </span>
-            <Sparkles className="w-3.5 h-3.5 text-gold-400" />
+            <Sparkles className="w-3.5 h-3.5 text-gold-400/80" />
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-100 tracking-tight mb-4">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-slate-100 tracking-tight mb-4">
             Wedding Planning Services
           </h1>
-          <p className="font-serif italic text-gold-300 text-xl sm:text-2xl md:text-3xl font-normal mb-6">
+          <p className="font-editorial italic text-gold-300/90 text-xl sm:text-2xl md:text-3xl font-normal mb-6">
             "Your Dream Wedding, Our Complete Responsibility."
           </p>
-          <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-300 font-light leading-relaxed mb-8">
+          <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-300 font-light leading-relaxed mb-9">
             Royal Enterprise operates as your turnkey wedding management partner. We take complete ownership of budget optimization, vendor orchestration, aesthetic styling, guest logistics, and ritual execution—ensuring families celebrate without operational stress.
           </p>
 
@@ -272,26 +272,26 @@ const WeddingPlanner = () => {
             subtitle="From heritage rajbaris and 3D floral mandaps to VIP shadow managers, our end-to-end scope leaves nothing to chance."
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {scopeServices.map((service, idx) => {
               const Icon = service.icon;
               return (
                 <div
                   key={idx}
-                  className="bg-navy-900/60 border border-slate-800 rounded-sm p-7 hover:border-gold-400/50 transition-all duration-300 flex flex-col justify-between group shadow-lg hover:-translate-y-1"
+                  className="bg-[#090E1B]/80 border border-slate-800/80 rounded-[3px] p-7 hover:border-gold-500/35 transition-all duration-300 flex flex-col justify-between group shadow-md hover:-translate-y-0.5"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-sm bg-gold-500/10 border border-gold-500/30 flex items-center justify-center mb-5 group-hover:bg-gold-500 group-hover:text-navy-950 transition-colors">
-                      <Icon className="w-6 h-6 text-gold-400 group-hover:text-navy-950 transition-colors" />
+                    <div className="w-10 h-10 rounded-[2px] bg-navy-950 border border-gold-400/30 flex items-center justify-center mb-5 text-gold-400 group-hover:border-gold-300 transition-colors">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="font-serif text-lg font-bold text-slate-100 mb-2.5 group-hover:text-gold-300 transition-colors">
+                    <h3 className="font-serif text-lg font-bold text-slate-100 mb-2.5 group-hover:text-gold-300 transition-colors tracking-wide">
                       {service.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    <p className="text-xs sm:text-[13px] text-slate-300/90 leading-relaxed font-light">
                       {service.description}
                     </p>
                   </div>
-                  <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center text-[11px] text-gold-400 font-medium">
+                  <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center text-[10.5px] uppercase tracking-wider text-gold-400/90 font-medium">
                     <span>Full Royal Management</span>
                   </div>
                 </div>
@@ -303,37 +303,37 @@ const WeddingPlanner = () => {
         {/* ========================================================================= */}
         {/* 2. MASTER WEDDING TIMELINE & CHECKLIST */}
         {/* ========================================================================= */}
-        <section id="wedding-timeline" className="bg-navy-900/40 border border-slate-800 rounded-sm p-8 sm:p-12">
+        <section id="wedding-timeline" className="bg-[#080C16] border border-slate-800/80 rounded-[3px] p-8 sm:p-12 shadow-sm">
           <SectionHeader
             badge="Structured Execution"
             title="Master Wedding Timeline & Checklist"
             subtitle="A transparent, milestone-driven countdown ensuring serene planning from budget lock to the final reception."
           />
 
-          <div className="space-y-6">
+          <div className="space-y-5">
             {timelineChecklist.map((phase, idx) => (
               <div
                 key={idx}
-                className="bg-navy-950/80 border border-slate-800/90 rounded-sm p-6 hover:border-gold-400/40 transition-colors"
+                className="bg-[#090E1B] border border-slate-800/80 rounded-[2px] p-6 hover:border-gold-400/40 transition-colors"
               >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 border-b border-slate-800 pb-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 border-b border-slate-800/80 pb-3">
                   <div className="flex items-center space-x-3">
-                    <span className="font-serif text-xl sm:text-2xl font-bold text-gold-gradient">
+                    <span className="font-serif text-lg sm:text-xl font-bold text-gold-300 tracking-wide">
                       {phase.period}
                     </span>
-                    <span className="text-sm font-semibold text-slate-200">
+                    <span className="text-xs sm:text-sm font-semibold text-slate-200">
                       • {phase.title}
                     </span>
                   </div>
-                  <span className="inline-block text-[10px] uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded-sm bg-gold-500/10 border border-gold-500/30 text-gold-300 w-fit">
+                  <span className="inline-block text-[9.5px] uppercase tracking-[0.16em] font-semibold px-2.5 py-0.5 rounded-[2px] bg-gold-500/10 border border-gold-500/30 text-gold-300 w-fit">
                     {phase.tag}
                   </span>
                 </div>
 
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-300">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-[13px] text-slate-300 font-light">
                   {phase.items.map((item, itemIdx) => (
                     <li key={itemIdx} className="flex items-start">
-                      <div className="w-4 h-4 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
+                      <div className="w-4 h-4 rounded-[2px] bg-gold-500/15 text-gold-400 flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
                         <Check className="w-3 h-3 stroke-[2.5]" />
                       </div>
                       <span>{item}</span>
@@ -359,14 +359,14 @@ const WeddingPlanner = () => {
             {weddingPackages.map((pkg, idx) => (
               <div
                 key={idx}
-                className={`relative rounded-sm p-8 flex flex-col justify-between transition-all duration-300 ${
+                className={`relative rounded-[3px] p-8 flex flex-col justify-between transition-all duration-300 ${
                   pkg.highlight
-                    ? 'bg-gradient-to-b from-navy-900 via-navy-850 to-navy-900 border-2 border-gold-400 shadow-gold-glow'
-                    : 'bg-navy-900/60 border border-slate-800 hover:border-gold-500/40'
+                    ? 'bg-[#0B1020] border-2 border-gold-400/80 shadow-[0_12px_40px_rgba(0,0,0,0.7)]'
+                    : 'bg-[#090E1B]/80 border border-slate-800/80 hover:border-gold-500/35 shadow-md'
                 }`}
               >
                 {pkg.badge && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold-500 text-navy-950 font-bold text-[10px] uppercase tracking-widest px-4 py-1 rounded-full shadow-md flex items-center">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-950 font-bold text-[9.5px] uppercase tracking-[0.2em] px-4 py-1 rounded-[2px] shadow-md flex items-center">
                     <Crown className="w-3 h-3 mr-1" />
                     {pkg.badge}
                   </div>
@@ -374,37 +374,37 @@ const WeddingPlanner = () => {
 
                 <div>
                   <div className="mb-6">
-                    <h3 className="font-serif text-2xl font-bold text-slate-100 mb-1">
+                    <h3 className="font-serif text-2xl font-bold text-slate-100 mb-1 tracking-wide">
                       {pkg.name}
                     </h3>
                     <p className="text-xs text-gold-400 uppercase tracking-wider font-semibold mb-3">
                       {pkg.subtitle}
                     </p>
-                    <div className="p-3 bg-navy-950/80 border border-slate-800 rounded-sm text-xs text-slate-300 space-y-1">
-                      <p><span className="text-slate-400">Engagement Period:</span> <strong className="text-slate-100">{pkg.engagement}</strong></p>
-                      <p><span className="text-slate-400">On-Site Team:</span> <strong className="text-gold-300">{pkg.teamSize}</strong></p>
+                    <div className="p-3 bg-navy-950/80 border border-slate-800 rounded-[2px] text-xs text-slate-300 space-y-1 font-light">
+                      <p><span className="text-slate-400">Engagement Period:</span> <strong className="text-slate-100 font-medium">{pkg.engagement}</strong></p>
+                      <p><span className="text-slate-400">On-Site Team:</span> <strong className="text-gold-300 font-medium">{pkg.teamSize}</strong></p>
                     </div>
                   </div>
 
-                  <h5 className="text-xs uppercase tracking-wider font-semibold text-slate-300 mb-4 border-b border-slate-800 pb-2">
+                  <h5 className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-300 mb-4 border-b border-slate-800 pb-2">
                     Scope & Inclusions:
                   </h5>
 
-                  <ul className="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+                  <ul className="space-y-3 mb-8 text-xs sm:text-[13px] text-slate-300 font-light">
                     <li className="flex items-start">
-                      <strong className="text-gold-400 w-28 shrink-0 text-xs">Decor & Design:</strong>
+                      <strong className="text-gold-400 w-28 shrink-0 text-xs font-semibold">Decor & Design:</strong>
                       <span>{pkg.decor}</span>
                     </li>
                     <li className="flex items-start">
-                      <strong className="text-gold-400 w-28 shrink-0 text-xs">Catering Sync:</strong>
+                      <strong className="text-gold-400 w-28 shrink-0 text-xs font-semibold">Catering Sync:</strong>
                       <span>{pkg.catering}</span>
                     </li>
                     <li className="flex items-start">
-                      <strong className="text-gold-400 w-28 shrink-0 text-xs">Entertainment:</strong>
+                      <strong className="text-gold-400 w-28 shrink-0 text-xs font-semibold">Entertainment:</strong>
                       <span>{pkg.entertainment}</span>
                     </li>
                     <li className="flex items-start">
-                      <strong className="text-gold-400 w-28 shrink-0 text-xs">Hospitality:</strong>
+                      <strong className="text-gold-400 w-28 shrink-0 text-xs font-semibold">Hospitality:</strong>
                       <span>{pkg.hospitality}</span>
                     </li>
                   </ul>
@@ -422,7 +422,7 @@ const WeddingPlanner = () => {
             ))}
           </div>
 
-          <p className="text-center text-xs text-slate-400 italic mt-6">
+          <p className="text-center text-xs text-slate-400 italic mt-6 font-light">
             (Note: Planning fees cover management, design, and manpower; production, vendor bookings, and catering costs are billed transparently at actuals).
           </p>
         </section>
@@ -441,20 +441,20 @@ const WeddingPlanner = () => {
             {eventBlueprint.map((event, idx) => (
               <div
                 key={idx}
-                className="bg-navy-900/60 border border-slate-800 rounded-sm p-5 hover:border-gold-400/50 transition-all flex flex-col justify-between"
+                className="bg-[#090E1B]/80 border border-slate-800/80 rounded-[3px] p-5 hover:border-gold-400/40 transition-all flex flex-col justify-between shadow-sm"
               >
                 <div>
-                  <div className={`p-2 rounded-sm border text-[11px] font-bold uppercase tracking-wider mb-3 text-center ${event.accent}`}>
+                  <div className={`p-2 rounded-[2px] border text-[10px] font-bold uppercase tracking-[0.14em] mb-3 text-center ${event.accent}`}>
                     {event.day}
                   </div>
-                  <h4 className="font-serif font-bold text-base text-slate-100 mb-2">
+                  <h4 className="font-serif font-bold text-sm sm:text-base text-slate-100 mb-2 tracking-wide">
                     {event.title}
                   </h4>
-                  <p className="text-xs text-slate-400 leading-relaxed">
+                  <p className="text-xs text-slate-400 leading-relaxed font-light">
                     {event.description}
                   </p>
                 </div>
-                <div className="pt-3 mt-3 border-t border-slate-800 text-[10px] text-slate-400 uppercase tracking-wider">
+                <div className="pt-3 mt-3 border-t border-slate-800/80 text-[9.5px] text-slate-400 uppercase tracking-wider font-light">
                   Royal Protocol Assigned
                 </div>
               </div>
@@ -465,15 +465,15 @@ const WeddingPlanner = () => {
         {/* ========================================================================= */}
         {/* PRINTABLE PROPOSAL BANNER */}
         {/* ========================================================================= */}
-        <div className="p-8 sm:p-10 bg-gradient-to-r from-navy-900 via-navy-850 to-navy-900 border border-gold-500/40 rounded-sm flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+        <div className="p-8 sm:p-10 bg-[#090E1B] border border-gold-500/25 rounded-[3px] flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden">
           <div className="space-y-2 text-center sm:text-left">
-            <span className="text-xs uppercase tracking-widest text-gold-400 font-bold">
+            <span className="text-[10.5px] uppercase tracking-[0.2em] text-gold-400 font-bold block">
               Official Client Proposal & Agreement
             </span>
-            <h3 className="font-serif text-2xl font-bold text-slate-100">
+            <h3 className="font-serif text-2xl font-bold text-slate-100 tracking-wide">
               Need a Formal Printable Proposal & Contract?
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
+            <p className="text-xs sm:text-sm text-slate-300/90 max-w-xl font-light leading-relaxed">
               Preview our formal client contract document complete with scope of work, milestone payment schedules, and legal terms ready for PDF export or immediate printing.
             </p>
           </div>

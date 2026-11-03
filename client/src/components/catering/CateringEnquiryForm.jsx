@@ -159,23 +159,24 @@ const CateringEnquiryForm = ({ initialPackage = '' }) => {
   };
 
   return (
-    <div id="catering-enquiry-form" className="bg-navy-900/80 border border-gold-500/30 rounded-sm p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+    <div id="catering-enquiry-form" className="bg-[#090E1B] border border-gold-500/25 rounded-[3px] p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+      <div className="h-[2px] bg-gradient-to-r from-transparent via-gold-400/60 to-transparent -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
       {submittedData ? (
         <div className="text-center py-12 space-y-4">
-          <div className="w-16 h-16 bg-gold-500/20 border border-gold-400 rounded-full flex items-center justify-center mx-auto text-gold-400">
-            <CheckCircle2 className="w-10 h-10" />
+          <div className="w-14 h-14 bg-gold-500/15 border border-gold-400/60 rounded-[2px] flex items-center justify-center mx-auto text-gold-400">
+            <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="font-serif text-2xl font-bold text-slate-100">
+          <h3 className="font-serif text-2xl font-bold text-slate-100 tracking-wide">
             Catering Request Received
           </h3>
-          <p className="text-slate-300 max-w-md mx-auto text-sm leading-relaxed">
+          <p className="text-slate-300 max-w-md mx-auto text-sm leading-relaxed font-light">
             Thank you, <span className="text-gold-300 font-semibold">{submittedData.customerName}</span>. Your culinary enquiry for{' '}
-            <strong className="text-gold-300">{submittedData.guestCount} guests</strong> ({submittedData.selectedPackage}) has been saved to our master schedule.
+            <strong className="text-gold-300 font-medium">{submittedData.guestCount} guests</strong> ({submittedData.selectedPackage}) has been saved to our master schedule.
           </p>
-          <div className="inline-block bg-navy-950 border border-slate-700 px-4 py-2 rounded-sm text-xs text-slate-300">
+          <div className="inline-block bg-navy-950 border border-slate-800 px-4 py-2 rounded-[2px] text-xs text-slate-300">
             Tracking ID: <span className="font-mono text-gold-400 font-bold">{submittedData.submissionId}</span>
           </div>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-400 font-light">
             Our Master Chef and Banquet Director will contact you within 24 hours to arrange an itemized menu tasting.
           </p>
           <div className="pt-4">

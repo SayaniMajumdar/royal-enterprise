@@ -38,19 +38,27 @@ const Navbar = ({ onOpenQuoteModal }) => {
   return (
     <>
       {/* Top micro announcement bar */}
-      <div className="bg-navy-950 border-b border-gold-500/20 text-[11px] text-slate-300 py-1.5 px-4 hidden sm:block">
+      <div className="bg-[#050810] border-b border-gold-500/15 text-[11px] text-slate-300 py-2 px-4 hidden sm:block">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Sparkles className="w-3.5 h-3.5 text-gold-400" />
-            <span className="tracking-wide">Bespoke Celebrations & Artisanal Banquets</span>
+          <div className="flex items-center space-x-2.5">
+            <Sparkles className="w-3.5 h-3.5 text-gold-400/80" />
+            <span className="tracking-[0.08em] text-slate-300 font-normal">Bespoke Celebrations & Artisanal Banquets</span>
           </div>
           <div className="flex items-center space-x-6 text-slate-300">
-            <span className="flex items-center space-x-1.5">
+            <a
+              href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
+              className="flex items-center space-x-1.5 hover:text-gold-300 transition-colors"
+            >
               <PhoneCall className="w-3 h-3 text-gold-400" />
-              <span>{COMPANY_INFO.phone}</span>
-            </span>
-            <span className="text-slate-400">|</span>
-            <span>{COMPANY_INFO.email}</span>
+              <span className="tracking-wide">{COMPANY_INFO.phone}</span>
+            </a>
+            <span className="text-slate-600">|</span>
+            <a
+              href={`mailto:${COMPANY_INFO.email}`}
+              className="hover:text-gold-300 transition-colors tracking-wide"
+            >
+              {COMPANY_INFO.email}
+            </a>
           </div>
         </div>
       </div>
@@ -59,44 +67,44 @@ const Navbar = ({ onOpenQuoteModal }) => {
       <header
         className={`sticky top-0 z-40 transition-all duration-300 ${
           scrolled
-            ? 'bg-navy-950/95 backdrop-blur-md shadow-lg border-b border-gold-500/20 py-3'
-            : 'bg-navy-950/80 backdrop-blur-sm border-b border-slate-800/60 py-4'
+            ? 'bg-[#060A13]/95 backdrop-blur-md shadow-[0_4px_25px_rgba(0,0,0,0.8)] border-b border-gold-500/15 py-3'
+            : 'bg-[#060A13]/85 backdrop-blur-sm border-b border-slate-800/80 py-4'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-sm bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-gold-glow group-hover:scale-105 transition-transform">
-                <Crown className="w-6 h-6 text-navy-950" />
+            <Link to="/" className="flex items-center space-x-3.5 group">
+              <div className="w-9 h-9 rounded-[2px] bg-gradient-to-b from-navy-800 to-navy-950 border border-gold-400/50 flex items-center justify-center shadow-md group-hover:border-gold-300 transition-colors">
+                <Crown className="w-5 h-5 text-gold-400 group-hover:scale-105 transition-transform" />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-lg sm:text-xl font-bold tracking-wider text-slate-100 uppercase group-hover:text-gold-300 transition-colors">
+                <span className="font-serif text-lg sm:text-[19px] font-bold tracking-[0.16em] text-slate-100 uppercase group-hover:text-gold-300 transition-colors leading-tight">
                   Royal Enterprise
                 </span>
-                <span className="text-[9px] uppercase tracking-widest text-gold-400 font-medium">
+                <span className="text-[8.5px] uppercase tracking-[0.26em] text-gold-400/90 font-medium">
                   Events • Catering • Weddings
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-7">
+            <nav className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
                 return (
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`relative text-xs uppercase tracking-wider font-medium py-1 transition-colors duration-200 ${
+                    className={`relative text-[11px] uppercase tracking-[0.14em] font-semibold py-1.5 transition-colors duration-200 ${
                       isActive
-                        ? 'text-gold-400 font-semibold'
+                        ? 'text-gold-300'
                         : 'text-slate-300 hover:text-gold-300'
                     }`}
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-400 shadow-gold-glow" />
+                      <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-gold-500/40 via-gold-400 to-gold-500/40" />
                     )}
                   </Link>
                 );
@@ -109,7 +117,6 @@ const Navbar = ({ onOpenQuoteModal }) => {
                 variant="primary"
                 size="sm"
                 onClick={onOpenQuoteModal}
-                className="shadow-gold-glow"
               >
                 Get a Quote
               </Button>
@@ -121,7 +128,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
                 variant="primary"
                 size="sm"
                 onClick={onOpenQuoteModal}
-                className="py-1.5 px-3 text-[11px]"
+                className="py-1 px-3 text-[10px]"
               >
                 Quote
               </Button>
@@ -131,7 +138,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
                 className="text-slate-300 hover:text-gold-400 p-2 focus:outline-none"
                 aria-label="Toggle navigation menu"
               >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>
@@ -139,18 +146,18 @@ const Navbar = ({ onOpenQuoteModal }) => {
 
         {/* Mobile Navigation Drawer */}
         {isOpen && (
-          <div className="lg:hidden bg-navy-950/98 border-b border-gold-500/20 px-4 pt-4 pb-6 space-y-3 animate-in slide-in-from-top-3 duration-200">
-            <nav className="flex flex-col space-y-2">
+          <div className="lg:hidden bg-[#070B16] border-b border-gold-500/20 px-5 pt-4 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200 shadow-2xl">
+            <nav className="flex flex-col space-y-1">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
                 return (
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`px-3 py-2.5 rounded-sm text-sm font-medium tracking-wide uppercase transition-colors ${
+                    className={`px-3 py-2.5 rounded-[2px] text-xs font-semibold tracking-[0.14em] uppercase transition-colors ${
                       isActive
-                        ? 'bg-gold-500/15 text-gold-400 border-l-2 border-gold-400'
-                        : 'text-slate-300 hover:bg-slate-900 hover:text-gold-300'
+                        ? 'bg-gold-500/10 text-gold-300 border-l-2 border-gold-400'
+                        : 'text-slate-300 hover:bg-slate-900/60 hover:text-gold-300'
                     }`}
                   >
                     {link.name}
@@ -170,8 +177,8 @@ const Navbar = ({ onOpenQuoteModal }) => {
               >
                 Get a Quote
               </Button>
-              <div className="text-center text-xs text-slate-400 pt-2">
-                Direct Inquiries: <span className="text-gold-400">{COMPANY_INFO.phone}</span>
+              <div className="text-center text-xs text-slate-400 pt-1">
+                Direct Inquiries: <a href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`} className="text-gold-400 hover:underline">{COMPANY_INFO.phone}</a>
               </div>
             </div>
           </div>

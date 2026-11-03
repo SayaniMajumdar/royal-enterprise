@@ -285,32 +285,32 @@ const Catering = () => {
       {/* ========================================================================= */}
       {/* HERO BANNER */}
       {/* ========================================================================= */}
-      <section className="relative py-24 sm:py-32 overflow-hidden border-b border-gold-500/20">
+      <section className="relative py-24 sm:py-32 overflow-hidden border-b border-gold-500/15">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1920&q=80"
             alt="Royal Enterprise Gourmet Catering Hero"
-            className="w-full h-full object-cover filter brightness-30 scale-105"
+            className="w-full h-full object-cover filter brightness-[0.32] contrast-[1.05] scale-[1.02]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/75 to-navy-950/85" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center space-x-2 bg-navy-900/90 border border-gold-400/40 px-4 py-1.5 rounded-full mb-6 backdrop-blur-md shadow-gold-glow">
-            <Crown className="w-4 h-4 text-gold-400" />
-            <span className="text-xs uppercase tracking-widest text-gold-300 font-semibold">
+          <div className="inline-flex items-center space-x-2.5 bg-[#090E1B]/85 border border-gold-400/30 px-4 py-1.5 rounded-[2px] mb-7 shadow-sm">
+            <Crown className="w-3.5 h-3.5 text-gold-400" />
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-gold-300 font-semibold">
               Division II • Gourmet Heritage Catering
             </span>
-            <Sparkles className="w-3.5 h-3.5 text-gold-400" />
+            <Sparkles className="w-3.5 h-3.5 text-gold-400/80" />
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-100 tracking-tight mb-4">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-slate-100 tracking-tight mb-4">
             Catering Services
           </h1>
-          <p className="font-serif italic text-gold-300 text-xl sm:text-2xl md:text-3xl font-normal mb-6">
+          <p className="font-editorial italic text-gold-300/90 text-xl sm:text-2xl md:text-3xl font-normal mb-6">
             "Exceptional Food, Unforgettable Experiences."
           </p>
-          <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-300 font-light leading-relaxed mb-8">
+          <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-300 font-light leading-relaxed mb-9">
             Royal Enterprise delivers authentic heritage feasts, modern multi-cuisine spreads, and live interactive food stations for weddings, corporate galas, and private celebrations. We emphasize food hygiene, fresh sourcing, live on-site preparation, and uniformed hospitality staff.
           </p>
 
@@ -350,35 +350,35 @@ const Catering = () => {
             subtitle="From legendary Bengali Biye Bari traditions and charcoal Awadhi grills to pure Marwari kitchens and live Pan-Asian stations."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {culinaryStyles.map((style, idx) => {
               const Icon = style.icon;
               return (
                 <div
                   key={idx}
-                  className="bg-navy-900/60 border border-slate-800 rounded-sm p-7 hover:border-gold-400/50 transition-all duration-300 flex flex-col justify-between group shadow-lg hover:-translate-y-1"
+                  className="bg-[#090E1B]/80 border border-slate-800/80 rounded-[3px] p-7 hover:border-gold-500/35 transition-all duration-300 flex flex-col justify-between group shadow-md hover:-translate-y-0.5"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 rounded-sm bg-gold-500/10 border border-gold-500/30 flex items-center justify-center group-hover:bg-gold-500 group-hover:text-navy-950 transition-colors">
-                        <Icon className="w-6 h-6 text-gold-400 group-hover:text-navy-950 transition-colors" />
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="w-10 h-10 rounded-[2px] bg-navy-950 border border-gold-400/30 flex items-center justify-center text-gold-400 group-hover:border-gold-300 transition-colors">
+                        <Icon className="w-5 h-5" />
                       </div>
-                      <span className="text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-sm bg-navy-950 border border-slate-800 text-gold-300">
+                      <span className="text-[9.5px] uppercase tracking-[0.16em] font-semibold px-2.5 py-1 rounded-[2px] bg-navy-950 border border-slate-800 text-gold-300">
                         {style.badge}
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-lg font-bold text-slate-100 mb-1.5 group-hover:text-gold-300 transition-colors">
+                    <h3 className="font-serif text-lg font-bold text-slate-100 mb-1.5 group-hover:text-gold-300 transition-colors tracking-wide">
                       {style.title}
                     </h3>
-                    <p className="text-xs text-gold-400 font-medium mb-3">
+                    <p className="text-xs text-gold-400/90 font-medium mb-3">
                       {style.subtitle}
                     </p>
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    <p className="text-xs sm:text-[13px] text-slate-300/90 leading-relaxed font-light">
                       {style.description}
                     </p>
                   </div>
-                  <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center text-[11px] text-slate-400">
+                  <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center text-[10.5px] uppercase tracking-wider text-slate-400 font-light">
                     <span>Live Chef Station Supported</span>
                   </div>
                 </div>
@@ -401,14 +401,14 @@ const Catering = () => {
             {signaturePackages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`relative rounded-sm p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
+                className={`relative rounded-[3px] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                   pkg.popular
-                    ? 'bg-gradient-to-b from-navy-900 via-navy-850 to-navy-900 border-2 border-gold-400 shadow-gold-glow'
-                    : 'bg-navy-900/60 border border-slate-800 hover:border-gold-500/40'
+                    ? 'bg-[#0B1020] border-2 border-gold-400/80 shadow-[0_12px_40px_rgba(0,0,0,0.7)]'
+                    : 'bg-[#090E1B]/80 border border-slate-800/80 hover:border-gold-500/35 shadow-md'
                 }`}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold-500 text-navy-950 font-bold text-[10px] uppercase tracking-widest px-4 py-1 rounded-full shadow-md flex items-center">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-950 font-bold text-[9.5px] uppercase tracking-[0.2em] px-4 py-1 rounded-[2px] shadow-md flex items-center">
                     <Crown className="w-3 h-3 mr-1" />
                     {pkg.badge}
                   </div>
@@ -416,27 +416,27 @@ const Catering = () => {
 
                 <div>
                   <div className="mb-6">
-                    <span className="text-[11px] uppercase tracking-widest font-bold text-gold-400 block mb-1">
+                    <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gold-400 block mb-1">
                       {pkg.code}
                     </span>
-                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100 mb-2">
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100 mb-2 tracking-wide">
                       {pkg.name}
                     </h3>
-                    <p className="text-xs text-slate-300 bg-navy-950/80 p-2.5 rounded-sm border border-slate-800">
-                      <strong className="text-gold-300">Best for:</strong> {pkg.bestFor}
+                    <p className="text-xs text-slate-300 bg-navy-950/80 p-2.5 rounded-[2px] border border-slate-800 font-light">
+                      <strong className="text-gold-300 font-semibold">Best for:</strong> {pkg.bestFor}
                     </p>
                   </div>
 
                   <div className="space-y-4 mb-8">
                     {pkg.sections.map((sec, secIdx) => (
                       <div key={secIdx} className="border-b border-slate-800/80 pb-3 last:border-b-0">
-                        <h5 className="text-xs uppercase tracking-wider font-bold text-gold-400 mb-2">
+                        <h5 className="text-[11px] uppercase tracking-[0.14em] font-bold text-gold-400/90 mb-2">
                           {sec.heading}:
                         </h5>
-                        <ul className="space-y-1.5 text-xs text-slate-300">
+                        <ul className="space-y-1.5 text-xs text-slate-300 font-light">
                           {sec.items.map((item, itemIdx) => (
                             <li key={itemIdx} className="flex items-start">
-                              <span className="w-1.5 h-1.5 rounded-full bg-gold-400 mr-2 mt-1.5 shrink-0" />
+                              <span className="w-1.5 h-1.5 bg-gold-400/80 mr-2 mt-1.5 shrink-0 rotate-45" />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -462,7 +462,7 @@ const Catering = () => {
         {/* ========================================================================= */}
         {/* 3. INTERACTIVE DISH EXPLORER (Category Wise with Veg / Non-Veg Toggle) */}
         {/* ========================================================================= */}
-        <section id="menu-explorer" className="bg-navy-900/40 border border-slate-800 rounded-sm p-8 sm:p-12">
+        <section id="menu-explorer" className="bg-[#080C16] border border-slate-800/80 rounded-[3px] p-8 sm:p-12 shadow-sm">
           <SectionHeader
             badge="Culinary Repertoire"
             title="Interactive Dish Explorer"
@@ -474,37 +474,37 @@ const Catering = () => {
         {/* ========================================================================= */}
         {/* 4. CATERING PRICING GUIDE (Market Benchmarks) */}
         {/* ========================================================================= */}
-        <section id="pricing-guide" className="bg-navy-900/40 border border-slate-800 rounded-sm p-8 sm:p-12">
+        <section id="pricing-guide" className="bg-[#080C16] border border-slate-800/80 rounded-[3px] p-8 sm:p-12 shadow-sm">
           <SectionHeader
             badge="Budget Benchmarks"
             title="Catering Pricing Guide"
             subtitle="Estimated market benchmarks for classic feasts and luxury multi-counter formats."
           />
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs sm:text-sm border border-slate-800">
-              <thead className="bg-navy-950 text-gold-300 uppercase tracking-wider font-semibold border-b border-slate-800">
+          <div className="overflow-x-auto rounded-[2px] border border-slate-800/80 bg-[#090E1B]">
+            <table className="w-full text-left text-xs sm:text-sm border-collapse">
+              <thead className="bg-[#050811] text-gold-300 uppercase tracking-[0.14em] font-semibold border-b border-slate-800">
                 <tr>
-                  <th className="p-4 border-r border-slate-800">Package Category</th>
-                  <th className="p-4 border-r border-slate-800">Typical Menu Highlights</th>
-                  <th className="p-4 border-r border-slate-800">Target Guest Scale</th>
-                  <th className="p-4">Service Format</th>
+                  <th className="p-4 border-r border-slate-800 text-[11px]">Package Category</th>
+                  <th className="p-4 border-r border-slate-800 text-[11px]">Typical Menu Highlights</th>
+                  <th className="p-4 border-r border-slate-800 text-[11px]">Target Guest Scale</th>
+                  <th className="p-4 text-[11px]">Service Format</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800 text-slate-300">
+              <tbody className="divide-y divide-slate-800/80 text-slate-300">
                 {pricingGuide.map((row, idx) => (
                   <tr key={idx} className="hover:bg-navy-900/60 transition-colors">
                     <td className="p-4 font-bold text-slate-100 border-r border-slate-800">{row.category}</td>
-                    <td className="p-4 border-r border-slate-800">{row.highlights}</td>
+                    <td className="p-4 border-r border-slate-800 font-light">{row.highlights}</td>
                     <td className="p-4 border-r border-slate-800 font-semibold text-gold-300">{row.guestTier}</td>
-                    <td className="p-4">{row.serviceType}</td>
+                    <td className="p-4 font-light">{row.serviceType}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
 
-          <p className="text-center text-xs text-slate-400 italic mt-6">
+          <p className="text-center text-xs text-slate-400 italic mt-6 font-light">
             (Note: Pricing adjusts based on guest count, fish selection like Vetki vs. Katla, and live counter additions).
           </p>
         </section>
@@ -525,20 +525,20 @@ const Catering = () => {
               return (
                 <div
                   key={idx}
-                  className="p-6 bg-navy-900/60 border border-slate-800 rounded-sm hover:border-gold-400/40 transition-colors flex flex-col justify-between"
+                  className="p-6 bg-[#090E1B]/80 border border-slate-800/80 rounded-[3px] hover:border-gold-500/35 transition-colors flex flex-col justify-between shadow-sm"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-sm bg-gold-500/10 border border-gold-500/30 flex items-center justify-center mb-4 text-gold-400">
-                      <Icon className="w-6 h-6" />
+                    <div className="w-10 h-10 rounded-[2px] bg-navy-950 border border-gold-400/30 flex items-center justify-center mb-4 text-gold-400">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <h4 className="font-serif font-bold text-base text-slate-100 mb-2">
+                    <h4 className="font-serif font-bold text-base text-slate-100 mb-2 tracking-wide">
                       {item.title}
                     </h4>
-                    <p className="text-xs text-slate-400 leading-relaxed">
+                    <p className="text-xs text-slate-400 leading-relaxed font-light">
                       {item.description}
                     </p>
                   </div>
-                  <div className="pt-3 mt-3 border-t border-slate-800/80 text-[10px] text-gold-400 font-semibold uppercase tracking-wider">
+                  <div className="pt-3 mt-4 border-t border-slate-800/80 text-[10px] text-gold-400 font-semibold uppercase tracking-[0.14em]">
                     Standard with All Menus
                   </div>
                 </div>

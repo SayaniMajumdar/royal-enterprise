@@ -5,31 +5,30 @@ import Button from '../common/Button';
 
 const CallToAction = ({ onOpenQuote }) => {
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background with luxury gold accents */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 border-t border-gold-500/25" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold-500/10 via-transparent to-transparent" />
-
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center space-x-2 text-gold-400 text-xs font-semibold uppercase tracking-widest bg-gold-500/10 border border-gold-500/30 px-3.5 py-1 rounded-full mb-6">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>Begin Your Bespoke Journey</span>
+    <section className="py-24 relative overflow-hidden bg-[#060A13] border-t border-gold-500/15">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="inline-flex items-center space-x-2.5 mb-5">
+          <span className="w-4 h-px bg-gold-400/60" />
+          <span className="text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] uppercase text-gold-400">
+            Begin Your Bespoke Journey
+          </span>
+          <span className="w-4 h-px bg-gold-400/60" />
         </div>
 
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-100 mb-6">
-          Ready to Craft an <span className="text-gold-gradient">Unforgettable</span> Celebration?
+        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-100 mb-6 tracking-tight leading-tight">
+          Ready to Craft an <span className="font-editorial italic font-normal text-gold-300">Unforgettable</span> Celebration?
         </h2>
 
-        <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-300 font-light leading-relaxed mb-10">
+        <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-300/90 font-light leading-relaxed mb-10">
           Whether you require turnkey corporate event production, an imperial multi-cuisine banquet, or an end-to-end royal wedding, our directors are at your service.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
           <Button
             variant="primary"
             size="lg"
             onClick={onOpenQuote}
-            className="shadow-gold-glow-lg px-8 py-4"
+            className="w-full sm:w-auto px-8 py-3.5"
           >
             Request a Consultation
           </Button>
@@ -41,7 +40,7 @@ const CallToAction = ({ onOpenQuote }) => {
             <Button
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto px-8 py-4 border-slate-700 hover:border-gold-400"
+              className="w-full sm:w-auto px-8 py-3.5"
               icon={PhoneCall}
             >
               Direct Call: {COMPANY_INFO.phone}

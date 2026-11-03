@@ -137,14 +137,14 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
       maxWidth="max-w-2xl"
     >
       {/* Division Tabs */}
-      <div className="grid grid-cols-3 gap-1 bg-navy-950 p-1 rounded-sm border border-slate-800 mb-6">
+      <div className="grid grid-cols-3 gap-1.5 bg-[#050811] p-1.5 rounded-[2px] border border-slate-800/90 mb-6">
         <button
           type="button"
           onClick={() => setActiveTab('events')}
-          className={`py-2 text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors ${
+          className={`py-2 text-[11px] font-bold uppercase tracking-[0.14em] rounded-[2px] transition-all ${
             activeTab === 'events'
-              ? 'bg-gold-500 text-navy-950 shadow-sm'
-              : 'text-slate-400 hover:text-slate-200'
+              ? 'bg-gradient-to-b from-[#DEC692] via-[#C59B46] to-[#B38734] text-navy-950 shadow-sm'
+              : 'text-slate-400 hover:text-gold-300 hover:bg-navy-900/40'
           }`}
         >
           Event Mgmt
@@ -152,10 +152,10 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
         <button
           type="button"
           onClick={() => setActiveTab('catering')}
-          className={`py-2 text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors ${
+          className={`py-2 text-[11px] font-bold uppercase tracking-[0.14em] rounded-[2px] transition-all ${
             activeTab === 'catering'
-              ? 'bg-gold-500 text-navy-950 shadow-sm'
-              : 'text-slate-400 hover:text-slate-200'
+              ? 'bg-gradient-to-b from-[#DEC692] via-[#C59B46] to-[#B38734] text-navy-950 shadow-sm'
+              : 'text-slate-400 hover:text-gold-300 hover:bg-navy-900/40'
           }`}
         >
           Catering
@@ -163,10 +163,10 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
         <button
           type="button"
           onClick={() => setActiveTab('wedding')}
-          className={`py-2 text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors ${
+          className={`py-2 text-[11px] font-bold uppercase tracking-[0.14em] rounded-[2px] transition-all ${
             activeTab === 'wedding'
-              ? 'bg-gold-500 text-navy-950 shadow-sm'
-              : 'text-slate-400 hover:text-slate-200'
+              ? 'bg-gradient-to-b from-[#DEC692] via-[#C59B46] to-[#B38734] text-navy-950 shadow-sm'
+              : 'text-slate-400 hover:text-gold-300 hover:bg-navy-900/40'
           }`}
         >
           Wedding Planner

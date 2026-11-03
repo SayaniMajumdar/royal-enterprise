@@ -33,7 +33,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
     >
       <div className="space-y-6">
         {/* Print Action Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-3 p-3 bg-navy-950 border border-gold-500/30 rounded-sm">
+        <div className="flex flex-wrap items-center justify-between gap-3 p-3 bg-[#050811] border border-gold-500/25 rounded-[2px]">
           <div className="text-xs text-slate-300">
             <span className="text-gold-400 font-semibold">Printable Format:</span> Standard Letter / A4 with legal terms & signature blocks.
           </div>

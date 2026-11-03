@@ -13,25 +13,25 @@ const CompletePackageBanner = ({ onGetPlan }) => {
   ];
 
   return (
-    <div id="complete-package" className="relative rounded-sm overflow-hidden border-2 border-gold-400 p-8 sm:p-12 bg-gradient-to-br from-navy-900 via-navy-850 to-navy-950 shadow-gold-glow-lg my-16">
+    <div id="complete-package" className="relative rounded-[3px] overflow-hidden border-2 border-gold-400/80 p-8 sm:p-12 bg-[#0B1020] shadow-[0_20px_50px_rgba(0,0,0,0.8)] my-16">
       {/* Subtle gold crown watermark */}
-      <div className="absolute -right-8 -bottom-8 text-gold-500/5 pointer-events-none">
+      <div className="absolute -right-8 -bottom-8 text-gold-500/[0.04] pointer-events-none">
         <Crown className="w-80 h-80" />
       </div>
 
       <div className="relative z-10 max-w-4xl">
-        <div className="inline-flex items-center space-x-2 bg-gold-500/15 border border-gold-400/50 px-3.5 py-1 rounded-full mb-4">
+        <div className="inline-flex items-center space-x-2 bg-gold-500/15 border border-gold-400/40 px-3.5 py-1 rounded-[2px] mb-4">
           <Sparkles className="w-3.5 h-3.5 text-gold-400" />
-          <span className="text-xs uppercase tracking-widest text-gold-300 font-bold">
+          <span className="text-[10.5px] uppercase tracking-[0.2em] text-gold-300 font-bold">
             All-Inclusive Royal Masterpiece
           </span>
         </div>
 
-        <h3 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-100 mb-4">
+        <h3 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-100 mb-4 tracking-tight">
           Get Your Complete Wedding Package
         </h3>
 
-        <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl font-light">
+        <p className="text-slate-300/90 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl font-light">
           Experience stress-free royal majesty. From palace venue selection to haute bridal couture, heirloom jewellery, mandap florals, cinematic films, and multi-course royal feasts—our master directors take complete responsibility for your wedding from day one to the farewell doli.
         </p>
 
@@ -40,7 +40,7 @@ const CompletePackageBanner = ({ onGetPlan }) => {
           {inclusions.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center space-x-2.5 p-2.5 bg-navy-950/80 border border-slate-800 rounded-sm text-xs font-medium text-slate-200"
+              className="flex items-center space-x-2.5 p-3 bg-navy-950/80 border border-slate-800 rounded-[2px] text-xs font-medium text-slate-200"
             >
               <CheckCircle2 className="w-4 h-4 text-gold-400 shrink-0" />
               <span>{item}</span>
@@ -53,12 +53,12 @@ const CompletePackageBanner = ({ onGetPlan }) => {
             variant="primary"
             size="lg"
             onClick={onGetPlan}
-            className="shadow-gold-glow px-8 py-4 text-sm uppercase tracking-wider"
+            className="px-8 py-3.5 text-xs uppercase tracking-[0.14em]"
             icon={HeartHandshake}
           >
             Get a Wedding Plan
           </Button>
-          <span className="text-xs text-slate-400 italic">
+          <span className="text-xs text-slate-400 italic font-light">
             * 100% customized to your family traditions and budget.
           </span>
         </div>

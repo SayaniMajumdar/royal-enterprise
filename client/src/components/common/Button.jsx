@@ -15,23 +15,23 @@ const Button = ({
   ...props
 }) => {
   const baseStyles =
-    'relative inline-flex items-center justify-center font-medium transition-all duration-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-navy-950 uppercase tracking-wider text-xs md:text-sm';
+    'relative inline-flex items-center justify-center font-medium transition-all duration-300 rounded-[2px] focus:outline-none focus:ring-1 focus:ring-gold-400/50 uppercase tracking-[0.16em] text-xs font-semibold select-none';
 
   const variants = {
     primary:
-      'bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold shadow-gold-glow hover:shadow-gold-glow-lg border border-gold-300 active:scale-[0.98]',
+      'bg-gradient-to-b from-[#DEC692] via-[#C5A059] to-[#B38734] hover:brightness-105 text-navy-950 font-bold border border-gold-300/40 shadow-[0_2px_12px_rgba(197,160,89,0.2)] active:translate-y-[1px]',
     outline:
-      'border border-gold-400 text-gold-400 hover:bg-gold-400/10 hover:text-gold-300 backdrop-blur-sm active:scale-[0.98]',
+      'border border-gold-400/60 text-gold-300 hover:border-gold-300 hover:bg-gold-500/10 hover:text-gold-200 bg-transparent active:translate-y-[1px]',
     dark:
-      'bg-navy-900/90 hover:bg-navy-800 text-slate-100 border border-slate-700/60 hover:border-gold-500/50 shadow-md active:scale-[0.98]',
+      'bg-[#0C1220] hover:bg-[#121B2F] text-slate-200 border border-slate-800 hover:border-gold-500/40 active:translate-y-[1px]',
     ghost:
-      'text-gold-300 hover:text-gold-200 hover:bg-gold-500/10 active:scale-[0.98]',
+      'text-gold-400/90 hover:text-gold-200 hover:bg-gold-500/10 tracking-[0.14em] active:translate-y-[1px]',
   };
 
   const sizes = {
-    sm: 'px-4 py-2 text-xs',
-    md: 'px-6 py-3 text-xs md:text-sm',
-    lg: 'px-8 py-4 text-sm md:text-base font-semibold',
+    sm: 'px-4 py-2 text-[10.5px]',
+    md: 'px-6 py-2.5 text-xs',
+    lg: 'px-8 py-3.5 text-xs sm:text-[12.5px]',
   };
 
   return (
@@ -47,10 +47,10 @@ const Button = ({
       {loading ? (
         <Loader2 className="w-4 h-4 mr-2 animate-spin text-current" />
       ) : (
-        Icon && iconPosition === 'left' && <Icon className="w-4 h-4 mr-2" />
+        Icon && iconPosition === 'left' && <Icon className="w-3.5 h-3.5 mr-2" />
       )}
       <span>{children}</span>
-      {!loading && Icon && iconPosition === 'right' && <Icon className="w-4 h-4 ml-2" />}
+      {!loading && Icon && iconPosition === 'right' && <Icon className="w-3.5 h-3.5 ml-2" />}
     </button>
   );
 };

@@ -43,7 +43,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-navy-900/50 border-y border-slate-800 relative">
+    <section className="py-24 bg-[#080C16] border-y border-gold-500/15 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Excellence Redefined"
@@ -51,21 +51,29 @@ const WhyChooseUs = () => {
           subtitle="Our unyielding dedication to perfection transforms complex visions into effortless, timeless celebrations."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           {features.map((feature, idx) => {
             const Icon = feature.icon;
+            const numberFormatted = `0${idx + 1}`;
             return (
               <div
                 key={idx}
-                className="p-8 rounded-sm bg-navy-950/70 border border-slate-800/80 hover:border-gold-400/50 transition-all duration-300 group hover:-translate-y-1 shadow-lg"
+                className="p-7 sm:p-8 rounded-[2px] bg-[#0A0F1D]/80 border border-slate-800/90 hover:border-gold-500/35 transition-all duration-300 group hover:-translate-y-0.5 shadow-sm relative overflow-hidden"
               >
-                <div className="w-12 h-12 rounded-sm bg-gold-500/10 border border-gold-500/30 flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-navy-950 transition-colors">
-                  <Icon className="w-6 h-6 text-gold-400 group-hover:text-navy-950 transition-colors" />
+                {/* Subtle top indicator */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-10 h-10 rounded-[2px] bg-navy-950 border border-gold-400/30 flex items-center justify-center text-gold-400 group-hover:border-gold-300 transition-colors">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <span className="font-serif text-xs font-semibold tracking-[0.2em] text-gold-400/50">
+                    {numberFormatted}
+                  </span>
                 </div>
-                <h4 className="font-serif text-lg font-bold text-slate-100 mb-3 group-hover:text-gold-300 transition-colors">
+
+                <h4 className="font-serif text-base sm:text-lg font-bold text-slate-100 mb-2.5 group-hover:text-gold-300 transition-colors tracking-wide">
                   {feature.title}
                 </h4>
-                <p className="text-sm text-slate-400 leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-slate-400 leading-relaxed font-light">
                   {feature.description}
                 </p>
               </div>

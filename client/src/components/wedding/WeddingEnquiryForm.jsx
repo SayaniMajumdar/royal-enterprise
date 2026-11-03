@@ -195,23 +195,24 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
   };
 
   return (
-    <div id="wedding-enquiry-form" className="bg-navy-900/80 border border-gold-500/30 rounded-sm p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+    <div id="wedding-enquiry-form" className="bg-[#090E1B] border border-gold-500/25 rounded-[3px] p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+      <div className="h-[2px] bg-gradient-to-r from-transparent via-gold-400/60 to-transparent -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
       {submittedData ? (
         <div className="text-center py-12 space-y-4">
-          <div className="w-16 h-16 bg-gold-500/20 border border-gold-400 rounded-full flex items-center justify-center mx-auto text-gold-400">
-            <CheckCircle2 className="w-10 h-10" />
+          <div className="w-14 h-14 bg-gold-500/15 border border-gold-400/60 rounded-[2px] flex items-center justify-center mx-auto text-gold-400">
+            <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="font-serif text-2xl font-bold text-slate-100">
+          <h3 className="font-serif text-2xl font-bold text-slate-100 tracking-wide">
             Wedding Proposal Request Confirmed
           </h3>
-          <p className="text-slate-300 max-w-md mx-auto text-sm leading-relaxed">
+          <p className="text-slate-300 max-w-md mx-auto text-sm leading-relaxed font-light">
             Congratulations, <span className="text-gold-300 font-semibold">{submittedData.customerName}</span>. Your wedding inquiry for{' '}
             <span className="text-gold-300 font-semibold">{submittedData.packageType}</span> has been logged into our master database.
           </p>
-          <div className="inline-block bg-navy-950 border border-slate-700 px-4 py-2 rounded-sm text-xs text-slate-300">
+          <div className="inline-block bg-navy-950 border border-slate-800 px-4 py-2 rounded-[2px] text-xs text-slate-300">
             Tracking ID: <span className="font-mono text-gold-400 font-bold">{submittedData.submissionId}</span>
           </div>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-400 font-light">
             Our Senior Wedding Architect will connect with your family within 24 hours.
           </p>
           <div className="pt-4">
@@ -226,11 +227,11 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="border-b border-slate-800 pb-4 mb-6">
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100">
+          <div className="border-b border-slate-800/80 pb-4 mb-6">
+            <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100 tracking-wide">
               Wedding Planner Enquiry Form
             </h3>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1">
+            <p className="text-xs sm:text-sm text-slate-400 mt-1 font-light">
               Share your wedding aspirations. All responses are logged automatically into Google Sheets for confidential executive planning.
             </p>
           </div>
@@ -312,7 +313,7 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
           </div>
 
           {/* Package Type Radio / Select */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 bg-navy-950/60 p-4 border border-slate-800 rounded-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 bg-[#050811] p-4 border border-slate-800/80 rounded-[2px]">
             <Select
               label="Package Scope"
               name="packageType"
@@ -340,15 +341,15 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
           </div>
 
           {/* Key Wedding Services Checklist (Mapped to Database Columns) */}
-          <div className="bg-navy-950/60 p-4 sm:p-5 border border-slate-800 rounded-sm">
-            <label className="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-3">
+          <div className="bg-[#050811] p-4 sm:p-5 border border-slate-800/80 rounded-[2px]">
+            <label className="block text-[11px] uppercase tracking-[0.14em] text-gold-400 font-semibold mb-3">
               Required Wedding Services Scope (Direct Database Mappings)
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {coreWeddingServices.map((svc) => (
                 <label
                   key={svc.id}
-                  className={`flex items-center space-x-2 text-xs p-2.5 rounded-sm border cursor-pointer transition-colors ${
+                  className={`flex items-center space-x-2 text-xs p-2.5 rounded-[2px] border cursor-pointer transition-colors ${
                     serviceChecks[svc.key]
                       ? 'border-gold-500/50 bg-gold-500/10 text-gold-200'
                       : 'border-slate-800 bg-navy-900/40 text-slate-400 hover:border-slate-700'
@@ -358,7 +359,7 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
                     type="checkbox"
                     checked={serviceChecks[svc.key]}
                     onChange={() => handleServiceCheck(svc.key)}
-                    className="w-4 h-4 rounded border-slate-700 text-gold-500 focus:ring-gold-500 focus:ring-offset-navy-900 bg-navy-950 cursor-pointer"
+                    className="w-4 h-4 rounded-[2px] border-slate-700 text-gold-500 focus:ring-gold-500/30 focus:ring-offset-navy-900 bg-navy-950 cursor-pointer"
                   />
                   <span className="font-medium select-none">{svc.label}</span>
                 </label>
