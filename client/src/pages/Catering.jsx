@@ -286,7 +286,7 @@ const Catering = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen text-[#1F2937]">
+    <div className="bg-white dark:bg-[#141210] min-h-screen text-[#1F2937] dark:text-[#FAF7F2]">
       {/* ========================================================================= */}
       {/* HERO BANNER */}
       {/* ========================================================================= */}
@@ -361,29 +361,29 @@ const Catering = () => {
               return (
                 <div
                   key={idx}
-                  className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-7 hover:border-gold-base/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
+                  className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-7 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <div className="w-10 h-10 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark">
+                      <div className="w-10 h-10 rounded-full bg-[#FAF8F4] dark:bg-[#141210] border border-gold-dark/30 dark:border-gold-light/30 flex items-center justify-center text-gold-dark dark:text-gold-light">
                         <Icon className="w-5 h-5 stroke-[1.5]" />
                       </div>
-                      <span className="text-[9.5px] uppercase tracking-[0.16em] font-semibold px-2.5 py-1 rounded-[2px] bg-[#FAF8F4] border border-[#E8E1D5] text-gold-dark">
+                      <span className="text-[9.5px] uppercase tracking-[0.16em] font-semibold px-2.5 py-1 rounded-[2px] bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] text-gold-dark dark:text-gold-light">
                         {style.badge}
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-lg font-normal text-[#141414] mb-1.5 group-hover:text-maroon transition-colors tracking-wide">
+                    <h3 className="font-serif text-lg font-normal text-[#141414] dark:text-[#FAF7F2] mb-1.5 group-hover:text-maroon dark:group-hover:text-gold-light transition-colors tracking-wide">
                       {style.title}
                     </h3>
-                    <p className="text-xs text-gold-dark font-medium mb-3">
+                    <p className="text-xs text-gold-dark dark:text-gold-light font-medium mb-3">
                       {style.subtitle}
                     </p>
-                    <p className="text-xs sm:text-[13px] text-[#554F47] leading-relaxed font-light">
+                    <p className="text-xs sm:text-[13px] text-[#554F47] dark:text-[#A8A29E] leading-relaxed font-light">
                       {style.description}
                     </p>
                   </div>
-                  <div className="pt-4 mt-4 border-t border-[#E8E1D5]/60 flex items-center text-[10.5px] uppercase tracking-wider text-[#6B645C] font-light">
+                  <div className="pt-4 mt-4 border-t border-[#E8E1D5]/60 dark:border-[#38312B] flex items-center text-[10.5px] uppercase tracking-wider text-[#6B645C] dark:text-[#A8A29E] font-light">
                     <span>Live Chef Station Supported</span>
                   </div>
                 </div>
@@ -408,8 +408,8 @@ const Catering = () => {
                 key={pkg.id}
                 className={`relative rounded-[4px] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                   pkg.popular
-                    ? 'bg-[#FFFDF9] border-2 border-maroon shadow-md'
-                    : 'bg-[#FFFDF9] border border-[#E8E1D5] hover:border-gold-base/50 shadow-sm'
+                    ? 'bg-[#FFFDF9] dark:bg-[#1C1917] border-2 border-maroon dark:border-gold-light shadow-md'
+                    : 'bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] hover:border-gold-base/50 dark:hover:border-gold-light/50 shadow-sm'
                 }`}
               >
                 {pkg.popular && (
@@ -421,27 +421,27 @@ const Catering = () => {
 
                 <div>
                   <div className="mb-6">
-                    <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-gold-dark block mb-1">
+                    <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-gold-dark dark:text-gold-light block mb-1">
                       {pkg.code}
                     </span>
-                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] mb-2 tracking-wide">
+                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] dark:text-[#FAF7F2] mb-2 tracking-wide">
                       {pkg.name}
                     </h3>
-                    <p className="text-xs text-[#554F47] bg-[#FAF8F4] p-2.5 rounded-[2px] border border-[#E8E1D5] font-light">
-                      <strong className="text-gold-dark font-medium">Best for:</strong> {pkg.bestFor}
+                    <p className="text-xs text-[#554F47] dark:text-[#A8A29E] bg-[#FAF8F4] dark:bg-[#141210] p-2.5 rounded-[2px] border border-[#E8E1D5] dark:border-[#38312B] font-light">
+                      <strong className="text-gold-dark dark:text-gold-light font-medium">Best for:</strong> {pkg.bestFor}
                     </p>
                   </div>
 
                   <div className="space-y-4 mb-8">
                     {pkg.sections.map((sec, secIdx) => (
-                      <div key={secIdx} className="border-b border-[#E8E1D5] pb-3 last:border-b-0">
-                        <h5 className="text-[11px] uppercase tracking-[0.14em] font-semibold text-gold-dark mb-2">
+                      <div key={secIdx} className="border-b border-[#E8E1D5] dark:border-[#38312B] pb-3 last:border-b-0">
+                        <h5 className="text-[11px] uppercase tracking-[0.14em] font-semibold text-gold-dark dark:text-gold-light mb-2">
                           {sec.heading}:
                         </h5>
-                        <ul className="space-y-1.5 text-xs text-[#3A352F] font-light">
+                        <ul className="space-y-1.5 text-xs text-[#3A352F] dark:text-[#D5CCC0] font-light">
                           {sec.items.map((item, itemIdx) => (
                             <li key={itemIdx} className="flex items-start">
-                              <span className="w-1.5 h-1.5 bg-gold-dark mr-2 mt-1.5 shrink-0 rotate-45" />
+                              <span className="w-1.5 h-1.5 bg-gold-dark dark:bg-gold-light mr-2 mt-1.5 shrink-0 rotate-45" />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -467,7 +467,7 @@ const Catering = () => {
         {/* ========================================================================= */}
         {/* 3. INTERACTIVE DISH EXPLORER */}
         {/* ========================================================================= */}
-        <section id="menu-explorer" className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-8 sm:p-12 shadow-sm">
+        <section id="menu-explorer" className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-8 sm:p-12 shadow-sm">
           <SectionHeader
             badge="Culinary Repertoire"
             title="Interactive Dish Explorer"
@@ -479,37 +479,37 @@ const Catering = () => {
         {/* ========================================================================= */}
         {/* 4. CATERING PRICING GUIDE */}
         {/* ========================================================================= */}
-        <section id="pricing-guide" className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-8 sm:p-12 shadow-sm">
+        <section id="pricing-guide" className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-8 sm:p-12 shadow-sm">
           <SectionHeader
             badge="Budget Benchmarks"
             title="Catering Pricing Guide"
             subtitle="Estimated market benchmarks for classic feasts and luxury multi-counter formats."
           />
 
-          <div className="overflow-x-auto rounded-[3px] border border-[#E8E1D5] bg-[#FFFDF9]">
+          <div className="overflow-x-auto rounded-[3px] border border-[#E8E1D5] dark:border-[#38312B] bg-[#FFFDF9] dark:bg-[#1C1917]">
             <table className="w-full text-left text-xs sm:text-sm border-collapse">
-              <thead className="bg-[#FAF8F4] text-gold-dark uppercase tracking-[0.16em] font-semibold border-b border-[#E8E1D5]">
+              <thead className="bg-[#FAF8F4] dark:bg-[#141210] text-gold-dark dark:text-gold-light uppercase tracking-[0.16em] font-semibold border-b border-[#E8E1D5] dark:border-[#38312B]">
                 <tr>
-                  <th className="p-4 border-r border-[#E8E1D5] text-[11px]">Package Category</th>
-                  <th className="p-4 border-r border-[#E8E1D5] text-[11px]">Typical Menu Highlights</th>
-                  <th className="p-4 border-r border-[#E8E1D5] text-[11px]">Target Guest Scale</th>
+                  <th className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] text-[11px]">Package Category</th>
+                  <th className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] text-[11px]">Typical Menu Highlights</th>
+                  <th className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] text-[11px]">Target Guest Scale</th>
                   <th className="p-4 text-[11px]">Service Format</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E8E1D5] text-[#3A352F]">
+              <tbody className="divide-y divide-[#E8E1D5] dark:divide-[#38312B] text-[#3A352F] dark:text-[#D5CCC0]">
                 {pricingGuide.map((row, idx) => (
-                  <tr key={idx} className="hover:bg-[#FAF8F4]/60 transition-colors">
-                    <td className="p-4 font-medium text-[#141414] border-r border-[#E8E1D5]">{row.category}</td>
-                    <td className="p-4 border-r border-[#E8E1D5] font-light text-[#554F47]">{row.highlights}</td>
-                    <td className="p-4 border-r border-[#E8E1D5] font-medium text-maroon">{row.guestTier}</td>
-                    <td className="p-4 font-light text-[#554F47]">{row.serviceType}</td>
+                  <tr key={idx} className="hover:bg-[#FAF8F4]/60 dark:hover:bg-[#141210]/60 transition-colors">
+                    <td className="p-4 font-medium text-[#141414] dark:text-[#FAF7F2] border-r border-[#E8E1D5] dark:border-[#38312B]">{row.category}</td>
+                    <td className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] font-light text-[#554F47] dark:text-[#A8A29E]">{row.highlights}</td>
+                    <td className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] font-medium text-maroon dark:text-gold-light">{row.guestTier}</td>
+                    <td className="p-4 font-light text-[#554F47] dark:text-[#A8A29E]">{row.serviceType}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
 
-          <p className="text-center text-xs text-[#6B645C] italic mt-6 font-light">
+          <p className="text-center text-xs text-[#6B645C] dark:text-[#A8A29E] italic mt-6 font-light">
             (Note: Pricing adjusts based on guest count, fish selection like Vetki vs. Katla, and live counter additions).
           </p>
         </section>
@@ -530,20 +530,20 @@ const Catering = () => {
               return (
                 <div
                   key={idx}
-                  className="p-6 bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] hover:border-gold-base/50 transition-colors flex flex-col justify-between shadow-sm"
+                  className="p-6 bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-colors flex flex-col justify-between shadow-sm"
                 >
                   <div>
-                    <div className="w-10 h-10 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center mb-4 text-gold-dark">
+                    <div className="w-10 h-10 rounded-full bg-[#FAF8F4] dark:bg-[#141210] border border-gold-dark/30 dark:border-gold-light/30 flex items-center justify-center mb-4 text-gold-dark dark:text-gold-light">
                       <Icon className="w-5 h-5 stroke-[1.5]" />
                     </div>
-                    <h4 className="font-serif font-normal text-lg text-[#141414] mb-2 tracking-wide">
+                    <h4 className="font-serif font-normal text-lg text-[#141414] dark:text-[#FAF7F2] mb-2 tracking-wide">
                       {item.title}
                     </h4>
-                    <p className="text-xs text-[#554F47] leading-relaxed font-light">
+                    <p className="text-xs text-[#554F47] dark:text-[#A8A29E] leading-relaxed font-light">
                       {item.description}
                     </p>
                   </div>
-                  <div className="pt-3 mt-4 border-t border-[#E8E1D5]/60 text-[10px] text-gold-dark font-semibold uppercase tracking-[0.14em]">
+                  <div className="pt-3 mt-4 border-t border-[#E8E1D5]/60 dark:border-[#38312B] text-[10px] text-gold-dark dark:text-gold-light font-semibold uppercase tracking-[0.14em]">
                     Standard with All Menus
                   </div>
                 </div>

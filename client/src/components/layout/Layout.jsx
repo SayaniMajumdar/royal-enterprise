@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   const { toast, hideToast } = useNotification();
 
   return (
-    <div className="min-h-screen flex flex-col bg-navy-950 text-slate-100 font-sans selection:bg-gold-500 selection:text-navy-950">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] dark:bg-[#141210] text-[#1F1D1A] dark:text-[#FAF7F2] font-sans selection:bg-[#FEF3C7] selection:text-[#6E1423] dark:selection:bg-[#6E1423] dark:selection:text-[#FDE68A] transition-colors duration-200">
       <ScrollToTop />
       <Navbar onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
       

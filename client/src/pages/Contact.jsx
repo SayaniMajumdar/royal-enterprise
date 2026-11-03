@@ -112,17 +112,17 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#FAF7F2] min-h-screen text-[#1F1D1A]">
+    <div className="bg-[#FAF7F2] dark:bg-[#141210] min-h-screen text-[#1F1D1A] dark:text-[#FAF7F2]">
       
       {/* Hero Banner */}
-      <section className="bg-white pt-32 sm:pt-40 pb-14 sm:pb-20 border-b border-[#E5DED3]">
+      <section className="bg-white dark:bg-[#1C1917] pt-32 sm:pt-40 pb-14 sm:pb-20 border-b border-[#E5DED3] dark:border-[#38312B]">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="max-w-3xl space-y-3">
             <span className="stamp-tag">Direct Desk • Kolkata</span>
-            <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#1F1D1A] leading-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#1F1D1A] dark:text-[#FAF7F2] leading-tight">
               Get in touch with Royal Enterprise.
             </h1>
-            <p className="text-base sm:text-lg text-[#524C44] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#524C44] dark:text-[#A8A29E] leading-relaxed">
               Tell us about your date and guest count. We'll check our central kitchen calendar and call you back directly.
             </p>
           </div>
@@ -137,12 +137,12 @@ const Contact = () => {
           <div className="lg:col-span-5 space-y-6">
             
             {/* Direct WhatsApp Callout Banner */}
-            <div className="p-6 bg-[#E8F5E9] border border-emerald-300 rounded-lg space-y-3">
-              <div className="flex items-center space-x-2 text-emerald-900 font-bold text-sm">
-                <MessageSquare className="w-5 h-5 text-emerald-700" />
+            <div className="p-6 bg-[#E8F5E9] dark:bg-[#0E2A1A] border border-emerald-300 dark:border-emerald-800 rounded-lg space-y-3">
+              <div className="flex items-center space-x-2 text-emerald-900 dark:text-emerald-200 font-bold text-sm">
+                <MessageSquare className="w-5 h-5 text-emerald-700 dark:text-emerald-400" />
                 <span>Prefer a quick WhatsApp chat?</span>
               </div>
-              <p className="text-xs text-emerald-800 leading-relaxed">
+              <p className="text-xs text-emerald-800 dark:text-emerald-300 leading-relaxed">
                 Send us a message directly with your event date and estimated guests. We respond during business hours within minutes.
               </p>
               <a
@@ -157,27 +157,27 @@ const Contact = () => {
             </div>
 
             {/* Address & Office Details */}
-            <div className="bg-white border border-[#E5DED3] rounded-lg p-6 sm:p-7 space-y-6 shadow-paper-sm">
+            <div className="bg-white dark:bg-[#1C1917] border border-[#E5DED3] dark:border-[#38312B] rounded-lg p-6 sm:p-7 space-y-6 shadow-paper-sm">
               <div className="space-y-1">
-                <h3 className="font-serif text-xl font-bold text-[#1F1D1A]">
+                <h3 className="font-serif text-xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">
                   Royal Enterprise Office
                 </h3>
-                <span className="text-xs text-[#6E1423] font-medium">
+                <span className="text-xs text-[#6E1423] dark:text-gold-light font-medium">
                   Events • Catering • Wedding Planning
                 </span>
               </div>
 
-              <div className="space-y-4 text-xs sm:text-sm text-[#3B3630]">
+              <div className="space-y-4 text-xs sm:text-sm text-[#3B3630] dark:text-[#D5CCC0]">
                 <div className="flex items-start space-x-3">
-                  <MapPin className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#6E1423] dark:text-gold-light shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block text-[#1F1D1A]">Address:</span>
-                    <span className="leading-relaxed block text-[#524C44]">{COMPANY_INFO.address}</span>
+                    <span className="font-semibold block text-[#1F1D1A] dark:text-[#FAF7F2]">Address:</span>
+                    <span className="leading-relaxed block text-[#524C44] dark:text-[#A8A29E]">{COMPANY_INFO.address}</span>
                     <a
                       href={COMPANY_INFO.mapUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-[#6E1423] font-semibold hover:underline inline-flex items-center space-x-1 mt-1 text-xs"
+                      className="text-[#6E1423] dark:text-gold-light font-semibold hover:underline inline-flex items-center space-x-1 mt-1 text-xs"
                     >
                       <span>Open in Google Maps</span>
                       <ExternalLink className="w-3 h-3" />
@@ -186,26 +186,26 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-3">
-                  <Phone className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                  <Phone className="w-4 h-4 text-[#6E1423] dark:text-gold-light shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block text-[#1F1D1A]">Phone / WhatsApp:</span>
+                    <span className="font-semibold block text-[#1F1D1A] dark:text-[#FAF7F2]">Phone / WhatsApp:</span>
                     <a
                       href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-                      className="text-[#6E1423] font-semibold hover:underline block"
+                      className="text-[#6E1423] dark:text-gold-light font-semibold hover:underline block"
                     >
                       {COMPANY_INFO.displayPhone}
                     </a>
-                    <span className="text-xs text-[#7D756A] block">Alternate: {COMPANY_INFO.secondaryPhone}</span>
+                    <span className="text-xs text-[#7D756A] dark:text-[#8C827A] block">Alternate: {COMPANY_INFO.secondaryPhone}</span>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-3">
-                  <Mail className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                  <Mail className="w-4 h-4 text-[#6E1423] dark:text-gold-light shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block text-[#1F1D1A]">Email:</span>
+                    <span className="font-semibold block text-[#1F1D1A] dark:text-[#FAF7F2]">Email:</span>
                     <a
                       href={`mailto:${COMPANY_INFO.email}`}
-                      className="text-[#6E1423] font-semibold hover:underline"
+                      className="text-[#6E1423] dark:text-gold-light font-semibold hover:underline"
                     >
                       {COMPANY_INFO.email}
                     </a>
@@ -213,25 +213,25 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-3">
-                  <Clock className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                  <Clock className="w-4 h-4 text-[#6E1423] dark:text-gold-light shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block text-[#1F1D1A]">Working Hours:</span>
-                    <span className="text-[#524C44] block">{COMPANY_INFO.officeHours}</span>
+                    <span className="font-semibold block text-[#1F1D1A] dark:text-[#FAF7F2]">Working Hours:</span>
+                    <span className="text-[#524C44] dark:text-[#A8A29E] block">{COMPANY_INFO.officeHours}</span>
                   </div>
                 </div>
               </div>
 
               {/* Social Channels */}
-              <div className="pt-4 border-t border-[#E5DED3]">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#7D756A] block mb-2">
+              <div className="pt-4 border-t border-[#E5DED3] dark:border-[#38312B]">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#7D756A] dark:text-[#8C827A] block mb-2">
                   Social Channels
                 </span>
-                <div className="flex items-center space-x-2 text-[#524C44]">
+                <div className="flex items-center space-x-2 text-[#524C44] dark:text-[#A8A29E]">
                   <a
                     href={COMPANY_INFO.socials.instagram}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 bg-[#FAF7F2] rounded hover:text-[#6E1423] hover:bg-[#FAF2F3] transition-colors"
+                    className="p-2 bg-[#FAF7F2] dark:bg-[#141210] rounded hover:text-[#6E1423] dark:hover:text-gold-light hover:bg-[#FAF2F3] dark:hover:bg-[#2A1D1D] transition-colors"
                     aria-label="Instagram"
                   >
                     <Instagram className="w-4 h-4" />
@@ -240,7 +240,7 @@ const Contact = () => {
                     href={COMPANY_INFO.socials.facebook}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 bg-[#FAF7F2] rounded hover:text-[#6E1423] hover:bg-[#FAF2F3] transition-colors"
+                    className="p-2 bg-[#FAF7F2] dark:bg-[#141210] rounded hover:text-[#6E1423] dark:hover:text-gold-light hover:bg-[#FAF2F3] dark:hover:bg-[#2A1D1D] transition-colors"
                     aria-label="Facebook"
                   >
                     <Facebook className="w-4 h-4" />
@@ -249,7 +249,7 @@ const Contact = () => {
                     href={COMPANY_INFO.socials.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 bg-[#FAF7F2] rounded hover:text-[#6E1423] hover:bg-[#FAF2F3] transition-colors"
+                    className="p-2 bg-[#FAF7F2] dark:bg-[#141210] rounded hover:text-[#6E1423] dark:hover:text-gold-light hover:bg-[#FAF2F3] dark:hover:bg-[#2A1D1D] transition-colors"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="w-4 h-4" />
@@ -258,7 +258,7 @@ const Contact = () => {
                     href={COMPANY_INFO.socials.youtube}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 bg-[#FAF7F2] rounded hover:text-[#6E1423] hover:bg-[#FAF2F3] transition-colors"
+                    className="p-2 bg-[#FAF7F2] dark:bg-[#141210] rounded hover:text-[#6E1423] dark:hover:text-gold-light hover:bg-[#FAF2F3] dark:hover:bg-[#2A1D1D] transition-colors"
                     aria-label="YouTube"
                   >
                     <Youtube className="w-4 h-4" />
@@ -271,28 +271,28 @@ const Contact = () => {
 
           {/* Right Column: Clean, Direct Contact Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white border border-[#E5DED3] rounded-lg p-7 sm:p-10 shadow-paper-sm">
-              <div className="border-b border-[#E5DED3] pb-4 mb-6">
-                <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] block mb-1">
+            <div className="bg-white dark:bg-[#1C1917] border border-[#E5DED3] dark:border-[#38312B] rounded-lg p-7 sm:p-10 shadow-paper-sm">
+              <div className="border-b border-[#E5DED3] dark:border-[#38312B] pb-4 mb-6">
+                <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] dark:text-gold-light block mb-1">
                   Enquiry Form
                 </span>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F1D1A]">
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">
                   Check dates and ask questions
                 </h2>
-                <p className="text-xs text-[#524C44] mt-1">
+                <p className="text-xs text-[#524C44] dark:text-[#A8A29E] mt-1">
                   We ask only for what we need to verify dates and catering requirements.
                 </p>
               </div>
 
               {submitted ? (
                 <div className="text-center py-10 space-y-4">
-                  <div className="w-14 h-14 bg-emerald-50 border border-emerald-500 rounded-full flex items-center justify-center mx-auto text-emerald-700">
+                  <div className="w-14 h-14 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-500 rounded-full flex items-center justify-center mx-auto text-emerald-700 dark:text-emerald-400">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="font-serif text-2xl font-bold text-[#1F1D1A]">
+                  <h3 className="font-serif text-2xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">
                     Got it. Your enquiry is received.
                   </h3>
-                  <p className="text-sm text-[#524C44] max-w-md mx-auto leading-relaxed">
+                  <p className="text-sm text-[#524C44] dark:text-[#A8A29E] max-w-md mx-auto leading-relaxed">
                     We will call you within <strong>2 hours</strong> between <strong>10:00 AM and 8:30 PM IST</strong> to confirm details.
                   </p>
                   <div className="pt-3">
@@ -388,7 +388,7 @@ const Contact = () => {
                   />
 
                   <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-                    <span className="text-xs text-[#7D756A]">
+                    <span className="text-xs text-[#7D756A] dark:text-[#8C827A]">
                       We respect your privacy. No promotional spam calls.
                     </span>
                     <button

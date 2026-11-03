@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Rich Gold Gradients -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="35%" stop-color="#F59E0B"/>
+      <stop offset="70%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="maroonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B1E32"/>
+      <stop offset="50%" stop-color="#6E1423"/>
+      <stop offset="100%" stop-color="#4A0A15"/>
+    </linearGradient>
+    <linearGradient id="innerGlow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F2" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base Shield / Circle -->
+  <g filter="url(#subtleShadow)">
+    <circle cx="256" cy="256" r="236" fill="url(#maroonGradient)"/>
+    <circle cx="256" cy="256" r="236" fill="url(#innerGlow)"/>
+  </g>
+
+  <!-- Outer Concentric Gold Filigree Rings -->
+  <circle cx="256" cy="256" r="224" fill="none" stroke="url(#goldGradient)" stroke-width="2.5" stroke-opacity="0.6"/>
+  <circle cx="256" cy="256" r="214" fill="none" stroke="url(#goldGradient)" stroke-width="4.5"/>
+  <circle cx="256" cy="256" r="204" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" stroke-dasharray="4 6"/>
+
+  <!-- Four Cardinal Diamond Accents -->
+  <polygon points="256,44 262,54 256,64 250,54" fill="url(#goldGradient)"/>
+  <polygon points="256,448 262,458 256,468 250,458" fill="url(#goldGradient)"/>
+  <polygon points="44,256 54,262 64,256 54,250" fill="url(#goldGradient)"/>
+  <polygon points="448,256 458,262 468,256 458,250" fill="url(#goldGradient)"/>
+
+  <!-- Ornate Imperial Crown (Coronet) -->
+  <g transform="translate(0, -10)">
+    <!-- Crown Base Band -->
+    <path d="M 176 172 Q 256 182 336 172 L 340 186 Q 256 198 172 186 Z" fill="url(#goldGradient)"/>
+    
+    <!-- Crown Jewels on Band -->
+    <circle cx="204" cy="180" r="3" fill="#FAF7F2"/>
+    <circle cx="230" cy="182" r="3.5" fill="#FAF7F2"/>
+    <circle cx="256" cy="183" r="4.5" fill="#FAF7F2"/>
+    <circle cx="282" cy="182" r="3.5" fill="#FAF7F2"/>
+    <circle cx="308" cy="180" r="3" fill="#FAF7F2"/>
+
+    <!-- 5 Crown Peaks -->
+    <!-- Center Peak -->
+    <path d="M 246 172 L 256 112 L 266 172 Z" fill="url(#goldGradient)"/>
+    <circle cx="256" cy="106" r="7.5" fill="url(#goldGradient)"/>
+    <circle cx="256" cy="106" r="3.5" fill="#FAF7F2"/>
+
+    <!-- Mid Peaks -->
+    <path d="M 210 174 L 216 128 L 230 173 Z" fill="url(#goldGradient)"/>
+    <circle cx="216" cy="123" r="6" fill="url(#goldGradient)"/>
+    
+    <path d="M 302 174 L 296 128 L 282 173 Z" fill="url(#goldGradient)"/>
+    <circle cx="296" cy="123" r="6" fill="url(#goldGradient)"/>
+
+    <!-- Outer Peaks -->
+    <path d="M 180 174 L 176 142 L 196 174 Z" fill="url(#goldGradient)"/>
+    <circle cx="176" cy="138" r="5" fill="url(#goldGradient)"/>
+
+    <path d="M 332 174 L 336 142 L 316 174 Z" fill="url(#goldGradient)"/>
+    <circle cx="336" cy="138" r="5" fill="url(#goldGradient)"/>
+
+    <!-- Crown Crest Arch Cross -->
+    <path d="M 256 86 L 256 98 M 250 92 L 262 92" stroke="url(#goldGradient)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Central Interwoven Monogram: Regal R & E -->
+  <g id="monogram">
+    <!-- Shadow for depth -->
+    <path d="M 198 220 L 198 368 M 198 220 L 268 220 C 304 220 324 238 324 266 C 324 294 300 310 264 310 L 198 310 M 254 310 L 326 368"
+      fill="none" stroke="#2B050B" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+
+    <!-- Back 'E' stylized wing flourish -->
+    <path d="M 308 274 Q 346 274 346 312 Q 346 360 288 360 L 232 360"
+      fill="none" stroke="url(#goldGradient)" stroke-width="12" stroke-linecap="round" opacity="0.85"/>
+    <path d="M 276 314 L 332 314"
+      fill="none" stroke="url(#goldGradient)" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- Main Imperial 'R' Stem & Serifs -->
+    <!-- Vertical Spine -->
+    <path d="M 204 220 L 204 366" fill="none" stroke="url(#goldGradient)" stroke-width="20" stroke-linecap="square"/>
+    <!-- Top Serif -->
+    <path d="M 184 220 L 228 220" fill="none" stroke="url(#goldGradient)" stroke-width="12" stroke-linecap="round"/>
+    <!-- Bottom Serif -->
+    <path d="M 182 366 L 232 366" fill="none" stroke="url(#goldGradient)" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Loop of 'R' -->
+    <path d="M 204 220 L 262 220 C 296 220 318 238 318 266 C 318 294 294 310 260 310 L 204 310"
+      fill="none" stroke="url(#goldGradient)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Tail of 'R' with graceful regal flare -->
+    <path d="M 252 308 Q 272 328 322 368"
+      fill="none" stroke="url(#goldGradient)" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="324" cy="368" r="8" fill="url(#goldGradient)"/>
+
+    <!-- Center Monogram Star Accent -->
+    <polygon points="256,260 259,268 267,268 261,273 263,281 256,276 249,281 251,273 245,268 253,268" fill="#FAF7F2"/>
+  </g>
+
+  <!-- Royal Floral Laurel Garland & Marigold Petals at Bottom -->
+  <g id="laurelWreath">
+    <!-- Left Laurel Branch -->
+    <path d="M 124 330 C 120 376 156 422 222 434" fill="none" stroke="url(#goldGradient)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Leaves Left -->
+    <path d="M 124 338 Q 138 334 140 348 C 134 354 122 350 124 338 Z" fill="url(#goldGradient)"/>
+    <path d="M 132 364 Q 148 362 148 376 C 140 382 130 376 132 364 Z" fill="url(#goldGradient)"/>
+    <path d="M 150 390 Q 168 390 166 404 C 156 408 146 400 150 390 Z" fill="url(#goldGradient)"/>
+    <path d="M 178 412 Q 196 414 192 428 C 182 430 174 420 178 412 Z" fill="url(#goldGradient)"/>
+
+    <!-- Right Laurel Branch -->
+    <path d="M 388 330 C 392 376 356 422 290 434" fill="none" stroke="url(#goldGradient)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Leaves Right -->
+    <path d="M 388 338 Q 374 334 372 348 C 378 354 390 350 388 338 Z" fill="url(#goldGradient)"/>
+    <path d="M 380 364 Q 364 362 364 376 C 372 382 382 376 380 364 Z" fill="url(#goldGradient)"/>
+    <path d="M 362 390 Q 344 390 346 404 C 356 408 366 400 362 390 Z" fill="url(#goldGradient)"/>
+    <path d="M 334 412 Q 316 414 320 428 C 330 430 338 420 334 412 Z" fill="url(#goldGradient)"/>
+
+    <!-- Center Ribbon Knot & Traditional Marigold Medallion -->
+    <circle cx="256" cy="434" r="14" fill="url(#goldGradient)"/>
+    <circle cx="256" cy="434" r="8" fill="#6E1423"/>
+    <circle cx="256" cy="434" r="4" fill="url(#goldGradient)"/>
+
+    <!-- Ribbon Tails -->
+    <path d="M 248 444 C 238 460 220 464 212 472" fill="none" stroke="url(#goldGradient)" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 264 444 C 274 460 292 464 300 472" fill="none" stroke="url(#goldGradient)" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Est. 2014 & Kolkata Micro Ribbons -->
+  <text x="256" y="394" text-anchor="middle" font-family="'Lora', Georgia, serif" font-size="16" font-weight="600" letter-spacing="3.5" fill="#FAF7F2" opacity="0.95">KOLKATA</text>
+  <text x="256" y="412" text-anchor="middle" font-family="'Hind Siliguri', sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="url(#goldGradient)">EST. 2014</text>
+</svg>

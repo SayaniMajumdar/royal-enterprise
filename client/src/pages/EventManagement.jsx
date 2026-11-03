@@ -364,7 +364,7 @@ const EventManagement = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen text-[#1F2937]">
+    <div className="bg-white dark:bg-[#141210] min-h-screen text-[#1F2937] dark:text-[#FAF7F2]">
       {/* ========================================================================= */}
       {/* HERO BANNER */}
       {/* ========================================================================= */}
@@ -437,43 +437,43 @@ const EventManagement = () => {
             {coreCategories.map((cat) => (
               <div
                 key={cat.id}
-                className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] overflow-hidden hover:border-gold-base/60 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
+                className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] overflow-hidden hover:border-gold-base/60 dark:hover:border-gold-light/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
               >
                 <div>
-                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-200">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-200 dark:bg-stone-800">
                     <img
                       src={cat.image}
                       alt={cat.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute top-3 left-3 bg-[#FFFDF9]/95 backdrop-blur-sm border border-[#E8E1D5] px-2.5 py-0.5 rounded-[2px] text-[9.5px] font-semibold uppercase tracking-[0.16em] text-gold-dark">
+                    <div className="absolute top-3 left-3 bg-[#FFFDF9]/95 dark:bg-[#1C1917]/95 backdrop-blur-sm border border-[#E8E1D5] dark:border-[#38312B] px-2.5 py-0.5 rounded-[2px] text-[9.5px] font-semibold uppercase tracking-[0.16em] text-gold-dark dark:text-gold-light">
                       {cat.badge}
                     </div>
                   </div>
 
                   <div className="p-6 sm:p-7">
-                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] mb-1 group-hover:text-maroon transition-colors tracking-wide leading-snug">
+                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] dark:text-[#FAF7F2] mb-1 group-hover:text-maroon dark:group-hover:text-gold-light transition-colors tracking-wide leading-snug">
                       {cat.title}
                     </h3>
-                    <p className="text-[11px] uppercase tracking-wider font-semibold text-gold-dark mb-4">
+                    <p className="text-[11px] uppercase tracking-wider font-semibold text-gold-dark dark:text-gold-light mb-4">
                       {cat.subtitle}
                     </p>
-                    <p className="text-xs sm:text-[13px] text-[#554F47] leading-relaxed mb-6 font-light">
+                    <p className="text-xs sm:text-[13px] text-[#554F47] dark:text-[#A8A29E] leading-relaxed mb-6 font-light">
                       {cat.description}
                     </p>
 
-                    <h4 className="text-[10.5px] uppercase tracking-[0.16em] font-semibold text-gold-dark mb-3 border-b border-[#E8E1D5] pb-2">
+                    <h4 className="text-[10.5px] uppercase tracking-[0.16em] font-semibold text-gold-dark dark:text-gold-light mb-3 border-b border-[#E8E1D5] dark:border-[#38312B] pb-2">
                       Sub-Disciplines & Inclusions:
                     </h4>
 
                     <div className="space-y-3 mb-6">
                       {cat.subServices.map((sub, idx) => (
                         <div key={idx} className="text-xs">
-                          <p className="font-medium text-[#141414] flex items-start">
-                            <span className="w-1.5 h-1.5 bg-gold-dark mr-2 mt-1.5 shrink-0 rotate-45" />
+                          <p className="font-medium text-[#141414] dark:text-[#FAF7F2] flex items-start">
+                            <span className="w-1.5 h-1.5 bg-gold-dark dark:bg-gold-light mr-2 mt-1.5 shrink-0 rotate-45" />
                             <span>{sub.name}</span>
                           </p>
-                          <p className="text-[#6B645C] ml-3.5 mt-0.5 leading-relaxed text-[11px] font-light">
+                          <p className="text-[#6B645C] dark:text-[#A8A29E] ml-3.5 mt-0.5 leading-relaxed text-[11px] font-light">
                             {sub.detail}
                           </p>
                         </div>
@@ -482,7 +482,7 @@ const EventManagement = () => {
                   </div>
                 </div>
 
-                <div className="p-6 pt-0 border-t border-[#E8E1D5]/60">
+                <div className="p-6 pt-0 border-t border-[#E8E1D5]/60 dark:border-[#38312B]">
                   <Button
                     variant="primary"
                     size="sm"
@@ -509,27 +509,27 @@ const EventManagement = () => {
             subtitle="Explore exact operational deliverables provided by Royal Enterprise across seven foundational disciplines."
           />
 
-          <div className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] overflow-hidden shadow-sm mb-12">
+          <div className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] overflow-hidden shadow-sm mb-12">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs sm:text-sm border-collapse">
-                <thead className="bg-[#FAF8F4] text-gold-dark uppercase tracking-[0.16em] font-semibold border-b border-[#E8E1D5]">
+                <thead className="bg-[#FAF8F4] dark:bg-[#141210] text-gold-dark dark:text-gold-light uppercase tracking-[0.16em] font-semibold border-b border-[#E8E1D5] dark:border-[#38312B]">
                   <tr>
-                    <th className="p-4 sm:p-5 w-1/3 border-r border-[#E8E1D5] text-[11px]">Service Module</th>
+                    <th className="p-4 sm:p-5 w-1/3 border-r border-[#E8E1D5] dark:border-[#38312B] text-[11px]">Service Module</th>
                     <th className="p-4 sm:p-5 text-[11px]">What Royal Enterprise Delivers</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#E8E1D5] text-[#3A352F]">
+                <tbody className="divide-y divide-[#E8E1D5] dark:divide-[#38312B] text-[#3A352F] dark:text-[#D5CCC0]">
                   {serviceModules.map((mod, idx) => {
                     const Icon = mod.icon;
                     return (
-                      <tr key={idx} className="hover:bg-[#FAF8F4]/60 transition-colors">
-                        <td className="p-4 sm:p-5 font-medium text-[#141414] border-r border-[#E8E1D5] flex items-center space-x-3">
-                          <div className="w-8 h-8 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark shrink-0">
+                      <tr key={idx} className="hover:bg-[#FAF8F4]/60 dark:hover:bg-[#141210]/60 transition-colors">
+                        <td className="p-4 sm:p-5 font-medium text-[#141414] dark:text-[#FAF7F2] border-r border-[#E8E1D5] dark:border-[#38312B] flex items-center space-x-3">
+                          <div className="w-8 h-8 rounded-full bg-[#FAF8F4] dark:bg-[#141210] border border-gold-dark/30 dark:border-gold-light/30 flex items-center justify-center text-gold-dark dark:text-gold-light shrink-0">
                             <Icon className="w-4 h-4 stroke-[1.5]" />
                           </div>
                           <span>{mod.name}</span>
                         </td>
-                        <td className="p-4 sm:p-5 leading-relaxed text-[#554F47] font-light">
+                        <td className="p-4 sm:p-5 leading-relaxed text-[#554F47] dark:text-[#A8A29E] font-light">
                           {mod.deliverable}
                         </td>
                       </tr>
@@ -544,7 +544,7 @@ const EventManagement = () => {
         {/* ========================================================================= */}
         {/* 3. HOW WE WORK (OUR 4-STEP PROCESS) */}
         {/* ========================================================================= */}
-        <section id="our-process" className="bg-[#F6E4E1] border border-[#ECD6D2] rounded-[4px] p-8 sm:p-12 shadow-sm">
+        <section id="our-process" className="bg-[#F6E4E1] dark:bg-[#1C1414] border border-[#ECD6D2] dark:border-[#3A2222] rounded-[4px] p-8 sm:p-12 shadow-sm">
           <SectionHeader
             badge="Methodology & Precision"
             title="How We Work (Our 4-Step Process)"
@@ -556,27 +556,27 @@ const EventManagement = () => {
               {processSteps.map((step, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#FFFDF9] border border-[#ECD6D2] rounded-[3px] p-6 hover:border-gold-base/50 transition-all duration-300 flex flex-col justify-between shadow-sm"
+                  className="bg-[#FFFDF9] dark:bg-[#141210] border border-[#ECD6D2] dark:border-[#38312B] rounded-[3px] p-6 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-all duration-300 flex flex-col justify-between shadow-sm"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="font-serif text-3xl font-light text-gold-dark">
+                      <span className="font-serif text-3xl font-light text-gold-dark dark:text-gold-light">
                         0{step.step}
                       </span>
-                      <span className="text-[9.5px] uppercase tracking-[0.16em] bg-maroon/10 text-maroon border border-maroon/20 px-2 py-0.5 rounded-[2px] font-semibold">
+                      <span className="text-[9.5px] uppercase tracking-[0.16em] bg-maroon/10 dark:bg-maroon/20 text-maroon dark:text-gold-light border border-maroon/20 dark:border-maroon/40 px-2 py-0.5 rounded-[2px] font-semibold">
                         {step.tag}
                       </span>
                     </div>
 
-                    <h4 className="font-serif font-normal text-lg text-[#141414] mb-2 tracking-wide">
+                    <h4 className="font-serif font-normal text-lg text-[#141414] dark:text-[#FAF7F2] mb-2 tracking-wide">
                       {step.title}
                     </h4>
-                    <p className="text-xs text-[#554F47] leading-relaxed font-light">
+                    <p className="text-xs text-[#554F47] dark:text-[#A8A29E] leading-relaxed font-light">
                       {step.description}
                     </p>
                   </div>
 
-                  <div className="pt-4 mt-4 border-t border-[#ECD6D2]/60 flex items-center text-[10.5px] uppercase tracking-wider text-gold-dark font-medium">
+                  <div className="pt-4 mt-4 border-t border-[#ECD6D2]/60 dark:border-[#38312B] flex items-center text-[10.5px] uppercase tracking-wider text-gold-dark dark:text-gold-light font-medium">
                     <span>Phase 0{step.step} Verified</span>
                     <ChevronRight className="w-3.5 h-3.5 ml-1" />
                   </div>
@@ -602,8 +602,8 @@ const EventManagement = () => {
                 key={pkg.id}
                 className={`relative rounded-[4px] p-8 flex flex-col justify-between transition-all duration-300 ${
                   pkg.popular
-                    ? 'bg-[#FFFDF9] border-2 border-maroon shadow-md'
-                    : 'bg-[#FFFDF9] border border-[#E8E1D5] hover:border-gold-base/50 shadow-sm'
+                    ? 'bg-[#FFFDF9] dark:bg-[#1C1917] border-2 border-maroon dark:border-gold-light shadow-md'
+                    : 'bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] hover:border-gold-base/50 dark:hover:border-gold-light/50 shadow-sm'
                 }`}
               >
                 {pkg.popular && (
@@ -616,31 +616,31 @@ const EventManagement = () => {
                 <div>
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-1">
-                      <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] tracking-wide">
+                      <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] dark:text-[#FAF7F2] tracking-wide">
                         {pkg.name}
                       </h3>
                       {!pkg.popular && (
-                        <span className="text-[9.5px] uppercase tracking-[0.14em] text-gold-dark bg-[#FAF8F4] border border-[#E8E1D5] px-2 py-0.5 rounded-[2px] font-semibold">
+                        <span className="text-[9.5px] uppercase tracking-[0.14em] text-gold-dark dark:text-gold-light bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] px-2 py-0.5 rounded-[2px] font-semibold">
                           {pkg.badge}
                         </span>
                       )}
                     </div>
-                    <p className="text-xs font-semibold text-maroon mt-1">
+                    <p className="text-xs font-semibold text-maroon dark:text-gold-light mt-1">
                       {pkg.targetGuests}
                     </p>
-                    <p className="text-[11px] text-[#6B645C] italic mt-0.5 font-light">
+                    <p className="text-[11px] text-[#6B645C] dark:text-[#A8A29E] italic mt-0.5 font-light">
                       ({pkg.idealEvents})
                     </p>
                   </div>
 
-                  <h5 className="text-[11px] uppercase tracking-[0.14em] font-semibold text-gold-dark mb-4 border-b border-[#E8E1D5] pb-2">
+                  <h5 className="text-[11px] uppercase tracking-[0.14em] font-semibold text-gold-dark dark:text-gold-light mb-4 border-b border-[#E8E1D5] dark:border-[#38312B] pb-2">
                     Package Inclusions:
                   </h5>
 
                   <ul className="space-y-3 mb-8">
                     {pkg.inclusions.map((inc, idx) => (
-                      <li key={idx} className="flex items-start text-xs sm:text-[13px] text-[#3A352F] font-light">
-                        <div className="w-4 h-4 rounded-full bg-gold-dark/15 text-gold-dark flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
+                      <li key={idx} className="flex items-start text-xs sm:text-[13px] text-[#3A352F] dark:text-[#D5CCC0] font-light">
+                        <div className="w-4 h-4 rounded-full bg-gold-dark/15 dark:bg-gold-light/20 text-gold-dark dark:text-gold-light flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
                           <Check className="w-3 h-3 stroke-[2.5]" />
                         </div>
                         <span>{inc}</span>

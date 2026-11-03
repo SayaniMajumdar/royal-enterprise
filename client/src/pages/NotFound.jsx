@@ -4,19 +4,19 @@ import { ArrowLeft, Utensils } from 'lucide-react';
 
 const NotFound = () => {
   return (
-    <div className="min-h-[75vh] flex items-center justify-center bg-[#FAF7F2] px-4 py-24 text-center">
+    <div className="min-h-[75vh] flex items-center justify-center bg-[#FAF7F2] dark:bg-[#141210] px-4 py-24 text-center">
       <div className="max-w-md space-y-6">
-        <div className="w-14 h-14 rounded-full bg-white border border-[#E5DED3] flex items-center justify-center mx-auto text-[#6E1423] shadow-sm">
+        <div className="w-14 h-14 rounded-full bg-white dark:bg-[#1C1917] border border-[#E5DED3] dark:border-[#38312B] flex items-center justify-center mx-auto text-[#6E1423] dark:text-gold-light shadow-sm">
           <Utensils className="w-6 h-6" />
         </div>
         
         <span className="stamp-tag">404 • Missing Link</span>
 
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F1D1A] tracking-tight">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2] tracking-tight">
           This page didn't show up. Unlike our caterers.
         </h1>
 
-        <p className="text-sm text-[#524C44] leading-relaxed">
+        <p className="text-sm text-[#524C44] dark:text-[#A8A29E] leading-relaxed">
           The link you followed seems to have gone missing or was moved. Everything else is on schedule.
         </p>
 

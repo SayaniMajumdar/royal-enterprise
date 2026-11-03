@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -13,12 +14,14 @@ export default {
           dark: '#540D1A',
           deep: '#3E0812',
           light: '#8B1E32',
+          glow: '#A72638',
         },
         marigold: {
           DEFAULT: '#D97706',
           dark: '#B45309',
           light: '#F59E0B',
           pale: '#FEF3C7',
+          amber: '#FCD34D',
           border: 'rgba(217, 119, 6, 0.35)',
         },
         paper: {
@@ -27,6 +30,16 @@ export default {
           surface: '#FFFDF9',
           border: '#E5DED3',
           card: '#F6F2E9',
+        },
+        // Dark Mode Obsidian & Warm Charcoal Palette
+        night: {
+          DEFAULT: '#141210',   // Main dark background
+          surface: '#1C1917',   // Elevated card background
+          card: '#231F1C',      // Sub-card background
+          border: '#38312B',    // Subtle warm border
+          muted: '#9E9487',     // Secondary text
+          text: '#F5EFE6',      // Primary light text
+          highlight: '#2A2420', // Hover background
         },
         charcoal: {
           DEFAULT: '#1F1D1A',
@@ -78,6 +91,7 @@ export default {
         'paper-sm': '0 1px 3px rgba(31, 29, 26, 0.05), 0 1px 2px rgba(31, 29, 26, 0.03)',
         'paper-md': '0 8px 24px -6px rgba(31, 29, 26, 0.08), 0 2px 6px -2px rgba(31, 29, 26, 0.04)',
         'paper-lg': '0 16px 36px -10px rgba(31, 29, 26, 0.12), 0 4px 12px -3px rgba(31, 29, 26, 0.05)',
+        'dark-card': '0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(255, 255, 255, 0.04)',
       },
     },
   },

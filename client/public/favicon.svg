@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="maroonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B1E32"/>
+      <stop offset="50%" stop-color="#6E1423"/>
+      <stop offset="100%" stop-color="#4A0A15"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="256" cy="256" r="240" fill="url(#maroonGrad)"/>
+  <circle cx="256" cy="256" r="222" fill="none" stroke="url(#goldGrad)" stroke-width="6"/>
+  <circle cx="256" cy="256" r="210" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- Crown -->
+  <g transform="translate(0, -12)">
+    <path d="M 176 172 Q 256 182 336 172 L 340 186 Q 256 198 172 186 Z" fill="url(#goldGrad)"/>
+    <path d="M 246 172 L 256 112 L 266 172 Z" fill="url(#goldGrad)"/>
+    <circle cx="256" cy="106" r="8" fill="url(#goldGrad)"/>
+    <path d="M 210 174 L 216 128 L 230 173 Z" fill="url(#goldGrad)"/>
+    <circle cx="216" cy="123" r="6" fill="url(#goldGrad)"/>
+    <path d="M 302 174 L 296 128 L 282 173 Z" fill="url(#goldGrad)"/>
+    <circle cx="296" cy="123" r="6" fill="url(#goldGrad)"/>
+    <path d="M 180 174 L 176 142 L 196 174 Z" fill="url(#goldGrad)"/>
+    <circle cx="176" cy="138" r="5" fill="url(#goldGrad)"/>
+    <path d="M 332 174 L 336 142 L 316 174 Z" fill="url(#goldGrad)"/>
+    <circle cx="336" cy="138" r="5" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Monogram R -->
+  <path d="M 204 220 L 204 366" fill="none" stroke="url(#goldGrad)" stroke-width="24" stroke-linecap="square"/>
+  <path d="M 184 220 L 228 220" fill="none" stroke="url(#goldGrad)" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 182 366 L 232 366" fill="none" stroke="url(#goldGrad)" stroke-width="16" stroke-linecap="round"/>
+  <path d="M 204 220 L 262 220 C 296 220 318 238 318 266 C 318 294 294 310 260 310 L 204 310"
+    fill="none" stroke="url(#goldGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 252 308 Q 272 328 322 368"
+    fill="none" stroke="url(#goldGrad)" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="324" cy="368" r="9" fill="url(#goldGrad)"/>
+
+  <!-- E flourish -->
+  <path d="M 308 274 Q 346 274 346 312 Q 346 360 288 360 L 232 360"
+    fill="none" stroke="url(#goldGrad)" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  <path d="M 276 314 L 332 314"
+    fill="none" stroke="url(#goldGrad)" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Base Laurel -->
+  <path d="M 140 360 C 140 410 180 436 256 436 C 332 436 372 410 372 360" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="256" cy="436" r="10" fill="url(#goldGrad)"/>
+</svg>

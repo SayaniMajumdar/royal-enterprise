@@ -41,18 +41,18 @@ const CallToAction = ({ onOpenQuote }) => {
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-[#FAF7F2]">
+    <section className="py-16 sm:py-20 bg-[#FAF7F2] dark:bg-[#141210] transition-colors">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        <div className="bg-[#540D1A] text-white rounded-lg p-8 sm:p-12 shadow-paper-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-[#3E0812]">
+        <div className="bg-[#540D1A] dark:bg-[#3E0812] text-white rounded-lg p-8 sm:p-12 shadow-paper-lg dark:shadow-dark-card grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-[#3E0812] dark:border-[#540D1A]">
           
           <div className="lg:col-span-7 space-y-4">
-            <span className="text-xs uppercase font-bold tracking-wider text-amber-300 block">
+            <span className="text-xs uppercase font-bold tracking-wider text-amber-300 dark:text-[#FCD34D] block">
               Have a date in mind?
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
               Let's talk through your guest list, menus, and venue options.
             </h2>
-            <p className="text-sm sm:text-base text-white/90 leading-relaxed max-w-xl font-light">
+            <p className="text-sm sm:text-base text-white/90 dark:text-[#D5CCC0] leading-relaxed max-w-xl font-light">
               Dates during the Kolkata wedding seasons (November–February) fill up quickly. Give us a call or drop your number below, and we'll check our kitchen availability.
             </p>
 
@@ -63,8 +63,8 @@ const CallToAction = ({ onOpenQuote }) => {
               </div>
             ) : (
               <form onSubmit={handleQuickCallback} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-2 max-w-md">
-                <div className="flex-1 flex items-center bg-white border border-[#E5DED3] rounded px-3 py-2 text-[#1F1D1A]">
-                  <span className="text-xs font-bold text-[#7D756A] mr-2">🇮🇳 +91</span>
+                <div className="flex-1 flex items-center bg-white dark:bg-[#1C1917] border border-[#E5DED3] dark:border-[#38312B] rounded px-3 py-2 text-[#1F1D1A] dark:text-[#FAF7F2]">
+                  <span className="text-xs font-bold text-[#7D756A] dark:text-[#8C8477] mr-2">🇮🇳 +91</span>
                   <input
                     type="tel"
                     placeholder="Enter phone number"

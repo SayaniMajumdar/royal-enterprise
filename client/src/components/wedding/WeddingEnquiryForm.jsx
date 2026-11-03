@@ -198,24 +198,24 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
   };
 
   return (
-    <div id="wedding-enquiry-form" className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-6 sm:p-10 shadow-theevexa relative overflow-hidden">
+    <div id="wedding-enquiry-form" className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-6 sm:p-10 shadow-theevexa relative overflow-hidden">
       <div className="h-[2.5px] bg-gradient-to-r from-maroon via-gold-base to-maroon -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
       {submittedData ? (
         <div className="text-center py-12 space-y-4">
-          <div className="w-14 h-14 bg-emerald-50 border border-emerald-600/40 rounded-full flex items-center justify-center mx-auto text-emerald-700">
+          <div className="w-14 h-14 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-600/40 rounded-full flex items-center justify-center mx-auto text-emerald-700 dark:text-emerald-400">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="font-serif text-3xl font-normal text-[#141414] tracking-tight">
+          <h3 className="font-serif text-3xl font-normal text-[#141414] dark:text-[#FAF7F2] tracking-tight">
             Wedding Proposal Request Confirmed
           </h3>
-          <p className="text-[#554F47] max-w-md mx-auto text-sm leading-relaxed font-light">
-            Congratulations, <span className="text-maroon font-semibold">{submittedData.customerName}</span>. Your wedding inquiry for{' '}
-            <span className="text-maroon font-semibold">{submittedData.packageType}</span> has been logged into our master database.
+          <p className="text-[#554F47] dark:text-[#A8A29E] max-w-md mx-auto text-sm leading-relaxed font-light">
+            Congratulations, <span className="text-maroon dark:text-gold-light font-semibold">{submittedData.customerName}</span>. Your wedding inquiry for{' '}
+            <span className="text-maroon dark:text-gold-light font-semibold">{submittedData.packageType}</span> has been logged into our master database.
           </p>
-          <div className="inline-block bg-[#F6F3EE] border border-[#E8E1D5] px-4 py-2 rounded-[2px] text-xs text-[#3A352F]">
-            Tracking ID: <span className="font-mono text-gold-dark font-bold">{submittedData.submissionId}</span>
+          <div className="inline-block bg-[#F6F3EE] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] px-4 py-2 rounded-[2px] text-xs text-[#3A352F] dark:text-[#FAF7F2]">
+            Tracking ID: <span className="font-mono text-gold-dark dark:text-gold-light font-bold">{submittedData.submissionId}</span>
           </div>
-          <p className="text-xs text-[#524C44] font-medium">
+          <p className="text-xs text-[#524C44] dark:text-[#C5BEB3] font-medium">
             Got it. We will call you within 2 hours between 10:00 AM and 8:30 PM IST to discuss dates and venue possibilities.
           </p>
           <div className="pt-4">
@@ -230,11 +230,11 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="border-b border-[#E8E1D5] pb-4 mb-6">
-            <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#141414] tracking-tight">
+          <div className="border-b border-[#E8E1D5] dark:border-[#38312B] pb-4 mb-6">
+            <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#141414] dark:text-[#FAF7F2] tracking-tight">
               Wedding Planner Enquiry Form
             </h3>
-            <p className="text-xs sm:text-sm text-[#6B645C] mt-1 font-light">
+            <p className="text-xs sm:text-sm text-[#6B645C] dark:text-[#A8A29E] mt-1 font-light">
               Share your wedding aspirations. All responses are logged automatically into Google Sheets for confidential executive planning.
             </p>
           </div>
@@ -316,7 +316,7 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
           </div>
 
           {/* Package Type Radio / Select */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 bg-[#050811] p-4 border border-slate-800/80 rounded-[2px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 bg-[#FAF8F4] dark:bg-[#141210] p-4 border border-[#E8E1D5] dark:border-[#38312B] rounded-[2px]">
             <Select
               label="Package Scope"
               name="packageType"
@@ -344,8 +344,8 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
           </div>
 
           {/* Key Wedding Services Checklist (Mapped to Database Columns) */}
-          <div className="bg-[#FAF8F4] p-5 sm:p-6 border border-[#E8E1D5] rounded-[3px]">
-            <label className="block text-[11px] uppercase tracking-[0.2em] text-gold-dark font-medium mb-3">
+          <div className="bg-[#FAF8F4] dark:bg-[#141210] p-5 sm:p-6 border border-[#E8E1D5] dark:border-[#38312B] rounded-[3px]">
+            <label className="block text-[11px] uppercase tracking-[0.2em] text-gold-dark dark:text-gold-light font-medium mb-3">
               Required Wedding Services Scope (Database Synchronized)
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -354,8 +354,8 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
                   key={svc.id}
                   className={`flex items-center space-x-2 text-xs p-3 rounded-[3px] border cursor-pointer transition-colors ${
                     serviceChecks[svc.key]
-                      ? 'border-maroon/60 bg-maroon/5 text-maroon font-medium'
-                      : 'border-[#E8E1D5] bg-[#FFFDF9] text-[#3A352F] hover:border-[#D5CCC0]'
+                      ? 'border-maroon/60 bg-maroon/5 dark:bg-maroon/20 text-maroon dark:text-gold-light font-medium'
+                      : 'border-[#E8E1D5] dark:border-[#38312B] bg-[#FFFDF9] dark:bg-[#1C1917] text-[#3A352F] dark:text-[#FAF7F2] hover:border-[#D5CCC0] dark:hover:border-[#524B42]'
                   }`}
                 >
                   <input

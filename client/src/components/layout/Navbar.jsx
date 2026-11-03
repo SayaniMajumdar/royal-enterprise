@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MessageSquare, MapPin } from 'lucide-react';
 import { COMPANY_INFO } from '../../data/mockData';
+import Logo from '../common/Logo';
+import ThemeToggle from '../common/ThemeToggle';
 
 const Navbar = ({ onOpenQuoteModal }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +34,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top Utility Bar: Clear Kolkata Helpline & WhatsApp */}
-      <div className="bg-[#540D1A] text-white text-xs py-1.5 px-4 sm:px-6 border-b border-white/10 hidden md:block">
+      <div className="bg-[#540D1A] dark:bg-[#3E0812] text-white text-xs py-1.5 px-4 sm:px-6 border-b border-white/10 dark:border-white/5 hidden md:block transition-colors">
         <div className="max-w-[1240px] mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3 text-white/90">
             <span className="font-medium text-amber-200">Kolkata & Eastern India</span>
@@ -65,29 +67,17 @@ const Navbar = ({ onOpenQuoteModal }) => {
       <div
         className={`transition-all duration-200 ${
           scrolled
-            ? 'bg-white text-[#1F1D1A] shadow-md py-3 border-b border-[#E5DED3]'
-            : 'bg-[#FAF7F2] text-[#1F1D1A] py-3.5 border-b border-[#E5DED3]'
+            ? 'bg-white dark:bg-[#1C1917] text-[#1F1D1A] dark:text-[#F5EFE6] shadow-md dark:shadow-dark-card py-2.5 sm:py-3 border-b border-[#E5DED3] dark:border-[#38312B]'
+            : 'bg-[#FAF7F2] dark:bg-[#141210] text-[#1F1D1A] dark:text-[#F5EFE6] py-3 sm:py-3.5 border-b border-[#E5DED3] dark:border-[#38312B]'
         }`}
       >
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2.5 group">
-              <div className="w-9 h-9 rounded bg-[#6E1423] text-white flex items-center justify-center font-serif text-lg font-bold shadow-sm">
-                R
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#1F1D1A] leading-tight group-hover:text-[#6E1423] transition-colors">
-                  Royal Enterprise
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.16em] font-medium text-[#7D756A]">
-                  Kolkata • Events & Catering
-                </span>
-              </div>
-            </Link>
+            {/* New Official Royal Enterprise Logo */}
+            <Logo iconSize="h-10 w-10 sm:h-11 sm:w-11" />
 
             {/* Desktop Navigation Links: Short, single line, no wrapping */}
-            <nav className="hidden lg:flex items-center space-x-7">
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
                 return (
@@ -96,21 +86,23 @@ const Navbar = ({ onOpenQuoteModal }) => {
                     to={link.path}
                     className={`text-[14px] font-medium whitespace-nowrap py-1 transition-colors relative ${
                       isActive
-                        ? 'text-[#6E1423] font-semibold'
-                        : 'text-[#3B3630] hover:text-[#6E1423]'
+                        ? 'text-[#6E1423] dark:text-[#F59E0B] font-semibold'
+                        : 'text-[#3B3630] dark:text-[#D5CCC0] hover:text-[#6E1423] dark:hover:text-[#F59E0B]'
                     }`}
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#6E1423] rounded-full" />
+                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#6E1423] dark:bg-[#F59E0B] rounded-full" />
                     )}
                   </Link>
                 );
               })}
             </nav>
 
-            {/* Desktop Action Buttons: Single-line "Get a quote" */}
+            {/* Desktop Action Buttons: Theme Toggle & "Get a quote" */}
             <div className="hidden lg:flex items-center space-x-3">
+              <ThemeToggle size="md" />
+
               <a
                 href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hello%20Royal%20Enterprise,%20I%20would%20like%20to%20discuss%20an%20event.`}
                 target="_blank"
@@ -120,6 +112,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
                 <MessageSquare className="w-3.5 h-3.5" />
                 <span>WhatsApp</span>
               </a>
+
               <button
                 type="button"
                 onClick={onOpenQuoteModal}
@@ -129,19 +122,21 @@ const Navbar = ({ onOpenQuoteModal }) => {
               </button>
             </div>
 
-            {/* Mobile Actions */}
+            {/* Mobile Actions: Theme Toggle + Quote + Menu */}
             <div className="flex lg:hidden items-center space-x-2">
+              <ThemeToggle size="sm" />
+
               <button
                 type="button"
                 onClick={onOpenQuoteModal}
                 className="btn-maroon px-3 py-1.5 text-xs font-semibold"
               >
-                Get a quote
+                Get quote
               </button>
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-[#1F1D1A] hover:text-[#6E1423]"
+                className="p-1.5 text-[#1F1D1A] dark:text-[#F5EFE6] hover:text-[#6E1423] dark:hover:text-[#F59E0B]"
                 aria-label="Toggle navigation menu"
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -153,7 +148,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
 
       {/* Mobile Navigation Drawer */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-b border-[#E5DED3] px-6 pt-4 pb-6 space-y-4 shadow-xl text-[#1F1D1A]">
+        <div className="lg:hidden bg-white dark:bg-[#1C1917] border-b border-[#E5DED3] dark:border-[#38312B] px-6 pt-4 pb-6 space-y-4 shadow-xl text-[#1F1D1A] dark:text-[#F5EFE6]">
           <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
@@ -163,8 +158,8 @@ const Navbar = ({ onOpenQuoteModal }) => {
                   to={link.path}
                   className={`px-3 py-2.5 rounded text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-[#FAF2F3] text-[#6E1423] font-semibold'
-                      : 'text-[#3B3630] hover:text-[#6E1423]'
+                      ? 'bg-[#FAF2F3] dark:bg-[#2A181C] text-[#6E1423] dark:text-[#F59E0B] font-semibold'
+                      : 'text-[#3B3630] dark:text-[#D5CCC0] hover:text-[#6E1423] dark:hover:text-[#F59E0B]'
                   }`}
                 >
                   {link.name}
@@ -172,7 +167,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
               );
             })}
           </nav>
-          <div className="pt-3 border-t border-[#E5DED3] space-y-2.5">
+          <div className="pt-3 border-t border-[#E5DED3] dark:border-[#38312B] space-y-2.5">
             <button
               type="button"
               onClick={() => {

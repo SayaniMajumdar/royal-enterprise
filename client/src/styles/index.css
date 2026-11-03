@@ -8,6 +8,10 @@
     color-scheme: light;
   }
 
+  html.dark {
+    color-scheme: dark;
+  }
+
   body {
     background-color: #FAF7F2;
     color: #1F1D1A;
@@ -16,11 +20,22 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.65;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .dark body {
+    background-color: #141210;
+    color: #F5EFE6;
   }
 
   ::selection {
     background-color: #FEF3C7;
     color: #6E1423;
+  }
+
+  .dark ::selection {
+    background-color: #6E1423;
+    color: #FDE68A;
   }
 
   /* Headings: Lora editorial serif with natural weight and human rhythm */
@@ -55,6 +70,10 @@
     flex: 1;
     background: #E5DED3;
   }
+  .dark .paper-divider::before,
+  .dark .paper-divider::after {
+    background: #38312B;
+  }
 
   /* Authentic Primary Button: Deep Heritage Maroon */
   .btn-maroon,
@@ -73,6 +92,16 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(110, 20, 35, 0.2);
   }
+  .dark .btn-maroon,
+  .dark .btn-brand {
+    background-color: #8B1E32;
+    border-color: #A72638;
+  }
+  .dark .btn-maroon:hover,
+  .dark .btn-brand:hover {
+    background-color: #6E1423;
+    box-shadow: 0 4px 14px rgba(139, 30, 50, 0.4);
+  }
 
   /* Accent Button: Marigold / Turmeric Yellow */
   .btn-marigold,
@@ -90,6 +119,18 @@
     background-color: #B45309;
     transform: translateY(-1px);
   }
+  .dark .btn-marigold,
+  .dark .btn-gold {
+    background-color: #F59E0B;
+    color: #141210;
+    border-color: #D97706;
+    font-weight: 700;
+  }
+  .dark .btn-marigold:hover,
+  .dark .btn-gold:hover {
+    background-color: #D97706;
+    color: #FFFFFF;
+  }
 
   /* Secondary Outline Button */
   .btn-outline {
@@ -103,6 +144,14 @@
   .btn-outline:hover {
     background-color: #F0ECE1;
     border-color: #1F1D1A;
+  }
+  .dark .btn-outline {
+    color: #F5EFE6;
+    border-color: #38312B;
+  }
+  .dark .btn-outline:hover {
+    background-color: #231F1C;
+    border-color: #F59E0B;
   }
 
   /* Direct WhatsApp Button */
@@ -125,12 +174,21 @@
     color: #1F1D1A;
     padding: 10px 14px;
     font-size: 15px;
-    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
   }
   .input-clean:focus {
     outline: none;
     border-color: #6E1423;
     box-shadow: 0 0 0 2px rgba(110, 20, 35, 0.15);
+  }
+  .dark .input-clean {
+    background-color: #1C1917;
+    border-color: #38312B;
+    color: #F5EFE6;
+  }
+  .dark .input-clean:focus {
+    border-color: #F59E0B;
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
   }
 
   /* Editorial stamp tag */
@@ -145,6 +203,11 @@
     color: #6E1423;
     background-color: #FAF2F3;
     border-radius: 2px;
+  }
+  .dark .stamp-tag {
+    border-color: #D97706;
+    color: #FCD34D;
+    background-color: #241D17;
   }
 }
 
@@ -161,4 +224,13 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #6E1423;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #141210;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #38312B;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #F59E0B;
 }

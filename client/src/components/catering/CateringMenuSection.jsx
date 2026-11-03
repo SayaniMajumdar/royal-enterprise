@@ -59,7 +59,7 @@ const CateringMenuSection = () => {
   return (
     <div className="py-6">
       {/* Category Tabs */}
-      <div className="flex flex-wrap items-center justify-between gap-4 mb-8 border-b border-[#E8E1D5] pb-5">
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-8 border-b border-[#E8E1D5] dark:border-[#38312B] pb-5">
         <div className="flex flex-wrap gap-2">
           {categories.map((cat) => (
             <button
@@ -69,7 +69,7 @@ const CateringMenuSection = () => {
               className={`px-4 sm:px-5 py-2 rounded-[3px] text-xs font-medium uppercase tracking-[0.16em] transition-all duration-200 ${
                 activeCategory === cat.id
                   ? 'bg-maroon text-[#FFF8F0] shadow-sm'
-                  : 'bg-[#FFFDF9] text-[#3A352F] hover:text-maroon border border-[#E8E1D5]'
+                  : 'bg-[#FFFDF9] dark:bg-[#1C1917] text-[#3A352F] dark:text-[#FAF7F2] hover:text-maroon dark:hover:text-gold-light border border-[#E8E1D5] dark:border-[#38312B]'
               }`}
             >
               {cat.label}
@@ -78,14 +78,14 @@ const CateringMenuSection = () => {
         </div>
 
         {/* Dietary Toggle */}
-        <div className="flex items-center space-x-1.5 bg-[#FFFDF9] p-1 rounded-[3px] border border-[#E8E1D5] text-xs">
+        <div className="flex items-center space-x-1.5 bg-[#FFFDF9] dark:bg-[#1C1917] p-1 rounded-[3px] border border-[#E8E1D5] dark:border-[#38312B] text-xs">
           <button
             type="button"
             onClick={() => setDietaryFilter('all')}
             className={`px-3 py-1.5 rounded-[2px] transition-colors font-medium text-[11px] tracking-wide ${
               dietaryFilter === 'all'
-                ? 'bg-[#FAF8F4] text-gold-dark border border-gold-dark/40 font-semibold'
-                : 'text-[#6B645C] hover:text-[#141414]'
+                ? 'bg-[#FAF8F4] dark:bg-[#25201C] text-gold-dark dark:text-gold-light border border-gold-dark/40 dark:border-gold-light/40 font-semibold'
+                : 'text-[#6B645C] dark:text-[#A8A29E] hover:text-[#141414] dark:hover:text-[#FAF7F2]'
             }`}
           >
             All Items
@@ -95,8 +95,8 @@ const CateringMenuSection = () => {
             onClick={() => setDietaryFilter('veg')}
             className={`px-3 py-1.5 rounded-[2px] transition-colors font-medium text-[11px] tracking-wide flex items-center space-x-1.5 ${
               dietaryFilter === 'veg'
-                ? 'bg-emerald-50 text-emerald-800 border border-emerald-600/30 font-semibold'
-                : 'text-[#6B645C] hover:text-emerald-700'
+                ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-600/30 font-semibold'
+                : 'text-[#6B645C] dark:text-[#A8A29E] hover:text-emerald-700 dark:hover:text-emerald-300'
             }`}
           >
             <span className="w-2 h-2 rounded-full bg-[#2E7D32]" />
@@ -107,8 +107,8 @@ const CateringMenuSection = () => {
             onClick={() => setDietaryFilter('non-veg')}
             className={`px-3 py-1.5 rounded-[2px] transition-colors font-medium text-[11px] tracking-wide flex items-center space-x-1.5 ${
               dietaryFilter === 'non-veg'
-                ? 'bg-rose-50 text-rose-800 border border-rose-600/30 font-semibold'
-                : 'text-[#6B645C] hover:text-rose-700'
+                ? 'bg-rose-50 dark:bg-rose-950/40 text-rose-800 dark:text-rose-300 border border-rose-600/30 font-semibold'
+                : 'text-[#6B645C] dark:text-[#A8A29E] hover:text-rose-700 dark:hover:text-rose-300'
             }`}
           >
             <span className="w-2 h-2 rounded-full bg-[#B3261E]" />
@@ -122,7 +122,7 @@ const CateringMenuSection = () => {
         {filteredItems.map((dish, idx) => (
           <div
             key={idx}
-            className="p-6 rounded-[3px] bg-[#FFFDF9] border border-[#E8E1D5] hover:border-gold-base/60 transition-all duration-200 flex flex-col justify-between group shadow-sm hover:shadow-md"
+            className="p-6 rounded-[3px] bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] hover:border-gold-base/60 dark:hover:border-gold-light/50 transition-all duration-200 flex flex-col justify-between group shadow-sm hover:shadow-md"
           >
             <div>
               <div className="flex items-center justify-between gap-3 mb-2.5">
@@ -130,34 +130,34 @@ const CateringMenuSection = () => {
                   <span
                     className={`w-4 h-4 rounded-[2px] flex items-center justify-center border text-[9px] ${
                       dish.type === 'veg'
-                        ? 'border-[#2E7D32] text-[#2E7D32] bg-emerald-50'
-                        : 'border-[#B3261E] text-[#B3261E] bg-rose-50'
+                        ? 'border-[#2E7D32] text-[#2E7D32] bg-emerald-50 dark:bg-emerald-950/40'
+                        : 'border-[#B3261E] text-[#B3261E] bg-rose-50 dark:bg-rose-950/40'
                     }`}
                     title={dish.type === 'veg' ? 'Vegetarian' : 'Non-Vegetarian'}
                   >
                     ●
                   </span>
-                  <h4 className="font-serif text-lg font-normal text-[#141414] group-hover:text-maroon transition-colors tracking-wide">
+                  <h4 className="font-serif text-lg font-normal text-[#141414] dark:text-[#FAF7F2] group-hover:text-maroon dark:group-hover:text-gold-light transition-colors tracking-wide">
                     {dish.name}
                   </h4>
                 </div>
-                <span className="text-[9.5px] uppercase tracking-[0.16em] font-semibold px-2 py-0.5 rounded-[2px] bg-[#FAF8F4] border border-[#E8E1D5] text-gold-dark shrink-0">
+                <span className="text-[9.5px] uppercase tracking-[0.16em] font-semibold px-2 py-0.5 rounded-[2px] bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] text-gold-dark dark:text-gold-light shrink-0">
                   {dish.cuisine}
                 </span>
               </div>
-              <p className="text-xs sm:text-[13px] text-[#554F47] leading-relaxed font-light">
+              <p className="text-xs sm:text-[13px] text-[#554F47] dark:text-[#A8A29E] leading-relaxed font-light">
                 {dish.description}
               </p>
             </div>
-            <div className="pt-3 mt-4 border-t border-[#E8E1D5]/60 flex items-center justify-between text-[11px] text-[#6B645C] font-light">
+            <div className="pt-3 mt-4 border-t border-[#E8E1D5]/60 dark:border-[#38312B] flex items-center justify-between text-[11px] text-[#6B645C] dark:text-[#A8A29E] font-light">
               <span>{dish.type === 'veg' ? '100% Pure Vegetarian' : 'Fresh Poultry, Lamb or Seafood'}</span>
-              <span className="text-gold-dark font-medium">Chef Recommended</span>
+              <span className="text-gold-dark dark:text-gold-light font-medium">Chef Recommended</span>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-8 p-4 bg-[#FFFDF9] border border-[#E8E1D5] rounded-[3px] text-center text-xs text-[#554F47] font-light shadow-sm">
+      <div className="mt-8 p-4 bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[3px] text-center text-xs text-[#554F47] dark:text-[#D5CCC0] font-light shadow-sm">
         <Sparkles className="w-3.5 h-3.5 text-gold-dark inline-block mr-1.5 -mt-0.5" />
         All menus are customizable. We provide dedicated pure vegetarian and Jain cooking kitchens with separate utensils, cold rooms, and service staff upon request.
       </div>

@@ -137,14 +137,14 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
       maxWidth="max-w-2xl"
     >
       {/* Division Tabs */}
-      <div className="grid grid-cols-3 gap-1.5 bg-[#FAF7F2] p-1.5 rounded border border-[#E5DED3] mb-6">
+      <div className="grid grid-cols-3 gap-1.5 bg-[#FAF7F2] dark:bg-[#141210] p-1.5 rounded border border-[#E5DED3] dark:border-[#38312B] mb-6">
         <button
           type="button"
           onClick={() => setActiveTab('wedding')}
           className={`py-2 text-xs rounded transition-all font-semibold ${
             activeTab === 'wedding'
               ? 'bg-[#6E1423] text-white shadow-sm'
-              : 'text-[#524C44] hover:text-[#1F1D1A] hover:bg-white/60'
+              : 'text-[#524C44] dark:text-[#A8A29E] hover:text-[#1F1D1A] dark:hover:text-[#FAF7F2] hover:bg-white/60 dark:hover:bg-white/5'
           }`}
         >
           Weddings
@@ -155,7 +155,7 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
           className={`py-2 text-xs rounded transition-all font-semibold ${
             activeTab === 'catering'
               ? 'bg-[#6E1423] text-white shadow-sm'
-              : 'text-[#524C44] hover:text-[#1F1D1A] hover:bg-white/60'
+              : 'text-[#524C44] dark:text-[#A8A29E] hover:text-[#1F1D1A] dark:hover:text-[#FAF7F2] hover:bg-white/60 dark:hover:bg-white/5'
           }`}
         >
           Catering
@@ -166,7 +166,7 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
           className={`py-2 text-xs rounded transition-all font-semibold ${
             activeTab === 'events'
               ? 'bg-[#6E1423] text-white shadow-sm'
-              : 'text-[#524C44] hover:text-[#1F1D1A] hover:bg-white/60'
+              : 'text-[#524C44] dark:text-[#A8A29E] hover:text-[#1F1D1A] dark:hover:text-[#FAF7F2] hover:bg-white/60 dark:hover:bg-white/5'
           }`}
         >
           Events

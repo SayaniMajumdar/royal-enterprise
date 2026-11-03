@@ -27,7 +27,7 @@ const CheckboxGroup = ({
   return (
     <div className={`w-full ${className}`}>
       {label && (
-        <label className="block text-[11px] font-medium text-[#6B645C] uppercase tracking-[0.2em] mb-3">
+        <label className="block text-[11px] font-medium text-[#6B645C] dark:text-[#A8A29E] uppercase tracking-[0.2em] mb-3">
           {label}
         </label>
       )}
@@ -42,8 +42,8 @@ const CheckboxGroup = ({
               key={val}
               className={`flex items-center space-x-2.5 p-3 rounded-[3px] border cursor-pointer transition-all select-none text-xs ${
                 isChecked
-                  ? 'border-maroon/60 bg-maroon/5 text-maroon font-medium'
-                  : 'border-[#E8E1D5] bg-[#FFFDF9] text-[#3A352F] hover:border-[#D5CCC0]'
+                  ? 'border-maroon/60 bg-maroon/5 dark:bg-maroon/20 text-maroon dark:text-gold-light font-medium'
+                  : 'border-[#E8E1D5] dark:border-[#38312B] bg-[#FFFDF9] dark:bg-[#1C1917] text-[#3A352F] dark:text-[#FAF7F2] hover:border-[#D5CCC0] dark:hover:border-[#524B42]'
               }`}
             >
               <input

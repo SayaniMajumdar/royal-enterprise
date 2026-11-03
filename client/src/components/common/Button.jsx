@@ -25,11 +25,11 @@ const Button = ({
     maroon:
       'btn-maroon text-[#FFF8F0] shadow-sm active:translate-y-0',
     outline:
-      'border border-slate-300 text-[#374151] hover:border-roseBrand hover:text-roseBrand hover:bg-roseBrand/5 active:translate-y-0',
+      'border border-[#D5CCC0] dark:border-[#38312B] text-[#374151] dark:text-[#FAF7F2] hover:border-maroon dark:hover:border-gold-light hover:text-maroon dark:hover:text-gold-light hover:bg-maroon/5 dark:hover:bg-gold-light/10 active:translate-y-0',
     dark:
-      'bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 active:translate-y-0',
+      'bg-stone-900 hover:bg-stone-800 text-white border border-stone-700 active:translate-y-0',
     ghost:
-      'text-roseBrand hover:text-roseBrand-dark active:translate-y-0',
+      'text-maroon dark:text-gold-light hover:text-maroon-dark dark:hover:text-gold active:translate-y-0',
   };
 
   const sizes = {
