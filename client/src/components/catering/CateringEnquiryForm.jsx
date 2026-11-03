@@ -159,24 +159,24 @@ const CateringEnquiryForm = ({ initialPackage = '' }) => {
   };
 
   return (
-    <div id="catering-enquiry-form" className="bg-[#090E1B] border border-gold-500/25 rounded-[3px] p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-      <div className="h-[2px] bg-gradient-to-r from-transparent via-gold-400/60 to-transparent -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
+    <div id="catering-enquiry-form" className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-6 sm:p-10 shadow-theevexa relative overflow-hidden">
+      <div className="h-[2.5px] bg-gradient-to-r from-maroon via-gold-base to-maroon -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
       {submittedData ? (
         <div className="text-center py-12 space-y-4">
-          <div className="w-14 h-14 bg-gold-500/15 border border-gold-400/60 rounded-[2px] flex items-center justify-center mx-auto text-gold-400">
+          <div className="w-14 h-14 bg-emerald-50 border border-emerald-600/40 rounded-full flex items-center justify-center mx-auto text-emerald-700">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="font-serif text-2xl font-bold text-slate-100 tracking-wide">
+          <h3 className="font-serif text-3xl font-normal text-[#141414] tracking-tight">
             Catering Request Received
           </h3>
-          <p className="text-slate-300 max-w-md mx-auto text-sm leading-relaxed font-light">
-            Thank you, <span className="text-gold-300 font-semibold">{submittedData.customerName}</span>. Your culinary enquiry for{' '}
-            <strong className="text-gold-300 font-medium">{submittedData.guestCount} guests</strong> ({submittedData.selectedPackage}) has been saved to our master schedule.
+          <p className="text-[#554F47] max-w-md mx-auto text-sm leading-relaxed font-light">
+            Thank you, <span className="text-maroon font-semibold">{submittedData.customerName}</span>. Your culinary enquiry for{' '}
+            <strong className="text-maroon font-medium">{submittedData.guestCount} guests</strong> ({submittedData.selectedPackage}) has been saved to our master schedule.
           </p>
-          <div className="inline-block bg-navy-950 border border-slate-800 px-4 py-2 rounded-[2px] text-xs text-slate-300">
-            Tracking ID: <span className="font-mono text-gold-400 font-bold">{submittedData.submissionId}</span>
+          <div className="inline-block bg-[#F6F3EE] border border-[#E8E1D5] px-4 py-2 rounded-[2px] text-xs text-[#3A352F]">
+            Tracking ID: <span className="font-mono text-gold-dark font-bold">{submittedData.submissionId}</span>
           </div>
-          <p className="text-xs text-slate-400 font-light">
+          <p className="text-xs text-[#6B645C] font-light">
             Our Master Chef and Banquet Director will contact you within 24 hours to arrange an itemized menu tasting.
           </p>
           <div className="pt-4">
@@ -191,15 +191,15 @@ const CateringEnquiryForm = ({ initialPackage = '' }) => {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="border-b border-slate-800 pb-4 mb-6">
-            <div className="flex items-center space-x-2 text-gold-400 text-xs font-semibold uppercase tracking-widest mb-1">
+          <div className="border-b border-[#E8E1D5] pb-4 mb-6">
+            <div className="flex items-center space-x-2 text-gold-dark text-xs font-semibold uppercase tracking-widest mb-1">
               <Utensils className="w-4 h-4" />
               <span>Direct Kitchen Reservation</span>
             </div>
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100">
+            <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#141414] tracking-tight">
               Catering Services Enquiry Form
             </h3>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1">
+            <p className="text-xs sm:text-sm text-[#6B645C] mt-1 font-light">
               Select your desired package, event date, and guest count. All details are saved to our master Google Sheets database for immediate executive planning.
             </p>
           </div>

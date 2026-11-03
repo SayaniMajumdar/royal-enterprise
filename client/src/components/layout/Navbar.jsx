@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Crown, PhoneCall, Sparkles } from 'lucide-react';
-import Button from '../common/Button';
+import { Menu, X, Star, Phone, MessageCircle } from 'lucide-react';
 import { COMPANY_INFO } from '../../data/mockData';
 
 const Navbar = ({ onOpenQuoteModal }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 30) {
+      if (window.scrollY > 40) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -21,7 +21,6 @@ const Navbar = ({ onOpenQuoteModal }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
@@ -35,107 +34,106 @@ const Navbar = ({ onOpenQuoteModal }) => {
     { name: 'Contact Us', path: '/contact' },
   ];
 
+  // Determine navbar appearance: transparent over hero when at top of homepage, solid ivory otherwise
+  const isTransparent = isHomePage && !scrolled;
+
   return (
     <>
-      {/* Top micro announcement bar */}
-      <div className="bg-[#050810] border-b border-gold-500/15 text-[11px] text-slate-300 py-2 px-4 hidden sm:block">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-2.5">
-            <Sparkles className="w-3.5 h-3.5 text-gold-400/80" />
-            <span className="tracking-[0.08em] text-slate-300 font-normal">Bespoke Celebrations & Artisanal Banquets</span>
-          </div>
-          <div className="flex items-center space-x-6 text-slate-300">
-            <a
-              href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-              className="flex items-center space-x-1.5 hover:text-gold-300 transition-colors"
-            >
-              <PhoneCall className="w-3 h-3 text-gold-400" />
-              <span className="tracking-wide">{COMPANY_INFO.phone}</span>
-            </a>
-            <span className="text-slate-600">|</span>
-            <a
-              href={`mailto:${COMPANY_INFO.email}`}
-              className="hover:text-gold-300 transition-colors tracking-wide"
-            >
-              {COMPANY_INFO.email}
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navigation */}
       <header
-        className={`sticky top-0 z-40 transition-all duration-300 ${
-          scrolled
-            ? 'bg-[#060A13]/95 backdrop-blur-md shadow-[0_4px_25px_rgba(0,0,0,0.8)] border-b border-gold-500/15 py-3'
-            : 'bg-[#060A13]/85 backdrop-blur-sm border-b border-slate-800/80 py-4'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isTransparent
+            ? 'bg-gradient-to-b from-black/70 via-black/40 to-transparent py-5'
+            : 'bg-[#F6F3EE]/95 backdrop-blur-md border-b border-[#E8E1D5] py-3.5 shadow-sm'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1180px] mx-auto px-5 sm:px-6">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3.5 group">
-              <div className="w-9 h-9 rounded-[2px] bg-gradient-to-b from-navy-800 to-navy-950 border border-gold-400/50 flex items-center justify-center shadow-md group-hover:border-gold-300 transition-colors">
-                <Crown className="w-5 h-5 text-gold-400 group-hover:scale-105 transition-transform" />
+            {/* Logo in Theevexa Style: Circular Star/Crown Emblem + Letterspaced Title */}
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div
+                className={`w-9 h-9 rounded-full border flex items-center justify-center transition-colors ${
+                  isTransparent
+                    ? 'border-gold-light/60 text-gold-light bg-black/20'
+                    : 'border-gold-base/70 text-gold-dark bg-[#FFFDF9]'
+                }`}
+              >
+                <Star className="w-4 h-4 fill-current stroke-[1.5]" />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-lg sm:text-[19px] font-bold tracking-[0.16em] text-slate-100 uppercase group-hover:text-gold-300 transition-colors leading-tight">
+                <span
+                  className={`font-serif text-lg sm:text-[19px] font-medium tracking-[0.22em] uppercase leading-none transition-colors ${
+                    isTransparent ? 'text-white' : 'text-[#141414]'
+                  }`}
+                >
                   Royal Enterprise
                 </span>
-                <span className="text-[8.5px] uppercase tracking-[0.26em] text-gold-400/90 font-medium">
-                  Events • Catering • Weddings
+                <span
+                  className={`text-[8.5px] uppercase tracking-[0.28em] font-medium mt-1 transition-colors ${
+                    isTransparent ? 'text-gold-light/90' : 'text-gold-dark'
+                  }`}
+                >
+                  Wedding & Event Atelier
                 </span>
               </div>
             </Link>
 
-            {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            {/* Desktop Navigation Links (Theevexa letterspaced uppercase) */}
+            <nav className="hidden lg:flex items-center space-x-7">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
                 return (
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`relative text-[11px] uppercase tracking-[0.14em] font-semibold py-1.5 transition-colors duration-200 ${
-                      isActive
-                        ? 'text-gold-300'
-                        : 'text-slate-300 hover:text-gold-300'
+                    className={`text-[11.5px] uppercase tracking-[0.2em] font-medium py-1 transition-colors duration-200 relative ${
+                      isTransparent
+                        ? isActive
+                          ? 'text-gold-light font-semibold'
+                          : 'text-white/90 hover:text-gold-light'
+                        : isActive
+                        ? 'text-maroon font-semibold'
+                        : 'text-[#3A352F] hover:text-gold-dark'
                     }`}
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-gold-500/40 via-gold-400 to-gold-500/40" />
+                      <span
+                        className={`absolute -bottom-1 left-0 right-0 h-[1.5px] ${
+                          isTransparent ? 'bg-gold-light' : 'bg-maroon'
+                        }`}
+                      />
                     )}
                   </Link>
                 );
               })}
             </nav>
 
-            {/* Desktop CTA */}
+            {/* Desktop Right CTA: Deep Maroon Pill / Rectangular Button (Theevexa PLAN WEDDING signature) */}
             <div className="hidden lg:flex items-center space-x-4">
-              <Button
-                variant="primary"
-                size="sm"
+              <button
+                type="button"
                 onClick={onOpenQuoteModal}
+                className="bg-maroon hover:bg-maroon-dark text-[#FFF8F0] px-6 py-2.5 rounded-[3px] text-[11px] uppercase tracking-[0.2em] font-medium shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
               >
-                Get a Quote
-              </Button>
+                Plan Event
+              </button>
             </div>
 
             {/* Mobile Hamburger Button */}
-            <div className="flex lg:hidden items-center space-x-3">
-              <Button
-                variant="primary"
-                size="sm"
+            <div className="flex lg:hidden items-center space-x-2.5">
+              <button
+                type="button"
                 onClick={onOpenQuoteModal}
-                className="py-1 px-3 text-[10px]"
+                className="bg-maroon text-[#FFF8F0] px-3.5 py-1.5 rounded-[2px] text-[10px] uppercase tracking-[0.18em] font-medium"
               >
-                Quote
-              </Button>
+                Plan
+              </button>
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-slate-300 hover:text-gold-400 p-2 focus:outline-none"
+                className={`p-2 transition-colors ${
+                  isTransparent ? 'text-white hover:text-gold-light' : 'text-[#141414] hover:text-maroon'
+                }`}
                 aria-label="Toggle navigation menu"
               >
                 {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -146,7 +144,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
 
         {/* Mobile Navigation Drawer */}
         {isOpen && (
-          <div className="lg:hidden bg-[#070B16] border-b border-gold-500/20 px-5 pt-4 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200 shadow-2xl">
+          <div className="lg:hidden bg-[#F6F3EE] border-b border-[#E8E1D5] px-6 pt-4 pb-6 space-y-4 shadow-xl">
             <nav className="flex flex-col space-y-1">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
@@ -154,10 +152,10 @@ const Navbar = ({ onOpenQuoteModal }) => {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`px-3 py-2.5 rounded-[2px] text-xs font-semibold tracking-[0.14em] uppercase transition-colors ${
+                    className={`px-3 py-2.5 rounded-[2px] text-xs font-medium tracking-[0.18em] uppercase transition-colors ${
                       isActive
-                        ? 'bg-gold-500/10 text-gold-300 border-l-2 border-gold-400'
-                        : 'text-slate-300 hover:bg-slate-900/60 hover:text-gold-300'
+                        ? 'bg-maroon/10 text-maroon font-semibold'
+                        : 'text-[#3A352F] hover:text-gold-dark'
                     }`}
                   >
                     {link.name}
@@ -165,25 +163,49 @@ const Navbar = ({ onOpenQuoteModal }) => {
                 );
               })}
             </nav>
-            <div className="pt-4 border-t border-slate-800 space-y-3">
-              <Button
-                variant="primary"
-                size="md"
+            <div className="pt-3 border-t border-[#E8E1D5] space-y-3">
+              <button
+                type="button"
                 onClick={() => {
                   setIsOpen(false);
                   onOpenQuoteModal();
                 }}
-                className="w-full"
+                className="w-full bg-maroon text-[#FFF8F0] py-3 rounded-[3px] text-xs uppercase tracking-[0.2em] font-medium"
               >
-                Get a Quote
-              </Button>
-              <div className="text-center text-xs text-slate-400 pt-1">
-                Direct Inquiries: <a href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`} className="text-gold-400 hover:underline">{COMPANY_INFO.phone}</a>
+                Plan Your Event
+              </button>
+              <div className="flex items-center justify-center space-x-4 text-xs text-[#6B645C] pt-1">
+                <a
+                  href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
+                  className="flex items-center space-x-1.5 hover:text-maroon"
+                >
+                  <Phone className="w-3.5 h-3.5 text-gold-dark" />
+                  <span>{COMPANY_INFO.phone}</span>
+                </a>
               </div>
             </div>
           </div>
         )}
       </header>
+
+      {/* Floating Bottom Quick Action Bar on Mobile (56px high, as requested in Part 4.8) */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#FFFDF9]/95 backdrop-blur-md border-t border-[#E8E1D5] py-2.5 px-4 flex items-center justify-between lg:hidden shadow-lg">
+        <a
+          href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
+          className="flex-1 flex items-center justify-center space-x-2 py-2 px-3 rounded-[3px] border border-[#D5CCC0] text-xs text-[#141414] font-medium uppercase tracking-wider mr-2 active:bg-slate-100"
+        >
+          <Phone className="w-3.5 h-3.5 text-gold-dark" />
+          <span>Call Us</span>
+        </a>
+        <button
+          type="button"
+          onClick={onOpenQuoteModal}
+          className="flex-1 flex items-center justify-center space-x-2 py-2 px-3 rounded-[3px] bg-maroon text-[#FFF8F0] text-xs font-medium uppercase tracking-wider active:bg-maroon-dark"
+        >
+          <MessageCircle className="w-3.5 h-3.5" />
+          <span>Enquire</span>
+        </button>
+      </div>
     </>
   );
 };

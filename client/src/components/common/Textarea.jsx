@@ -15,8 +15,8 @@ const Textarea = ({
   return (
     <div className={`w-full ${className}`}>
       {label && (
-        <label htmlFor={name} className="block text-[11px] font-medium text-slate-300 uppercase tracking-[0.14em] mb-2">
-          {label} {required && <span className="text-gold-400 font-bold">*</span>}
+        <label htmlFor={name} className="block text-[11px] font-medium text-[#6B645C] uppercase tracking-[0.2em] mb-1.5">
+          {label} {required && <span className="text-maroon font-bold">*</span>}
         </label>
       )}
       <textarea
@@ -27,14 +27,14 @@ const Textarea = ({
         placeholder={placeholder}
         rows={rows}
         required={required}
-        className={`w-full bg-navy-900/60 border ${
+        className={`w-full bg-transparent border-b ${
           error
-            ? 'border-rose-500/80 focus:border-rose-400 focus:ring-1 focus:ring-rose-400/30'
-            : 'border-slate-800 focus:border-gold-400/70 focus:ring-1 focus:ring-gold-400/30'
-        } rounded-[2px] px-3.5 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:bg-navy-900 transition-all duration-200 resize-y`}
+            ? 'border-[#B3261E] focus:border-[#B3261E]'
+            : 'border-[#D5CCC0] focus:border-[#B8934A]'
+        } rounded-none px-1 py-2 text-sm text-[#141414] placeholder-[#9E968D] focus:outline-none transition-colors duration-200 resize-y`}
         {...props}
       />
-      {error && <p className="mt-1.5 text-xs text-rose-400">{error}</p>}
+      {error && <p className="mt-1 text-xs text-[#B3261E] font-medium">{error}</p>}
     </div>
   );
 };

@@ -29,30 +29,30 @@ const Modal = ({ isOpen, onClose, title, subtitle, children, maxWidth = 'max-w-2
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-navy-950/90 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       />
 
       {/* Modal Card */}
       <div
-        className={`relative w-full ${maxWidth} bg-[#0A0F1D] border border-gold-500/25 rounded-[3px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] z-10 my-8 overflow-hidden`}
+        className={`relative w-full ${maxWidth} bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] shadow-2xl z-10 my-8 overflow-hidden`}
       >
-        {/* Top Gold Trim Accent */}
-        <div className="h-[2px] bg-gradient-to-r from-transparent via-gold-400/70 to-transparent" />
+        {/* Top Maroon/Gold Line Accent */}
+        <div className="h-[3px] bg-gradient-to-r from-maroon via-gold-base to-maroon" />
 
         {/* Header */}
-        <div className="flex items-start justify-between p-6 sm:p-7 border-b border-slate-800/80 bg-navy-950/40">
+        <div className="flex items-start justify-between p-6 sm:p-7 border-b border-[#E8E1D5] bg-[#FAF8F4]">
           <div>
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100 tracking-wide">
+            <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#141414] tracking-tight">
               {title}
             </h3>
             {subtitle && (
-              <p className="text-xs sm:text-sm text-slate-400 mt-1 font-light">{subtitle}</p>
+              <p className="text-xs sm:text-sm text-[#6B645C] mt-1 font-light">{subtitle}</p>
             )}
           </div>
           <button
             onClick={onClose}
-            className="text-slate-400 hover:text-gold-300 transition-colors p-1.5 rounded-[2px] bg-navy-900/60 hover:bg-navy-900 border border-slate-800"
+            className="text-[#6B645C] hover:text-maroon transition-colors p-1.5 rounded-full hover:bg-black/5"
             aria-label="Close modal"
           >
             <X className="w-4 h-4" />

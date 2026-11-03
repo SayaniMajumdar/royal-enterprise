@@ -132,19 +132,19 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title="Request a Royal Quote"
+      title="Request a Bespoke Proposal"
       subtitle="Select your desired division and receive a tailored proposal within 24 hours."
       maxWidth="max-w-2xl"
     >
       {/* Division Tabs */}
-      <div className="grid grid-cols-3 gap-1.5 bg-[#050811] p-1.5 rounded-[2px] border border-slate-800/90 mb-6">
+      <div className="grid grid-cols-3 gap-1.5 bg-[#F6F3EE] p-1.5 rounded-[3px] border border-[#E8E1D5] mb-6">
         <button
           type="button"
           onClick={() => setActiveTab('events')}
-          className={`py-2 text-[11px] font-bold uppercase tracking-[0.14em] rounded-[2px] transition-all ${
+          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-medium ${
             activeTab === 'events'
-              ? 'bg-gradient-to-b from-[#DEC692] via-[#C59B46] to-[#B38734] text-navy-950 shadow-sm'
-              : 'text-slate-400 hover:text-gold-300 hover:bg-navy-900/40'
+              ? 'bg-maroon text-[#FFF8F0] shadow-sm'
+              : 'text-[#6B645C] hover:text-[#141414] hover:bg-white/60'
           }`}
         >
           Event Mgmt
@@ -152,10 +152,10 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
         <button
           type="button"
           onClick={() => setActiveTab('catering')}
-          className={`py-2 text-[11px] font-bold uppercase tracking-[0.14em] rounded-[2px] transition-all ${
+          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-medium ${
             activeTab === 'catering'
-              ? 'bg-gradient-to-b from-[#DEC692] via-[#C59B46] to-[#B38734] text-navy-950 shadow-sm'
-              : 'text-slate-400 hover:text-gold-300 hover:bg-navy-900/40'
+              ? 'bg-maroon text-[#FFF8F0] shadow-sm'
+              : 'text-[#6B645C] hover:text-[#141414] hover:bg-white/60'
           }`}
         >
           Catering
@@ -163,10 +163,10 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
         <button
           type="button"
           onClick={() => setActiveTab('wedding')}
-          className={`py-2 text-[11px] font-bold uppercase tracking-[0.14em] rounded-[2px] transition-all ${
+          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-medium ${
             activeTab === 'wedding'
-              ? 'bg-gradient-to-b from-[#DEC692] via-[#C59B46] to-[#B38734] text-navy-950 shadow-sm'
-              : 'text-slate-400 hover:text-gold-300 hover:bg-navy-900/40'
+              ? 'bg-maroon text-[#FFF8F0] shadow-sm'
+              : 'text-[#6B645C] hover:text-[#141414] hover:bg-white/60'
           }`}
         >
           Wedding Planner

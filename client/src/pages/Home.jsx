@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import HeroSection from '../components/home/HeroSection';
+import BrandStory from '../components/home/BrandStory';
 import DivisionOverview from '../components/home/DivisionOverview';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import ExperienceStats from '../components/home/ExperienceStats';
@@ -10,8 +11,9 @@ const Home = () => {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   return (
-    <div>
+    <div className="bg-[#F6F3EE] min-h-screen">
       <HeroSection onOpenQuote={() => setIsQuoteOpen(true)} />
+      <BrandStory />
       <DivisionOverview onOpenQuote={() => setIsQuoteOpen(true)} />
       <WhyChooseUs />
       <ExperienceStats />

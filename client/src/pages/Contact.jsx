@@ -93,89 +93,89 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#060A13] min-h-screen">
+    <div className="bg-[#F6F3EE] min-h-screen text-[#141414]">
       {/* Hero Banner */}
-      <section className="relative py-20 sm:py-28 overflow-hidden border-b border-gold-500/15">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <section className="bg-charcoal text-[#FFF8F0] relative py-20 sm:py-28 overflow-hidden border-b border-white/10">
+        <div className="max-w-[1180px] mx-auto px-5 sm:px-6 text-center relative z-10">
           <div className="inline-flex items-center space-x-2.5 mb-3">
-            <span className="w-4 h-px bg-gold-400/60" />
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-gold-400 font-semibold">
-              Executive Desk
+            <span className="w-5 h-px bg-gold-light/60" />
+            <span className="text-[11px] uppercase tracking-[0.26em] text-gold-light font-medium">
+              Concierge & Executive Desk
             </span>
-            <span className="w-4 h-px bg-gold-400/60" />
+            <span className="w-5 h-px bg-gold-light/60" />
           </div>
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-slate-100 mb-4 tracking-tight leading-tight">
+          <h1 className="font-serif text-3xl sm:text-5xl font-normal text-[#FFF8F0] mb-4 tracking-tight leading-tight">
             Contact Royal Enterprise
           </h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-300/90 font-light leading-relaxed">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/80 font-light leading-relaxed">
             Connect with our management team for corporate partnerships, service consultations, or general inquiries.
           </p>
         </div>
       </section>
 
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 max-w-[1180px] mx-auto px-5 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* Company Details Column */}
-          <div className="lg:col-span-5 space-y-8 bg-[#090E1B] border border-slate-800/80 rounded-[3px] p-8 shadow-sm">
+          <div className="lg:col-span-5 space-y-8 bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-8 shadow-sm">
             <div>
-              <h3 className="font-serif text-2xl font-bold text-slate-100 mb-1.5 tracking-wide">
+              <h3 className="font-serif text-2xl font-normal text-[#141414] mb-1.5 tracking-wide">
                 {COMPANY_INFO.name}
               </h3>
-              <p className="text-[10.5px] text-gold-400 uppercase tracking-[0.18em] font-semibold mb-4">
+              <p className="text-[10.5px] text-gold-dark uppercase tracking-[0.2em] font-semibold mb-4">
                 Corporate Headquarters & Concierge
               </p>
-              <p className="text-xs sm:text-sm text-slate-300/90 leading-relaxed font-light">
+              <p className="text-xs sm:text-sm text-[#554F47] leading-relaxed font-light">
                 We invite you to connect with our client relationship managers to discuss your forthcoming celebration, corporate summit, or catering requirement.
               </p>
             </div>
 
-            <div className="space-y-5 border-y border-slate-800/80 py-6">
+            <div className="space-y-5 border-y border-[#E8E1D5] py-6">
               <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-[2px] bg-navy-950 border border-gold-400/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                <div className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark shrink-0 mt-0.5">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold">Office Address</h5>
-                  <p className="text-xs sm:text-sm text-slate-200 mt-1 font-light leading-relaxed">{COMPANY_INFO.address}</p>
+                  <h5 className="text-[10.5px] uppercase tracking-wider text-gold-dark font-semibold">Office Address</h5>
+                  <p className="text-xs sm:text-sm text-[#141414] mt-1 font-light leading-relaxed">{COMPANY_INFO.address}</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-[2px] bg-navy-950 border border-gold-400/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                <div className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark shrink-0 mt-0.5">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold">Telephone Desk</h5>
-                  <p className="text-xs sm:text-sm text-slate-200 mt-1 font-medium">{COMPANY_INFO.phone}</p>
-                  <p className="text-xs text-slate-400 font-light">{COMPANY_INFO.secondaryPhone}</p>
+                  <h5 className="text-[10.5px] uppercase tracking-wider text-gold-dark font-semibold">Telephone Desk</h5>
+                  <p className="text-xs sm:text-sm text-[#141414] mt-1 font-medium">{COMPANY_INFO.phone}</p>
+                  <p className="text-xs text-[#6B645C] font-light">{COMPANY_INFO.secondaryPhone}</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-[2px] bg-navy-950 border border-gold-400/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                <div className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark shrink-0 mt-0.5">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold">Email Correspondence</h5>
-                  <p className="text-xs sm:text-sm text-slate-200 mt-1 font-light">{COMPANY_INFO.email}</p>
-                  <p className="text-xs text-slate-400 font-light">{COMPANY_INFO.bookingEmail}</p>
+                  <h5 className="text-[10.5px] uppercase tracking-wider text-gold-dark font-semibold">Email Correspondence</h5>
+                  <p className="text-xs sm:text-sm text-[#141414] mt-1 font-light">{COMPANY_INFO.email}</p>
+                  <p className="text-xs text-[#6B645C] font-light">{COMPANY_INFO.bookingEmail}</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-[2px] bg-navy-950 border border-gold-400/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                <div className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark shrink-0 mt-0.5">
                   <Clock className="w-4 h-4" />
                 </div>
                 <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold">Operating Hours</h5>
-                  <p className="text-xs sm:text-sm text-slate-200 mt-1 font-light">{COMPANY_INFO.officeHours}</p>
+                  <h5 className="text-[10.5px] uppercase tracking-wider text-gold-dark font-semibold">Operating Hours</h5>
+                  <p className="text-xs sm:text-sm text-[#141414] mt-1 font-light">{COMPANY_INFO.officeHours}</p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
             <div>
-              <h5 className="text-[10.5px] uppercase tracking-[0.16em] text-slate-400 font-semibold mb-3">
+              <h5 className="text-[10.5px] uppercase tracking-[0.16em] text-gold-dark font-semibold mb-3">
                 Follow Royal Enterprise
               </h5>
               <div className="flex items-center space-x-2.5">
@@ -183,7 +183,7 @@ const Contact = () => {
                   href={COMPANY_INFO.socials.instagram}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-9 h-9 rounded-[2px] bg-navy-950 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-gold-300 hover:border-gold-500/40 transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-[#E8E1D5] flex items-center justify-center text-[#6B645C] hover:text-maroon hover:border-maroon/40 transition-colors"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>
@@ -191,7 +191,7 @@ const Contact = () => {
                   href={COMPANY_INFO.socials.facebook}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-9 h-9 rounded-[2px] bg-navy-950 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-gold-300 hover:border-gold-500/40 transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-[#E8E1D5] flex items-center justify-center text-[#6B645C] hover:text-maroon hover:border-maroon/40 transition-colors"
                 >
                   <Facebook className="w-4 h-4" />
                 </a>
@@ -199,7 +199,7 @@ const Contact = () => {
                   href={COMPANY_INFO.socials.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-9 h-9 rounded-[2px] bg-navy-950 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-gold-300 hover:border-gold-500/40 transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-[#E8E1D5] flex items-center justify-center text-[#6B645C] hover:text-maroon hover:border-maroon/40 transition-colors"
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
@@ -207,7 +207,7 @@ const Contact = () => {
                   href={COMPANY_INFO.socials.youtube}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-9 h-9 rounded-[2px] bg-navy-950 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-gold-300 hover:border-gold-500/40 transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-[#E8E1D5] flex items-center justify-center text-[#6B645C] hover:text-maroon hover:border-maroon/40 transition-colors"
                 >
                   <Youtube className="w-4 h-4" />
                 </a>
@@ -217,17 +217,17 @@ const Contact = () => {
 
           {/* Business Enquiry Form Column */}
           <div className="lg:col-span-7">
-            <div className="bg-[#090E1B] border border-gold-500/25 rounded-[3px] p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-              <div className="h-[2px] bg-gradient-to-r from-transparent via-gold-400/60 to-transparent -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
+            <div className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-6 sm:p-10 shadow-sm relative overflow-hidden">
+              <div className="h-[2px] bg-gradient-to-r from-transparent via-gold-base/50 to-transparent -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
               {submitted ? (
                 <div className="text-center py-12 space-y-4">
-                  <div className="w-14 h-14 bg-gold-500/15 border border-gold-400/60 rounded-[2px] flex items-center justify-center mx-auto text-gold-400">
+                  <div className="w-14 h-14 bg-maroon/10 border border-maroon/30 rounded-full flex items-center justify-center mx-auto text-maroon">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="font-serif text-2xl font-bold text-slate-100 tracking-wide">
+                  <h3 className="font-serif text-2xl font-normal text-[#141414] tracking-wide">
                     Message Sent Successfully
                   </h3>
-                  <p className="text-slate-300 max-w-md mx-auto text-sm leading-relaxed font-light">
+                  <p className="text-[#554F47] max-w-md mx-auto text-sm leading-relaxed font-light">
                     Thank you for reaching out to Royal Enterprise. Your message has been stored in our Contact Enquiries registry. A representative will contact you within one business day.
                   </p>
                   <div className="pt-4">
@@ -242,11 +242,11 @@ const Contact = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="border-b border-slate-800/80 pb-4 mb-4">
-                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100 tracking-wide">
+                  <div className="border-b border-[#E8E1D5] pb-4 mb-4">
+                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] tracking-wide">
                       Send a Business Enquiry
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-400 mt-1 font-light">
+                    <p className="text-xs sm:text-sm text-[#6B645C] mt-1 font-light">
                       Fill out the form below. All messages are directly integrated with Google Sheets.
                     </p>
                   </div>
@@ -331,13 +331,13 @@ const Contact = () => {
             subtitle="Visit our executive studio for personalized design and culinary menu tasting sessions."
           />
 
-          <div className="relative rounded-sm overflow-hidden border border-slate-800 h-96 bg-navy-900/60 flex items-center justify-center text-center p-6">
+          <div className="relative rounded-[4px] overflow-hidden border border-[#E8E1D5] h-96 bg-[#FAF8F4] shadow-sm flex items-center justify-center text-center p-2">
             <iframe
               title="Royal Enterprise Location Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.21689648937!2d88.26495085845722!3d22.535564936991185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
-              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
+              style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

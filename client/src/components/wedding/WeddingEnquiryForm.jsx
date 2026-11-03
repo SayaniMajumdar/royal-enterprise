@@ -195,24 +195,24 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
   };
 
   return (
-    <div id="wedding-enquiry-form" className="bg-[#090E1B] border border-gold-500/25 rounded-[3px] p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-      <div className="h-[2px] bg-gradient-to-r from-transparent via-gold-400/60 to-transparent -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
+    <div id="wedding-enquiry-form" className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-6 sm:p-10 shadow-theevexa relative overflow-hidden">
+      <div className="h-[2.5px] bg-gradient-to-r from-maroon via-gold-base to-maroon -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
       {submittedData ? (
         <div className="text-center py-12 space-y-4">
-          <div className="w-14 h-14 bg-gold-500/15 border border-gold-400/60 rounded-[2px] flex items-center justify-center mx-auto text-gold-400">
+          <div className="w-14 h-14 bg-emerald-50 border border-emerald-600/40 rounded-full flex items-center justify-center mx-auto text-emerald-700">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="font-serif text-2xl font-bold text-slate-100 tracking-wide">
+          <h3 className="font-serif text-3xl font-normal text-[#141414] tracking-tight">
             Wedding Proposal Request Confirmed
           </h3>
-          <p className="text-slate-300 max-w-md mx-auto text-sm leading-relaxed font-light">
-            Congratulations, <span className="text-gold-300 font-semibold">{submittedData.customerName}</span>. Your wedding inquiry for{' '}
-            <span className="text-gold-300 font-semibold">{submittedData.packageType}</span> has been logged into our master database.
+          <p className="text-[#554F47] max-w-md mx-auto text-sm leading-relaxed font-light">
+            Congratulations, <span className="text-maroon font-semibold">{submittedData.customerName}</span>. Your wedding inquiry for{' '}
+            <span className="text-maroon font-semibold">{submittedData.packageType}</span> has been logged into our master database.
           </p>
-          <div className="inline-block bg-navy-950 border border-slate-800 px-4 py-2 rounded-[2px] text-xs text-slate-300">
-            Tracking ID: <span className="font-mono text-gold-400 font-bold">{submittedData.submissionId}</span>
+          <div className="inline-block bg-[#F6F3EE] border border-[#E8E1D5] px-4 py-2 rounded-[2px] text-xs text-[#3A352F]">
+            Tracking ID: <span className="font-mono text-gold-dark font-bold">{submittedData.submissionId}</span>
           </div>
-          <p className="text-xs text-slate-400 font-light">
+          <p className="text-xs text-[#6B645C] font-light">
             Our Senior Wedding Architect will connect with your family within 24 hours.
           </p>
           <div className="pt-4">
@@ -227,11 +227,11 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="border-b border-slate-800/80 pb-4 mb-6">
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100 tracking-wide">
+          <div className="border-b border-[#E8E1D5] pb-4 mb-6">
+            <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#141414] tracking-tight">
               Wedding Planner Enquiry Form
             </h3>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1 font-light">
+            <p className="text-xs sm:text-sm text-[#6B645C] mt-1 font-light">
               Share your wedding aspirations. All responses are logged automatically into Google Sheets for confidential executive planning.
             </p>
           </div>
@@ -341,27 +341,27 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
           </div>
 
           {/* Key Wedding Services Checklist (Mapped to Database Columns) */}
-          <div className="bg-[#050811] p-4 sm:p-5 border border-slate-800/80 rounded-[2px]">
-            <label className="block text-[11px] uppercase tracking-[0.14em] text-gold-400 font-semibold mb-3">
-              Required Wedding Services Scope (Direct Database Mappings)
+          <div className="bg-[#FAF8F4] p-5 sm:p-6 border border-[#E8E1D5] rounded-[3px]">
+            <label className="block text-[11px] uppercase tracking-[0.2em] text-gold-dark font-medium mb-3">
+              Required Wedding Services Scope (Database Synchronized)
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {coreWeddingServices.map((svc) => (
                 <label
                   key={svc.id}
-                  className={`flex items-center space-x-2 text-xs p-2.5 rounded-[2px] border cursor-pointer transition-colors ${
+                  className={`flex items-center space-x-2 text-xs p-3 rounded-[3px] border cursor-pointer transition-colors ${
                     serviceChecks[svc.key]
-                      ? 'border-gold-500/50 bg-gold-500/10 text-gold-200'
-                      : 'border-slate-800 bg-navy-900/40 text-slate-400 hover:border-slate-700'
+                      ? 'border-maroon/60 bg-maroon/5 text-maroon font-medium'
+                      : 'border-[#E8E1D5] bg-[#FFFDF9] text-[#3A352F] hover:border-[#D5CCC0]'
                   }`}
                 >
                   <input
                     type="checkbox"
                     checked={serviceChecks[svc.key]}
                     onChange={() => handleServiceCheck(svc.key)}
-                    className="w-4 h-4 rounded-[2px] border-slate-700 text-gold-500 focus:ring-gold-500/30 focus:ring-offset-navy-900 bg-navy-950 cursor-pointer"
+                    className="w-4 h-4 rounded-[2px] border-[#D5CCC0] text-maroon focus:ring-maroon cursor-pointer"
                   />
-                  <span className="font-medium select-none">{svc.label}</span>
+                  <span className="select-none">{svc.label}</span>
                 </label>
               ))}
             </div>

@@ -5,7 +5,7 @@ const SectionHeader = ({
   title,
   subtitle,
   align = 'center',
-  theme = 'dark',
+  theme = 'light',
   className = '',
 }) => {
   const alignmentClasses = {

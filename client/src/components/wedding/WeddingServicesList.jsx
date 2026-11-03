@@ -8,23 +8,23 @@ const WeddingServicesList = () => {
       {WEDDING_SERVICES.map((serv) => (
         <div
           key={serv.id}
-          className="bg-[#090E1B]/80 border border-slate-800/80 rounded-[3px] p-7 sm:p-8 hover:border-gold-500/35 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-0.5"
+          className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-7 sm:p-8 hover:border-gold-base/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
         >
           <div>
-            <h3 className="font-serif text-lg sm:text-xl font-bold text-slate-100 group-hover:text-gold-300 transition-colors mb-3 tracking-wide">
+            <h3 className="font-serif text-lg sm:text-xl font-normal text-[#141414] group-hover:text-maroon transition-colors mb-3 tracking-wide">
               {serv.title}
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-400 leading-relaxed mb-6 font-light">
+            <p className="text-xs sm:text-[13px] text-[#554F47] leading-relaxed mb-6 font-light">
               {serv.description}
             </p>
 
-            <h5 className="text-[10.5px] uppercase tracking-[0.16em] font-semibold text-gold-400 mb-3 border-b border-slate-800/80 pb-2">
+            <h5 className="text-[10.5px] uppercase tracking-[0.16em] font-semibold text-gold-dark mb-3 border-b border-[#E8E1D5] pb-2">
               Services & Inclusions:
             </h5>
             <ul className="space-y-2.5">
               {serv.items.map((item, idx) => (
-                <li key={idx} className="flex items-start text-xs sm:text-[13px] text-slate-300 font-light">
-                  <div className="w-4 h-4 rounded-[2px] bg-gold-500/15 text-gold-400 flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
+                <li key={idx} className="flex items-start text-xs sm:text-[13px] text-[#3A352F] font-light">
+                  <div className="w-4 h-4 rounded-full bg-gold-dark/15 text-gold-dark flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
                     <Check className="w-3 h-3 stroke-[2.5]" />
                   </div>
                   <span>{item}</span>

@@ -364,36 +364,36 @@ const EventManagement = () => {
   };
 
   return (
-    <div className="bg-navy-950 min-h-screen text-slate-100 selection:bg-gold-500 selection:text-navy-950">
+    <div className="bg-[#F6F3EE] min-h-screen text-[#141414]">
       {/* ========================================================================= */}
       {/* HERO BANNER */}
       {/* ========================================================================= */}
-      <section className="relative py-24 sm:py-32 overflow-hidden border-b border-gold-500/15">
+      <section className="bg-charcoal text-[#FFF8F0] relative py-24 sm:py-32 overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1920&q=80"
             alt="Royal Enterprise Event Management Hero"
-            className="w-full h-full object-cover filter brightness-[0.32] contrast-[1.05] scale-[1.02]"
+            className="w-full h-full object-cover filter brightness-[0.38] contrast-[1.08] scale-[1.02]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/75 to-navy-950/85" />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/80" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center space-x-2.5 bg-[#090E1B]/85 border border-gold-400/30 px-4 py-1.5 rounded-[2px] mb-7 shadow-sm">
-            <Crown className="w-3.5 h-3.5 text-gold-400" />
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-gold-300 font-semibold">
+        <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 text-center">
+          <div className="inline-flex items-center space-x-2.5 mb-5">
+            <span className="w-5 h-px bg-gold-light/60" />
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.26em] text-gold-light font-medium">
               Division I • Turnkey Event Production & Management
             </span>
-            <Sparkles className="w-3.5 h-3.5 text-gold-400/80" />
+            <span className="w-5 h-px bg-gold-light/60" />
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-slate-100 tracking-tight leading-tight mb-4">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-normal text-[#FFF8F0] tracking-tight leading-[1.12] mb-4">
             Event Management
           </h1>
-          <p className="font-editorial italic text-gold-300/90 text-xl sm:text-2xl md:text-3xl font-normal mb-6">
+          <p className="font-editorial italic text-gold-light text-xl sm:text-2xl md:text-3xl font-normal mb-6">
             "We Make Every Event Memorable."
           </p>
-          <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-300 font-light leading-relaxed mb-9">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/80 font-light leading-relaxed mb-9">
             From Fortune 500 corporate summits and luxury product activations to cherished family milestone celebrations and megascale public festivals, Royal Enterprise provides comprehensive turnkey production with master craftsmanship.
           </p>
 
@@ -422,7 +422,7 @@ const EventManagement = () => {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-28">
+      <div className="max-w-[1180px] mx-auto px-5 sm:px-6 py-20 space-y-28">
         {/* ========================================================================= */}
         {/* 1. CORE EVENT CATEGORIES WE HANDLE */}
         {/* ========================================================================= */}
@@ -437,44 +437,43 @@ const EventManagement = () => {
             {coreCategories.map((cat) => (
               <div
                 key={cat.id}
-                className="bg-[#090E1B]/80 border border-slate-800/80 rounded-[3px] overflow-hidden hover:border-gold-500/35 transition-all duration-300 flex flex-col justify-between group shadow-lg hover:-translate-y-0.5"
+                className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] overflow-hidden hover:border-gold-base/60 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
               >
                 <div>
-                  <div className="relative h-60 overflow-hidden">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-200">
                     <img
                       src={cat.image}
                       alt={cat.title}
-                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#060A13] via-navy-950/40 to-transparent" />
-                    <div className="absolute top-4 left-4 bg-navy-950/90 border border-gold-400/40 px-3 py-1 rounded-[2px] text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-300">
+                    <div className="absolute top-3 left-3 bg-[#FFFDF9]/95 backdrop-blur-sm border border-[#E8E1D5] px-2.5 py-0.5 rounded-[2px] text-[9.5px] font-semibold uppercase tracking-[0.16em] text-gold-dark">
                       {cat.badge}
                     </div>
                   </div>
 
                   <div className="p-6 sm:p-7">
-                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100 mb-1 group-hover:text-gold-300 transition-colors tracking-wide">
+                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] mb-1 group-hover:text-maroon transition-colors tracking-wide leading-snug">
                       {cat.title}
                     </h3>
-                    <p className="text-xs uppercase tracking-wider font-semibold text-gold-400/90 mb-4">
+                    <p className="text-[11px] uppercase tracking-wider font-semibold text-gold-dark mb-4">
                       {cat.subtitle}
                     </p>
-                    <p className="text-xs sm:text-sm text-slate-300/90 leading-relaxed mb-6 font-light">
+                    <p className="text-xs sm:text-[13px] text-[#554F47] leading-relaxed mb-6 font-light">
                       {cat.description}
                     </p>
 
-                    <h4 className="text-[10.5px] uppercase tracking-[0.16em] font-bold text-slate-400 mb-3 border-b border-slate-800 pb-2">
+                    <h4 className="text-[10.5px] uppercase tracking-[0.16em] font-semibold text-gold-dark mb-3 border-b border-[#E8E1D5] pb-2">
                       Sub-Disciplines & Inclusions:
                     </h4>
 
-                    <div className="space-y-3.5 mb-6">
+                    <div className="space-y-3 mb-6">
                       {cat.subServices.map((sub, idx) => (
                         <div key={idx} className="text-xs">
-                          <p className="font-semibold text-gold-300 flex items-start">
-                            <span className="w-1.5 h-1.5 bg-gold-400/80 mr-2 mt-1.5 shrink-0 rotate-45" />
+                          <p className="font-medium text-[#141414] flex items-start">
+                            <span className="w-1.5 h-1.5 bg-gold-dark mr-2 mt-1.5 shrink-0 rotate-45" />
                             <span>{sub.name}</span>
                           </p>
-                          <p className="text-slate-400 ml-3.5 mt-0.5 leading-relaxed text-[11px] font-light">
+                          <p className="text-[#6B645C] ml-3.5 mt-0.5 leading-relaxed text-[11px] font-light">
                             {sub.detail}
                           </p>
                         </div>
@@ -483,7 +482,7 @@ const EventManagement = () => {
                   </div>
                 </div>
 
-                <div className="p-6 pt-0 border-t border-slate-800/80">
+                <div className="p-6 pt-0 border-t border-[#E8E1D5]/60">
                   <Button
                     variant="primary"
                     size="sm"
@@ -501,7 +500,7 @@ const EventManagement = () => {
         </section>
 
         {/* ========================================================================= */}
-        {/* 2. COMPREHENSIVE SERVICE MODULES TABLE / CARDS */}
+        {/* 2. COMPREHENSIVE SERVICE MODULES TABLE */}
         {/* ========================================================================= */}
         <section id="service-modules">
           <SectionHeader
@@ -510,27 +509,27 @@ const EventManagement = () => {
             subtitle="Explore exact operational deliverables provided by Royal Enterprise across seven foundational disciplines."
           />
 
-          <div className="bg-[#090E1B]/80 border border-slate-800/80 rounded-[3px] overflow-hidden shadow-xl mb-12">
+          <div className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] overflow-hidden shadow-sm mb-12">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs sm:text-sm border-collapse">
-                <thead className="bg-[#050811] text-gold-300 uppercase tracking-[0.14em] font-semibold border-b border-slate-800">
+                <thead className="bg-[#FAF8F4] text-gold-dark uppercase tracking-[0.16em] font-semibold border-b border-[#E8E1D5]">
                   <tr>
-                    <th className="p-4 sm:p-5 w-1/3 border-r border-slate-800 text-[11px]">Service Module</th>
+                    <th className="p-4 sm:p-5 w-1/3 border-r border-[#E8E1D5] text-[11px]">Service Module</th>
                     <th className="p-4 sm:p-5 text-[11px]">What Royal Enterprise Delivers</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-800/80 text-slate-300">
+                <tbody className="divide-y divide-[#E8E1D5] text-[#3A352F]">
                   {serviceModules.map((mod, idx) => {
                     const Icon = mod.icon;
                     return (
-                      <tr key={idx} className="hover:bg-navy-900/60 transition-colors">
-                        <td className="p-4 sm:p-5 font-bold text-slate-100 border-r border-slate-800 flex items-center space-x-3">
-                          <div className="w-8 h-8 rounded-[2px] bg-navy-950 border border-gold-400/30 flex items-center justify-center text-gold-400 shrink-0">
-                            <Icon className="w-4 h-4" />
+                      <tr key={idx} className="hover:bg-[#FAF8F4]/60 transition-colors">
+                        <td className="p-4 sm:p-5 font-medium text-[#141414] border-r border-[#E8E1D5] flex items-center space-x-3">
+                          <div className="w-8 h-8 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark shrink-0">
+                            <Icon className="w-4 h-4 stroke-[1.5]" />
                           </div>
                           <span>{mod.name}</span>
                         </td>
-                        <td className="p-4 sm:p-5 leading-relaxed text-slate-300 font-light">
+                        <td className="p-4 sm:p-5 leading-relaxed text-[#554F47] font-light">
                           {mod.deliverable}
                         </td>
                       </tr>
@@ -545,7 +544,7 @@ const EventManagement = () => {
         {/* ========================================================================= */}
         {/* 3. HOW WE WORK (OUR 4-STEP PROCESS) */}
         {/* ========================================================================= */}
-        <section id="our-process" className="bg-[#080C16] border border-slate-800/80 rounded-[3px] p-8 sm:p-12 shadow-sm">
+        <section id="our-process" className="bg-[#F6E4E1] border border-[#ECD6D2] rounded-[4px] p-8 sm:p-12 shadow-sm">
           <SectionHeader
             badge="Methodology & Precision"
             title="How We Work (Our 4-Step Process)"
@@ -553,34 +552,31 @@ const EventManagement = () => {
           />
 
           <div className="relative">
-            {/* Connecting Horizontal Line for Desktop */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/40 to-transparent -translate-y-12 z-0" />
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
               {processSteps.map((step, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#090E1B] border border-slate-800/80 rounded-[2px] p-6 hover:border-gold-400/40 transition-all duration-300 flex flex-col justify-between group shadow-md"
+                  className="bg-[#FFFDF9] border border-[#ECD6D2] rounded-[3px] p-6 hover:border-gold-base/50 transition-all duration-300 flex flex-col justify-between shadow-sm"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-300">
+                      <span className="font-serif text-3xl font-light text-gold-dark">
                         0{step.step}
                       </span>
-                      <span className="text-[9.5px] uppercase tracking-[0.16em] bg-gold-500/10 text-gold-300 border border-gold-500/30 px-2 py-0.5 rounded-[2px] font-semibold">
+                      <span className="text-[9.5px] uppercase tracking-[0.16em] bg-maroon/10 text-maroon border border-maroon/20 px-2 py-0.5 rounded-[2px] font-semibold">
                         {step.tag}
                       </span>
                     </div>
 
-                    <h4 className="font-serif font-bold text-base sm:text-lg text-slate-100 mb-2 group-hover:text-gold-300 transition-colors tracking-wide">
+                    <h4 className="font-serif font-normal text-lg text-[#141414] mb-2 tracking-wide">
                       {step.title}
                     </h4>
-                    <p className="text-xs text-slate-400 leading-relaxed font-light">
+                    <p className="text-xs text-[#554F47] leading-relaxed font-light">
                       {step.description}
                     </p>
                   </div>
 
-                  <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center text-[10.5px] uppercase tracking-wider text-gold-400/90 group-hover:text-gold-300 transition-colors">
+                  <div className="pt-4 mt-4 border-t border-[#ECD6D2]/60 flex items-center text-[10.5px] uppercase tracking-wider text-gold-dark font-medium">
                     <span>Phase 0{step.step} Verified</span>
                     <ChevronRight className="w-3.5 h-3.5 ml-1" />
                   </div>
@@ -604,14 +600,14 @@ const EventManagement = () => {
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`relative rounded-[3px] p-8 flex flex-col justify-between transition-all duration-300 ${
+                className={`relative rounded-[4px] p-8 flex flex-col justify-between transition-all duration-300 ${
                   pkg.popular
-                    ? 'bg-[#0B1020] border-2 border-gold-400/80 shadow-[0_12px_40px_rgba(0,0,0,0.7)]'
-                    : 'bg-[#090E1B]/80 border border-slate-800/80 hover:border-gold-500/35 shadow-md'
+                    ? 'bg-[#FFFDF9] border-2 border-maroon shadow-md'
+                    : 'bg-[#FFFDF9] border border-[#E8E1D5] hover:border-gold-base/50 shadow-sm'
                 }`}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-950 font-bold text-[9.5px] uppercase tracking-[0.2em] px-4 py-1 rounded-[2px] shadow-md flex items-center">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-maroon text-[#FFF8F0] font-medium text-[9.5px] uppercase tracking-[0.2em] px-4 py-1 rounded-[2px] shadow-sm flex items-center">
                     <Crown className="w-3 h-3 mr-1" />
                     {pkg.badge}
                   </div>
@@ -620,31 +616,31 @@ const EventManagement = () => {
                 <div>
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-1">
-                      <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100 tracking-wide">
+                      <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] tracking-wide">
                         {pkg.name}
                       </h3>
                       {!pkg.popular && (
-                        <span className="text-[9.5px] uppercase tracking-[0.14em] text-gold-400 bg-gold-500/10 border border-gold-500/30 px-2 py-0.5 rounded-[2px] font-semibold">
+                        <span className="text-[9.5px] uppercase tracking-[0.14em] text-gold-dark bg-[#FAF8F4] border border-[#E8E1D5] px-2 py-0.5 rounded-[2px] font-semibold">
                           {pkg.badge}
                         </span>
                       )}
                     </div>
-                    <p className="text-xs font-semibold text-gold-300 mt-1">
+                    <p className="text-xs font-semibold text-maroon mt-1">
                       {pkg.targetGuests}
                     </p>
-                    <p className="text-[11px] text-slate-400 italic mt-0.5 font-light">
+                    <p className="text-[11px] text-[#6B645C] italic mt-0.5 font-light">
                       ({pkg.idealEvents})
                     </p>
                   </div>
 
-                  <h5 className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-300 mb-4 border-b border-slate-800 pb-2">
+                  <h5 className="text-[11px] uppercase tracking-[0.14em] font-semibold text-gold-dark mb-4 border-b border-[#E8E1D5] pb-2">
                     Package Inclusions:
                   </h5>
 
                   <ul className="space-y-3 mb-8">
                     {pkg.inclusions.map((inc, idx) => (
-                      <li key={idx} className="flex items-start text-xs sm:text-[13px] text-slate-300 font-light">
-                        <div className="w-4 h-4 rounded-[2px] bg-gold-500/15 text-gold-400 flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
+                      <li key={idx} className="flex items-start text-xs sm:text-[13px] text-[#3A352F] font-light">
+                        <div className="w-4 h-4 rounded-full bg-gold-dark/15 text-gold-dark flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
                           <Check className="w-3 h-3 stroke-[2.5]" />
                         </div>
                         <span>{inc}</span>
@@ -654,7 +650,7 @@ const EventManagement = () => {
                 </div>
 
                 <Button
-                  variant={pkg.popular ? 'primary' : 'outline'}
+                  variant={pkg.popular ? 'maroon' : 'outline'}
                   size="md"
                   onClick={() => handleSelectPackage(pkg.name)}
                   className="w-full"

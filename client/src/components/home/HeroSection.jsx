@@ -1,95 +1,63 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Crown, Sparkles, ArrowRight, ShieldCheck, Award } from 'lucide-react';
-import Button from '../common/Button';
+import { ArrowRight, MapPin } from 'lucide-react';
 
 const HeroSection = ({ onOpenQuote }) => {
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-16 pb-24">
-      {/* Background Image with Deep Luxury Gradient Overlays */}
+    <section className="relative min-h-[95vh] flex items-end overflow-hidden pb-20 pt-36">
+      {/* Background Image: Full Bleed Indian Wedding / Royal Mandap Atmosphere */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85"
-          alt="Royal Enterprise Grand Celebration"
-          className="w-full h-full object-cover object-center scale-[1.02] filter brightness-[0.42] contrast-[1.06]"
+          src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=2000&q=85"
+          alt="Royal Enterprise Bespoke Wedding Atelier"
+          className="w-full h-full object-cover object-center filter brightness-[0.52] contrast-[1.08]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#060A13] via-[#060A13]/70 to-[#060A13]/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#060A13_80%)]" />
+        {/* Subtle cinematic gradient overlay matching Theevexa */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/35" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Royal Crest / Badge */}
-        <div className="inline-flex items-center space-x-2.5 bg-[#090E1B]/85 border border-gold-400/35 px-4 py-1.5 rounded-[2px] mb-8 shadow-sm">
-          <Crown className="w-3.5 h-3.5 text-gold-400" />
-          <span className="text-[10px] sm:text-[10.5px] uppercase tracking-[0.25em] text-gold-300 font-semibold">
-            Royal Enterprise • The Sovereign of Grandeur
-          </span>
-          <Sparkles className="w-3.5 h-3.5 text-gold-400/80" />
-        </div>
+      <div className="relative z-10 max-w-[1180px] w-full mx-auto px-5 sm:px-6">
+        <div className="max-w-2xl text-left">
+          {/* Eyebrow */}
+          <div className="inline-flex items-center space-x-2.5 mb-4">
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.26em] text-gold-light font-medium">
+              Events • Catering • Weddings
+            </span>
+          </div>
 
-        {/* Main Headline */}
-        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-bold text-slate-100 tracking-tight leading-[1.12] mb-6">
-          Architects of <span className="font-editorial italic font-normal text-gold-300">Extraordinary</span> Memories & Imperial Celebrations
-        </h1>
+          {/* Large Serif Title (Title Case, Theevexa Style: Crafting Forever Moments) */}
+          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[5.2rem] font-normal text-white tracking-tight leading-[1.05] mb-6">
+            Crafting Forever <span className="font-editorial italic font-normal text-gold-light">Moments</span>
+          </h1>
 
-        {/* Subtitle */}
-        <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-slate-300/90 font-light leading-relaxed mb-10">
-          Uniting premier <span className="text-gold-300 font-medium">Event Management</span>, artisanal <span className="text-gold-300 font-medium">Gourmet Catering</span>, and breathtaking <span className="text-gold-300 font-medium">Bespoke Wedding Planning</span> under one royal canopy.
-        </p>
+          {/* Subtitle / Story Lead */}
+          <p className="text-base sm:text-lg text-white/90 font-light leading-relaxed mb-9 max-w-xl">
+            India's premier luxury event atelier — designing bespoke celebrations across heritage palaces, grand banquets, and iconic destinations. From intimate gatherings to thousand-guest spectacles, every detail is yours.
+          </p>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-16">
-          <Button
-            variant="primary"
-            size="lg"
-            onClick={onOpenQuote}
-            className="w-full sm:w-auto px-8 py-3.5 shadow-md"
-          >
-            Plan Your Event
-          </Button>
-          <Link to="/wedding-planner" className="w-full sm:w-auto">
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto px-8 py-3.5"
-              icon={ArrowRight}
-              iconPosition="right"
+          {/* Left-Aligned CTAs matching Theevexa */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8">
+            <button
+              type="button"
+              onClick={onOpenQuote}
+              className="btn-gold px-8 py-3.5 text-xs tracking-[0.18em] shadow-lg text-center"
             >
-              Get a Wedding Plan
-            </Button>
-          </Link>
+              Begin Your Journey
+            </button>
+            <Link
+              to="/wedding-planner"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-white/60 text-white hover:border-gold-light hover:text-gold-light transition-all text-xs uppercase tracking-[0.18em] font-medium backdrop-blur-sm"
+            >
+              <span>View Our Work</span>
+              <ArrowRight className="w-3.5 h-3.5 ml-2" />
+            </Link>
+          </div>
         </div>
 
-        {/* Trust Badges */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto pt-8 border-t border-gold-500/15 text-left">
-          <div className="flex items-center space-x-3 p-3 bg-navy-950/60 rounded-[2px] border border-slate-800/80 hover:border-gold-500/30 transition-colors">
-            <Award className="w-5 h-5 text-gold-400 shrink-0" />
-            <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-200">Turnkey Precision</p>
-              <p className="text-[10.5px] text-slate-400">Concept to curtain-close</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-3 p-3 bg-navy-950/60 rounded-[2px] border border-slate-800/80 hover:border-gold-500/30 transition-colors">
-            <Crown className="w-5 h-5 text-gold-400 shrink-0" />
-            <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-200">Royal Heritage</p>
-              <p className="text-[10.5px] text-slate-400">Regal grandeur & dignity</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-3 p-3 bg-navy-950/60 rounded-[2px] border border-slate-800/80 hover:border-gold-500/30 transition-colors">
-            <Sparkles className="w-5 h-5 text-gold-400 shrink-0" />
-            <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-200">Master Culinary</p>
-              <p className="text-[10.5px] text-slate-400">Authentic royal recipes</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-3 p-3 bg-navy-950/60 rounded-[2px] border border-slate-800/80 hover:border-gold-500/30 transition-colors">
-            <ShieldCheck className="w-5 h-5 text-gold-400 shrink-0" />
-            <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-200">Flawless Delivery</p>
-              <p className="text-[10.5px] text-slate-400">100% on-time execution</p>
-            </div>
-          </div>
+        {/* Location Tag at Bottom Right (Theevexa / White Tie signature) */}
+        <div className="hidden sm:flex items-center justify-end space-x-2 text-[11px] uppercase tracking-[0.24em] text-white/70 pt-4 border-t border-white/15">
+          <MapPin className="w-3.5 h-3.5 text-gold-light" />
+          <span>Kolkata • Pan India & Destinations</span>
         </div>
       </div>
     </section>

@@ -15,23 +15,25 @@ const Button = ({
   ...props
 }) => {
   const baseStyles =
-    'relative inline-flex items-center justify-center font-medium transition-all duration-300 rounded-[2px] focus:outline-none focus:ring-1 focus:ring-gold-400/50 uppercase tracking-[0.16em] text-xs font-semibold select-none';
+    'relative inline-flex items-center justify-center font-medium transition-all duration-300 focus:outline-none uppercase tracking-[0.16em] text-xs font-semibold select-none';
 
   const variants = {
     primary:
-      'bg-gradient-to-b from-[#DEC692] via-[#C5A059] to-[#B38734] hover:brightness-105 text-navy-950 font-bold border border-gold-300/40 shadow-[0_2px_12px_rgba(197,160,89,0.2)] active:translate-y-[1px]',
+      'btn-gold text-[#1A1205] shadow-sm active:translate-y-0',
+    maroon:
+      'btn-maroon text-[#FFF8F0] shadow-sm active:translate-y-0',
     outline:
-      'border border-gold-400/60 text-gold-300 hover:border-gold-300 hover:bg-gold-500/10 hover:text-gold-200 bg-transparent active:translate-y-[1px]',
+      'border border-[#B8934A]/70 text-[#141414] hover:bg-[#B8934A]/10 hover:border-[#B8934A] rounded-full active:translate-y-0',
     dark:
-      'bg-[#0C1220] hover:bg-[#121B2F] text-slate-200 border border-slate-800 hover:border-gold-500/40 active:translate-y-[1px]',
+      'bg-charcoal hover:bg-charcoal-surface text-[#FFF8F0] border border-white/20 rounded-full active:translate-y-0',
     ghost:
-      'text-gold-400/90 hover:text-gold-200 hover:bg-gold-500/10 tracking-[0.14em] active:translate-y-[1px]',
+      'text-gold-dark hover:text-maroon tracking-[0.16em] active:translate-y-0',
   };
 
   const sizes = {
-    sm: 'px-4 py-2 text-[10.5px]',
-    md: 'px-6 py-2.5 text-xs',
-    lg: 'px-8 py-3.5 text-xs sm:text-[12.5px]',
+    sm: 'px-5 py-2 text-[10.5px]',
+    md: 'px-7 py-3 text-xs',
+    lg: 'px-9 py-3.5 text-xs sm:text-[12.5px]',
   };
 
   return (
@@ -39,13 +41,13 @@ const Button = ({
       type={type}
       onClick={onClick}
       disabled={disabled || loading}
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${
-        disabled || loading ? 'opacity-60 cursor-not-allowed' : ''
+      className={`${baseStyles} ${variants[variant] || variants.primary} ${sizes[size]} ${
+        disabled || loading ? 'opacity-50 cursor-not-allowed' : ''
       } ${className}`}
       {...props}
     >
       {loading ? (
-        <Loader2 className="w-4 h-4 mr-2 animate-spin text-current" />
+        <Loader2 className="w-3.5 h-3.5 mr-2 animate-spin text-current" />
       ) : (
         Icon && iconPosition === 'left' && <Icon className="w-3.5 h-3.5 mr-2" />
       )}

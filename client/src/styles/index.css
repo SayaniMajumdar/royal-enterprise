@@ -4,89 +4,121 @@
 
 @layer base {
   html {
-    color-scheme: dark;
+    scroll-behavior: smooth;
+    color-scheme: light;
   }
 
   body {
-    @apply bg-navy-950 text-slate-100 font-sans selection:bg-gold-500 selection:text-navy-950;
+    background-color: #F6F3EE;
+    color: #141414;
+    font-family: 'Jost', 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
+  ::selection {
+    background-color: #E2C27D;
+    color: #141414;
+  }
+
+  /* Headings: never bold, maximum weight 500, sentence case */
   h1, h2, h3, h4, .font-serif {
-    letter-spacing: 0.025em;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
   }
 }
 
 @layer utilities {
-  /* Subtle, Natural Gold Highlight (not neon gradient) */
-  .text-gold-gradient {
-    background: linear-gradient(135deg, #FFF8EC 0%, #E2C589 40%, #C5A059 80%, #9E7632 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  /* Theevexa & White Tie fine hairline ornament */
+  .theevexa-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
   }
-
-  .text-gold-subtle {
-    color: #DEC692;
-  }
-
-  .border-gold-subtle {
-    border-color: rgba(197, 160, 89, 0.2);
-  }
-
-  /* Architectural atelier borders (White Tie & The Evexa signature) */
-  .border-atelier {
-    border: 1px solid rgba(197, 160, 89, 0.2);
-  }
-
-  .border-atelier-hover {
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .border-atelier-hover:hover {
-    border-color: rgba(197, 160, 89, 0.45);
-  }
-
-  /* Fine luxury gold line accent */
-  .gold-hairline {
-    background: linear-gradient(90deg, transparent 0%, rgba(197, 160, 89, 0.4) 50%, transparent 100%);
-    height: 1px;
-  }
-
-  /* Subtle glass header */
-  .bg-glass {
-    background: rgba(6, 10, 19, 0.9);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  /* Sophisticated framed photo treatment */
-  .photo-frame {
-    position: relative;
-    padding: 6px;
-    background: rgba(10, 15, 26, 0.6);
-    border: 1px solid rgba(197, 160, 89, 0.25);
-  }
-  .photo-frame::after {
+  .theevexa-divider::before,
+  .theevexa-divider::after {
     content: '';
-    position: absolute;
-    inset: 3px;
-    border: 1px solid rgba(197, 160, 89, 0.12);
-    pointer-events: none;
+    height: 1px;
+    width: 60px;
+    background: linear-gradient(90deg, transparent, rgba(184, 147, 74, 0.45));
+  }
+  .theevexa-divider::after {
+    background: linear-gradient(90deg, rgba(184, 147, 74, 0.45), transparent);
+  }
+
+  /* Architectural image framing: 14px top, 4px bottom */
+  .theevexa-img {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  /* Single luxury soft shadow */
+  .theevexa-shadow {
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Gold button hover lift */
+  .btn-gold {
+    background: linear-gradient(135deg, #D4B36A 0%, #A67C32 100%);
+    color: #1A1205;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+  }
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+    box-shadow: 0 8px 24px -4px rgba(184, 147, 74, 0.35);
+  }
+
+  .btn-maroon {
+    background: linear-gradient(135deg, #6E1423 0%, #540D1A 100%);
+    color: #FFF8F0;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+  }
+  .btn-maroon:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+  }
+
+  /* Underline-only minimal luxury input */
+  .input-underline {
+    border: none;
+    border-bottom: 1px solid #D5CCC0;
+    border-radius: 0;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    transition: border-color 0.2s ease;
+  }
+  .input-underline:focus {
+    outline: none;
+    border-bottom: 2px solid #B8934A;
   }
 }
 
-/* Custom Luxury Minimal Scrollbar */
+/* Custom Minimal Gold Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #060A13;
+  background: #F6F3EE;
 }
 ::-webkit-scrollbar-thumb {
-  background: #182238;
-  border-radius: 2px;
+  background: #B8934A;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C5A059;
+  background: #8A6A2C;
 }

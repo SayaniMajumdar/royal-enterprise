@@ -7,61 +7,58 @@ export default {
   theme: {
     extend: {
       colors: {
-        gold: {
-          50: '#FAF7F0',
-          100: '#F5EEDD',
-          200: '#EBDEBD',
-          300: '#DEC692',
-          400: '#C5A059', // Refined Antique Gold (White Tie & Evexa style)
-          500: '#B89045', // Primary Royal Gold
-          600: '#9E7632',
-          700: '#825E25',
-          800: '#66481A',
-          900: '#4A3311',
-        },
-        navy: {
-          800: '#141D2E',
-          850: '#0F1624',
-          900: '#0A0F1A',
-          950: '#060A13', // Obsidian Midnight
-        },
-        wine: {
-          800: '#4E0C17',
-          900: '#380710',
-          950: '#26040A', // Deep Royal Imperial Wine
-        },
-        cream: {
-          50: '#FAF8F4',
-          100: '#F5F0E8',
-          200: '#EDE4D5',
-          300: '#E2D5BF',
-          800: '#2C2720',
-          900: '#1E1A14',
-        },
         ivory: {
-          50: '#FDFCFA',
-          100: '#F9F7F2',
-          200: '#F2EDE2',
-          300: '#E8E0D0',
-          400: '#D9CDB8',
+          DEFAULT: '#F6F3EE',
+          light: '#FAF8F4',
+          surface: '#FFFDF9',
+          border: '#E8E1D5',
+        },
+        blush: {
+          DEFAULT: '#F6E4E1',
+          light: '#FAF0EE',
+          surface: '#FDF7F6',
+          border: '#ECD6D2',
+        },
+        maroon: {
+          DEFAULT: '#6E1423',
+          dark: '#540D1A',
+          deep: '#3A0610',
+          light: '#851C2D',
+        },
+        gold: {
+          DEFAULT: '#B8934A',
+          dark: '#8A6A2C', // AA compliant on ivory
+          light: '#E2C27D', // on maroon/charcoal
+          satin: '#C5A059',
+          border: 'rgba(184, 147, 74, 0.35)',
+        },
+        charcoal: {
+          DEFAULT: '#141414',
+          surface: '#1C1C1C',
+          muted: '#2A2A2A',
+        },
+        warmgrey: {
+          DEFAULT: '#6B645C',
+          body: '#3A352F',
+          dark: '#26221D',
+          light: '#9E968D',
         },
       },
       fontFamily: {
-        serif: ['Cinzel', 'Playfair Display', 'Georgia', 'serif'],
-        editorial: ['"Cormorant Garamond"', 'Playfair Display', 'Georgia', 'serif'],
-        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['"Cormorant Garamond"', 'Cinzel', 'Playfair Display', 'serif'],
+        editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        cinzel: ['Cinzel', 'serif'],
+        sans: ['Jost', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'subtle': '0 4px 20px -2px rgba(0, 0, 0, 0.4)',
-        'luxury': '0 20px 45px -15px rgba(0, 0, 0, 0.7), 0 0 1px 1px rgba(197, 160, 89, 0.1)',
-        'card': '0 8px 30px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.03)',
-        'card-hover': '0 16px 36px -10px rgba(0, 0, 0, 0.75), 0 0 1px 1px rgba(197, 160, 89, 0.25)',
+        'theevexa': '0 30px 60px -30px rgba(0, 0, 0, 0.25)',
+        'theevexa-soft': '0 12px 35px -10px rgba(40, 25, 20, 0.08)',
+        'card-hover': '0 20px 40px -15px rgba(110, 20, 35, 0.12), 0 0 1px 1px rgba(184, 147, 74, 0.25)',
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gold-metallic': 'linear-gradient(135deg, #FBF6E9 0%, #C5A059 45%, #A8813B 80%, #7E5D23 100%)',
-        'gold-satin': 'linear-gradient(180deg, #C5A059 0%, #B0883E 100%)',
-        'luxury-dark': 'linear-gradient(180deg, #0A0F1A 0%, #060A13 100%)',
+        'gold-btn': 'linear-gradient(135deg, #D4B36A 0%, #A67C32 100%)',
+        'maroon-btn': 'linear-gradient(135deg, #6E1423 0%, #540D1A 100%)',
+        'hero-gradient': 'linear-gradient(180deg, rgba(10,6,4,0.55) 0%, rgba(10,6,4,0.35) 40%, rgba(10,6,4,0.92) 100%)',
       },
     },
   },

@@ -59,17 +59,17 @@ const CateringMenuSection = () => {
   return (
     <div className="py-6">
       {/* Category Tabs */}
-      <div className="flex flex-wrap items-center justify-between gap-4 mb-8 border-b border-slate-800/80 pb-5">
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-8 border-b border-[#E8E1D5] pb-5">
         <div className="flex flex-wrap gap-2">
           {categories.map((cat) => (
             <button
               key={cat.id}
               type="button"
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-4 sm:px-5 py-2 rounded-[2px] text-xs font-semibold uppercase tracking-[0.14em] transition-all duration-200 ${
+              className={`px-4 sm:px-5 py-2 rounded-[3px] text-xs font-medium uppercase tracking-[0.16em] transition-all duration-200 ${
                 activeCategory === cat.id
-                  ? 'bg-gradient-to-b from-[#DEC692] via-[#C59B46] to-[#B38734] text-navy-950 font-bold shadow-sm'
-                  : 'bg-navy-900/60 text-slate-300 hover:text-gold-300 border border-slate-800/80'
+                  ? 'bg-maroon text-[#FFF8F0] shadow-sm'
+                  : 'bg-[#FFFDF9] text-[#3A352F] hover:text-maroon border border-[#E8E1D5]'
               }`}
             >
               {cat.label}
@@ -78,14 +78,14 @@ const CateringMenuSection = () => {
         </div>
 
         {/* Dietary Toggle */}
-        <div className="flex items-center space-x-1.5 bg-[#050811] p-1 rounded-[2px] border border-slate-800 text-xs">
+        <div className="flex items-center space-x-1.5 bg-[#FFFDF9] p-1 rounded-[3px] border border-[#E8E1D5] text-xs">
           <button
             type="button"
             onClick={() => setDietaryFilter('all')}
             className={`px-3 py-1.5 rounded-[2px] transition-colors font-medium text-[11px] tracking-wide ${
               dietaryFilter === 'all'
-                ? 'bg-navy-950 text-gold-300 border border-gold-500/40'
-                : 'text-slate-400 hover:text-slate-200'
+                ? 'bg-[#FAF8F4] text-gold-dark border border-gold-dark/40 font-semibold'
+                : 'text-[#6B645C] hover:text-[#141414]'
             }`}
           >
             All Items
@@ -95,11 +95,11 @@ const CateringMenuSection = () => {
             onClick={() => setDietaryFilter('veg')}
             className={`px-3 py-1.5 rounded-[2px] transition-colors font-medium text-[11px] tracking-wide flex items-center space-x-1.5 ${
               dietaryFilter === 'veg'
-                ? 'bg-emerald-950/80 text-emerald-300 border border-emerald-500/50'
-                : 'text-slate-400 hover:text-emerald-400'
+                ? 'bg-emerald-50 text-emerald-800 border border-emerald-600/30 font-semibold'
+                : 'text-[#6B645C] hover:text-emerald-700'
             }`}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <span className="w-2 h-2 rounded-full bg-[#2E7D32]" />
             <span>Pure Veg</span>
           </button>
           <button
@@ -107,11 +107,11 @@ const CateringMenuSection = () => {
             onClick={() => setDietaryFilter('non-veg')}
             className={`px-3 py-1.5 rounded-[2px] transition-colors font-medium text-[11px] tracking-wide flex items-center space-x-1.5 ${
               dietaryFilter === 'non-veg'
-                ? 'bg-rose-950/80 text-rose-300 border border-rose-500/50'
-                : 'text-slate-400 hover:text-rose-400'
+                ? 'bg-rose-50 text-rose-800 border border-rose-600/30 font-semibold'
+                : 'text-[#6B645C] hover:text-rose-700'
             }`}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
+            <span className="w-2 h-2 rounded-full bg-[#B3261E]" />
             <span>Non-Veg</span>
           </button>
         </div>
@@ -122,43 +122,43 @@ const CateringMenuSection = () => {
         {filteredItems.map((dish, idx) => (
           <div
             key={idx}
-            className="p-5 sm:p-6 rounded-[2px] bg-[#090E1B] border border-slate-800/80 hover:border-gold-500/35 transition-all duration-200 flex flex-col justify-between group shadow-sm"
+            className="p-6 rounded-[3px] bg-[#FFFDF9] border border-[#E8E1D5] hover:border-gold-base/60 transition-all duration-200 flex flex-col justify-between group shadow-sm hover:shadow-md"
           >
             <div>
               <div className="flex items-center justify-between gap-3 mb-2.5">
                 <div className="flex items-center space-x-2.5">
                   <span
-                    className={`w-3.5 h-3.5 rounded-[2px] flex items-center justify-center border text-[8px] ${
+                    className={`w-4 h-4 rounded-[2px] flex items-center justify-center border text-[9px] ${
                       dish.type === 'veg'
-                        ? 'border-emerald-500/80 text-emerald-400 bg-emerald-500/10'
-                        : 'border-rose-500/80 text-rose-400 bg-rose-500/10'
+                        ? 'border-[#2E7D32] text-[#2E7D32] bg-emerald-50'
+                        : 'border-[#B3261E] text-[#B3261E] bg-rose-50'
                     }`}
                     title={dish.type === 'veg' ? 'Vegetarian' : 'Non-Vegetarian'}
                   >
                     ●
                   </span>
-                  <h4 className="font-serif font-bold text-base text-slate-100 group-hover:text-gold-300 transition-colors tracking-wide">
+                  <h4 className="font-serif text-lg font-normal text-[#141414] group-hover:text-maroon transition-colors tracking-wide">
                     {dish.name}
                   </h4>
                 </div>
-                <span className="text-[9.5px] uppercase tracking-[0.16em] font-semibold px-2 py-0.5 rounded-[2px] bg-navy-950 border border-slate-800 text-gold-400/90 shrink-0">
+                <span className="text-[9.5px] uppercase tracking-[0.16em] font-semibold px-2 py-0.5 rounded-[2px] bg-[#FAF8F4] border border-[#E8E1D5] text-gold-dark shrink-0">
                   {dish.cuisine}
                 </span>
               </div>
-              <p className="text-xs sm:text-[13px] text-slate-300/90 leading-relaxed font-light">
+              <p className="text-xs sm:text-[13px] text-[#554F47] leading-relaxed font-light">
                 {dish.description}
               </p>
             </div>
-            <div className="pt-3 mt-4 border-t border-slate-800/70 flex items-center justify-between text-[11px] text-slate-400 font-light">
+            <div className="pt-3 mt-4 border-t border-[#E8E1D5]/60 flex items-center justify-between text-[11px] text-[#6B645C] font-light">
               <span>{dish.type === 'veg' ? '100% Pure Vegetarian' : 'Fresh Poultry, Lamb or Seafood'}</span>
-              <span className="text-gold-400/90 font-medium">Chef Recommended</span>
+              <span className="text-gold-dark font-medium">Chef Recommended</span>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-8 p-4 bg-[#090E1B] border border-slate-800/80 rounded-[2px] text-center text-xs text-slate-300/90 font-light">
-        <Sparkles className="w-3.5 h-3.5 text-gold-400 inline-block mr-1.5 -mt-0.5" />
+      <div className="mt-8 p-4 bg-[#FFFDF9] border border-[#E8E1D5] rounded-[3px] text-center text-xs text-[#554F47] font-light shadow-sm">
+        <Sparkles className="w-3.5 h-3.5 text-gold-dark inline-block mr-1.5 -mt-0.5" />
         All menus are customizable. We provide dedicated pure vegetarian and Jain cooking kitchens with separate utensils, cold rooms, and service staff upon request.
       </div>
     </div>

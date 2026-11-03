@@ -1,90 +1,135 @@
 import React from 'react';
-import { Crown, Sparkles, UtensilsCrossed, ShieldCheck, HeartHandshake, Layers } from 'lucide-react';
-import SectionHeader from '../common/SectionHeader';
+import { Crown, UtensilsCrossed, Layers, ShieldCheck, Sparkles, HeartHandshake } from 'lucide-react';
 
-const features = [
+const processSteps = [
+  {
+    step: '01',
+    title: 'Share Your Vision',
+    description: 'We listen to your desires, family traditions, event scope, and culinary preferences.',
+  },
+  {
+    step: '02',
+    title: 'Bespoke Proposal',
+    description: 'A transparent blueprint covering venue layout, customized menus, and 3D mandate decor.',
+  },
+  {
+    step: '03',
+    title: 'Design & Tasting',
+    description: 'Live food tastings with our master chefs, bridal styling trials, and acoustic run-throughs.',
+  },
+  {
+    step: '04',
+    title: 'Flawless Celebration',
+    description: 'Our floor directors manage every minute, while you immerse in unconditional joy.',
+  },
+];
+
+const pillars = [
   {
     icon: Crown,
     title: 'The Royal Standard',
-    description:
-      'We bring royal poise, meticulous protocol, and unmatched aesthetic grandeur to every corporate gala, wedding mandap, and milestone banquet.',
+    description: 'Unmatched poise and protocol brought to every wedding mandap, gala stage, and banquet.',
   },
   {
     icon: UtensilsCrossed,
     title: 'Culinary Maestros',
-    description:
-      'Our kitchens are commanded by veteran executive chefs specialized in authentic Awadhi, Mughlai, Continental, Pan-Asian, and Jain delicacies.',
+    description: 'Master chefs specializing in authentic Awadhi, Mughlai, Continental, and pure Jain feasts.',
   },
   {
     icon: Layers,
-    title: 'Turnkey Event Architecture',
-    description:
-      'From 3D set fabrication and acoustic design to guest protocol, VIP security, and artist management—we manage all logistics seamlessly.',
+    title: 'Turnkey Architecture',
+    description: 'From 3D stage fabrication to VIP security and artist management under single-point care.',
   },
   {
     icon: ShieldCheck,
     title: 'Unwavering Reliability',
-    description:
-      'Precision timelines, strict hygiene protocols, transparent pricing, and zero surprises. What we promise in our blueprint is what we deliver.',
+    description: 'Precision timelines, strict food safety protocols, transparent pricing, and zero surprises.',
   },
   {
     icon: Sparkles,
     title: 'Bespoke Customization',
-    description:
-      'No pre-packaged monotony. Every floral arrangement, stage lighting sequence, and menu course is tailored to your unique taste and vision.',
+    description: 'No template monotony. Every floral canopy, lighting sequence, and course is curated for you.',
   },
   {
     icon: HeartHandshake,
-    title: 'Dedicated Royal Concierge',
-    description:
-      'A personal event director and 24/7 coordinator assigned to oversee every micro-detail before, during, and after your celebration.',
+    title: 'Personal Concierge',
+    description: 'A dedicated event director and 24/7 coordinator assigned to oversee every micro-detail.',
   },
 ];
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-24 sm:py-28 bg-[#180408] border-y border-gold-500/20 relative overflow-hidden">
-      {/* Subtle wine atmospheric glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(197,160,89,0.05)_0%,_transparent_70%)] pointer-events-none" />
+    <div>
+      {/* 1. Signature Process Band (Theevexa & White Tie Maroon Band) */}
+      <section className="py-20 sm:py-24 bg-maroon text-[#FFF8F0] relative overflow-hidden">
+        <div className="max-w-[1180px] mx-auto px-5 sm:px-6 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-[11px] uppercase tracking-[0.26em] text-gold-light font-medium block mb-3">
+              The Sovereign Pathway
+            </span>
+            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#FFF8F0] tracking-tight">
+              From First Call to <span className="font-editorial italic font-normal text-gold-light">Last Dance</span>
+            </h2>
+          </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <SectionHeader
-          badge="Excellence Redefined"
-          title="Why Choose Royal Enterprise"
-          subtitle="Our unyielding dedication to perfection transforms complex visions into effortless, timeless celebrations."
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-          {features.map((feature, idx) => {
-            const Icon = feature.icon;
-            const numberFormatted = `0${idx + 1}`;
-            return (
-              <div
-                key={idx}
-                className="p-7 sm:p-8 rounded-[2px] bg-[#22070D]/80 border border-gold-500/20 hover:border-gold-400/50 transition-all duration-300 group hover:-translate-y-0.5 shadow-sm relative overflow-hidden"
-              >
-                {/* Subtle top indicator */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-10 h-10 rounded-[2px] bg-[#120205] border border-gold-400/40 flex items-center justify-center text-gold-400 group-hover:border-gold-300 transition-colors">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <span className="font-serif text-xs font-semibold tracking-[0.25em] text-gold-400/70">
-                    {numberFormatted}
-                  </span>
-                </div>
-
-                <h4 className="font-serif text-base sm:text-lg font-bold text-slate-100 mb-2.5 group-hover:text-gold-300 transition-colors tracking-wide">
-                  {feature.title}
-                </h4>
-                <p className="text-xs sm:text-[13px] text-slate-300/85 leading-relaxed font-light">
-                  {feature.description}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+            {processSteps.map((p, idx) => (
+              <div key={p.step} className="relative space-y-3">
+                <span className="font-serif text-3xl sm:text-4xl text-gold-light/60 block font-light">
+                  {p.step}
+                </span>
+                <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#FFF8F0]">
+                  {p.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+                  {p.description}
                 </p>
+                {idx < processSteps.length - 1 && (
+                  <div className="hidden lg:block absolute top-6 right-0 w-8 h-px bg-gold-light/30" />
+                )}
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* 2. Why Couples & Corporate Clients Choose Us (Warm Ivory Section) */}
+      <section className="py-24 sm:py-32 bg-[#F6F3EE] text-[#141414] border-b border-[#E8E1D5]">
+        <div className="max-w-[1180px] mx-auto px-5 sm:px-6">
+          <div className="max-w-2xl text-left mb-16">
+            <div className="inline-flex items-center space-x-2 text-gold-dark text-[11px] font-semibold uppercase tracking-[0.24em] mb-3">
+              <span className="w-5 h-px bg-gold-dark/60" />
+              <span>Core Values</span>
+            </div>
+            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#141414] tracking-tight leading-[1.12]">
+              Why patrons choose <span className="font-editorial italic font-normal text-maroon">Royal Enterprise</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {pillars.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="p-8 bg-[#FFFDF9] rounded-[3px] border border-[#E8E1D5] hover:border-gold-base/50 transition-all duration-300 shadow-sm"
+                >
+                  <div className="w-10 h-10 rounded-full border border-gold-dark/40 flex items-center justify-center text-gold-dark mb-5 bg-[#FAF8F4]">
+                    <Icon className="w-4 h-4 stroke-[1.5]" />
+                  </div>
+                  <h4 className="font-serif text-xl font-normal text-[#141414] mb-2.5">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs sm:text-[13px] text-[#554F47] font-light leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

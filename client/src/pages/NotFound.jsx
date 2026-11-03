@@ -5,18 +5,18 @@ import Button from '../components/common/Button';
 
 const NotFound = () => {
   return (
-    <div className="min-h-[75vh] flex items-center justify-center bg-[#060A13] px-4 text-center">
+    <div className="min-h-[75vh] flex items-center justify-center bg-[#F6F3EE] px-4 text-center">
       <div className="max-w-md space-y-6">
-        <div className="w-14 h-14 rounded-[2px] bg-[#090E1B] border border-gold-400/40 flex items-center justify-center mx-auto text-gold-400 shadow-md">
-          <Crown className="w-7 h-7" />
+        <div className="w-14 h-14 rounded-full bg-[#FFFDF9] border border-[#E8E1D5] flex items-center justify-center mx-auto text-gold-dark shadow-sm">
+          <Crown className="w-6 h-6 stroke-[1.5]" />
         </div>
-        <h1 className="font-serif text-6xl font-bold text-gold-300 tracking-tight">
+        <h1 className="font-serif text-6xl font-light text-maroon tracking-tight">
           404
         </h1>
-        <h2 className="font-serif text-2xl font-bold text-slate-100 tracking-wide">
+        <h2 className="font-serif text-2xl font-normal text-[#141414] tracking-wide">
           Page Not Found
         </h2>
-        <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+        <p className="text-xs sm:text-sm text-[#6B645C] leading-relaxed font-light">
           The requested grand suite or page cannot be located. Allow us to escort you back to our main salon.
         </p>
         <div className="pt-2">

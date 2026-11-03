@@ -1,59 +1,106 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { STATS, TESTIMONIALS } from '../../data/mockData';
-import { Quote } from 'lucide-react';
-import SectionHeader from '../common/SectionHeader';
+import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const ExperienceStats = () => {
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  const prevTestimonial = () => {
+    setActiveIdx((prev) => (prev === 0 ? TESTIMONIALS.length - 1 : prev - 1));
+  };
+
+  const nextTestimonial = () => {
+    setActiveIdx((prev) => (prev === TESTIMONIALS.length - 1 ? 0 : prev + 1));
+  };
+
+  const current = TESTIMONIALS[activeIdx];
+
   return (
-    <section className="py-24 sm:py-28 bg-[#FAF7F2] text-[#1B1713] relative border-b border-[#E6DCBF]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Statistics Bar */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 p-6 sm:p-10 bg-white border border-[#E6DCBF] rounded-[3px] shadow-[0_10px_35px_rgba(40,30,10,0.06)] mb-24">
-          {STATS.map((stat, idx) => (
-            <div key={idx} className="text-center px-4 py-2 border-r last:border-r-0 border-[#EAE2D0]">
-              <span className="block font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gold-700 mb-2 tracking-tight">
-                {stat.value}
-              </span>
-              <span className="text-[10px] sm:text-[10.5px] uppercase tracking-[0.22em] text-[#5A544A] font-semibold">
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Testimonials Header */}
-        <SectionHeader
-          theme="light"
-          badge="Patron Reflections"
-          title="Trusted by Connoisseurs of Grandeur"
-          subtitle="Honored words from clients whose landmark celebrations we had the privilege of orchestrating."
-        />
-
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          {TESTIMONIALS.map((t, idx) => (
-            <div
-              key={idx}
-              className="p-7 sm:p-8 rounded-[3px] bg-white border border-[#E6DCBF] flex flex-col justify-between hover:border-gold-500 transition-all shadow-[0_8px_30px_rgba(40,30,10,0.05)] hover:-translate-y-0.5"
-            >
-              <div>
-                <Quote className="w-6 h-6 text-gold-600/60 mb-4" />
-                <p className="font-editorial italic text-[#26221C] text-base sm:text-[17px] leading-relaxed mb-6 font-normal">
-                  "{t.quote}"
-                </p>
-              </div>
-              <div className="pt-4 border-t border-[#EAE2D0]">
-                <h5 className="font-serif font-bold text-sm text-[#1B1713] tracking-wide">{t.name}</h5>
-                <p className="text-xs text-gold-800 font-medium mt-0.5">{t.role}</p>
-                <span className="inline-block mt-2.5 text-[9.5px] uppercase tracking-[0.18em] text-[#5A544A] bg-[#F8F5EE] px-2.5 py-1 rounded-[2px] border border-[#E0D7C2] font-semibold">
-                  {t.division}
+    <div>
+      {/* 1. Charcoal Stats Strip (Reference A & C: narrow band directly contrasting with ivory) */}
+      <section className="py-14 bg-charcoal text-[#FFF8F0] border-y border-white/10">
+        <div className="max-w-[1180px] mx-auto px-5 sm:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {STATS.map((stat, idx) => (
+              <div key={idx} className="space-y-1">
+                <span className="font-serif text-3xl sm:text-5xl font-light text-gold-light tracking-tight block">
+                  {stat.value}
+                </span>
+                <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-white/70 font-medium">
+                  {stat.label}
                 </span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* 2. Testimonials Carousel / Pull Quote Section (Warm Ivory) */}
+      <section className="py-24 sm:py-32 bg-[#F6F3EE] text-[#141414] border-b border-[#E8E1D5]">
+        <div className="max-w-[900px] mx-auto px-5 sm:px-6 text-center">
+          <div className="inline-flex items-center space-x-2 text-gold-dark text-[11px] font-semibold uppercase tracking-[0.24em] mb-4">
+            <span className="w-5 h-px bg-gold-dark/60" />
+            <span>Patron Reflections</span>
+            <span className="w-5 h-px bg-gold-dark/60" />
+          </div>
+
+          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#141414] tracking-tight mb-12">
+            Cherished by connoisseurs of <span className="font-editorial italic font-normal text-maroon">grandeur</span>
+          </h2>
+
+          {/* Testimonial Quote Card */}
+          <div className="bg-[#FFFDF9] border border-[#E8E1D5] p-8 sm:p-14 rounded-[4px] shadow-sm relative">
+            <Quote className="w-10 h-10 text-gold-base/30 mx-auto mb-6" />
+
+            {/* 5 Gold Stars */}
+            <div className="flex items-center justify-center space-x-1.5 mb-6 text-gold-dark">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-current stroke-[1.5]" />
+              ))}
+            </div>
+
+            <p className="font-serif text-xl sm:text-2xl md:text-3xl text-[#141414] font-normal leading-relaxed mb-8 italic">
+              "{current.quote}"
+            </p>
+
+            <div className="pt-6 border-t border-[#E8E1D5]/60 max-w-sm mx-auto">
+              <h4 className="font-serif text-lg font-medium text-[#141414] tracking-wide">
+                {current.name}
+              </h4>
+              <p className="text-xs text-gold-dark font-medium mt-0.5">
+                {current.role}
+              </p>
+              <span className="inline-block mt-2 text-[10px] uppercase tracking-[0.2em] text-[#6B645C] bg-[#F6F3EE] px-3 py-1 rounded-full border border-[#E8E1D5]">
+                {current.division}
+              </span>
+            </div>
+
+            {/* Carousel Navigation Arrows */}
+            <div className="flex items-center justify-center space-x-4 mt-8">
+              <button
+                type="button"
+                onClick={prevTestimonial}
+                className="w-10 h-10 rounded-full border border-[#D5CCC0] text-[#141414] hover:border-maroon hover:text-maroon flex items-center justify-center transition-colors"
+                aria-label="Previous review"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <span className="text-xs text-[#6B645C] font-mono">
+                {activeIdx + 1} / {TESTIMONIALS.length}
+              </span>
+              <button
+                type="button"
+                onClick={nextTestimonial}
+                className="w-10 h-10 rounded-full border border-[#D5CCC0] text-[#141414] hover:border-maroon hover:text-maroon flex items-center justify-center transition-colors"
+                aria-label="Next review"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
