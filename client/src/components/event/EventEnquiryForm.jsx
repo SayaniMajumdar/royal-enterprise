@@ -20,7 +20,7 @@ const serviceOptions = [
   'Cultural & Social Gathering',
   'College / Institutional Fest',
   'Artist & Celebrity Management',
-  'Turnkey Event Production',
+  'Full Event Production',
 ];
 
 const EventEnquiryForm = ({ initialCategory = '' }) => {

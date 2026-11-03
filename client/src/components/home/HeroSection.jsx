@@ -18,7 +18,7 @@ const HeroSection = ({ onOpenQuote }) => {
                 Kolkata & Eastern India
               </span>
               <span className="text-xs text-[#7D756A] dark:text-[#A89F91] font-medium hidden sm:inline">
-                In-house cooking & turnkey event execution
+                Our own kitchen, our own team, your peace of mind
               </span>
             </div>
 
@@ -89,8 +89,8 @@ const HeroSection = ({ onOpenQuote }) => {
 
             {/* Small floating assurance sticker breaking the corner */}
             <div className="absolute -bottom-4 -left-4 bg-[#6E1423] dark:bg-[#8B1E32] text-white p-3 rounded shadow-md hidden sm:block border border-[#540D1A] dark:border-[#A72638]">
-              <span className="block font-serif text-xl font-bold leading-tight">Turnkey</span>
-              <span className="text-[10px] text-amber-200 uppercase tracking-wider block">In-House Production</span>
+              <span className="block font-serif text-xl font-bold leading-tight">Complete</span>
+              <span className="text-[10px] text-amber-200 uppercase tracking-wider block">In-House Care</span>
             </div>
           </div>
 

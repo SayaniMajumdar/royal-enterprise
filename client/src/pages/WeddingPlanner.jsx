@@ -5,10 +5,6 @@ import WeddingProposalModal from '../components/wedding/WeddingProposalModal';
 import Button from '../components/common/Button';
 import {
   HeartHandshake,
-  Sparkles,
-  Crown,
-  Calendar,
-  Clock,
   Check,
   FileText,
   Building,
@@ -16,145 +12,142 @@ import {
   Users,
   Gift,
   Flame,
-  Music,
-  Printer,
-  ArrowRight,
-  ShieldCheck,
+  Crown,
 } from 'lucide-react';
 
 const WeddingPlanner = () => {
-  const [packageType, setPackageType] = useState('Imperial: Turnkey Luxury');
+  const [packageType, setPackageType] = useState('Gold: Complete Planning');
   const [isProposalModalOpen, setIsProposalModalOpen] = useState(false);
 
-  // 1. Scope of Planning Services
+  // 1. What We Take Care Of For Your Wedding (Human, Relatable Copy)
   const scopeServices = [
     {
       icon: Building,
-      title: 'Venue Scouting & Negotiations',
+      title: 'Finding the Perfect Venue',
       description:
-        'Heritage rajbaris, 5-star banquet lawns, beach resorts, and luxury convention centres across Kolkata, Rajasthan, and destination wedding hubs. We negotiate guaranteed corporate & bulk booking rates.',
+        'Whether you dream of a heritage rajbari with historic courtyards, a five-star ballroom, or a riverside lawn across Kolkata, we help you pick the right space and lock in honest rates.',
     },
     {
       icon: Palette,
-      title: 'Thematic Decor & Styling',
+      title: 'Mandap Styling & Flower Decor',
       description:
-        'Photorealistic 3D mandate visualization, custom floral installations, photobooths, fairy-light canopies, and grand designer bride-groom entries tailored to your royal aesthetic.',
+        'From traditional marigold mandaps and fresh tuberose canopies to photogenic entrance gates, we design warm, welcoming settings that look even more magical in person.',
     },
     {
       icon: Users,
-      title: 'Vendor Orchestration',
+      title: 'Working with Trusted Vendors',
       description:
-        'Vetting, contract negotiation, and liaison with candid photographers, bridal makeup artists (MUA), choreographers, priests/pandits, DJs, and live musical bands.',
+        'We coordinate with the city’s finest candid photographers, makeup artists, choreographers, shehnai players, and priests so you don’t spend weeks chasing phone calls.',
     },
     {
       icon: HeartHandshake,
-      title: 'Hospitality & RSVP Management',
+      title: 'Taking Care of Your Guests',
       description:
-        'Airport/railway welcome desks, room hampering, digital RSVP tracking, luggage handling, and dedicated personal family shadow managers for zero operational stress.',
+        'Airport pickups, welcoming hotel desks, luggage handling, and friendly coordinators so your outstation relatives and elders feel genuinely cared for from the moment they arrive.',
     },
     {
       icon: Gift,
-      title: 'Trousseau & Gifting',
+      title: 'Gifting & Tattwa Packaging',
       description:
-        'Curated wedding invitation boxes, bespoke packaging for tattwa (ceremonial gifting trays), wedding favors, and personalized bridal/groom entourage hampers.',
+        'Beautifully arranged tattwa trays, custom wedding invitation hampers, and thoughtful return favors that express your family’s love with elegance and traditional grace.',
     },
     {
       icon: Flame,
-      title: 'Ritual Coordination',
+      title: 'Traditional Rituals & Timings',
       description:
-        'Flawless sequencing ensuring puja samagri, brass utensils, sacred fire (homa/yajna) setups, and ceremonial items are staged on time for sacred traditional rituals.',
+        'We make sure the puja samagri, sacred fire, brass thalis, and priest requirements are prepared well ahead of time, ensuring subho drishti and saat phere happen with peaceful dignity.',
     },
   ];
 
-  // 2. Master Wedding Timeline & Checklist
+  // 2. Step-by-Step Wedding Timeline (Warm, Practical Copy)
   const timelineChecklist = [
     {
       period: '6–9 Months Before',
-      title: 'Budget, Venue & Core Theme',
-      tag: 'Strategic Foundation',
+      title: 'Budget, Prime Venues & The Big Vision',
+      tag: 'First steps',
       items: [
-        'Finalize estimated guest list and overall wedding expenditure ceiling.',
-        'Select and lock prime venues for pre-wedding rituals, main wedding, and reception.',
-        'Contract key high-demand single-client vendors: Lead Photographer/Cinematographer and Bridal Makeup Artist.',
+        'Sit down with family to finalize the guest list and overall spending comfort.',
+        'Visit and reserve your favorite rajbaris, banquets, or lawns for pre-wedding and wedding days.',
+        'Book high-demand single-client specialists early: your lead photographer and bridal makeup artist.',
       ],
     },
     {
       period: '3–5 Months Before',
-      title: 'Design Concepts & Catering Curation',
-      tag: 'Creative Curation',
+      title: 'Decor Themes, Menu Tastings & Invitations',
+      tag: 'Creative details',
       items: [
-        'Finalize 3D decor themes for Haldi, Mehendi, Sangeet, Wedding Mandap, and Reception.',
-        'Conduct catering menu food tastings with the kitchen team and finalize per-plate menus.',
-        'Select and order printed stationery, digital e-invites, and bespoke gift boxes.',
-        'Book entertainment: DJ, live acoustic singer/sufi troupe, emcee, and Sangeet choreographer.',
+        'Finalize flower and decor themes for Haldi, Mehendi, Sangeet, Mandap, and Boubhat.',
+        'Join our kitchen team for live food tastings and handpick your favorite per-plate recipes.',
+        'Order traditional printed cards, bespoke gift boxes, and digital video invites.',
+        'Confirm family Sangeet choreographers, live musicians, and DJ setups.',
       ],
     },
     {
       period: '1–2 Months Before',
-      title: 'Logistics, Wardrobe & Wardrobe Styling',
-      tag: 'Precision Planning',
+      title: 'Outfits, Guest Stays & Local Permissions',
+      tag: 'Family prep',
       items: [
-        'Complete final bridal and groom wear fittings; finalize jewellery and accessories.',
-        'Coordinate outstation guest flight/train schedules and confirm hotel room block allocations.',
-        'Finalize tattwa decoration styles and wrap wedding favors.',
-        'Secure municipal, noise, and fire safety licenses (if hosting at private outdoor grounds).',
+        'Complete final bridal and groom outfit fittings; finalize Benarasi drapes, jewellery, and footwear.',
+        'Confirm outstation family train/flight timings and block hotel room wings.',
+        'Wrap wedding favors and design ceremonial tattwa trays.',
+        'Secure any required outdoor ground or music sound permissions.',
       ],
     },
     {
       period: '1–2 Weeks Before',
-      title: 'Final Rehearsals & Vendor Briefings',
-      tag: 'Rehearsal Run',
+      title: 'Run-of-Show Schedules & Final Walkthrough',
+      tag: 'Final checks',
       items: [
-        'Distribute minute-by-minute run-of-show schedules to family heads and technical vendors.',
-        'Pack room welcome kits, vanity bags, and guest identity access tags.',
-        'Finalize ritual timings (subho drishti, lagna, saat phere) with the lead priest.',
+        'Share a clear minute-by-minute schedule with family heads and vendors so everyone is aligned.',
+        'Assemble welcome vanity bags, room hampers, and guest luggage tags.',
+        'Review auspicious lagna timings and ritual items with the family priest.',
       ],
     },
     {
       period: 'The Wedding Days',
-      title: 'Day-of Execution & Shadow Support',
-      tag: 'Flawless Execution',
+      title: 'On-Ground Care & Family Shadow Support',
+      tag: 'The big day',
       items: [
-        'Mobilize on-ground production team 8 hours prior to guest arrival.',
-        'Assign dedicated personal shadows to the bride and groom for wardrobe adjustments, refreshments, and stage transitions.',
-        'Direct crowd flow between greeting lounge, main mandap, and buffet dining areas.',
+        'Our team arrives 8 hours prior to guest arrivals to inspect flowers, sound, and dining stations.',
+        'A dedicated personal shadow stays by the bride and groom for refreshments, wardrobe adjustments, and cues.',
+        'We guide guests smoothly between greeting lounges, the main mandap, and hot buffet dining.',
       ],
     },
   ];
 
-  // 3. Wedding Planning Packages Comparison
+  // 3. Clear Planning Options
   const weddingPackages = [
     {
-      name: 'Silver: Coordination',
-      subtitle: 'Best Suited For Couples Who Booked Vendors But Need Day-Of Execution',
-      engagement: '4 Weeks prior to event',
-      decor: 'Oversee client-selected decor team',
-      catering: 'Menu timeline sync & plate counts',
-      entertainment: 'Basic DJ & mic coordination',
-      hospitality: 'Day-of guest direction',
+      name: 'Silver: Day-of Management',
+      subtitle: 'For couples who booked vendors but want to relax on the big day',
+      engagement: 'Starts 4 weeks before event',
+      decor: 'Coordinate and supervise client-booked decor team',
+      catering: 'Sync food timings, plate counts, and live counters',
+      entertainment: 'Sound and music timing management',
+      hospitality: 'Warm guest guidance and reception flow',
       teamSize: '3–4 Coordinators',
       highlight: false,
     },
     {
       name: 'Gold: Complete Planning',
-      subtitle: 'Mid-to-Grand Scale City Weddings (300–600 Guests)',
-      engagement: '6–8 Months prior to event',
-      decor: 'Bespoke 3D decor theme, floral design & execution',
-      catering: 'Full menu curation, tasting runs, quality audits',
-      entertainment: 'Emcee, professional DJ console, dance troupe',
-      hospitality: 'Airport pickups, hotel desk, luggage management',
+      subtitle: 'Best for city weddings with 300 to 600 guests',
+      engagement: '6–8 months of dedicated planning',
+      decor: 'Custom 3D design, fresh flower setups & production',
+      catering: 'Full menu curation, kitchen tastings & quality audits',
+      entertainment: 'Professional emcee, DJ console & folk/dance artists',
+      hospitality: 'Airport transfers, hotel check-in desk & hamper delivery',
       teamSize: '6–8 Specialists + 1 Event Director',
       highlight: true,
-      badge: 'Most Popular Choice',
+      badge: 'Most Popular',
     },
     {
-      name: 'Imperial: Turnkey Luxury',
-      subtitle: 'Destination & Luxury Multi-Day Weddings (500+ Guests)',
-      engagement: '9–12 Months prior to event',
-      decor: 'Architectural set builds, exotic florals, LED walls',
-      catering: 'Royal multi-counter curation, chef tables, live bars',
-      entertainment: 'Celebrity artists, live bands, Sufi night setups',
-      hospitality: 'Fleet of luxury cars, dedicated concierge, 24/7 lounge',
+      name: 'Imperial: Royal All-Inclusive',
+      subtitle: 'For grand palatial and destination celebrations (500+ guests)',
+      engagement: '9–12 months of comprehensive care',
+      decor: 'Architectural rajbari builds, exotic florals & LED stagecraft',
+      catering: 'Royal multi-course banquets, chef tables & dessert counters',
+      entertainment: 'Celebrity singers, headline bands & Sufi night setups',
+      hospitality: 'Luxury car fleet, 24/7 hospitality lounge & luggage desk',
       teamSize: '12+ Full Crew + Bride & Groom Shadow Managers',
       highlight: false,
       badge: 'Royal Flagship',
@@ -166,32 +159,32 @@ const WeddingPlanner = () => {
     {
       day: 'Day 1: Morning',
       title: 'Haldi & Phoolon Ki Holi',
-      description: 'Yellow/Marigold Boho floral setup, dhol beats, organic herbal haldi, and vibrant photo-ops.',
-      accent: 'border-amber-400 bg-amber-500/10 text-amber-300',
+      description: 'Bright marigold floral setup, live dhol beats, organic herbal haldi, and joyful candid photo-ops.',
+      accent: 'border-amber-400 bg-amber-500/10 text-amber-900 dark:text-amber-300',
     },
     {
       day: 'Day 1: Evening',
       title: 'Sangeet & Cocktail Night',
-      description: 'Glamorous club lighting, elevated bar, high-power DJ console, choreographed family dance routines.',
-      accent: 'border-purple-400 bg-purple-500/10 text-purple-300',
+      description: 'Glamorous club lighting, elevated mocktail bar, high-energy DJ music, and choreographed family dances.',
+      accent: 'border-purple-400 bg-purple-500/10 text-purple-900 dark:text-purple-300',
     },
     {
       day: 'Day 2: Morning',
-      title: 'Traditional Chokh Daan / Aai Buro Bhaat / Chuda Ceremony',
-      description: 'Intimate Vedic rituals with brass lamps, auspicious alpana floor art, and heritage family feasts.',
-      accent: 'border-rose-400 bg-rose-500/10 text-rose-300',
+      title: 'Traditional Aai Buro Bhaat & Chuda',
+      description: 'Intimate rituals with brass lamps, auspicious alpana art, and a beloved traditional family feast.',
+      accent: 'border-rose-400 bg-rose-500/10 text-rose-900 dark:text-rose-300',
     },
     {
       day: 'Day 2: Evening',
-      title: 'The Royal Wedding',
-      description: 'Grand Barat entry with vintage chariot/cars, floating mandap with fresh florals, and imperial multi-course banquet.',
-      accent: 'border-gold-400 bg-gold-500/15 text-gold-300',
+      title: 'The Royal Wedding Ceremony',
+      description: 'Grand Barat entry, fresh flower mandap, sacred Vedic chants, and a grand banquet feast for all guests.',
+      accent: 'border-amber-500 bg-amber-500/15 text-amber-900 dark:text-amber-200',
     },
     {
       day: 'Day 3: Evening',
-      title: 'Reception / Boubhat',
-      description: 'Sleek modern decor, live acoustic sufi/jazz band, formal photo lounge, and grand multi-cuisine feast.',
-      accent: 'border-sky-400 bg-sky-500/10 text-sky-300',
+      title: 'Boubhat & Grand Reception',
+      description: 'Sleek modern decor, live acoustic sufi or jazz music, family photo lounge, and an imperial multi-cuisine feast.',
+      accent: 'border-sky-400 bg-sky-500/10 text-sky-900 dark:text-sky-300',
     },
   ];
 
@@ -204,7 +197,7 @@ const WeddingPlanner = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-[#141210] min-h-screen text-[#1F2937] dark:text-[#FAF7F2]">
+    <div className="bg-white dark:bg-[#141210] min-h-screen text-[#2D2823] dark:text-[#FAF7F2]">
       {/* ========================================================================= */}
       {/* HERO BANNER */}
       {/* ========================================================================= */}
@@ -228,13 +221,13 @@ const WeddingPlanner = () => {
           </div>
 
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-[#FFF8F0] tracking-tight mb-4">
-            Turnkey Wedding Planning
+            Your wedding, truly taken care of
           </h1>
           <p className="font-serif text-lg sm:text-2xl text-amber-200 font-normal mb-6">
-            From heritage rajbaris to Vedic mandaps, bridal styling, Benarasi sarees, and food cooked by our own bawarchis.
+            From heritage rajbaris to Vedic flower mandaps and feasts cooked fresh by our own bawarchis.
           </p>
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/90 font-light leading-relaxed mb-9">
-            We handle venue reservations, floral mandaps, ritual coordination, photography, and banquet service with one dedicated team. Your family celebrates without running around after suppliers.
+            We handle venue reservations, stage decor, ritual timings, photography, and hospitality with one devoted local team. Your family celebrates without running around after suppliers.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -246,7 +239,7 @@ const WeddingPlanner = () => {
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Explore Wedding Packages
+              Explore planning options
             </Button>
             <Button
               variant="outline"
@@ -255,7 +248,7 @@ const WeddingPlanner = () => {
               icon={FileText}
               iconPosition="left"
             >
-              View Printable Contract & Proposal
+              View sample proposal & agreement
             </Button>
           </div>
         </div>
@@ -267,9 +260,9 @@ const WeddingPlanner = () => {
         {/* ========================================================================= */}
         <section id="scope-of-services">
           <SectionHeader
-            badge="Turnkey Management"
-            title="Scope of Planning Services"
-            subtitle="From heritage rajbaris and 3D floral mandaps to VIP shadow managers, our end-to-end scope leaves nothing to chance."
+            badge="Complete wedding care"
+            title="What we take care of for your wedding"
+            subtitle="From booking historic courtyards to personal shadow managers on the big day, we stay by your side so you can enjoy every moment."
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -278,21 +271,21 @@ const WeddingPlanner = () => {
               return (
                 <div
                   key={idx}
-                  className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-7 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
+                  className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-xl p-7 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
                 >
                   <div>
                     <div className="w-10 h-10 rounded-full bg-[#FAF8F4] dark:bg-[#141210] border border-gold-dark/30 dark:border-gold-light/30 flex items-center justify-center mb-5 text-gold-dark dark:text-gold-light group-hover:border-maroon/40 transition-colors">
                       <Icon className="w-5 h-5 stroke-[1.5]" />
                     </div>
-                    <h3 className="font-serif text-lg font-normal text-[#141414] dark:text-[#FAF7F2] mb-2.5 group-hover:text-maroon dark:group-hover:text-gold-light transition-colors tracking-wide">
+                    <h3 className="font-serif text-lg font-bold text-[#1F1D1A] dark:text-[#FAF7F2] mb-2.5 group-hover:text-maroon dark:group-hover:text-gold-light transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-xs sm:text-[13px] text-[#554F47] dark:text-[#A8A29E] leading-relaxed font-light">
                       {service.description}
                     </p>
                   </div>
-                  <div className="pt-4 mt-4 border-t border-[#E8E1D5]/60 dark:border-[#38312B] flex items-center text-[10.5px] uppercase tracking-wider text-gold-dark dark:text-gold-light font-medium">
-                    <span>Full Royal Management</span>
+                  <div className="pt-4 mt-4 border-t border-[#E8E1D5]/60 dark:border-[#38312B] flex items-center text-[11px] text-gold-dark dark:text-gold-light font-medium">
+                    <span>Royal Enterprise personal care</span>
                   </div>
                 </div>
               );
@@ -303,34 +296,34 @@ const WeddingPlanner = () => {
         {/* ========================================================================= */}
         {/* 2. MASTER WEDDING TIMELINE & CHECKLIST */}
         {/* ========================================================================= */}
-        <section id="wedding-timeline" className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-8 sm:p-12 shadow-sm">
+        <section id="wedding-timeline" className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-xl p-8 sm:p-12 shadow-sm">
           <SectionHeader
-            badge="Structured Execution"
-            title="Master Wedding Timeline & Checklist"
-            subtitle="A transparent, milestone-driven countdown ensuring serene planning from budget lock to the final reception."
+            badge="Step-by-step checklist"
+            title="Your wedding planning timeline"
+            subtitle="A clear countdown from our first conversation to the morning of Boubhat so you always know what comes next."
           />
 
           <div className="space-y-5">
             {timelineChecklist.map((phase, idx) => (
               <div
                 key={idx}
-                className="bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] rounded-[3px] p-6 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-colors"
+                className="bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] rounded-lg p-6 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-colors"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 border-b border-[#E8E1D5] dark:border-[#38312B] pb-3">
                   <div className="flex items-center space-x-3">
-                    <span className="font-serif text-lg sm:text-xl font-normal text-maroon dark:text-gold-light tracking-wide">
+                    <span className="font-serif text-lg sm:text-xl font-bold text-maroon dark:text-gold-light tracking-wide">
                       {phase.period}
                     </span>
-                    <span className="text-xs sm:text-sm font-medium text-[#141414] dark:text-[#FAF7F2]">
+                    <span className="text-xs sm:text-sm font-medium text-[#1F1D1A] dark:text-[#FAF7F2]">
                       • {phase.title}
                     </span>
                   </div>
-                  <span className="inline-block text-[9.5px] uppercase tracking-[0.16em] font-semibold px-2.5 py-0.5 rounded-[2px] bg-maroon/10 dark:bg-maroon/20 border border-maroon/20 dark:border-maroon/40 text-maroon dark:text-gold-light w-fit">
+                  <span className="inline-block text-[11px] font-medium px-2.5 py-0.5 rounded bg-maroon/10 dark:bg-maroon/20 border border-maroon/20 dark:border-maroon/40 text-maroon dark:text-gold-light w-fit">
                     {phase.tag}
                   </span>
                 </div>
 
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-[13px] text-[#3A352F] dark:text-[#D5CCC0] font-light">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-[13px] text-[#4A433A] dark:text-[#D5CCC0] font-light">
                   {phase.items.map((item, itemIdx) => (
                     <li key={itemIdx} className="flex items-start">
                       <div className="w-4 h-4 rounded-full bg-gold-dark/15 dark:bg-gold-light/20 text-gold-dark dark:text-gold-light flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
@@ -350,23 +343,23 @@ const WeddingPlanner = () => {
         {/* ========================================================================= */}
         <section id="wedding-packages-section">
           <SectionHeader
-            badge="Tiered Engagements"
-            title="Wedding Planning Packages"
-            subtitle="Transparent service tiers tailored to your engagement period, wedding scale, and crew requirements."
+            badge="Planning options"
+            title="Options tailored to your celebration"
+            subtitle="Honest options tailored to whether you need a dedicated hand on the day of the wedding or full guidance from day one."
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {weddingPackages.map((pkg, idx) => (
               <div
                 key={idx}
-                className={`relative rounded-[4px] p-8 flex flex-col justify-between transition-all duration-300 ${
+                className={`relative rounded-xl p-8 flex flex-col justify-between transition-all duration-300 ${
                   pkg.highlight
                     ? 'bg-[#FFFDF9] dark:bg-[#1C1917] border-2 border-maroon dark:border-gold-light shadow-md'
                     : 'bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] hover:border-gold-base/50 dark:hover:border-gold-light/50 shadow-sm'
                 }`}
               >
                 {pkg.badge && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-maroon text-[#FFF8F0] font-medium text-[9.5px] uppercase tracking-[0.2em] px-4 py-1 rounded-[2px] shadow-sm flex items-center">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-maroon text-[#FFF8F0] font-medium text-[11px] px-3.5 py-1 rounded-full shadow-sm flex items-center">
                     <Crown className="w-3 h-3 mr-1" />
                     {pkg.badge}
                   </div>
@@ -374,29 +367,29 @@ const WeddingPlanner = () => {
 
                 <div>
                   <div className="mb-6">
-                    <h3 className="font-serif text-2xl font-normal text-[#141414] dark:text-[#FAF7F2] mb-1 tracking-wide">
+                    <h3 className="font-serif text-2xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2] mb-1">
                       {pkg.name}
                     </h3>
-                    <p className="text-xs text-gold-dark dark:text-gold-light uppercase tracking-wider font-semibold mb-3">
+                    <p className="text-xs text-[#6E1423] dark:text-[#F59E0B] font-medium mb-3">
                       {pkg.subtitle}
                     </p>
-                    <div className="p-3 bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] rounded-[2px] text-xs text-[#554F47] dark:text-[#A8A29E] space-y-1 font-light">
-                      <p><span className="text-[#6B645C] dark:text-[#8C827A]">Engagement Period:</span> <strong className="text-[#141414] dark:text-[#FAF7F2] font-medium">{pkg.engagement}</strong></p>
+                    <div className="p-3 bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] rounded text-xs text-[#554F47] dark:text-[#A8A29E] space-y-1 font-light">
+                      <p><span className="text-[#6B645C] dark:text-[#8C827A]">Planning Period:</span> <strong className="text-[#1F1D1A] dark:text-[#FAF7F2] font-medium">{pkg.engagement}</strong></p>
                       <p><span className="text-[#6B645C] dark:text-[#8C827A]">On-Site Team:</span> <strong className="text-maroon dark:text-gold-light font-medium">{pkg.teamSize}</strong></p>
                     </div>
                   </div>
 
-                  <h5 className="text-[11px] uppercase tracking-[0.14em] font-semibold text-gold-dark dark:text-gold-light mb-4 border-b border-[#E8E1D5] dark:border-[#38312B] pb-2">
-                    Scope & Inclusions:
+                  <h5 className="text-xs font-semibold text-gold-dark dark:text-gold-light mb-4 border-b border-[#E8E1D5] dark:border-[#38312B] pb-2">
+                    What is included:
                   </h5>
 
-                  <ul className="space-y-3 mb-8 text-xs sm:text-[13px] text-[#3A352F] dark:text-[#D5CCC0] font-light">
+                  <ul className="space-y-3 mb-8 text-xs sm:text-[13px] text-[#4A433A] dark:text-[#D5CCC0] font-light">
                     <li className="flex items-start">
-                      <strong className="text-gold-dark dark:text-gold-light w-28 shrink-0 text-xs font-semibold">Decor & Design:</strong>
+                      <strong className="text-gold-dark dark:text-gold-light w-28 shrink-0 text-xs font-semibold">Decor & Flowers:</strong>
                       <span>{pkg.decor}</span>
                     </li>
                     <li className="flex items-start">
-                      <strong className="text-gold-dark dark:text-gold-light w-28 shrink-0 text-xs font-semibold">Catering Sync:</strong>
+                      <strong className="text-gold-dark dark:text-gold-light w-28 shrink-0 text-xs font-semibold">Feast Sync:</strong>
                       <span>{pkg.catering}</span>
                     </li>
                     <li className="flex items-start">
@@ -404,7 +397,7 @@ const WeddingPlanner = () => {
                       <span>{pkg.entertainment}</span>
                     </li>
                     <li className="flex items-start">
-                      <strong className="text-gold-dark dark:text-gold-light w-28 shrink-0 text-xs font-semibold">Hospitality:</strong>
+                      <strong className="text-gold-dark dark:text-gold-light w-28 shrink-0 text-xs font-semibold">Guest Care:</strong>
                       <span>{pkg.hospitality}</span>
                     </li>
                   </ul>
@@ -416,7 +409,7 @@ const WeddingPlanner = () => {
                   onClick={() => handleSelectPackage(pkg.name)}
                   className="w-full"
                 >
-                  Select {pkg.name.split(':')[0]}
+                  Choose {pkg.name.split(':')[0]}
                 </Button>
               </div>
             ))}
@@ -432,30 +425,30 @@ const WeddingPlanner = () => {
         {/* ========================================================================= */}
         <section id="multi-day-blueprint">
           <SectionHeader
-            badge="The Sacred Journey"
-            title="Multi-Day Event Blueprint"
-            subtitle="A cinematic narrative sequencing each traditional Bengali and Indian wedding ritual into a seamless royal celebration."
+            badge="The celebrations"
+            title="A 3-day wedding journey in Kolkata"
+            subtitle="How we guide your family through each traditional Bengali and Indian ceremony with joy and zero rush."
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {eventBlueprint.map((event, idx) => (
               <div
                 key={idx}
-                className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-5 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-all flex flex-col justify-between shadow-sm"
+                className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-xl p-5 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-all flex flex-col justify-between shadow-sm"
               >
                 <div>
-                  <div className={`p-2 rounded-[2px] border text-[10px] font-semibold uppercase tracking-[0.14em] mb-3 text-center ${event.accent}`}>
+                  <div className={`p-2 rounded text-[11px] font-semibold mb-3 text-center ${event.accent}`}>
                     {event.day}
                   </div>
-                  <h4 className="font-serif font-normal text-base text-[#141414] dark:text-[#FAF7F2] mb-2 tracking-wide">
+                  <h4 className="font-serif font-bold text-base text-[#1F1D1A] dark:text-[#FAF7F2] mb-2">
                     {event.title}
                   </h4>
                   <p className="text-xs text-[#554F47] dark:text-[#A8A29E] leading-relaxed font-light">
                     {event.description}
                   </p>
                 </div>
-                <div className="pt-3 mt-3 border-t border-[#E8E1D5]/60 dark:border-[#38312B] text-[9.5px] text-gold-dark dark:text-gold-light uppercase tracking-wider font-medium">
-                  Royal Protocol Assigned
+                <div className="pt-3 mt-3 border-t border-[#E8E1D5]/60 dark:border-[#38312B] text-[10.5px] text-gold-dark dark:text-gold-light font-medium">
+                  Dedicated team assigned
                 </div>
               </div>
             ))}
@@ -463,46 +456,14 @@ const WeddingPlanner = () => {
         </section>
 
         {/* ========================================================================= */}
-        {/* PRINTABLE PROPOSAL BANNER */}
+        {/* 5. INQUIRY FORM */}
         {/* ========================================================================= */}
-        <div className="p-8 sm:p-10 bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm relative overflow-hidden">
-          <div className="space-y-2 text-center sm:text-left">
-            <span className="text-[10.5px] uppercase tracking-[0.2em] text-gold-dark dark:text-gold-light font-semibold block">
-              Official Client Proposal & Agreement
-            </span>
-            <h3 className="font-serif text-2xl font-normal text-[#141414] dark:text-[#FAF7F2] tracking-wide">
-              Need a Formal Printable Proposal & Contract?
-            </h3>
-            <p className="text-xs sm:text-sm text-[#554F47] dark:text-[#A8A29E] max-w-xl font-light leading-relaxed">
-              Preview our formal client contract document complete with scope of work, milestone payment schedules, and legal terms ready for PDF export or immediate printing.
-            </p>
-          </div>
-          <Button
-            variant="primary"
-            size="lg"
-            onClick={() => setIsProposalModalOpen(true)}
-            icon={Printer}
-            iconPosition="left"
-            className="shrink-0"
-          >
-            Open Printable Proposal
-          </Button>
-        </div>
-
-        {/* ========================================================================= */}
-        {/* DEDICATED WEDDING ENQUIRY FORM */}
-        {/* ========================================================================= */}
-        <section id="wedding-enquiry-form" className="max-w-4xl mx-auto pt-6">
-          <SectionHeader
-            badge="Confidential Consultation"
-            title="Design Your Dream Wedding"
-            subtitle="Submit your wedding preferences. All details are saved to our master schedule for an executive proposal presentation."
-          />
+        <section id="wedding-enquiry-form" className="pt-8">
           <WeddingEnquiryForm initialPackageType={packageType} />
         </section>
       </div>
 
-      {/* Global Printable Proposal Modal */}
+      {/* Proposal & Contract Modal */}
       <WeddingProposalModal
         isOpen={isProposalModalOpen}
         onClose={() => setIsProposalModalOpen(false)}

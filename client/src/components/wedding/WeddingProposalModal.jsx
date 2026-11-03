@@ -14,7 +14,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
     eventDates: '________________________',
     venue: '________________________',
     guestCount: '________________________',
-    packageLevel: 'Silver / Gold / Imperial Turnkey Luxury',
+    packageLevel: 'Silver / Gold / Imperial Signature',
     planningFee: '₹ _______________',
     crewFee: '₹ _______________',
     taxFee: 'GST @ 18%',
@@ -37,7 +37,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
       isOpen={isOpen}
       onClose={onClose}
       title="Formal Wedding Planning Proposal & Contract"
-      subtitle="Official contract document for Royal Enterprise turnkey wedding services. Ready for print or client review."
+      subtitle="Official contract document for Royal Enterprise full wedding services. Ready for print or client review."
       maxWidth="max-w-4xl"
     >
       <div className="space-y-6">
@@ -72,7 +72,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
                     ROYAL ENTERPRISE
                   </div>
                   <p className="text-[10px] font-semibold text-slate-600 tracking-wider uppercase mt-1">
-                    Turnkey Wedding Planning | Gourmet Catering | Event Production
+                    Wedding Planning | In-House Catering | Event Management
                   </p>
                 </div>
               </div>
@@ -111,7 +111,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
               1. Executive Summary & Event Scope
             </h3>
             <p className="text-slate-700 text-xs sm:text-sm">
-              Royal Enterprise is honored to submit this formal proposal for comprehensive wedding planning, event coordination, and production management for the upcoming nuptial celebrations. Our mandate is to oversee end-to-end design, vendor operations, scheduling, and on-ground hospitality to ensure a seamless and memorable celebration.
+              Royal Enterprise is honored to submit this formal proposal for comprehensive wedding planning, event coordination, and on-ground hospitality for the upcoming nuptial celebrations. Our team oversees design, vendor scheduling, stage setup, and guest hospitality to ensure an enjoyable and well-managed celebration.
             </p>
             <div className="bg-slate-50 p-3 rounded border border-slate-200 text-xs space-y-1">
               <p className="font-bold text-slate-800 uppercase text-[10px] tracking-wider mb-1">Celebration Details</p>
@@ -135,7 +135,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
                 <strong>Theme & Decor Management:</strong> Conceptualization of 3D visual mockups for all functions (Haldi, Sangeet, Wedding Ceremony, and Reception); oversight of floral arrangements, mandap fabrication, atmospheric illumination, and stage backdrops.
               </li>
               <li>
-                <strong>Vendor Orchestration:</strong> Sourcing, contract negotiation, schedule management, and day-of briefing for external specialists (cinematographers, bridal makeup artists, choreographers, priests, musical bands, and DJs).
+                <strong>Vendor Coordination:</strong> Sourcing, contract negotiation, schedule management, and day-of briefing for external specialists (cinematographers, bridal makeup artists, choreographers, priests, musical bands, and DJs).
               </li>
               <li>
                 <strong>Catering Supervision:</strong> Coordinating menu tastings, banquet layouts, plate auditing, live food counter sequencing, and service staff monitoring.
@@ -167,7 +167,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
                 <tbody className="divide-y divide-slate-200 text-slate-700">
                   <tr>
                     <td className="p-2 border border-slate-200 font-medium">Wedding Planning & Direction Fee</td>
-                    <td className="p-2 border border-slate-200">Complete turnkey coordination and design supervision</td>
+                    <td className="p-2 border border-slate-200">Complete event coordination and design supervision</td>
                     <td className="p-2 border border-slate-200 text-right font-mono">{clientData.planningFee}</td>
                   </tr>
                   <tr>
@@ -251,7 +251,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
                 <strong>Cancellation & Postponement:</strong> The initial 25% booking retainer is non-refundable, reflecting immediate planning and administrative investments. If an event is postponed due to verified unforeseen circumstances, deposits may be transferred to a mutually agreed future date within six (6) calendar months, subject to calendar availability.
               </li>
               <li>
-                <strong>Force Majeure:</strong> Neither party shall be held liable for failure to fulfill obligations when hindered by events beyond reasonable control, including natural disasters, governmental mandates, utility disruptions, or civil emergencies.
+                <strong>Force Majeure:</strong> Neither party shall be held liable for failure to fulfill obligations when hindered by events beyond reasonable control, including natural disasters, governmental regulations, power disruptions, or civil emergencies.
               </li>
               <li>
                 <strong>Permits & Legal Compliances:</strong> The client and venue management remain responsible for venue-specific statutory permits, sound licensing, and commercial permissions, with advisory assistance provided by Royal Enterprise.

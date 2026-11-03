@@ -43,7 +43,7 @@ const BrandStory = () => {
 
             <div className="space-y-4 text-sm sm:text-base text-[#524C44] dark:text-[#A89F91] leading-relaxed">
               <p className="bg-[#FAF7F2] dark:bg-[#24201D] p-3.5 rounded border border-[#E5DED3] dark:border-[#38312B] text-xs font-mono text-[#6E1423] dark:text-[#F59E0B]">
-                [Company Founder Story: Insert story of {COMPANY_INFO.founder}, how Royal Enterprise started in {COMPANY_INFO.foundedYear}, and the core mission of providing integrated turnkey event management and in-house catering here.]
+                [Company Founder Story: Insert story of {COMPANY_INFO.founder}, how Royal Enterprise started in {COMPANY_INFO.foundedYear}, and the core mission of providing complete event management and in-house catering here.]
               </p>
               <p>
                 We believe that the single biggest challenge families and corporate organizers face is dealing with fragmented contractors who fail to coordinate on the day of the event.

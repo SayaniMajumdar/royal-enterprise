@@ -103,7 +103,7 @@ const DivisionOverview = ({ onOpenQuote }) => {
           {/* ========================================================================= */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
             
-            {/* Card A: Turnkey Wedding Planning */}
+            {/* Card A: Wedding Planning */}
             <div className="bg-white dark:bg-[#1C1917] rounded-lg border border-[#E5DED3] dark:border-[#38312B] p-6 flex-1 flex flex-col justify-between shadow-paper-sm dark:shadow-dark-card transition-colors">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
@@ -170,7 +170,7 @@ const DivisionOverview = ({ onOpenQuote }) => {
                   </li>
                   <li className="flex items-center space-x-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#6E1423] dark:bg-[#F59E0B]" />
-                    <span>Single turnkey invoice with zero hidden add-ons</span>
+                    <span>Clear itemized estimate with zero surprise add-ons</span>
                   </li>
                 </ul>
               </div>

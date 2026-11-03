@@ -31,160 +31,160 @@ const EventManagement = () => {
     {
       id: 'corporate',
       title: 'Corporate Events & Conferences',
-      subtitle: 'Executive Precision & High-Impact Brand Production',
+      subtitle: 'Conferences, leadership summits & award galas',
       description:
-        'Turnkey execution for leadership summits, annual galas, and global corporate gatherings with automated delegate logistics, high-definition stagecraft, and strict protocol.',
+        'From leadership summits at luxury hotel ballrooms to annual award nights, our on-ground crew sets up custom stages, high-definition LED screens, acoustic sound, and seating logistics so your leadership team can focus on the event.',
       image:
         'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80',
-      badge: 'Corporate Standard',
+      badge: 'Corporate & Summits',
       subServices: [
         {
-          name: 'Annual Corporate Galas & Award Nights',
-          detail: 'Stage design, digital LED backdrops, awards distribution logistics, and keynote scripting.',
+          name: 'Annual Galas & Award Nights',
+          detail: 'Stage design, digital LED backdrops, trophy distribution flow, and emcee coordination.',
         },
         {
-          name: 'Product Launches & Brand Activations',
-          detail: 'Thematic reveal zones, media walls, press kits, interactive demonstration booths, and PR coordination.',
+          name: 'Product Launches & Press Meets',
+          detail: 'Thematic reveal zones, media photo backdrops, press kit tables, and live demo audio.',
         },
         {
-          name: 'Conferences, Seminars & Summits',
-          detail: 'Registration desk automation, AV equipment setup, directional signage, delegate kits, and simultaneous translation support.',
+          name: 'Conferences & Leadership Summits',
+          detail: 'Delegate registration desks, crisp wireless microphones, directional signage, and smooth session timings.',
         },
         {
           name: 'Corporate Team Outings & Offsites',
-          detail: 'Team-building activities, venue scouting, transport, accommodation, and gala dinners.',
+          detail: 'Venue selection, guest transport, team-building setups, and evening dinners.',
         },
       ],
     },
     {
       id: 'social',
-      title: 'Social Celebrations & Milestone Events',
-      subtitle: 'Cherished Family Milestones & Opulent Social Soirees',
+      title: 'Social Celebrations & Family Milestones',
+      subtitle: 'Milestone birthdays, golden jubilees & rice ceremonies',
       description:
-        'From milestone birthdays and golden jubilees to traditional rice ceremonies and high-energy Sangeet nights, we create joyous, beautifully staged family celebrations.',
+        'From first birthdays and 50th jubilees to traditional Annaprashan (rice ceremonies) and vibrant Sangeet nights, we create warm, beautifully staged family celebrations where every relative feels looked after.',
       image:
         'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=80',
-      badge: 'Family & Milestones',
+      badge: 'Family Celebrations',
       subServices: [
         {
-          name: 'Anniversary Celebrations',
-          detail: 'Romantic, luxury, or retro-themed settings with customized lighting and curated entertainment.',
+          name: 'Anniversaries & Milestone Birthdays',
+          detail: 'Warm atmospheric lighting, memorable photo corners, curated music, and dedicated family dining.',
         },
         {
-          name: 'Milestone Birthdays',
-          detail: 'Custom 1st birthdays, sweet sixteens, and 50th/60th grand celebrations with dedicated kid/family engagement areas.',
+          name: 'Annaprashan & Rice Ceremonies',
+          detail: 'Traditional floral seating, aesthetic baby stage, and authentic Bengali feast service.',
         },
         {
-          name: 'Pre-Wedding Socials',
-          detail: 'Haldi, Mehendi, Sangeet night choreography, Sufi nights, and cocktail evenings.',
+          name: 'Pre-Wedding Sangeet & Cocktail Nights',
+          detail: 'Dance floor trussing, professional DJ sound, live percussionists, and cocktail snacks.',
         },
         {
-          name: 'Baby Showers & Rice Ceremonies (Annaprashan)',
-          detail: 'Traditional florals, aesthetic stage setups, and family dining arrangements.',
+          name: 'Baby Showers & Family Gatherings',
+          detail: 'Custom floral arches, sweet tables, and relaxed seating for all generations.',
         },
       ],
     },
     {
       id: 'cultural',
-      title: 'Cultural, Festivals & Public Events',
-      subtitle: 'Megascale Infrastructure & High-Capacity Crowd Production',
+      title: 'Cultural Festivals & Community Events',
+      subtitle: 'Durga puja infrastructure, community melas & live music shows',
       description:
-        'End-to-end event infrastructure for large-capacity religious festivals, ticketed live concerts, college symposiums, and civic exhibitions with municipal safety compliance.',
+        'Large-capacity festival grounds, live acoustic concert staging, safety barricading, and municipal fire safety compliance for Kolkata\'s grandest community gatherings.',
       image:
         'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80',
-      badge: 'Megascale Infrastructure',
+      badge: 'Cultural & Festivals',
       subServices: [
         {
-          name: 'Pooja & Festival Event Infrastructure',
-          detail: 'Complete pandal fabrication, light gates, crowd control barriers, VIP lounges, and power backups.',
+          name: 'Puja & Festival Ground Infrastructure',
+          detail: 'Pandal fabrication, illuminated gates, crowd pathways, VIP seating, and generator power backups.',
         },
         {
           name: 'Live Music Concerts & Shows',
-          detail: 'Acoustic stage construction, artist green rooms, crowd security, ticketing management, and municipal/fire safety permissions.',
+          detail: 'Acoustic line-array sound, artist green rooms, crowd security, and municipal safety approvals.',
         },
       ],
     },
   ];
 
   // =========================================================================
-  // 2. COMPREHENSIVE SERVICE MODULES
+  // 2. WHAT WE MANAGE FOR YOU (SERVICE MODULES)
   // =========================================================================
   const serviceModules = [
     {
       icon: Building2,
-      name: 'Venue Sourcing & Booking',
+      name: 'Finding the Right Venue',
       deliverable:
-        'Scouting banquet halls, luxury resorts, open-air lawns, and farmhouses; negotiating corporate/bulk rates.',
+        'Scouting heritage rajbaris, open lawns, banquet halls, and hotel ballrooms; negotiating fair corporate and family rates.',
     },
     {
       icon: Palette,
-      name: 'Concept & Stage Decor',
+      name: 'Stage Design & Visuals',
       deliverable:
-        '3D stage layout rendering, thematic entry arches, bespoke floral installations, red carpets, and lounge setups.',
+        'Clear 3D stage mockups, entry arches, fresh floral decor, red carpet walkways, and comfortable VIP seating.',
     },
     {
       icon: Volume2,
-      name: 'Audiovisual & Technicals',
+      name: 'Sound, Lights & LED Walls',
       deliverable:
-        'Line-array sound systems, moving-head intelligent lighting, LED video walls (P2/P3), laser shows, and heavy genset power backups.',
+        'Crisp speech sound systems, ambient mood lighting, high-definition LED screens, and heavy-duty power generator backups.',
     },
     {
       icon: Music,
-      name: 'Artist & Entertainment',
+      name: 'Live Music & Emcees',
       deliverable:
-        'Emcees/hosts, live Bollywood/Sufi bands, celebrity appearances, DJ setups, folk dance troupes, and stand-up comedians.',
+        'Engaging event hosts, live Bengali and Bollywood musicians, cultural performers, and professional DJs.',
     },
     {
       icon: Camera,
-      name: 'Photography & Videography',
+      name: 'Photo & Video Teams',
       deliverable:
-        'Traditional photo/video teams, candid cinematic wedding teasers, drone videography, crane cameras, and live webcasting.',
+        'Candid ceremony photography, cinematic highlight reels, drone videography, and live screen feeds.',
     },
     {
       icon: Users,
-      name: 'Guest Hospitality & Logistics',
+      name: 'Guest Hospitality & Transport',
       deliverable:
-        'Airport/station transfers, luxury fleet rentals, hotel check-in desks, welcome hampers, and valet parking management.',
+        'Airport and Howrah/Sealdah station pickups, hotel check-in assistance, welcome kits, and valet parking coordination.',
     },
     {
       icon: ShieldCheck,
-      name: 'Security & Crowd Control',
+      name: 'Safety & Crowd Care',
       deliverable:
-        'Trained bouncers, female security personnel, metal detector frames, fire safety compliance, and medical first-responder teams.',
+        'Trained event marshals, female security staff, fire safety equipment, and on-ground medical first-aid.',
     },
   ];
 
   // =========================================================================
-  // 3. HOW WE WORK (OUR 4-STEP PROCESS)
+  // 3. HOW WE WORK TOGETHER (OUR 4-STEP PROCESS)
   // =========================================================================
   const processSteps = [
     {
       step: '1',
-      title: 'Discovery & Briefing',
+      title: 'A Warm Chat & Your Brief',
       description:
-        'We understand your event purpose, expected guest count, venue preferences, and target budget.',
-      tag: 'Strategic Alignment',
+        'We listen to your event ideas, estimated guest count, preferred venue type, and comfortable budget.',
+      tag: 'First Conversation',
     },
     {
       step: '2',
-      title: 'Concept & Budget Design',
+      title: 'Floor Plan & Transparent Pricing',
       description:
-        'We draft a customized 3D design preview, timeline breakdown, and transparent line-item budget estimate.',
-      tag: '3D Preview & Costing',
+        'We share a 3D stage preview, run-of-show schedule, and itemized cost breakdown with zero hidden additions.',
+      tag: 'Clear Estimates',
     },
     {
       step: '3',
-      title: 'Pre-Production',
+      title: 'Rehearsals & Menu Tastings',
       description:
-        'Vendor allocations, technical dry-runs, catering menu tastings, sound/light checks, and legal/safety clearances.',
-      tag: 'Rehearsals & Clearances',
+        'Technical sound checks, lighting cues, stage dry-runs, and catering menu tastings before the celebration.',
+      tag: 'Dry Runs & Tastings',
     },
     {
       step: '4',
-      title: 'On-Ground Execution',
+      title: 'Calm On-Ground Management',
       description:
-        'A dedicated floor manager oversees artist timelines, backstage cues, dining transitions, and crowd comfort.',
-      tag: 'Live Show Management',
+        'Our experienced floor managers and technical leads stay on site from morning setup until the last guest leaves.',
+      tag: 'On-Ground Care',
     },
   ];
 
@@ -199,13 +199,13 @@ const EventManagement = () => {
       idealEvents: 'Birthdays, Anniversaries, Seminars',
       inclusions: [
         'Standard Stage Setup & Backdrop',
-        'Ambient Up-Lighting & Spotlights',
-        'Basic PA Sound System & Mic Setup',
-        'On-Site Event Coordinator for Show Running',
+        'Warm Ambient Up-Lighting & Spotlights',
+        'Crisp PA Sound System & Cordless Mics',
+        'On-Site Coordinator for Timeline Management',
         'Guest Welcoming & Reception Direction',
       ],
       popular: false,
-      badge: 'Essentials Tier',
+      badge: 'Essentials',
     },
     {
       id: 'gold',
@@ -215,31 +215,31 @@ const EventManagement = () => {
       inclusions: [
         'Custom Thematic Stage Design & Decor',
         'High-Resolution LED Backdrop Wall',
-        'Intelligent Beam Lighting & DMX Rigging',
-        'Professional DJ Console & Sound System',
-        'Professional Emcee / Host',
-        'Digital Photography & Videography Coverage',
+        'Intelligent Beam Lighting & Trussing',
+        'Professional DJ Console & Sound Setup',
+        'Experienced Professional Emcee / Host',
+        'Photography & Videography Highlights',
         '3 Dedicated On-Site Event Coordinators',
       ],
       popular: true,
-      badge: 'Signature Choice',
+      badge: 'Most Popular',
     },
     {
       id: 'imperial',
-      name: 'Imperial Package (Turnkey Luxury)',
+      name: 'Imperial Package (Large-Scale & Flagship)',
       targetGuests: 'Ideal for 500+ guests or multi-day corporate/wedding events',
-      idealEvents: 'Megascale summits, royal weddings, public festivals',
+      idealEvents: 'Large-scale summits, royal celebrations, public festivals',
       inclusions: [
-        'Comprehensive Turnkey 3D Thematic Fabrication',
-        'High-Power Line-Array Sound Towers & Concert Trussing',
-        'Celebrity Artist / Headline Performer Booking',
-        'Full Hospitality Concierge & VIP Logistics Team',
-        'Cinematic 4K Live Broadcast & Drone Coverage',
-        'Dedicated Operations Heads & Personal Shadows',
-        'Complete Civic, Police & Fire Safety Liaisons',
+        'Custom 3D Thematic Stage & Backdrop Build',
+        'Concert Acoustic Sound Towers & Truss Lighting',
+        'Celebrity Artist / Live Band Coordination',
+        'Full Guest Hospitality & VIP Logistics Team',
+        'Cinematic 4K Video Coverage & Drone Shoot',
+        'Dedicated Senior Floor Managers on site',
+        'Complete Municipal, Police & Fire Safety Clearances',
       ],
       popular: false,
-      badge: 'Turnkey Luxury',
+      badge: 'Flagship Scale',
     },
   ];
 
@@ -422,22 +422,22 @@ const EventManagement = () => {
         </div>
       </section>
 
-      <div className="max-w-[1180px] mx-auto px-5 sm:px-6 py-20 space-y-28">
+      <div className="max-w-[1180px] mx-auto px-5 sm:px-6 py-20 space-y-24">
         {/* ========================================================================= */}
         {/* 1. CORE EVENT CATEGORIES WE HANDLE */}
         {/* ========================================================================= */}
         <section id="core-categories">
           <SectionHeader
-            badge="Full Spectrum Portfolio"
+            badge="What We Organize"
             title="Core Event Categories We Handle"
-            subtitle="Explore our three flagship event categories with detailed sub-disciplines tailored for corporate impact, family heritage, and megascale culture."
+            subtitle="Explore our three event categories tailored for corporate conferences, family milestones, and large community gatherings in Kolkata."
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {coreCategories.map((cat) => (
               <div
                 key={cat.id}
-                className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] overflow-hidden hover:border-gold-base/60 dark:hover:border-gold-light/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
+                className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-xl overflow-hidden hover:border-[#6E1423]/40 dark:hover:border-[#F59E0B]/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
               >
                 <div>
                   <div className="relative aspect-[16/10] overflow-hidden bg-slate-200 dark:bg-stone-800">
@@ -446,34 +446,34 @@ const EventManagement = () => {
                       alt={cat.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute top-3 left-3 bg-[#FFFDF9]/95 dark:bg-[#1C1917]/95 backdrop-blur-sm border border-[#E8E1D5] dark:border-[#38312B] px-2.5 py-0.5 rounded-[2px] text-[9.5px] font-semibold uppercase tracking-[0.16em] text-gold-dark dark:text-gold-light">
+                    <div className="absolute top-3 left-3 bg-[#FFFDF9]/95 dark:bg-[#1C1917]/95 backdrop-blur-sm border border-[#E8E1D5] dark:border-[#38312B] px-2.5 py-0.5 rounded text-[10px] font-semibold text-[#6E1423] dark:text-[#F59E0B]">
                       {cat.badge}
                     </div>
                   </div>
 
                   <div className="p-6 sm:p-7">
-                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] dark:text-[#FAF7F2] mb-1 group-hover:text-maroon dark:group-hover:text-gold-light transition-colors tracking-wide leading-snug">
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2] mb-1 group-hover:text-[#6E1423] dark:group-hover:text-[#F59E0B] transition-colors leading-snug">
                       {cat.title}
                     </h3>
-                    <p className="text-[11px] uppercase tracking-wider font-semibold text-gold-dark dark:text-gold-light mb-4">
+                    <p className="text-xs font-semibold text-[#6E1423] dark:text-[#F59E0B] mb-3">
                       {cat.subtitle}
                     </p>
-                    <p className="text-xs sm:text-[13px] text-[#554F47] dark:text-[#A8A29E] leading-relaxed mb-6 font-light">
+                    <p className="text-xs sm:text-[13.5px] text-[#524C44] dark:text-[#A89F91] leading-relaxed mb-6 font-light">
                       {cat.description}
                     </p>
 
-                    <h4 className="text-[10.5px] uppercase tracking-[0.16em] font-semibold text-gold-dark dark:text-gold-light mb-3 border-b border-[#E8E1D5] dark:border-[#38312B] pb-2">
-                      Sub-Disciplines & Inclusions:
+                    <h4 className="text-xs font-semibold text-[#1F1D1A] dark:text-[#FAF7F2] mb-3 border-b border-[#E8E1D5] dark:border-[#38312B] pb-2">
+                      What we take care of:
                     </h4>
 
                     <div className="space-y-3 mb-6">
                       {cat.subServices.map((sub, idx) => (
                         <div key={idx} className="text-xs">
-                          <p className="font-medium text-[#141414] dark:text-[#FAF7F2] flex items-start">
-                            <span className="w-1.5 h-1.5 bg-gold-dark dark:bg-gold-light mr-2 mt-1.5 shrink-0 rotate-45" />
+                          <p className="font-medium text-[#1F1D1A] dark:text-[#FAF7F2] flex items-start">
+                            <span className="w-1.5 h-1.5 bg-[#6E1423] dark:bg-[#F59E0B] mr-2 mt-1.5 shrink-0 rounded-full" />
                             <span>{sub.name}</span>
                           </p>
-                          <p className="text-[#6B645C] dark:text-[#A8A29E] ml-3.5 mt-0.5 leading-relaxed text-[11px] font-light">
+                          <p className="text-[#524C44] dark:text-[#A89F91] ml-3.5 mt-0.5 leading-relaxed text-[11.5px] font-light">
                             {sub.detail}
                           </p>
                         </div>
@@ -500,36 +500,36 @@ const EventManagement = () => {
         </section>
 
         {/* ========================================================================= */}
-        {/* 2. COMPREHENSIVE SERVICE MODULES TABLE */}
+        {/* 2. WHAT WE MANAGE FOR YOU TABLE */}
         {/* ========================================================================= */}
         <section id="service-modules">
           <SectionHeader
-            badge="Turnkey Capabilities"
-            title="Comprehensive Service Modules"
-            subtitle="Explore exact operational deliverables provided by Royal Enterprise across seven foundational disciplines."
+            badge="In-House Capabilities"
+            title="What We Manage For You"
+            subtitle="Every operational detail handled by our dedicated crew so you don't have to chase suppliers."
           />
 
-          <div className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] overflow-hidden shadow-sm mb-12">
+          <div className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-xl overflow-hidden shadow-sm mb-12">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs sm:text-sm border-collapse">
-                <thead className="bg-[#FAF8F4] dark:bg-[#141210] text-gold-dark dark:text-gold-light uppercase tracking-[0.16em] font-semibold border-b border-[#E8E1D5] dark:border-[#38312B]">
+                <thead className="bg-[#FAF8F4] dark:bg-[#141210] text-[#6E1423] dark:text-[#F59E0B] font-semibold border-b border-[#E8E1D5] dark:border-[#38312B]">
                   <tr>
-                    <th className="p-4 sm:p-5 w-1/3 border-r border-[#E8E1D5] dark:border-[#38312B] text-[11px]">Service Module</th>
-                    <th className="p-4 sm:p-5 text-[11px]">What Royal Enterprise Delivers</th>
+                    <th className="p-4 sm:p-5 w-1/3 border-r border-[#E8E1D5] dark:border-[#38312B] text-xs">Service</th>
+                    <th className="p-4 sm:p-5 text-xs">What Royal Enterprise Takes Care Of</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#E8E1D5] dark:divide-[#38312B] text-[#3A352F] dark:text-[#D5CCC0]">
+                <tbody className="divide-y divide-[#E8E1D5] dark:divide-[#38312B] text-[#3B342C] dark:text-[#D5CCC0]">
                   {serviceModules.map((mod, idx) => {
                     const Icon = mod.icon;
                     return (
                       <tr key={idx} className="hover:bg-[#FAF8F4]/60 dark:hover:bg-[#141210]/60 transition-colors">
-                        <td className="p-4 sm:p-5 font-medium text-[#141414] dark:text-[#FAF7F2] border-r border-[#E8E1D5] dark:border-[#38312B] flex items-center space-x-3">
-                          <div className="w-8 h-8 rounded-full bg-[#FAF8F4] dark:bg-[#141210] border border-gold-dark/30 dark:border-gold-light/30 flex items-center justify-center text-gold-dark dark:text-gold-light shrink-0">
+                        <td className="p-4 sm:p-5 font-medium text-[#1F1D1A] dark:text-[#FAF7F2] border-r border-[#E8E1D5] dark:border-[#38312B] flex items-center space-x-3">
+                          <div className="w-8 h-8 rounded-full bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] flex items-center justify-center text-[#6E1423] dark:text-[#F59E0B] shrink-0">
                             <Icon className="w-4 h-4 stroke-[1.5]" />
                           </div>
                           <span>{mod.name}</span>
                         </td>
-                        <td className="p-4 sm:p-5 leading-relaxed text-[#554F47] dark:text-[#A8A29E] font-light">
+                        <td className="p-4 sm:p-5 leading-relaxed text-[#524C44] dark:text-[#A89F91] font-light">
                           {mod.deliverable}
                         </td>
                       </tr>
@@ -542,13 +542,13 @@ const EventManagement = () => {
         </section>
 
         {/* ========================================================================= */}
-        {/* 3. HOW WE WORK (OUR 4-STEP PROCESS) */}
+        {/* 3. HOW WE WORK TOGETHER */}
         {/* ========================================================================= */}
-        <section id="our-process" className="bg-[#F6E4E1] dark:bg-[#1C1414] border border-[#ECD6D2] dark:border-[#3A2222] rounded-[4px] p-8 sm:p-12 shadow-sm">
+        <section id="our-process" className="bg-[#FAF7F2] dark:bg-[#1C1414] border border-[#E5DED3] dark:border-[#3A2222] rounded-xl p-8 sm:p-12 shadow-sm">
           <SectionHeader
-            badge="Methodology & Precision"
-            title="How We Work (Our 4-Step Process)"
-            subtitle="[1. Discovery & Briefing] ➔ [2. Concept & 3D Design] ➔ [3. Production & Vendor Sync] ➔ [4. On-Ground Execution]"
+            badge="Simple Steps"
+            title="How We Work Together"
+            subtitle="From your first phone call to the final guest farewell, here is what you can expect."
           />
 
           <div className="relative">
@@ -556,28 +556,28 @@ const EventManagement = () => {
               {processSteps.map((step, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#FFFDF9] dark:bg-[#141210] border border-[#ECD6D2] dark:border-[#38312B] rounded-[3px] p-6 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-all duration-300 flex flex-col justify-between shadow-sm"
+                  className="bg-white dark:bg-[#141210] border border-[#E5DED3] dark:border-[#38312B] rounded-xl p-6 hover:border-[#6E1423]/40 dark:hover:border-[#F59E0B]/40 transition-all duration-300 flex flex-col justify-between shadow-sm"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="font-serif text-3xl font-light text-gold-dark dark:text-gold-light">
+                      <span className="font-serif text-3xl font-bold text-[#6E1423] dark:text-[#F59E0B]">
                         0{step.step}
                       </span>
-                      <span className="text-[9.5px] uppercase tracking-[0.16em] bg-maroon/10 dark:bg-maroon/20 text-maroon dark:text-gold-light border border-maroon/20 dark:border-maroon/40 px-2 py-0.5 rounded-[2px] font-semibold">
+                      <span className="text-[10px] font-semibold bg-[#6E1423]/10 dark:bg-[#F59E0B]/20 text-[#6E1423] dark:text-[#F59E0B] border border-[#6E1423]/20 dark:border-[#F59E0B]/30 px-2 py-0.5 rounded">
                         {step.tag}
                       </span>
                     </div>
 
-                    <h4 className="font-serif font-normal text-lg text-[#141414] dark:text-[#FAF7F2] mb-2 tracking-wide">
+                    <h4 className="font-serif font-bold text-lg text-[#1F1D1A] dark:text-[#FAF7F2] mb-2 leading-snug">
                       {step.title}
                     </h4>
-                    <p className="text-xs text-[#554F47] dark:text-[#A8A29E] leading-relaxed font-light">
+                    <p className="text-xs text-[#524C44] dark:text-[#A89F91] leading-relaxed font-light">
                       {step.description}
                     </p>
                   </div>
 
-                  <div className="pt-4 mt-4 border-t border-[#ECD6D2]/60 dark:border-[#38312B] flex items-center text-[10.5px] uppercase tracking-wider text-gold-dark dark:text-gold-light font-medium">
-                    <span>Phase 0{step.step} Verified</span>
+                  <div className="pt-4 mt-4 border-t border-[#E5DED3] dark:border-[#38312B] flex items-center text-xs font-semibold text-[#6E1423] dark:text-[#F59E0B]">
+                    <span>Step 0{step.step} Ready</span>
                     <ChevronRight className="w-3.5 h-3.5 ml-1" />
                   </div>
                 </div>
@@ -591,24 +591,24 @@ const EventManagement = () => {
         {/* ========================================================================= */}
         <section id="standard-packages">
           <SectionHeader
-            badge="Turnkey Tiers"
+            badge="Transparent Options"
             title="Standard Event Management Packages"
-            subtitle="Select the ideal scale for intimate milestones, signature corporate galas, or megascale public productions."
+            subtitle="Choose a package tier that suits your guest count, or let us create a custom estimate for your vision."
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`relative rounded-[4px] p-8 flex flex-col justify-between transition-all duration-300 ${
+                className={`relative rounded-xl p-8 flex flex-col justify-between transition-all duration-300 ${
                   pkg.popular
-                    ? 'bg-[#FFFDF9] dark:bg-[#1C1917] border-2 border-maroon dark:border-gold-light shadow-md'
-                    : 'bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] hover:border-gold-base/50 dark:hover:border-gold-light/50 shadow-sm'
+                    ? 'bg-white dark:bg-[#1C1917] border-2 border-[#6E1423] dark:border-[#F59E0B] shadow-md'
+                    : 'bg-white dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] hover:border-[#6E1423]/40 dark:hover:border-[#F59E0B]/50 shadow-sm'
                 }`}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-maroon text-[#FFF8F0] font-medium text-[9.5px] uppercase tracking-[0.2em] px-4 py-1 rounded-[2px] shadow-sm flex items-center">
-                    <Crown className="w-3 h-3 mr-1" />
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#6E1423] text-white font-semibold text-xs px-4 py-1 rounded-full shadow-sm flex items-center">
+                    <Crown className="w-3.5 h-3.5 mr-1" />
                     {pkg.badge}
                   </div>
                 )}
@@ -616,31 +616,31 @@ const EventManagement = () => {
                 <div>
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-1">
-                      <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] dark:text-[#FAF7F2] tracking-wide">
+                      <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">
                         {pkg.name}
                       </h3>
                       {!pkg.popular && (
-                        <span className="text-[9.5px] uppercase tracking-[0.14em] text-gold-dark dark:text-gold-light bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] px-2 py-0.5 rounded-[2px] font-semibold">
+                        <span className="text-[10px] font-semibold text-[#6E1423] dark:text-[#F59E0B] bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] px-2 py-0.5 rounded">
                           {pkg.badge}
                         </span>
                       )}
                     </div>
-                    <p className="text-xs font-semibold text-maroon dark:text-gold-light mt-1">
+                    <p className="text-xs font-semibold text-[#6E1423] dark:text-[#F59E0B] mt-1">
                       {pkg.targetGuests}
                     </p>
-                    <p className="text-[11px] text-[#6B645C] dark:text-[#A8A29E] italic mt-0.5 font-light">
+                    <p className="text-xs text-[#524C44] dark:text-[#A89F91] italic mt-0.5 font-light">
                       ({pkg.idealEvents})
                     </p>
                   </div>
 
-                  <h5 className="text-[11px] uppercase tracking-[0.14em] font-semibold text-gold-dark dark:text-gold-light mb-4 border-b border-[#E8E1D5] dark:border-[#38312B] pb-2">
+                  <h5 className="text-xs font-semibold text-[#1F1D1A] dark:text-[#FAF7F2] mb-4 border-b border-[#E8E1D5] dark:border-[#38312B] pb-2">
                     Package Inclusions:
                   </h5>
 
                   <ul className="space-y-3 mb-8">
                     {pkg.inclusions.map((inc, idx) => (
-                      <li key={idx} className="flex items-start text-xs sm:text-[13px] text-[#3A352F] dark:text-[#D5CCC0] font-light">
-                        <div className="w-4 h-4 rounded-full bg-gold-dark/15 dark:bg-gold-light/20 text-gold-dark dark:text-gold-light flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
+                      <li key={idx} className="flex items-start text-xs sm:text-[13px] text-[#3B342C] dark:text-[#D5CCC0] font-light">
+                        <div className="w-4 h-4 rounded-full bg-[#6E1423]/10 dark:bg-[#F59E0B]/20 text-[#6E1423] dark:text-[#F59E0B] flex items-center justify-center shrink-0 mr-2.5 mt-0.5">
                           <Check className="w-3 h-3 stroke-[2.5]" />
                         </div>
                         <span>{inc}</span>
@@ -650,7 +650,7 @@ const EventManagement = () => {
                 </div>
 
                 <Button
-                  variant={pkg.popular ? 'maroon' : 'outline'}
+                  variant={pkg.popular ? 'primary' : 'outline'}
                   size="md"
                   onClick={() => handleSelectPackage(pkg.name)}
                   className="w-full"
@@ -667,9 +667,9 @@ const EventManagement = () => {
         {/* ========================================================================= */}
         <section id="event-enquiry-form" className="max-w-4xl mx-auto pt-6">
           <SectionHeader
-            badge="Direct Consultation"
-            title="Request an Event Production Proposal"
-            subtitle="Submit your event specifications directly to our senior directors. Selected packages and service modules are automatically logged into Google Sheets."
+            badge="Check Dates & Pricing"
+            title="Let's Plan Your Upcoming Event"
+            subtitle="Tell us a little about your event below. Our team will review your requirements and get in touch with ideas and an honest estimate."
           />
 
           <EnquiryForm
@@ -678,9 +678,9 @@ const EventManagement = () => {
               eventCategory: selectedCategory,
               packagePreference: selectedPackage,
             }}
-            title="Event Management Enquiry Form"
-            subtitle="Provide your event specifications below. Submissions are synced to our live Google Sheets database for immediate review."
-            submitButtonText="Submit Event Proposal Request"
+            title="Event Planning & Management Enquiry"
+            subtitle="Share your event dates, venue ideas, or guest count below. We will get back to you promptly."
+            submitButtonText="Send Event Enquiry"
           />
         </section>
       </div>

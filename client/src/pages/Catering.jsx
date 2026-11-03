@@ -290,20 +290,20 @@ const Catering = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 text-center">
           <div className="inline-flex items-center space-x-2.5 mb-5">
             <span className="w-5 h-px bg-gold-light/60" />
-            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.26em] text-gold-light font-medium">
-              Division II • Gourmet Heritage Catering
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.2em] text-amber-200 font-semibold">
+              Kolkata • Authentic In-House Cooking
             </span>
             <span className="w-5 h-px bg-gold-light/60" />
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-normal text-[#FFF8F0] tracking-tight mb-4">
-            Catering Services
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-[#FFF8F0] tracking-tight mb-4">
+            Authentic feasts cooked by our own team
           </h1>
-          <p className="font-editorial italic text-gold-light text-xl sm:text-2xl md:text-3xl font-normal mb-6">
-            "Food as Performing Art & Royal Banqueting."
+          <p className="font-serif text-lg sm:text-2xl text-amber-200 font-normal mb-6">
+            "We cook the food ourselves. Nothing is outsourced to a stranger’s kitchen."
           </p>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/80 font-light leading-relaxed mb-9">
-            Royal Enterprise delivers authentic heritage feasts, modern multi-cuisine spreads, and live interactive food stations for weddings, corporate galas, and private celebrations. We emphasize food hygiene, fresh sourcing, live on-site preparation, and uniformed hospitality staff.
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/90 font-light leading-relaxed mb-9">
+            From crispy Kolkata Bhetki fry and slow-cooked mutton kosha to fragrant Awadhi dum biryanis and dedicated pure-veg Marwari kitchens, our own veteran cooks prepare every course fresh on-site.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -315,7 +315,7 @@ const Catering = () => {
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Explore Signature Packages
+              Explore signature feast menus
             </Button>
             <Button
               variant="outline"
@@ -325,7 +325,7 @@ const Catering = () => {
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Interactive Dish Explorer
+              Browse dishes
             </Button>
           </div>
         </div>
@@ -337,9 +337,9 @@ const Catering = () => {
         {/* ========================================================================= */}
         <section id="culinary-styles">
           <SectionHeader
-            badge="Culinary Breadth"
-            title="Culinary Styles & Formats Offered"
-            subtitle="From legendary Bengali Biye Bari traditions and charcoal Awadhi grills to pure Marwari kitchens and live Pan-Asian stations."
+            badge="What we cook"
+            title="Traditions and cuisines we specialize in"
+            subtitle="From legendary Bengali Biye Bari courses to clay-oven kebabs and dedicated vegetarian kitchens."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -348,30 +348,30 @@ const Catering = () => {
               return (
                 <div
                   key={idx}
-                  className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-7 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
+                  className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-xl p-7 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-5">
                       <div className="w-10 h-10 rounded-full bg-[#FAF8F4] dark:bg-[#141210] border border-gold-dark/30 dark:border-gold-light/30 flex items-center justify-center text-gold-dark dark:text-gold-light">
                         <Icon className="w-5 h-5 stroke-[1.5]" />
                       </div>
-                      <span className="text-[9.5px] uppercase tracking-[0.16em] font-semibold px-2.5 py-1 rounded-[2px] bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] text-gold-dark dark:text-gold-light">
+                      <span className="text-[11px] font-medium px-2.5 py-0.5 rounded bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] text-gold-dark dark:text-gold-light">
                         {style.badge}
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-lg font-normal text-[#141414] dark:text-[#FAF7F2] mb-1.5 group-hover:text-maroon dark:group-hover:text-gold-light transition-colors tracking-wide">
+                    <h3 className="font-serif text-lg font-bold text-[#1F1D1A] dark:text-[#FAF7F2] mb-1.5 group-hover:text-maroon dark:group-hover:text-gold-light transition-colors">
                       {style.title}
                     </h3>
                     <p className="text-xs text-gold-dark dark:text-gold-light font-medium mb-3">
                       {style.subtitle}
                     </p>
-                    <p className="text-xs sm:text-[13px] text-[#554F47] dark:text-[#A8A29E] leading-relaxed font-light">
+                    <p className="text-xs sm:text-[13px] text-[#4A433A] dark:text-[#A8A29E] leading-relaxed font-light">
                       {style.description}
                     </p>
                   </div>
-                  <div className="pt-4 mt-4 border-t border-[#E8E1D5]/60 dark:border-[#38312B] flex items-center text-[10.5px] uppercase tracking-wider text-[#6B645C] dark:text-[#A8A29E] font-light">
-                    <span>Live Chef Station Supported</span>
+                  <div className="pt-4 mt-4 border-t border-[#E8E1D5]/60 dark:border-[#38312B] flex items-center text-[11px] text-[#6B645C] dark:text-[#A8A29E]">
+                    <span>Live chef counter available</span>
                   </div>
                 </div>
               );
@@ -384,23 +384,23 @@ const Catering = () => {
         {/* ========================================================================= */}
         <section id="signature-menus">
           <SectionHeader
-            badge="The Grand Banquets"
-            title="Signature Catering Packages & Menus"
-            subtitle="Curated menu sequences featuring authentic Kolkata Bhetki, slow-cooked Mutton Kosha, and artisanal sweet theatres."
+            badge="Signature menus"
+            title="Our most loved feast spreads"
+            subtitle="Curated menu sequences featuring authentic Kolkata Bhetki, slow-cooked Mutton Kosha, and hot artisanal mishti."
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {signaturePackages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`relative rounded-[4px] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
+                className={`relative rounded-xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                   pkg.popular
                     ? 'bg-[#FFFDF9] dark:bg-[#1C1917] border-2 border-maroon dark:border-gold-light shadow-md'
                     : 'bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] hover:border-gold-base/50 dark:hover:border-gold-light/50 shadow-sm'
                 }`}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-maroon text-[#FFF8F0] font-medium text-[9.5px] uppercase tracking-[0.2em] px-4 py-1 rounded-[2px] shadow-sm flex items-center">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-maroon text-[#FFF8F0] font-medium text-[11px] px-3.5 py-1 rounded-full shadow-sm flex items-center">
                     <Crown className="w-3 h-3 mr-1" />
                     {pkg.badge}
                   </div>
@@ -408,13 +408,13 @@ const Catering = () => {
 
                 <div>
                   <div className="mb-6">
-                    <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-gold-dark dark:text-gold-light block mb-1">
+                    <span className="text-xs font-semibold text-gold-dark dark:text-gold-light block mb-1">
                       {pkg.code}
                     </span>
-                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] dark:text-[#FAF7F2] mb-2 tracking-wide">
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2] mb-2">
                       {pkg.name}
                     </h3>
-                    <p className="text-xs text-[#554F47] dark:text-[#A8A29E] bg-[#FAF8F4] dark:bg-[#141210] p-2.5 rounded-[2px] border border-[#E8E1D5] dark:border-[#38312B] font-light">
+                    <p className="text-xs text-[#554F47] dark:text-[#A8A29E] bg-[#FAF8F4] dark:bg-[#141210] p-2.5 rounded border border-[#E8E1D5] dark:border-[#38312B] font-light">
                       <strong className="text-gold-dark dark:text-gold-light font-medium">Best for:</strong> {pkg.bestFor}
                     </p>
                   </div>
@@ -422,7 +422,7 @@ const Catering = () => {
                   <div className="space-y-4 mb-8">
                     {pkg.sections.map((sec, secIdx) => (
                       <div key={secIdx} className="border-b border-[#E8E1D5] dark:border-[#38312B] pb-3 last:border-b-0">
-                        <h5 className="text-[11px] uppercase tracking-[0.14em] font-semibold text-gold-dark dark:text-gold-light mb-2">
+                        <h5 className="text-xs font-semibold text-gold-dark dark:text-gold-light mb-2">
                           {sec.heading}:
                         </h5>
                         <ul className="space-y-1.5 text-xs text-[#3A352F] dark:text-[#D5CCC0] font-light">
@@ -444,7 +444,7 @@ const Catering = () => {
                   onClick={() => handleSelectPackage(pkg.fullName)}
                   className="w-full"
                 >
-                  Select & Request Quote
+                  Choose this menu & request tasting
                 </Button>
               </div>
             ))}
@@ -454,11 +454,11 @@ const Catering = () => {
         {/* ========================================================================= */}
         {/* 3. INTERACTIVE DISH EXPLORER */}
         {/* ========================================================================= */}
-        <section id="menu-explorer" className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-8 sm:p-12 shadow-sm">
+        <section id="menu-explorer" className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-xl p-8 sm:p-12 shadow-sm">
           <SectionHeader
-            badge="Culinary Repertoire"
-            title="Interactive Dish Explorer"
-            subtitle="Browse our comprehensive menu repertoire across appetizers, master chef curries, artisanal sweets, and craft coolers."
+            badge="Full culinary repertoire"
+            title="Browse our dishes"
+            subtitle="Take a look through our appetizers, curries, artisanal sweets, and refreshing coolers."
           />
           <CateringMenuSection />
         </section>
@@ -466,14 +466,14 @@ const Catering = () => {
         {/* ========================================================================= */}
         {/* 4. CATERING PRICING GUIDE */}
         {/* ========================================================================= */}
-        <section id="pricing-guide" className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-8 sm:p-12 shadow-sm">
+        <section id="pricing-guide" className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-xl p-8 sm:p-12 shadow-sm">
           <SectionHeader
-            badge="Budget Benchmarks"
-            title="Catering Pricing Guide"
-            subtitle="Estimated market benchmarks for classic feasts and luxury multi-counter formats."
+            badge="Menu benchmarks"
+            title="Catering menu guide"
+            subtitle="Standard course breakdowns to help plan your feast."
           />
 
-          <div className="overflow-x-auto rounded-[3px] border border-[#E8E1D5] dark:border-[#38312B] bg-[#FFFDF9] dark:bg-[#1C1917]">
+          <div className="overflow-x-auto rounded-lg border border-[#E8E1D5] dark:border-[#38312B] bg-[#FFFDF9] dark:bg-[#1C1917]">
             <table className="w-full text-left text-xs sm:text-sm border-collapse">
               <thead className="bg-[#FAF8F4] dark:bg-[#141210] text-gold-dark dark:text-gold-light uppercase tracking-[0.16em] font-semibold border-b border-[#E8E1D5] dark:border-[#38312B]">
                 <tr>
@@ -502,9 +502,9 @@ const Catering = () => {
         {/* ========================================================================= */}
         <section id="kitchen-standards">
           <SectionHeader
-            badge="Hospitality Assurance"
-            title="Kitchen Standards & Logistics Included"
-            subtitle="We maintain exemplary hygiene, bone china chinaware, and polite stewards for every royal banquet."
+            badge="Our kitchen promise"
+            title="Standards & hospitality included"
+            subtitle="We maintain strict kitchen cleanliness, fine dinnerware, and polite serving stewards for every event."
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
