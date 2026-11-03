@@ -76,12 +76,6 @@ const DivisionOverview = ({ onOpenQuote }) => {
                     <span>Live hot kesariya jalebi & rabdi counters</span>
                   </div>
                 </div>
-
-                {/* Chef Attribution */}
-                <div className="mt-4 pt-4 border-t border-[#E5DED3] dark:border-[#38312B] text-xs text-[#7D756A] dark:text-[#8C8477]">
-                  <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">{COMPANY_INFO.headChef}</span>
-                  <span className="block">{COMPANY_INFO.headChefTitle}</span>
-                </div>
               </div>
             </div>
 
@@ -91,7 +85,7 @@ const DivisionOverview = ({ onOpenQuote }) => {
                 to="/catering"
                 className="btn-maroon px-5 py-2.5 text-xs font-semibold inline-flex items-center space-x-1.5"
               >
-                <span>See our menus & prices</span>
+                <span>Explore catering menus</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
               <button
@@ -117,7 +111,6 @@ const DivisionOverview = ({ onOpenQuote }) => {
                     <HeartHandshake className="w-4 h-4" />
                     <span>Wedding Planning</span>
                   </div>
-                  <span className="text-[11px] text-[#7D756A] dark:text-[#8C8477] font-mono">[Package Price]</span>
                 </div>
 
                 <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">

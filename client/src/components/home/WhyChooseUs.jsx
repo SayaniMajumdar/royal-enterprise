@@ -1,6 +1,4 @@
 import React from 'react';
-import { MapPin } from 'lucide-react';
-import { RECENT_EVENTS } from '../../data/mockData';
 
 const WhyChooseUs = ({ onOpenQuote }) => {
   const steps = [
@@ -29,9 +27,7 @@ const WhyChooseUs = ({ onOpenQuote }) => {
   return (
     <div className="bg-[#FAF7F2] dark:bg-[#141210] border-b border-[#E5DED3] dark:border-[#38312B] transition-colors">
       
-      {/* ========================================================================= */}
-      {/* 1. LEFT-ALIGNED VERTICAL EDITORIAL TIMELINE */}
-      {/* ========================================================================= */}
+      {/* 4-Step Process (Our 4-Step Work Process) */}
       <section className="py-20 sm:py-24 max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
@@ -44,7 +40,7 @@ const WhyChooseUs = ({ onOpenQuote }) => {
               A straightforward process without corporate jargon.
             </h2>
             <p className="text-sm sm:text-base text-[#524C44] dark:text-[#A89F91] leading-relaxed">
-              Planning a wedding or major event shouldn't feel like wrestling with a contract. Here is how we take you from the first conversation to a completed celebration.
+              Planning a wedding or major event shouldn't feel like wrestling with a contract. Here is how we take you from the first briefing to a completed celebration.
             </p>
             <div className="pt-2">
               <button
@@ -78,56 +74,6 @@ const WhyChooseUs = ({ onOpenQuote }) => {
             ))}
           </div>
 
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 2. RECENT EVENTS LOG (Human Details Requirement) */}
-      {/* ========================================================================= */}
-      <section className="py-16 sm:py-20 bg-white dark:bg-[#1C1917] border-t border-[#E5DED3] dark:border-[#38312B] transition-colors">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
-            <div>
-              <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] dark:text-[#F59E0B] block mb-1">
-                Field log
-              </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2] tracking-tight">
-                Recent events handled across Kolkata
-              </h2>
-            </div>
-            <span className="text-xs text-[#7D756A] dark:text-[#8C8477] font-mono">
-              Real venues • Real dates • Real guest counts
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {RECENT_EVENTS.map((event, idx) => (
-              <div
-                key={idx}
-                className="bg-[#FAF7F2] dark:bg-[#24201D] border border-[#E5DED3] dark:border-[#38312B] rounded-lg p-5 sm:p-6 space-y-3 hover:border-[#6E1423]/40 dark:hover:border-[#F59E0B]/50 transition-colors shadow-paper-sm dark:shadow-dark-card"
-              >
-                <div className="flex items-center justify-between text-xs text-[#7D756A] dark:text-[#8C8477]">
-                  <div className="flex items-center space-x-1.5 font-semibold text-[#6E1423] dark:text-[#F59E0B]">
-                    <MapPin className="w-3.5 h-3.5" />
-                    <span>{event.venue}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 font-mono">
-                    <span>{event.date}</span>
-                    <span>•</span>
-                    <span>{event.guests}</span>
-                  </div>
-                </div>
-
-                <h3 className="font-serif text-lg font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">
-                  {event.title}
-                </h3>
-
-                <p className="text-xs sm:text-sm text-[#524C44] dark:text-[#A89F91] leading-relaxed">
-                  {event.handled}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

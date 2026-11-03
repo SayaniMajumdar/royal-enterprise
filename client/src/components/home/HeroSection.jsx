@@ -15,7 +15,7 @@ const HeroSection = ({ onOpenQuote }) => {
             {/* Small stamp label */}
             <div className="inline-flex items-center space-x-2">
               <span className="stamp-tag">
-                Since {COMPANY_INFO.foundedYear} • Kolkata
+                Kolkata & Eastern India
               </span>
               <span className="text-xs text-[#7D756A] dark:text-[#A89F91] font-medium hidden sm:inline">
                 In-house cooking & turnkey event execution
@@ -77,7 +77,7 @@ const HeroSection = ({ onOpenQuote }) => {
 
           </div>
 
-          {/* Right Column: Large Offset Authentic Photograph */}
+          {/* Right Column: Large Authentic Photograph */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-lg overflow-hidden border border-[#E5DED3] dark:border-[#38312B] bg-white dark:bg-[#1C1917] shadow-paper-lg dark:shadow-dark-card">
               <img
@@ -85,25 +85,12 @@ const HeroSection = ({ onOpenQuote }) => {
                 alt="Traditional Kolkata Indian wedding ceremony and mandap"
                 className="w-full h-[420px] sm:h-[480px] object-cover"
               />
-              
-              {/* Offset Caption with Venue and Month (as requested) */}
-              <div className="p-4 bg-white/95 dark:bg-[#1C1917]/95 backdrop-blur-sm border-t border-[#E5DED3] dark:border-[#38312B] text-left">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">
-                    [Event Type] at [Venue Name / Location]
-                  </span>
-                  <span className="text-[#7D756A] dark:text-[#8C8477] font-mono">[Event Date]</span>
-                </div>
-                <p className="text-[11px] text-[#524C44] dark:text-[#A89F91] mt-1">
-                  Handled: [Scope Handled: e.g. Turnkey Vedic mandap, floral architecture, and [Guest Count] banquet].
-                </p>
-              </div>
             </div>
 
-            {/* Small floating counter sticker breaking the corner */}
+            {/* Small floating assurance sticker breaking the corner */}
             <div className="absolute -bottom-4 -left-4 bg-[#6E1423] dark:bg-[#8B1E32] text-white p-3 rounded shadow-md hidden sm:block border border-[#540D1A] dark:border-[#A72638]">
-              <span className="block font-serif text-2xl font-bold leading-tight">750+</span>
-              <span className="text-[10px] text-amber-200 uppercase tracking-wider block">Kolkata Events Done</span>
+              <span className="block font-serif text-xl font-bold leading-tight">Turnkey</span>
+              <span className="text-[10px] text-amber-200 uppercase tracking-wider block">In-House Production</span>
             </div>
           </div>
 

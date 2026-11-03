@@ -11,14 +11,6 @@ export const COMPANY_INFO = {
   officeHours: '[Insert Working Hours]',
   mapUrl: 'https://maps.google.com/?q=Kolkata',
   website: 'www.royalenterprise.com',
-  founder: '[Owner Name]',
-  founderTitle: 'Director / Lead Planner',
-  foundedYear: '[Year Established]',
-  teamSize: '[Insert Number, e.g. 6–8 Specialists + 1 Event Director]',
-  eventsCount: '[Events Count]',
-  largestEvent: '[Insert Largest Event Scale, e.g. 500+ Guests]',
-  headChef: '[Culinary Lead / Head Chef Name]',
-  headChefTitle: 'Head of Culinary Operations',
   socials: {
     instagram: '[Instagram Link]',
     facebook: '[Facebook Link]',
@@ -53,78 +45,15 @@ export const DIVISIONS = [
     subtitle: 'Conferences, leadership summits, and public programs.',
     description: 'Stage fabrication, acoustic sound engineering, 3D digital LED backdrops, artist coordination, and executive delegate hospitality across Kolkata’s top venues.',
     image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80',
-    link: '/event-management',
+    link: '/events',
     highlights: ['Annual Corporate Meets & Awards', 'Stage Fabrication & AV Sound', 'Media & Product Launches', 'Delegate Registration & Hospitality'],
   },
-];
-
-export const RECENT_EVENTS = [
-  {
-    venue: '[Venue Name / Location]',
-    date: '[Event Date / Month & Year]',
-    guests: '[Guest Count]',
-    title: '[Event Title / Celebration Type]',
-    handled: '[Scope Handled: e.g. Turnkey wedding coordination, Vedic marigold mandap, live shehnai, and traditional feast].',
-  },
-  {
-    venue: '[Venue Name / Location]',
-    date: '[Event Date / Month & Year]',
-    guests: '[Guest Count]',
-    title: '[Event Title / Corporate Summit]',
-    handled: '[Scope Handled: e.g. Custom 3D LED stage, acoustic sound engineering, multi-camera broadcast, and banquet dinner].',
-  },
-  {
-    venue: '[Venue Name / Location]',
-    date: '[Event Date / Month & Year]',
-    guests: '[Guest Count]',
-    title: '[Event Title / Sangeet & Reception]',
-    handled: '[Scope Handled: e.g. Dedicated separate pure-veg kitchen, live counters, and architectural fairy lighting].',
-  },
-  {
-    venue: '[Venue Name / Location]',
-    date: '[Event Date / Month & Year]',
-    guests: '[Guest Count]',
-    title: '[Event Title / Anniversary Gala]',
-    handled: '[Scope Handled: e.g. Acoustic live band setup, floral canopy tablescapes, and curated artisanal hors d’oeuvres].',
-  },
-];
-
-export const TESTIMONIALS = [
-  {
-    quote: '[Client Testimonial: Insert verified client feedback here regarding wedding planning, catering service, and on-ground coordination.]',
-    name: '[Customer Name]',
-    area: '[City / Area]',
-    event: '[Event Type: e.g. Bengali Wedding & Reception]',
-    guests: '[Guest Count]',
-  },
-  {
-    quote: '[Client Testimonial: Insert verified client feedback here regarding corporate summit execution, stagecraft, and AV management.]',
-    name: '[Customer Name]',
-    area: '[City / Area]',
-    event: '[Event Type: e.g. Marwari Wedding & Sangeet]',
-    guests: '[Guest Count]',
-  },
-  {
-    quote: '[Client Testimonial: Insert verified client feedback here regarding gourmet catering quality, live counter presentation, and banquet staff hospitality.]',
-    name: '[Customer Name]',
-    area: '[City / Area]',
-    event: '[Event Type: e.g. Corporate Annual Leadership Summit]',
-    guests: '[Guest Count]',
-  },
-];
-
-export const STATS = [
-  { value: '[Events Count]', label: 'Events managed and executed' },
-  { value: '[Year Established]', label: 'Serving clients and families since' },
-  { value: '[Team Size]', label: 'On-site specialists & coordinators' },
-  { value: '100%', label: 'In-house supervision & execution' },
 ];
 
 export const CATERING_PACKAGES = [
   {
     id: 'package-a',
     name: 'Package A: Classic Heritage Feast (Standard Non-Veg)',
-    priceRange: '[Package Price]',
     guestRange: 'Best for: Reception (Boubhat), Annaprashan, Ring Ceremonies',
     summary: 'Sequenced with cold-pressed mustard oil and fresh fish. Traditional Bengali banquet courses.',
     menuHighlights: [
@@ -141,7 +70,6 @@ export const CATERING_PACKAGES = [
   {
     id: 'package-b',
     name: 'Package B: The Grand Imperial Royal Spread (Premium Non-Veg)',
-    priceRange: '[Package Price]',
     guestRange: 'Best for: Grand Weddings & Premium Receptions',
     summary: 'Charcoal clay-oven grills, dum biryanis, slow-cooked kormas, and artisanal sweet counters.',
     menuHighlights: [
@@ -157,7 +85,6 @@ export const CATERING_PACKAGES = [
   {
     id: 'package-c',
     name: 'Package C: Pure Vegetarian Shubh Vivah Spread',
-    priceRange: '[Package Price]',
     guestRange: 'Best for: Sangeet, Pooja, Haldi, Marwari / Jain celebrations',
     summary: 'Dedicated separate-kitchen setups with authentic Rajasthani, North Indian, and Satvik delicacies.',
     menuHighlights: [

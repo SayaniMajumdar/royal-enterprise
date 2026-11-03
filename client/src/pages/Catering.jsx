@@ -31,7 +31,6 @@ const Catering = () => {
       description:
         'Authentic sequencing from Gondhoraj drinks to pure Bhetki fry, Basanti pulao, mutton kosha, and seasonal mishti.',
       badge: 'Heritage Bengal',
-      price: '[Package Price]',
       icon: Utensils,
     },
     {
@@ -40,7 +39,6 @@ const Catering = () => {
       description:
         'Charcoal tandoori grills, dum biryanis, slow-cooked kormas, and rich artisanal gravies.',
       badge: 'Awadhi Royalty',
-      price: '[Package Price]',
       icon: Flame,
     },
     {
@@ -49,7 +47,6 @@ const Catering = () => {
       description:
         'Dedicated separate-kitchen setups with Dal Baati Churma, Ker Sangri, Shahi Paneer, and live sweet jalebi counters.',
       badge: 'Pure Vegetarian',
-      price: '[Package Price]',
       icon: Leaf,
     },
     {
@@ -58,7 +55,6 @@ const Catering = () => {
       description:
         'Wood-fired artisanal pizzas, toss-to-order Italian pasta, wok-tossed Pan-Asian noodles/dim sums, and street-style live chaat setups.',
       badge: 'Interactive Counters',
-      price: '[Package Price]',
       icon: ChefHat,
     },
     {
@@ -67,7 +63,6 @@ const Catering = () => {
       description:
         'Balanced, hygienic, and calorie-conscious boxed and buffet meals for summits, seminars, and boardroom luncheons.',
       badge: 'Corporate Standard',
-      price: '[Package Price]',
       icon: ShieldCheck,
     },
   ];
