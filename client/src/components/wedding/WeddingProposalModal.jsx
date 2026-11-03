@@ -56,13 +56,17 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
           {/* Header */}
           <div className="border-b-2 border-slate-900 pb-6 mb-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
             <div>
-              <div className="flex items-center space-x-2 text-amber-800 font-serif font-black text-2xl tracking-wider uppercase">
-                <Crown className="w-6 h-6 text-amber-700" />
-                <span>ROYAL ENTERPRISE</span>
+              <div className="flex items-center space-x-3 mb-1">
+                <img src="/logo-crest.png" alt="Royal Enterprise Official Crest" className="w-12 h-12 object-contain shrink-0" />
+                <div>
+                  <div className="text-amber-900 font-serif font-black text-2xl tracking-wider uppercase leading-none">
+                    ROYAL ENTERPRISE
+                  </div>
+                  <p className="text-[10px] font-semibold text-slate-600 tracking-wider uppercase mt-1">
+                    Turnkey Wedding Planning • Gourmet Catering • Event Production
+                  </p>
+                </div>
               </div>
-              <p className="text-[11px] font-semibold text-slate-600 tracking-wide uppercase mt-0.5">
-                Turnkey Wedding Planning • Gourmet Catering • Event Production
-              </p>
               <p className="text-[11px] text-slate-500 mt-2">
                 Office: {COMPANY_INFO.address}
               </p>

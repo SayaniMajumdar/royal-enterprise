@@ -87,6 +87,13 @@ const About = () => {
             </div>
 
             <div className="p-5 bg-white dark:bg-[#1C1917] border border-[#E5DED3] dark:border-[#38312B] rounded text-xs space-y-2 transition-colors">
+              <div className="flex items-center space-x-3 pb-3 mb-2 border-b border-[#E5DED3] dark:border-[#38312B]">
+                <img src="/logo-crest.png" alt="Royal Enterprise Seal" className="w-12 h-12 object-contain shrink-0 filter drop-shadow-sm" />
+                <div>
+                  <span className="font-serif text-sm font-bold block text-[#1F1D1A] dark:text-[#FAF7F2]">Royal Enterprise</span>
+                  <span className="text-[10px] uppercase tracking-widest text-[#6E1423] dark:text-[#F59E0B] font-semibold">Official Trademark & Heraldic Shield</span>
+                </div>
+              </div>
               <div className="flex justify-between py-1 border-b border-[#E5DED3] dark:border-[#38312B]">
                 <span className="text-[#7D756A] dark:text-[#8C8477]">Company Registered:</span>
                 <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">{COMPANY_INFO.foundedYear}</span>

@@ -2,20 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 /**
- * Royal Enterprise Official Vector Logo Component
- * Supports light & dark modes automatically with SVG vector rendering
+ * Royal Enterprise Official Crest Logo Component
+ * Incorporates the authentic heraldic shield crest with cloche, wedding rings, and archway
  */
 const Logo = ({
-  variant = 'full', // 'full' | 'icon' | 'stacked'
+  variant = 'full', // 'full' | 'icon' | 'stacked' | 'crest'
   className = '',
-  iconSize = 'h-10 w-10',
+  iconSize = 'h-11 w-11 sm:h-12 sm:w-12',
   linkToHome = true,
 }) => {
   const Emblem = (
     <div className={`relative shrink-0 ${iconSize} flex items-center justify-center`}>
       <img
-        src="/logo-icon.svg"
-        alt="Royal Enterprise Imperial Seal"
+        src="/logo-crest.png"
+        alt="Royal Enterprise Crest"
         className="w-full h-full object-contain filter drop-shadow-sm transition-transform duration-200 group-hover:scale-105"
       />
     </div>

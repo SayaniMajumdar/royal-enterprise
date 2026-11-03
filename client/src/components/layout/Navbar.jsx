@@ -73,8 +73,8 @@ const Navbar = ({ onOpenQuoteModal }) => {
       >
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between">
-            {/* New Official Royal Enterprise Logo */}
-            <Logo iconSize="h-10 w-10 sm:h-11 sm:w-11" />
+            {/* New Official Royal Enterprise Shield Crest Logo */}
+            <Logo iconSize="h-11 w-11 sm:h-12 sm:w-12" />
 
             {/* Desktop Navigation Links: Short, single line, no wrapping */}
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
