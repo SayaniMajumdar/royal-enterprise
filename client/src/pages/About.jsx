@@ -5,39 +5,39 @@ import { MapPin, Check, ArrowRight, MessageSquare } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: 'Subrata Majumdar',
-    role: 'Founder & Client Operations',
-    story: 'Oversees every event roadmap and personally visits key venues prior to wedding dates.',
+    name: '[Owner Name]',
+    role: 'Director / Lead Planner',
+    story: 'Directs turnkey wedding planning, client consultations, budget architecture, and overall event production.',
   },
   {
-    name: 'Chef Ashis Bhattacharya',
+    name: '[Culinary Lead / Head Chef Name]',
     role: 'Head of Culinary Operations',
-    story: '22 years running large-scale Kolkata banquets, traditional Bengali recipes, and Awadhi dum handis.',
+    story: 'Oversees in-house kitchens, authentic recipes, per-plate food tastings, and banquet service staff.',
   },
   {
-    name: 'Poulami Mukherjee',
-    role: 'Wedding Decor & Ritual Styling',
-    story: 'Coordinates Vedic mandaps, marigold canopies, bridal attire draping, and floral vendors.',
-  },
-  {
-    name: 'Arindam Roy',
+    name: '[Core Team Member Name]',
     role: 'Stage Fabrication & AV Lead',
-    story: 'Manages 3D LED setups, stage rigging, acoustic sound engineering, and safety inspections.',
+    story: 'Manages 3D LED setups, stage rigging, acoustic sound engineering, and site safety inspections.',
   },
   {
-    name: 'Biswanath Dey',
-    role: 'Senior Halwai & Traditional Sweets',
-    story: 'Prepares hot Nolen gur rosogollas, live kesariya jalebi counters, and authentic pure-ghee mishti.',
+    name: '[Core Team Member Name]',
+    role: 'Wedding Decor & Ritual Styling',
+    story: 'Coordinates Vedic mandaps, floral themes, bridal entourage support, and minute-by-minute ritual timing.',
+  },
+  {
+    name: '[Core Team Member Name]',
+    role: 'Guest Logistics & Floor Operations',
+    story: 'Supervises airport transfers, hotel check-in desks, dining transitions, and personal family shadow managers.',
   },
 ];
 
 const venuesWorkedAt = [
-  { name: 'The Rajbari Bawali', type: 'Heritage Rajbari & Palatial Weddings' },
-  { name: 'ITC Royal Bengal, Kolkata', type: 'Grand Luxury Ballroom & Corporate Galas' },
-  { name: 'PC Chandra Garden, Kolkata', type: 'Large-scale Marwari & Bengali Weddings' },
-  { name: 'Taj Bengal, Alipore', type: 'Intimate Banquets & High-Profile Receptions' },
-  { name: 'Swabhumi Heritage', type: 'Thematic Sangeets & Cultural Programs' },
-  { name: 'Biswa Bangla Mela Prangan', type: 'Public Exhibitions & Large Summits' },
+  { name: '[Heritage Rajbari / Palace Venue]', type: 'Heritage Rajbaris & Palatial Weddings' },
+  { name: '[5-Star Luxury Ballroom / Hotel]', type: 'Grand Luxury Ballrooms & Corporate Galas' },
+  { name: '[Banquet Lawns & Convention Centres]', type: 'Large-scale Marwari & Bengali Weddings' },
+  { name: '[Destination Hub / Luxury Resort]', type: 'Destination Weddings & Intimate Receptions' },
+  { name: '[Cultural Center / Heritage Ground]', type: 'Thematic Sangeets & Cultural Programs' },
+  { name: '[Exhibition Ground / Summit Arena]', type: 'Public Exhibitions & Megascale Summits' },
 ];
 
 const About = () => {
@@ -52,10 +52,10 @@ const About = () => {
               Our Story • Since {COMPANY_INFO.foundedYear}
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#1F1D1A] dark:text-[#FAF7F2] leading-[1.15]">
-              Started with two tandoor ovens and one simple rule.
+              Turnkey event management and in-house catering with one clear rule.
             </h1>
             <p className="text-base sm:text-lg text-[#524C44] dark:text-[#A89F91] leading-relaxed">
-              If our name is on the invite, our own cooks must be in the kitchen.
+              If our name is on the event, our own team oversees the execution from first briefing to final guest farewell.
             </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ const About = () => {
             <div className="rounded-lg overflow-hidden border border-[#E5DED3] dark:border-[#38312B] bg-white dark:bg-[#1C1917] p-2 shadow-paper-md dark:shadow-dark-card transition-colors">
               <img
                 src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=900&q=80"
-                alt={`${COMPANY_INFO.founder}, Founder of Royal Enterprise`}
+                alt={`${COMPANY_INFO.founder}, Director of Royal Enterprise`}
                 className="w-full h-80 sm:h-96 object-cover rounded"
               />
               <div className="p-4 bg-white dark:bg-[#1C1917] transition-colors">
@@ -81,7 +81,7 @@ const About = () => {
                   {COMPANY_INFO.founderTitle}
                 </span>
                 <p className="text-xs text-[#524C44] dark:text-[#A89F91] mt-2 leading-relaxed">
-                  "Kolkata weddings are built around respect and food. When a family trusts us with their daughter's wedding or an annual corporate meet, they aren't looking for agency buzzwords. They want the mutton tender, the audio clean, and someone answering the phone at midnight."
+                  "Events and weddings are built around trust, precision, and hospitality. When a client or family trusts us with their milestone celebration, they deserve dedicated attention, flawless execution, and a single accountable partner."
                 </p>
               </div>
             </div>
@@ -95,20 +95,20 @@ const About = () => {
                 </div>
               </div>
               <div className="flex justify-between py-1 border-b border-[#E5DED3] dark:border-[#38312B]">
-                <span className="text-[#7D756A] dark:text-[#8C8477]">Company Registered:</span>
+                <span className="text-[#7D756A] dark:text-[#8C8477]">Company Established:</span>
                 <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">{COMPANY_INFO.foundedYear}</span>
               </div>
               <div className="flex justify-between py-1 border-b border-[#E5DED3] dark:border-[#38312B]">
                 <span className="text-[#7D756A] dark:text-[#8C8477]">Headquarters:</span>
-                <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">Rashbehari Avenue, Kolkata</span>
+                <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">{COMPANY_INFO.address}</span>
               </div>
               <div className="flex justify-between py-1 border-b border-[#E5DED3] dark:border-[#38312B]">
-                <span className="text-[#7D756A] dark:text-[#8C8477]">Central Kitchen:</span>
-                <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">North & South Kolkata Base</span>
+                <span className="text-[#7D756A] dark:text-[#8C8477]">Official Email:</span>
+                <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">{COMPANY_INFO.email}</span>
               </div>
               <div className="flex justify-between py-1">
-                <span className="text-[#7D756A] dark:text-[#8C8477]">Full-Time Staff:</span>
-                <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">28 On-Payroll Members</span>
+                <span className="text-[#7D756A] dark:text-[#8C8477]">Operational Crew:</span>
+                <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">{COMPANY_INFO.teamSize}</span>
               </div>
             </div>
           </div>
@@ -116,49 +116,49 @@ const About = () => {
           {/* Honest Story Details */}
           <div className="lg:col-span-7 space-y-6">
             <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] dark:text-[#F59E0B] block">
-              How Royal Enterprise Grew
+              Behind Royal Enterprise
             </span>
 
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2] leading-tight">
-              From family wedding catering to 2,500-guest gatherings.
+              Integrated event production, wedding styling, and in-house catering.
             </h2>
 
             <div className="space-y-4 text-sm sm:text-base text-[#524C44] dark:text-[#A89F91] leading-relaxed">
-              <p>
-                In 2014, Subrata Majumdar founded Royal Enterprise after noticing that most event planners in Kolkata operated merely as brokers. They would take an event booking, charge a hefty margin, and then sub-contract the catering to one vendor, the sound to another, and the flowers to a third stranger.
+              <p className="bg-[#FAF7F2] dark:bg-[#24201D] p-4 rounded border border-[#E5DED3] dark:border-[#38312B] text-xs sm:text-sm font-mono text-[#6E1423] dark:text-[#F59E0B]">
+                [Company Founder Story: Insert story of {COMPANY_INFO.founder}, how Royal Enterprise was established in {COMPANY_INFO.foundedYear}, and the core mission of delivering end-to-end event management and in-house culinary experiences here.]
               </p>
               <p>
-                When anything went wrong—whether the fish fry was cold or the microphone had feedback—nobody took responsibility, and the host family was left embarrassed in front of their guests.
+                When organizing a wedding or corporate conference, clients frequently experience the frustration of fragmented coordination—where decor, audiovisual, hospitality, and food catering are handled by unrelated vendors with no unified responsibility.
               </p>
               <p>
-                Subrata decided to build an integrated service. He hired a permanent crew of veteran halwais and wedding cooks, invested in in-house concert sound and staging, and instituted a strict rule: <strong>a dedicated on-site floor manager remains with the family until the last guest leaves.</strong>
+                Royal Enterprise provides an integrated, turnkey model. We take complete ownership of budget optimization, 3D design preview, vendor orchestration, aesthetic styling, guest logistics, and ritual execution—ensuring families and corporate organizers celebrate without operational stress.
               </p>
               <p>
-                Today, Royal Enterprise has delivered over 750 events across Eastern India, handling everything from 100-guest intimate family Biye Baris in Ballygunge to 2,500-guest political and corporate gatherings.
+                From intimate family celebrations to grand multi-day weddings and high-profile corporate summits, our dedicated coordinators and culinary personnel remain on the floor until the final guest departs.
               </p>
             </div>
 
             {/* Our 4 Rules */}
             <div className="pt-6 border-t border-[#E5DED3] dark:border-[#38312B] space-y-3">
               <h3 className="font-serif text-lg font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">
-                The 4 Rules We Never Break
+                Our 4 Operational Commitments
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#3B3630] dark:text-[#D5CCC0]">
                 <div className="p-3 bg-white dark:bg-[#1C1917] rounded border border-[#E5DED3] dark:border-[#38312B] flex items-start space-x-2">
                   <Check className="w-4 h-4 text-[#6E1423] dark:text-[#F59E0B] shrink-0 mt-0.5" />
-                  <span><strong>1. Zero Kitchen Outsourcing:</strong> Our own bawarchis and halwais cook every dish.</span>
+                  <span><strong>1. Strict Hygiene & In-House Preparation:</strong> Sanitized cookware, fresh sourcing, and live on-site preparation.</span>
                 </div>
                 <div className="p-3 bg-white dark:bg-[#1C1917] rounded border border-[#E5DED3] dark:border-[#38312B] flex items-start space-x-2">
                   <Check className="w-4 h-4 text-[#6E1423] dark:text-[#F59E0B] shrink-0 mt-0.5" />
-                  <span><strong>2. Dedicated Veg Kitchen:</strong> Separate cookware and utensils for Marwari/Jain guests.</span>
+                  <span><strong>2. Dedicated Veg Kitchens:</strong> Separate cookware and dedicated staff for pure-vegetarian celebrations.</span>
                 </div>
                 <div className="p-3 bg-white dark:bg-[#1C1917] rounded border border-[#E5DED3] dark:border-[#38312B] flex items-start space-x-2">
                   <Check className="w-4 h-4 text-[#6E1423] dark:text-[#F59E0B] shrink-0 mt-0.5" />
-                  <span><strong>3. Fixed Estimates:</strong> Itemized written quote with no surprise midnight billing.</span>
+                  <span><strong>3. Transparent Estimates:</strong> Clear line-item budgeting with no unapproved surprise expenses.</span>
                 </div>
                 <div className="p-3 bg-white dark:bg-[#1C1917] rounded border border-[#E5DED3] dark:border-[#38312B] flex items-start space-x-2">
                   <Check className="w-4 h-4 text-[#6E1423] dark:text-[#F59E0B] shrink-0 mt-0.5" />
-                  <span><strong>4. Floor Presence:</strong> A designated manager stays on ground till the final plate.</span>
+                  <span><strong>4. Floor Presence:</strong> Designated on-ground operations heads stay active from beginning to end.</span>
                 </div>
               </div>
             </div>
@@ -173,10 +173,10 @@ const About = () => {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mb-10">
             <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] dark:text-[#F59E0B] block mb-1">
-              The People On Ground
+              Core Leadership & Operations
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2] tracking-tight">
-              Meet the core team running your event.
+              Meet the key specialists running your event.
             </h2>
           </div>
 
@@ -208,7 +208,7 @@ const About = () => {
             Track Record
           </span>
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2] tracking-tight">
-            Real venues where we have managed setups and banquets
+            Real venues where we coordinate setups and banquets
           </h2>
         </div>
 
@@ -232,10 +232,10 @@ const About = () => {
         <div className="mt-12 p-8 bg-[#540D1A] dark:bg-[#3E0812] text-white rounded-lg flex flex-col sm:flex-row items-center justify-between gap-6 border border-[#3E0812] dark:border-[#540D1A]">
           <div className="space-y-1 text-center sm:text-left">
             <h3 className="font-serif text-2xl font-bold text-white">
-              Planning an upcoming celebration in Kolkata?
+              Planning an upcoming celebration or corporate meet?
             </h3>
             <p className="text-xs sm:text-sm text-white/80 dark:text-[#D5CCC0]">
-              Speak directly with Subrata or our catering lead to check dates.
+              Speak directly with {COMPANY_INFO.founder} or our lead coordinator to check dates.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">

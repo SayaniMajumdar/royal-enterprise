@@ -90,12 +90,12 @@ const HeroSection = ({ onOpenQuote }) => {
               <div className="p-4 bg-white/95 dark:bg-[#1C1917]/95 backdrop-blur-sm border-t border-[#E5DED3] dark:border-[#38312B] text-left">
                 <div className="flex items-center justify-between text-xs">
                   <span className="font-semibold text-[#1F1D1A] dark:text-[#FAF7F2]">
-                    Sangeet & Wedding at [The Rajbari Bawali]
+                    [Event Type] at [Venue Name / Location]
                   </span>
-                  <span className="text-[#7D756A] dark:text-[#8C8477] font-mono">Jan 2026</span>
+                  <span className="text-[#7D756A] dark:text-[#8C8477] font-mono">[Event Date]</span>
                 </div>
                 <p className="text-[11px] text-[#524C44] dark:text-[#A89F91] mt-1">
-                  Handled: Turnkey Vedic mandap, marigold architecture, shehnai & 450-guest traditional banquet.
+                  Handled: [Scope Handled: e.g. Turnkey Vedic mandap, floral architecture, and [Guest Count] banquet].
                 </p>
               </div>
             </div>

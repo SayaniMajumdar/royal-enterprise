@@ -117,7 +117,7 @@ const DivisionOverview = ({ onOpenQuote }) => {
                     <HeartHandshake className="w-4 h-4" />
                     <span>Wedding Planning</span>
                   </div>
-                  <span className="text-[11px] text-[#7D756A] dark:text-[#8C8477] font-mono">Full Packages from ₹4.5L</span>
+                  <span className="text-[11px] text-[#7D756A] dark:text-[#8C8477] font-mono">[Package Price]</span>
                 </div>
 
                 <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">
@@ -159,7 +159,7 @@ const DivisionOverview = ({ onOpenQuote }) => {
                     <Building2 className="w-4 h-4" />
                     <span>Event Management</span>
                   </div>
-                  <span className="text-[11px] text-[#7D756A] dark:text-[#8C8477] font-mono">100 to 3,000 Attendees</span>
+                  <span className="text-[11px] text-[#7D756A] dark:text-[#8C8477] font-mono">Up to 500+ Attendees</span>
                 </div>
 
                 <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">

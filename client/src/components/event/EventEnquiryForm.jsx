@@ -167,7 +167,7 @@ const EventEnquiryForm = ({ initialCategory = '' }) => {
               name="customerName"
               value={formData.customerName}
               onChange={handleChange}
-              placeholder="e.g. Reliance / Mr. Aditya Birla"
+              placeholder="e.g. [Organization Name] / [Customer Name]"
               required
               error={errors.customerName}
             />
@@ -176,7 +176,7 @@ const EventEnquiryForm = ({ initialCategory = '' }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="+91 98765 43210"
+              placeholder="+91 [Insert Contact Number]"
               required
               error={errors.phone}
             />

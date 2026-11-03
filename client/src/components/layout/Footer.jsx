@@ -170,7 +170,7 @@ const Footer = ({ onOpenQuoteModal }) => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[#E5DED3] dark:border-[#38312B] flex flex-col sm:flex-row items-center justify-between text-xs text-[#7D756A] dark:text-[#8C8477] gap-4">
-          <p>© {new Date().getFullYear()} Royal Enterprise. Rashbehari Avenue, Kolkata, West Bengal.</p>
+          <p>© {new Date().getFullYear()} Royal Enterprise. {COMPANY_INFO.address}.</p>
           <div className="flex items-center space-x-4">
             <Link to="/about" className="hover:text-[#6E1423] dark:hover:text-[#F59E0B]">Our Story</Link>
             <span>•</span>

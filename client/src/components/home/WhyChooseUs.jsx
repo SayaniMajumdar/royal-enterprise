@@ -6,23 +6,23 @@ const WhyChooseUs = ({ onOpenQuote }) => {
   const steps = [
     {
       num: '1',
-      title: 'You call or WhatsApp us.',
-      detail: 'We ask who is coming, what you eat, and what you can comfortably spend. No sales pitch, just honest options.',
+      title: 'Discovery & Briefing',
+      detail: 'We understand your event purpose, expected guest count, venue preferences, and target budget.',
     },
     {
       num: '2',
-      title: 'We meet you with actual sample menus and a floor plan.',
-      detail: 'You taste the food prepared by our chefs before you pay an advance. We confirm the portions, spices, and service style.',
+      title: 'Concept & Budget Design',
+      detail: 'We draft a customized 3D design preview, timeline breakdown, and transparent line-item budget estimate.',
     },
     {
       num: '3',
-      title: 'We lock the vendors, time-slots, and kitchen logistics.',
-      detail: 'Itemized written estimate with no hidden add-ons, extra per-plate surprises, or unexpected midnight bills.',
+      title: 'Pre-Production',
+      detail: 'Vendor allocations, technical dry-runs, catering menu tastings, sound/light checks, and legal/safety clearances.',
     },
     {
       num: '4',
-      title: 'On the day, a floor manager stays with you from the first guest to the last plate.',
-      detail: 'Our floor lead coordinates the halwais, servers, sound, and rituals while your family attends to your guests.',
+      title: 'Day-of Execution',
+      detail: 'A dedicated floor manager oversees artist timelines, backstage cues, dining transitions, and crowd comfort.',
     },
   ];
 

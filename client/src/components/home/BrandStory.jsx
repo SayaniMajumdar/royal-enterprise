@@ -14,7 +14,7 @@ const BrandStory = () => {
             <div className="rounded-lg overflow-hidden border border-[#E5DED3] dark:border-[#38312B] bg-[#FAF7F2] dark:bg-[#24201D] p-2 shadow-paper-md dark:shadow-dark-card transition-colors">
               <img
                 src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=800&q=80"
-                alt={`${COMPANY_INFO.founder}, Founder of Royal Enterprise`}
+                alt={`${COMPANY_INFO.founder}, Director of Royal Enterprise`}
                 className="w-full h-80 sm:h-96 object-cover rounded"
               />
               <div className="p-3 text-left">
@@ -25,7 +25,7 @@ const BrandStory = () => {
                   {COMPANY_INFO.founderTitle}
                 </span>
                 <span className="text-[11px] text-[#7D756A] dark:text-[#8C8477] block mt-0.5">
-                  Started Royal Enterprise in {COMPANY_INFO.foundedYear} in North Kolkata
+                  Established Royal Enterprise in {COMPANY_INFO.foundedYear}
                 </span>
               </div>
             </div>
@@ -38,34 +38,37 @@ const BrandStory = () => {
             </span>
 
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2] tracking-tight leading-tight">
-              Started with two tandoor ovens and a family kitchen in 2014.
+              Integrated event production, wedding styling, and in-house catering.
             </h2>
 
             <div className="space-y-4 text-sm sm:text-base text-[#524C44] dark:text-[#A89F91] leading-relaxed">
-              <p>
-                {COMPANY_INFO.founder} started Royal Enterprise in {COMPANY_INFO.foundedYear} catering neighborhood family weddings in North Kolkata. He believed that the single biggest fear families have when hosting an event is inconsistent food and irresponsible third-party contractors.
+              <p className="bg-[#FAF7F2] dark:bg-[#24201D] p-3.5 rounded border border-[#E5DED3] dark:border-[#38312B] text-xs font-mono text-[#6E1423] dark:text-[#F59E0B]">
+                [Company Founder Story: Insert story of {COMPANY_INFO.founder}, how Royal Enterprise started in {COMPANY_INFO.foundedYear}, and the core mission of providing integrated turnkey event management and in-house catering here.]
               </p>
               <p>
-                Today there are {COMPANY_INFO.teamSize}, and we have delivered over {COMPANY_INFO.eventsCount} events at venues like The Rajbari Bawali, ITC Royal Bengal, and PC Chandra Garden.
+                We believe that the single biggest challenge families and corporate organizers face is dealing with fragmented contractors who fail to coordinate on the day of the event.
+              </p>
+              <p>
+                With {COMPANY_INFO.teamSize}, Royal Enterprise takes complete ownership of venue scouting, 3D stagecraft, guest hospitality, ritual sequencing, and live banquet cooking under one single point of accountability.
               </p>
               <p className="font-medium text-[#1F1D1A] dark:text-[#FAF7F2]">
-                We have never used third-party food contractors. The same cooks who prepare the food in our central prep kitchen supervise the service on your wedding floor.
+                Our dedicated floor managers and culinary leads supervise every transition on the ground until the final guest is served.
               </p>
             </div>
 
             {/* Facts Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-[#E5DED3] dark:border-[#38312B]">
               <div>
-                <span className="font-serif text-2xl font-bold text-[#6E1423] dark:text-[#F59E0B] block">750+</span>
-                <span className="text-xs text-[#524C44] dark:text-[#A89F91]">Events run</span>
+                <span className="font-serif text-2xl font-bold text-[#6E1423] dark:text-[#F59E0B] block">{COMPANY_INFO.eventsCount}</span>
+                <span className="text-xs text-[#524C44] dark:text-[#A89F91]">Events managed</span>
               </div>
               <div>
-                <span className="font-serif text-2xl font-bold text-[#6E1423] dark:text-[#F59E0B] block">2,500</span>
-                <span className="text-xs text-[#524C44] dark:text-[#A89F91]">Largest single banquet</span>
+                <span className="font-serif text-2xl font-bold text-[#6E1423] dark:text-[#F59E0B] block">{COMPANY_INFO.foundedYear}</span>
+                <span className="text-xs text-[#524C44] dark:text-[#A89F91]">Established</span>
               </div>
               <div>
-                <span className="font-serif text-2xl font-bold text-[#6E1423] dark:text-[#F59E0B] block">28</span>
-                <span className="text-xs text-[#524C44] dark:text-[#A89F91]">Full-time staff</span>
+                <span className="font-serif text-2xl font-bold text-[#6E1423] dark:text-[#F59E0B] block">100%</span>
+                <span className="text-xs text-[#524C44] dark:text-[#A89F91]">In-house supervision</span>
               </div>
             </div>
 

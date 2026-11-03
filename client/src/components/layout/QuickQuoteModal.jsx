@@ -181,7 +181,7 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
             name="customerName"
             value={formData.customerName}
             onChange={handleChange}
-            placeholder="e.g. Maharani Gayatri Devi / Mr. Sharma"
+            placeholder="e.g. [Customer Name]"
             required
           />
           <Input
@@ -189,7 +189,7 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="+91 98765 43210"
+            placeholder="+91 [Insert Contact Number]"
             required
           />
         </div>

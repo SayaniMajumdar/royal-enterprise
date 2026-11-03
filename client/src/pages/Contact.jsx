@@ -313,7 +313,7 @@ const Contact = () => {
                       name="customerName"
                       value={formData.customerName}
                       onChange={handleChange}
-                      placeholder="e.g. Subir Mukherjee"
+                      placeholder="e.g. [Customer Name]"
                       required
                       error={errors.customerName}
                     />
@@ -323,7 +323,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+91 98300 00000"
+                      placeholder="+91 [Insert Contact Number]"
                       required
                       error={errors.phone}
                     />

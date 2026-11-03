@@ -251,14 +251,14 @@ const EventManagement = () => {
       name: 'customerName',
       label: 'Full Name / Organization',
       type: 'text',
-      placeholder: 'e.g. Reliance Industries / Mr. Aditya Birla',
+      placeholder: 'e.g. [Organization Name] / [Customer Name]',
       required: true,
     },
     {
       name: 'phone',
       label: 'Phone Number',
       type: 'tel',
-      placeholder: '+91 98765 43210',
+      placeholder: '+91 [Insert Contact Number]',
       required: true,
     },
     {

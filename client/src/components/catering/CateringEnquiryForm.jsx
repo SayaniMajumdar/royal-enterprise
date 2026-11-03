@@ -214,7 +214,7 @@ const CateringEnquiryForm = ({ initialPackage = '' }) => {
               name="customerName"
               value={formData.customerName}
               onChange={handleChange}
-              placeholder="e.g. Mr. & Mrs. Singhania"
+              placeholder="e.g. [Customer Name]"
               required
               error={errors.customerName}
             />
@@ -223,7 +223,7 @@ const CateringEnquiryForm = ({ initialPackage = '' }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="+91 98765 43210"
+              placeholder="+91 [Insert Contact Number]"
               required
               error={errors.phone}
             />

@@ -1,22 +1,31 @@
 import React, { useState } from 'react';
 import Modal from '../common/Modal';
 import Button from '../common/Button';
-import { Printer, Crown, FileText, CheckCircle2 } from 'lucide-react';
+import { Printer } from 'lucide-react';
 import { COMPANY_INFO } from '../../data/mockData';
 
 const WeddingProposalModal = ({ isOpen, onClose }) => {
-  const [clientData, setClientData] = useState({
-    refNo: 'RE/WP/2026/0482',
-    date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }),
-    coupleNames: 'Ananya Roy & Rohan Mehra',
-    phone: '+91 98765 43210',
-    email: 'ananya.rohan.wedding@example.com',
-    eventDates: '12th February 2027 – 14th February 2027',
-    venue: 'The Rajbari Bawali & ITC Royal Bengal, Kolkata',
-    guestCount: '350 – 400 Guests',
-    packageLevel: 'Imperial Package (Turnkey Luxury)',
-    planningFee: '₹4,50,000',
-    crewFee: '₹1,50,000',
+  const [clientData] = useState({
+    refNo: 'RE/WP/2026/[Draft-001]',
+    date: '[Date of Issuance]',
+    coupleNames: '[Bride’s Name] & [Groom’s Name] / [Client Representative Name]',
+    phone: '+91 [Client Phone Number]',
+    email: '[Client Email Address]',
+    eventDates: '[Start Date] to [End Date]',
+    venue: '[List Venue Names and Cities]',
+    guestCount: '[e.g., 350 – 400 Guests]',
+    packageLevel: '[Silver / Gold / Imperial Turnkey Luxury]',
+    planningFee: '₹ [Insert Amount]',
+    crewFee: '₹ [Insert Amount]',
+    taxFee: '₹ [Insert Amount]',
+    totalFee: '₹ [Insert Total Amount]',
+    crewCount: '[Insert Count]',
+    onGroundTeamSize: '[Insert Number, e.g., 6–8]',
+    dueDateMilestone2: '[Insert Specific Date]',
+    dueDateMilestone3: '[Insert Specific Date]',
+    repName: '[Representative Name]',
+    clientSignatoryName: '[Client / Guardian Name]',
+    relationship: '[e.g., Groom / Bride / Family Representative]',
   });
 
   const handlePrint = () => {
@@ -63,15 +72,15 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
                     ROYAL ENTERPRISE
                   </div>
                   <p className="text-[10px] font-semibold text-slate-600 tracking-wider uppercase mt-1">
-                    Turnkey Wedding Planning • Gourmet Catering • Event Production
+                    Turnkey Wedding Planning | Gourmet Catering | Event Production
                   </p>
                 </div>
               </div>
-              <p className="text-[11px] text-slate-500 mt-2">
+              <p className="text-[11px] text-slate-600 mt-2">
                 Office: {COMPANY_INFO.address}
               </p>
-              <p className="text-[11px] text-slate-500">
-                Phone: {COMPANY_INFO.phone} | Email: {COMPANY_INFO.email} | Web: www.royalenterprise.com
+              <p className="text-[11px] text-slate-600">
+                Phone: {COMPANY_INFO.phone} | Email: {COMPANY_INFO.email} | Web: {COMPANY_INFO.website}
               </p>
             </div>
             <div className="text-left sm:text-right text-[11px] text-slate-600 space-y-1">
@@ -86,11 +95,11 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
               Prepared For
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-              <p><span className="font-semibold text-slate-700">Client / Couple Names:</span> {clientData.coupleNames}</p>
+              <p><span className="font-semibold text-slate-700">Client Names:</span> {clientData.coupleNames}</p>
               <p><span className="font-semibold text-slate-700">Primary Phone:</span> {clientData.phone}</p>
               <p><span className="font-semibold text-slate-700">Email Address:</span> {clientData.email}</p>
               <p><span className="font-semibold text-slate-700">Projected Guest Count:</span> {clientData.guestCount}</p>
-              <p><span className="font-semibold text-slate-700">Celebration Dates:</span> {clientData.eventDates}</p>
+              <p><span className="font-semibold text-slate-700">Event Dates:</span> {clientData.eventDates}</p>
               <p><span className="font-semibold text-slate-700">Locations / Venues:</span> {clientData.venue}</p>
               <p className="sm:col-span-2"><span className="font-semibold text-slate-700">Selected Service Package:</span> {clientData.packageLevel}</p>
             </div>
@@ -104,6 +113,13 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
             <p className="text-slate-700 text-xs sm:text-sm">
               Royal Enterprise is honored to submit this formal proposal for comprehensive wedding planning, event coordination, and production management for the upcoming nuptial celebrations. Our mandate is to oversee end-to-end design, vendor operations, scheduling, and on-ground hospitality to ensure a seamless and memorable celebration.
             </p>
+            <div className="bg-slate-50 p-3 rounded border border-slate-200 text-xs space-y-1">
+              <p className="font-bold text-slate-800 uppercase text-[10px] tracking-wider mb-1">Celebration Details</p>
+              <p><span className="font-semibold">Event Dates:</span> {clientData.eventDates}</p>
+              <p><span className="font-semibold">Locations / Venues:</span> {clientData.venue}</p>
+              <p><span className="font-semibold">Projected Guest Count:</span> {clientData.guestCount}</p>
+              <p><span className="font-semibold">Selected Service Package:</span> {clientData.packageLevel}</p>
+            </div>
           </div>
 
           {/* Section 2 */}
@@ -112,7 +128,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
               2. Scope of Services & Deliverables
             </h3>
             <p className="text-slate-700 text-xs">
-              Under this agreement, Royal Enterprise will provide turnkey management across the following key operational areas:
+              Under this agreement, Royal Enterprise will provide management across the following key operational areas:
             </p>
             <ul className="list-disc pl-5 space-y-1.5 text-slate-700 text-xs">
               <li>
@@ -128,7 +144,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
                 <strong>Logistics & Guest Relations:</strong> Overseeing travel transfers, hotel check-in desks, room hamper distributions, luggage handling, and dedicated shadow assistance for the bride and groom.
               </li>
               <li>
-                <strong>On-Ground Operations:</strong> Deploying a dedicated team of 8–12 on-site coordinators headed by a Senior Event Director to supervise all timelines and emergency contingency plans.
+                <strong>On-Ground Operations:</strong> Deploying a dedicated team of {clientData.onGroundTeamSize} on-site coordinators headed by a Senior Event Director to supervise all timelines and emergency contingency plans.
               </li>
             </ul>
           </div>
@@ -138,6 +154,7 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
             <h3 className="font-serif font-bold text-base text-slate-900 border-b border-slate-200 pb-1">
               3. Financial Proposal & Cost Breakdown
             </h3>
+            <p className="text-xs font-semibold text-slate-800">Professional Service Fee</p>
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs border border-slate-200">
                 <thead className="bg-slate-100 text-slate-800 uppercase font-semibold">
@@ -151,27 +168,27 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
                   <tr>
                     <td className="p-2 border border-slate-200 font-medium">Wedding Planning & Direction Fee</td>
                     <td className="p-2 border border-slate-200">Complete turnkey coordination and design supervision</td>
-                    <td className="p-2 border border-slate-200 text-right">{clientData.planningFee}</td>
+                    <td className="p-2 border border-slate-200 text-right font-mono">{clientData.planningFee}</td>
                   </tr>
                   <tr>
                     <td className="p-2 border border-slate-200 font-medium">On-Site Operational Crew</td>
-                    <td className="p-2 border border-slate-200">8 Event managers, shadow coordinators, runners</td>
-                    <td className="p-2 border border-slate-200 text-right">{clientData.crewFee}</td>
+                    <td className="p-2 border border-slate-200">{clientData.crewCount} Event managers, shadow coordinators, runners</td>
+                    <td className="p-2 border border-slate-200 text-right font-mono">{clientData.crewFee}</td>
                   </tr>
                   <tr>
                     <td className="p-2 border border-slate-200 font-medium">Taxes & Statutory Levies</td>
                     <td className="p-2 border border-slate-200">Applicable Goods and Services Tax (GST @ 18%)</td>
-                    <td className="p-2 border border-slate-200 text-right">₹1,08,000</td>
+                    <td className="p-2 border border-slate-200 text-right font-mono">{clientData.taxFee}</td>
                   </tr>
                   <tr className="bg-slate-100 font-bold text-slate-900">
-                    <td className="p-2 border border-slate-200" colSpan="2">Total Professional Planning Fee (Net Payable)</td>
-                    <td className="p-2 border border-slate-200 text-right">₹7,08,000</td>
+                    <td className="p-2 border border-slate-200" colSpan="2">Total Professional Planning Fee (Net Payable Fee)</td>
+                    <td className="p-2 border border-slate-200 text-right font-mono">{clientData.totalFee}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p className="text-[11px] text-slate-500 italic">
-              * Note: Direct production expenses (including physical decor builds, venue booking rentals, external artist appearance fees, sound/generator setups, and per-plate catering costs) will be billed at actuals based on client-approved estimates.
+              Note: Direct production expenses (including physical decor builds, venue booking rentals, external artist appearance fees, sound/generator setups, and per-plate catering costs) will be billed at actuals based on client-approved estimates.
             </p>
           </div>
 
@@ -180,6 +197,9 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
             <h3 className="font-serif font-bold text-base text-slate-900 border-b border-slate-200 pb-1">
               4. Payment Schedule
             </h3>
+            <p className="text-slate-700 text-xs">
+              All professional fee disbursements shall be executed according to the following schedule:
+            </p>
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs border border-slate-200">
                 <thead className="bg-slate-100 text-slate-800 uppercase font-semibold">
@@ -198,12 +218,12 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
                   <tr>
                     <td className="p-2 border border-slate-200">2. Production Milestone (Upon approval of 3D themes & vendors)</td>
                     <td className="p-2 border border-slate-200 text-center font-semibold">35%</td>
-                    <td className="p-2 border border-slate-200">60 Days prior to first event</td>
+                    <td className="p-2 border border-slate-200 font-mono">{clientData.dueDateMilestone2}</td>
                   </tr>
                   <tr>
                     <td className="p-2 border border-slate-200">3. Final Logistics Review (14 days prior to first event)</td>
                     <td className="p-2 border border-slate-200 text-center font-semibold">30%</td>
-                    <td className="p-2 border border-slate-200">14 Days prior to first event</td>
+                    <td className="p-2 border border-slate-200 font-mono">{clientData.dueDateMilestone3}</td>
                   </tr>
                   <tr>
                     <td className="p-2 border border-slate-200">4. On-Ground Settlement (Prior to commencement of reception)</td>
@@ -253,9 +273,10 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
                 <p className="font-bold text-slate-900 text-xs uppercase tracking-wider">For Royal Enterprise:</p>
                 <div className="h-14 border-b border-dashed border-slate-400"></div>
                 <div className="text-xs space-y-1 text-slate-700">
-                  <p><span className="font-semibold">Authorized Signatory:</span> Subrata Majumdar</p>
-                  <p><span className="font-semibold">Title:</span> Managing Director / Lead Planner</p>
-                  <p><span className="font-semibold">Date:</span> {clientData.date}</p>
+                  <p><span className="font-semibold">Authorized Signatory:</span> ___________________________________</p>
+                  <p><span className="font-semibold">Name:</span> {clientData.repName}</p>
+                  <p><span className="font-semibold">Title:</span> Director / Lead Planner</p>
+                  <p><span className="font-semibold">Date:</span> ________________________</p>
                 </div>
               </div>
 
@@ -263,10 +284,10 @@ const WeddingProposalModal = ({ isOpen, onClose }) => {
                 <p className="font-bold text-slate-900 text-xs uppercase tracking-wider">For the Client:</p>
                 <div className="h-14 border-b border-dashed border-slate-400"></div>
                 <div className="text-xs space-y-1 text-slate-700">
-                  <p><span className="font-semibold">Primary Signatory:</span> _________________________________</p>
-                  <p><span className="font-semibold">Name:</span> {clientData.coupleNames}</p>
-                  <p><span className="font-semibold">Relationship to Event:</span> Groom / Bride / Family Head</p>
-                  <p><span className="font-semibold">Date:</span> _________________________</p>
+                  <p><span className="font-semibold">Primary Signatory:</span> _____________________________________</p>
+                  <p><span className="font-semibold">Name:</span> {clientData.clientSignatoryName}</p>
+                  <p><span className="font-semibold">Relationship to Event:</span> {clientData.relationship}</p>
+                  <p><span className="font-semibold">Date:</span> ________________________</p>
                 </div>
               </div>
             </div>

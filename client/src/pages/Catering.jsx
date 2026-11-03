@@ -27,47 +27,47 @@ const Catering = () => {
   const culinaryStyles = [
     {
       title: 'Traditional Bengali Wedding Feasts',
-      subtitle: 'Biye Bari and Boubhat banquets',
+      subtitle: 'Biye Bari & Boubhat banquets',
       description:
-        'Sequenced with cold-pressed mustard oil and fresh fish. Gondhoraj coolers, pure Kolkata Bhetki fry with kasundi, Basanti pulao, slow-simmered Kosha Mangsho, and hot Nolen gur mishti.',
+        'Authentic sequencing from Gondhoraj drinks to pure Bhetki fry, Basanti pulao, mutton kosha, and seasonal mishti.',
       badge: 'Heritage Bengal',
-      price: '₹1,150 – ₹1,850 / plate',
+      price: '[Package Price]',
       icon: Utensils,
     },
     {
-      title: 'North Indian & Awadhi Banquets',
+      title: 'North Indian, Mughlai & Awadhi Banquets',
       subtitle: 'Clay-oven grills and dum biryanis',
       description:
-        'Charcoal tandoori kebabs, fragrant dum biryanis sealed with dough, slow-cooked mutton rogan josh, and overnight charcoal-simmered Dal Bukhara.',
+        'Charcoal tandoori grills, dum biryanis, slow-cooked kormas, and rich artisanal gravies.',
       badge: 'Awadhi Royalty',
-      price: '₹1,450 – ₹2,400 / plate',
+      price: '[Package Price]',
       icon: Flame,
     },
     {
       title: 'Marwari & Pure Vegetarian Feasts',
       subtitle: 'Dedicated separate-kitchen setups',
       description:
-        'Prepared using dedicated vegetarian cookware and staff. Authentic Rajasthani Dal Baati Churma with pure desi ghee, Ker Sangri, Shahi Paneer, and live hot Kesariya jalebis.',
+        'Dedicated separate-kitchen setups with Dal Baati Churma, Ker Sangri, Shahi Paneer, and live sweet jalebi counters.',
       badge: 'Pure Vegetarian',
-      price: '₹850 – ₹1,400 / plate',
+      price: '[Package Price]',
       icon: Leaf,
     },
     {
-      title: 'Live Chef Counters & Street Food',
+      title: 'Live Global Counters',
       subtitle: 'Freshly cooked to order',
       description:
-        'Live Kolkata puchka counters with 4 flavored waters, tossed-to-order Italian pastas, wok-prepared Asian delicacies, and live hot malpua and rabdi stations.',
+        'Wood-fired artisanal pizzas, toss-to-order Italian pasta, wok-tossed Pan-Asian noodles/dim sums, and street-style live chaat setups.',
       badge: 'Interactive Counters',
-      price: 'Add-on from ₹180 / plate',
+      price: '[Package Price]',
       icon: ChefHat,
     },
     {
       title: 'Corporate Executive Buffets',
       subtitle: 'Pristine hygiene and punctual service',
       description:
-        'Nutritionally balanced hot buffet spreads and boxed executive meals for leadership summits, shareholder meetings, and corporate award dinners.',
+        'Balanced, hygienic, and calorie-conscious boxed and buffet meals for summits, seminars, and boardroom luncheons.',
       badge: 'Corporate Standard',
-      price: '₹650 – ₹1,200 / plate',
+      price: '[Package Price]',
       icon: ShieldCheck,
     },
   ];
@@ -226,26 +226,18 @@ const Catering = () => {
     {
       category: 'Standard Vegetarian',
       highlights: '2 Starters + Pulao/Breads + 2 Mains + Chutney + 2 Sweets',
-      guestTier: '100 - 500 Guests',
-      serviceType: 'Buffet with Live Tandoor',
     },
     {
       category: 'Classic Non-Vegetarian',
-      highlights: 'Fish Starter + Chicken Main + Fish/Katla + Pulao + 3 Sweets',
-      guestTier: '150 - 800 Guests',
-      serviceType: 'Buffet + Plated Fish Service',
+      highlights: 'Fish Starter + Chicken Main + Fish/Katla + Pulao + Sweets',
     },
     {
       category: 'Royal Multi-Cuisine',
-      highlights: '4 Starters + Live Chaat + Bhetki + Mutton Kosha + 4 Sweets',
-      guestTier: '200 - 1500 Guests',
-      serviceType: 'Multi-Thematic Counter Service',
+      highlights: '4 Starters + Live Chaat + Bhetki + Mutton Kosha + Sweets',
     },
     {
       category: 'Luxury Imperial Banquet',
-      highlights: 'Bhetki Paturi + Chingri Malai Curry + Mutton Biryani + Live Dessert Counters',
-      guestTier: '250 - 3000+ Guests',
-      serviceType: 'Imperial Butler & Live Cooking Theatres',
+      highlights: 'Bhetki Paturi + Chingri Malai Curry + Mutton Biryani + Live Counters',
     },
   ];
 
@@ -490,19 +482,15 @@ const Catering = () => {
             <table className="w-full text-left text-xs sm:text-sm border-collapse">
               <thead className="bg-[#FAF8F4] dark:bg-[#141210] text-gold-dark dark:text-gold-light uppercase tracking-[0.16em] font-semibold border-b border-[#E8E1D5] dark:border-[#38312B]">
                 <tr>
-                  <th className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] text-[11px]">Package Category</th>
-                  <th className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] text-[11px]">Typical Menu Highlights</th>
-                  <th className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] text-[11px]">Target Guest Scale</th>
-                  <th className="p-4 text-[11px]">Service Format</th>
+                  <th className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] text-[11px] w-1/3">Package Category</th>
+                  <th className="p-4 text-[11px]">Typical Menu Highlights</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#E8E1D5] dark:divide-[#38312B] text-[#3A352F] dark:text-[#D5CCC0]">
                 {pricingGuide.map((row, idx) => (
                   <tr key={idx} className="hover:bg-[#FAF8F4]/60 dark:hover:bg-[#141210]/60 transition-colors">
                     <td className="p-4 font-medium text-[#141414] dark:text-[#FAF7F2] border-r border-[#E8E1D5] dark:border-[#38312B]">{row.category}</td>
-                    <td className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] font-light text-[#554F47] dark:text-[#A8A29E]">{row.highlights}</td>
-                    <td className="p-4 border-r border-[#E8E1D5] dark:border-[#38312B] font-medium text-maroon dark:text-gold-light">{row.guestTier}</td>
-                    <td className="p-4 font-light text-[#554F47] dark:text-[#A8A29E]">{row.serviceType}</td>
+                    <td className="p-4 font-light text-[#554F47] dark:text-[#A8A29E] leading-relaxed">{row.highlights}</td>
                   </tr>
                 ))}
               </tbody>

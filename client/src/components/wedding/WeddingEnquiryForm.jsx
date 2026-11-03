@@ -246,7 +246,7 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
               name="customerName"
               value={formData.customerName}
               onChange={handleChange}
-              placeholder="e.g. Ananya Roy & Rohan Mehra"
+              placeholder="e.g. [Bride’s Name] & [Groom’s Name] / [Client Representative Name]"
               required
               error={errors.customerName}
             />
@@ -255,7 +255,7 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="+91 98765 43210"
+              placeholder="+91 [Insert Contact Number]"
               required
               error={errors.phone}
             />
