@@ -211,7 +211,7 @@ const WeddingPlanner = () => {
       <section className="bg-charcoal text-[#FFF8F0] relative py-24 sm:py-32 overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80"
+            src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1920&q=80"
             alt="Royal Enterprise Wedding Planner Hero"
             className="w-full h-full object-cover filter brightness-[0.38] contrast-[1.08] scale-[1.02]"
           />
@@ -221,20 +221,20 @@ const WeddingPlanner = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 text-center">
           <div className="inline-flex items-center space-x-2.5 mb-5">
             <span className="w-5 h-px bg-gold-light/60" />
-            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.26em] text-gold-light font-medium">
-              Division III • Turnkey Royal Wedding Planning
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.2em] text-amber-200 font-semibold">
+              Kolkata • Rajbaris • Destination
             </span>
             <span className="w-5 h-px bg-gold-light/60" />
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-normal text-[#FFF8F0] tracking-tight mb-4">
-            Wedding Planning Services
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-[#FFF8F0] tracking-tight mb-4">
+            Turnkey Wedding Planning
           </h1>
-          <p className="font-editorial italic text-gold-light text-xl sm:text-2xl md:text-3xl font-normal mb-6">
-            "Your Dream Wedding, Our Complete Responsibility."
+          <p className="font-serif text-lg sm:text-2xl text-amber-200 font-normal mb-6">
+            From heritage rajbaris to Vedic mandaps, bridal styling, Benarasi sarees, and food cooked by our own bawarchis.
           </p>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/80 font-light leading-relaxed mb-9">
-            Royal Enterprise operates as your turnkey wedding management partner. We take complete ownership of budget optimization, vendor orchestration, aesthetic styling, guest logistics, and ritual execution—ensuring families celebrate without operational stress.
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/90 font-light leading-relaxed mb-9">
+            We handle venue reservations, floral mandaps, ritual coordination, photography, and banquet service with one dedicated team. Your family celebrates without running around after suppliers.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">

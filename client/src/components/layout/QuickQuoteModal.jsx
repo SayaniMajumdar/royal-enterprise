@@ -116,7 +116,7 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
       }
 
       showToast(
-        res.message || 'Your enquiry has been received! Our royal concierge will contact you shortly.',
+        "Got it. We'll call you within 2 hours between 10:00 AM and 8:30 PM IST.",
         'success'
       );
       resetForm();
@@ -132,44 +132,44 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title="Request a Bespoke Proposal"
-      subtitle="Select your desired division and receive a tailored proposal within 24 hours."
+      title="Get a quote"
+      subtitle="Tell us about your event. We will check our kitchen schedule and call you back directly."
       maxWidth="max-w-2xl"
     >
       {/* Division Tabs */}
-      <div className="grid grid-cols-3 gap-1.5 bg-[#F6F3EE] p-1.5 rounded-[3px] border border-[#E8E1D5] mb-6">
+      <div className="grid grid-cols-3 gap-1.5 bg-[#FAF7F2] p-1.5 rounded border border-[#E5DED3] mb-6">
         <button
           type="button"
-          onClick={() => setActiveTab('events')}
-          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-semibold ${
-            activeTab === 'events'
-              ? 'bg-roseBrand text-white shadow-sm'
-              : 'text-[#6B645C] hover:text-[#141414] hover:bg-white/60'
+          onClick={() => setActiveTab('wedding')}
+          className={`py-2 text-xs rounded transition-all font-semibold ${
+            activeTab === 'wedding'
+              ? 'bg-[#6E1423] text-white shadow-sm'
+              : 'text-[#524C44] hover:text-[#1F1D1A] hover:bg-white/60'
           }`}
         >
-          Event Mgmt
+          Weddings
         </button>
         <button
           type="button"
           onClick={() => setActiveTab('catering')}
-          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-semibold ${
+          className={`py-2 text-xs rounded transition-all font-semibold ${
             activeTab === 'catering'
-              ? 'bg-roseBrand text-white shadow-sm'
-              : 'text-[#6B645C] hover:text-[#141414] hover:bg-white/60'
+              ? 'bg-[#6E1423] text-white shadow-sm'
+              : 'text-[#524C44] hover:text-[#1F1D1A] hover:bg-white/60'
           }`}
         >
           Catering
         </button>
         <button
           type="button"
-          onClick={() => setActiveTab('wedding')}
-          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-semibold ${
-            activeTab === 'wedding'
-              ? 'bg-roseBrand text-white shadow-sm'
-              : 'text-[#6B645C] hover:text-[#141414] hover:bg-white/60'
+          onClick={() => setActiveTab('events')}
+          className={`py-2 text-xs rounded transition-all font-semibold ${
+            activeTab === 'events'
+              ? 'bg-[#6E1423] text-white shadow-sm'
+              : 'text-[#524C44] hover:text-[#1F1D1A] hover:bg-white/60'
           }`}
         >
-          Wedding Planner
+          Events
         </button>
       </div>
 

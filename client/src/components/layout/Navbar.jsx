@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Star, Phone, MapPin, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, MessageSquare, MapPin } from 'lucide-react';
 import { COMPANY_INFO } from '../../data/mockData';
 
 const Navbar = ({ onOpenQuoteModal }) => {
@@ -10,7 +10,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -22,103 +22,110 @@ const Navbar = ({ onOpenQuoteModal }) => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Event Management', path: '/events' },
+    { name: 'Weddings', path: '/wedding-planner' },
+    { name: 'Events', path: '/events' },
     { name: 'Catering', path: '/catering' },
-    { name: 'Wedding Planner', path: '/wedding-planner' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact Us', path: '/contact' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      {/* Top Utility Bar (WedMeGood Screenshot 1 Reference) */}
-      <div className="bg-[#540D1A] text-white text-[11px] sm:text-xs py-1.5 px-4 sm:px-6 border-b border-white/10 hidden md:block">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Top Utility Bar: Clear Kolkata Helpline & WhatsApp */}
+      <div className="bg-[#540D1A] text-white text-xs py-1.5 px-4 sm:px-6 border-b border-white/10 hidden md:block">
         <div className="max-w-[1240px] mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <span className="font-light tracking-wide text-white/90">
-              Kolkata's Premier Luxury Event, Banquet & Wedding Atelier
-            </span>
-            <div className="inline-flex items-center space-x-1 bg-white/15 px-2.5 py-0.5 rounded-[3px] text-white/95">
-              <MapPin className="w-3 h-3 text-gold-light" />
-              <span>Kolkata & Pan India</span>
-              <ChevronDown className="w-3 h-3 ml-0.5 opacity-70" />
-            </div>
+          <div className="flex items-center space-x-3 text-white/90">
+            <span className="font-medium text-amber-200">Kolkata & Eastern India</span>
+            <span className="text-white/40">•</span>
+            <span>Weddings, Corporate Events & In-House Catering</span>
           </div>
           <div className="flex items-center space-x-5">
             <a
-              href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-              className="flex items-center space-x-1.5 hover:text-gold-light transition-colors"
+              href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hello%20Royal%20Enterprise,%20I%20would%20like%20to%20discuss%20an%20event.`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center space-x-1.5 text-emerald-300 hover:text-white transition-colors"
             >
-              <Phone className="w-3 h-3 text-gold-light" />
-              <span>Direct Desk: {COMPANY_INFO.phone}</span>
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span>WhatsApp: {COMPANY_INFO.displayPhone}</span>
             </a>
-            <button
-              type="button"
-              onClick={onOpenQuoteModal}
-              className="hover:text-gold-light transition-colors underline font-medium"
+            <span className="text-white/30">|</span>
+            <a
+              href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
+              className="inline-flex items-center space-x-1.5 hover:text-amber-200 transition-colors"
             >
-              Request Free Consultation
-            </button>
+              <Phone className="w-3.5 h-3.5 text-amber-300" />
+              <span>Call: {COMPANY_INFO.displayPhone}</span>
+            </a>
           </div>
         </div>
       </div>
 
       {/* Main Navbar */}
       <div
-        className={`transition-all duration-300 ${
+        className={`transition-all duration-200 ${
           scrolled
-            ? 'bg-white text-[#1F2937] shadow-md py-3 border-b border-slate-200'
-            : 'bg-white/95 backdrop-blur-md text-[#1F2937] py-3.5 border-b border-slate-200/80 shadow-sm'
+            ? 'bg-white text-[#1F1D1A] shadow-md py-3 border-b border-[#E5DED3]'
+            : 'bg-[#FAF7F2] text-[#1F1D1A] py-3.5 border-b border-[#E5DED3]'
         }`}
       >
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between">
-            {/* Logo: Royal Enterprise with Wedding Knot / Star Emblem */}
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-9 h-9 rounded-full bg-roseBrand text-white flex items-center justify-center shadow-sm">
-                <Star className="w-4 h-4 fill-current" />
+            {/* Logo */}
+            <Link to="/" className="flex items-center space-x-2.5 group">
+              <div className="w-9 h-9 rounded bg-[#6E1423] text-white flex items-center justify-center font-serif text-lg font-bold shadow-sm">
+                R
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#1F2937] group-hover:text-roseBrand transition-colors leading-none">
+                <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#1F1D1A] leading-tight group-hover:text-[#6E1423] transition-colors">
                   Royal Enterprise
                 </span>
-                <span className="text-[9px] uppercase tracking-[0.24em] font-semibold text-roseBrand mt-1">
-                  Events • Catering • Weddings
+                <span className="text-[10px] uppercase tracking-[0.16em] font-medium text-[#7D756A]">
+                  Kolkata • Events & Catering
                 </span>
               </div>
             </Link>
 
-            {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            {/* Desktop Navigation Links: Short, single line, no wrapping */}
+            <nav className="hidden lg:flex items-center space-x-7">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
                 return (
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`text-[13px] font-medium tracking-wide py-1 transition-colors duration-150 relative ${
+                    className={`text-[14px] font-medium whitespace-nowrap py-1 transition-colors relative ${
                       isActive
-                        ? 'text-roseBrand font-semibold'
-                        : 'text-[#374151] hover:text-roseBrand'
+                        ? 'text-[#6E1423] font-semibold'
+                        : 'text-[#3B3630] hover:text-[#6E1423]'
                     }`}
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute -bottom-1.5 left-0 right-0 h-[2px] bg-roseBrand rounded-full" />
+                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#6E1423] rounded-full" />
                     )}
                   </Link>
                 );
               })}
             </nav>
 
-            {/* Desktop Right CTA Button (WedMeGood Pink Button) */}
-            <div className="hidden lg:flex items-center space-x-4">
+            {/* Desktop Action Buttons: Single-line "Get a quote" */}
+            <div className="hidden lg:flex items-center space-x-3">
+              <a
+                href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hello%20Royal%20Enterprise,%20I%20would%20like%20to%20discuss%20an%20event.`}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-whatsapp px-3.5 py-2 text-xs font-semibold inline-flex items-center space-x-1.5 shadow-sm"
+              >
+                <MessageSquare className="w-3.5 h-3.5" />
+                <span>WhatsApp</span>
+              </a>
               <button
                 type="button"
                 onClick={onOpenQuoteModal}
-                className="btn-brand px-6 py-2.5 text-xs uppercase tracking-wider font-semibold shadow-sm"
+                className="btn-maroon px-5 py-2 text-xs font-semibold tracking-wide whitespace-nowrap shadow-sm"
               >
-                Plan An Event
+                Get a quote
               </button>
             </div>
 
@@ -127,14 +134,14 @@ const Navbar = ({ onOpenQuoteModal }) => {
               <button
                 type="button"
                 onClick={onOpenQuoteModal}
-                className="btn-brand px-3.5 py-1.5 text-xs uppercase font-medium"
+                className="btn-maroon px-3 py-1.5 text-xs font-semibold"
               >
-                Plan
+                Get a quote
               </button>
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-[#374151] hover:text-roseBrand"
+                className="p-2 text-[#1F1D1A] hover:text-[#6E1423]"
                 aria-label="Toggle navigation menu"
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -146,7 +153,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
 
       {/* Mobile Navigation Drawer */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-6 pt-4 pb-6 space-y-4 shadow-xl text-[#1F2937]">
+        <div className="lg:hidden bg-white border-b border-[#E5DED3] px-6 pt-4 pb-6 space-y-4 shadow-xl text-[#1F1D1A]">
           <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
@@ -154,10 +161,10 @@ const Navbar = ({ onOpenQuoteModal }) => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`px-3 py-2.5 rounded-[4px] text-sm font-medium transition-colors ${
+                  className={`px-3 py-2.5 rounded text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-roseBrand-light text-roseBrand font-semibold'
-                      : 'text-[#374151] hover:text-roseBrand'
+                      ? 'bg-[#FAF2F3] text-[#6E1423] font-semibold'
+                      : 'text-[#3B3630] hover:text-[#6E1423]'
                   }`}
                 >
                   {link.name}
@@ -165,47 +172,29 @@ const Navbar = ({ onOpenQuoteModal }) => {
               );
             })}
           </nav>
-          <div className="pt-3 border-t border-slate-100 space-y-3">
+          <div className="pt-3 border-t border-[#E5DED3] space-y-2.5">
             <button
               type="button"
               onClick={() => {
                 setIsOpen(false);
                 onOpenQuoteModal();
               }}
-              className="w-full btn-brand py-3 text-xs uppercase font-semibold"
+              className="w-full btn-maroon py-3 text-xs uppercase font-semibold"
             >
-              Plan Your Event
+              Get a quote
             </button>
-            <div className="flex items-center justify-center space-x-4 text-xs text-[#6B7280] pt-1">
-              <a
-                href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-                className="flex items-center space-x-1.5 hover:text-roseBrand"
-              >
-                <Phone className="w-3.5 h-3.5 text-roseBrand" />
-                <span>{COMPANY_INFO.phone}</span>
-              </a>
-            </div>
+            <a
+              href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hello%20Royal%20Enterprise,%20I%20would%20like%20to%20discuss%20an%20event.`}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full btn-whatsapp py-2.5 text-xs font-semibold flex items-center justify-center space-x-2"
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span>Chat on WhatsApp</span>
+            </a>
           </div>
         </div>
       )}
-
-      {/* Mobile Bottom Quick Action Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 py-2.5 px-4 flex items-center justify-between lg:hidden shadow-lg">
-        <a
-          href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-          className="flex-1 flex items-center justify-center space-x-2 py-2.5 px-3 rounded-[4px] border border-slate-300 text-xs text-[#374151] font-semibold uppercase tracking-wider mr-2 active:bg-slate-100"
-        >
-          <Phone className="w-3.5 h-3.5 text-roseBrand" />
-          <span>Call Desk</span>
-        </a>
-        <button
-          type="button"
-          onClick={onOpenQuoteModal}
-          className="flex-1 flex items-center justify-center space-x-2 py-2.5 px-3 rounded-[4px] btn-brand text-xs font-semibold uppercase tracking-wider shadow-sm"
-        >
-          <span>Enquire Now</span>
-        </button>
-      </div>
     </header>
   );
 };

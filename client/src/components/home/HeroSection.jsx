@@ -1,121 +1,112 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, ChevronDown, Sparkles } from 'lucide-react';
+import { MessageSquare, ArrowRight, CheckCircle2, ShieldCheck, Utensils } from 'lucide-react';
+import { COMPANY_INFO } from '../../data/mockData';
 
 const HeroSection = ({ onOpenQuote }) => {
-  const [selectedService, setSelectedService] = useState('Wedding Planning');
-  const [selectedLocation, setSelectedLocation] = useState('Kolkata');
-
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    onOpenQuote();
-  };
-
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-28 pb-16 sm:py-36">
-      {/* Background Image: Joyful candid Indian wedding celebration (WedMeGood Reference 1) */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=2000&q=85"
-          alt="Royal Enterprise Joyous Indian Wedding & Event Atelier"
-          className="w-full h-full object-cover object-center filter brightness-[0.62] contrast-[1.05]"
-        />
-        {/* Soft natural gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/30" />
-      </div>
+    <section className="relative bg-[#FAF7F2] pt-32 sm:pt-40 pb-16 sm:pb-24 border-b border-[#E5DED3] overflow-hidden">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          {/* Left Column: Bold, Asymmetric Headline & Direct Local Copy */}
+          <div className="lg:col-span-7 space-y-6">
+            
+            {/* Small stamp label */}
+            <div className="inline-flex items-center space-x-2">
+              <span className="stamp-tag">
+                Since {COMPANY_INFO.foundedYear} • Kolkata
+              </span>
+              <span className="text-xs text-[#7D756A] font-medium hidden sm:inline">
+                In-house cooking & turnkey event execution
+              </span>
+            </div>
 
-      <div className="relative z-10 max-w-[1180px] w-full mx-auto px-4 sm:px-6 text-center text-white">
-        {/* Headline (WedMeGood Reference: "Your Wedding, Your Way") */}
-        <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-5 border border-white/25">
-          <Sparkles className="w-3.5 h-3.5 text-gold-light" />
-          <span>India's Trusted Event, Catering & Wedding Atelier</span>
-        </div>
+            {/* Main Headline: Confident, specific, human */}
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1F1D1A] font-bold tracking-tight leading-[1.12]">
+              Weddings and events in Kolkata, cooked and run by one team.
+            </h1>
 
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-4 leading-tight drop-shadow-md">
-          Your Celebration, <span className="font-editorial italic font-normal text-gold-light">Your Way</span>
-        </h1>
+            {/* Sub-line: Direct and concrete */}
+            <p className="text-lg sm:text-xl text-[#3B3630] font-normal leading-relaxed max-w-2xl">
+              From a 100-guest Biye Bari to a 1,000-guest reception, we plan it, decorate it, and feed everyone.
+            </p>
 
-        <p className="text-base sm:text-xl text-white/95 font-normal max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-sm">
-          Kolkata's premier luxury atelier — bespoke corporate events, artisanal catering & turnkey royal wedding planning.
-        </p>
+            {/* Action Buttons: Honest labels */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <button
+                type="button"
+                onClick={onOpenQuote}
+                className="btn-maroon px-7 py-3 text-sm font-semibold tracking-wide shadow-sm"
+              >
+                Get a quote
+              </button>
+              <a
+                href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hello%20Royal%20Enterprise,%20I%20would%20like%20to%20discuss%20an%20event.`}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-whatsapp px-6 py-3 text-sm font-semibold inline-flex items-center space-x-2 shadow-sm"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>WhatsApp us</span>
+              </a>
+              <Link
+                to="/catering"
+                className="btn-outline px-6 py-3 text-sm font-semibold inline-flex items-center space-x-1.5"
+              >
+                <span>See our menus</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
 
-        {/* WedMeGood Signature Search / Planning Bar (Screenshot 1) */}
-        <div className="max-w-3xl mx-auto mb-8 bg-white rounded-xl sm:rounded-full p-2 sm:p-2.5 shadow-2xl border border-white/40">
-          <form
-            onSubmit={handleSearchSubmit}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 text-left"
-          >
-            {/* Service Division Dropdown */}
-            <div className="flex-1 px-4 py-2 sm:border-r border-slate-200">
-              <label className="block text-[10px] uppercase font-bold text-[#6B7280] tracking-wider mb-0.5">
-                Service Category
-              </label>
-              <div className="relative">
-                <select
-                  value={selectedService}
-                  onChange={(e) => setSelectedService(e.target.value)}
-                  className="w-full text-xs sm:text-sm font-semibold text-[#1F2937] bg-transparent focus:outline-none cursor-pointer appearance-none pr-5 py-0.5"
-                >
-                  <option value="Wedding Planning">Wedding Planning & Decor</option>
-                  <option value="Gourmet Catering">Gourmet Catering & Feasts</option>
-                  <option value="Event Management">Corporate & Social Events</option>
-                  <option value="Complete Package">Complete 360° Package</option>
-                </select>
-                <ChevronDown className="w-4 h-4 text-[#9CA3AF] absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none" />
+            {/* Real concrete proofs (not generic buzzwords) */}
+            <div className="pt-6 border-t border-[#E5DED3] grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#524C44]">
+              <div className="flex items-start space-x-2">
+                <Utensils className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                <span>We cook our own food. Never outsourced.</span>
+              </div>
+              <div className="flex items-start space-x-2">
+                <ShieldCheck className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                <span>Dedicated separate kitchen for pure-veg banquets.</span>
+              </div>
+              <div className="flex items-start space-x-2">
+                <CheckCircle2 className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                <span>One floor manager with you from first guest to last plate.</span>
               </div>
             </div>
 
-            {/* City / Location Dropdown */}
-            <div className="flex-1 px-4 py-2 sm:border-r border-slate-200">
-              <label className="block text-[10px] uppercase font-bold text-[#6B7280] tracking-wider mb-0.5">
-                Location / Region
-              </label>
-              <div className="relative">
-                <select
-                  value={selectedLocation}
-                  onChange={(e) => setSelectedLocation(e.target.value)}
-                  className="w-full text-xs sm:text-sm font-semibold text-[#1F2937] bg-transparent focus:outline-none cursor-pointer appearance-none pr-5 py-0.5"
-                >
-                  <option value="Kolkata">Kolkata (All Zones)</option>
-                  <option value="Salt Lake & New Town">Salt Lake & New Town</option>
-                  <option value="Heritage Palaces">Heritage Rajbaris & Palaces</option>
-                  <option value="Pan India">Pan-India & Destination</option>
-                </select>
-                <ChevronDown className="w-4 h-4 text-[#9CA3AF] absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none" />
+          </div>
+
+          {/* Right Column: Large Offset Authentic Photograph */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative rounded-lg overflow-hidden border border-[#E5DED3] bg-white shadow-paper-lg">
+              <img
+                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1000&q=80"
+                alt="Traditional Kolkata Indian wedding ceremony and mandap"
+                className="w-full h-[420px] sm:h-[480px] object-cover"
+              />
+              
+              {/* Offset Caption with Venue and Month (as requested) */}
+              <div className="p-4 bg-white/95 backdrop-blur-sm border-t border-[#E5DED3] text-left">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-semibold text-[#1F1D1A]">
+                    Sangeet & Wedding at [The Rajbari Bawali]
+                  </span>
+                  <span className="text-[#7D756A] font-mono">Jan 2026</span>
+                </div>
+                <p className="text-[11px] text-[#524C44] mt-1">
+                  Handled: Turnkey Vedic mandap, marigold architecture, shehnai & 450-guest traditional banquet.
+                </p>
               </div>
             </div>
 
-            {/* Submit / Get Started Button */}
-            <button
-              type="submit"
-              className="btn-brand px-7 py-3.5 sm:py-3 text-sm font-bold uppercase tracking-wider rounded-lg sm:rounded-full shadow-md flex items-center justify-center space-x-2 shrink-0"
-            >
-              <Search className="w-4 h-4" />
-              <span>Get Started</span>
-            </button>
-          </form>
-        </div>
+            {/* Small floating counter sticker breaking the corner */}
+            <div className="absolute -bottom-4 -left-4 bg-[#6E1423] text-white p-3 rounded shadow-md hidden sm:block border border-[#540D1A]">
+              <span className="block font-serif text-2xl font-bold leading-tight">750+</span>
+              <span className="text-[10px] text-amber-200 uppercase tracking-wider block">Kolkata Events Done</span>
+            </div>
+          </div>
 
-        {/* Popular Searches Link Tags (Screenshot 1) */}
-        <div className="flex flex-wrap items-center justify-center gap-2 text-xs text-white/90 font-light">
-          <span className="font-semibold text-gold-light uppercase tracking-wider text-[11px]">
-            Popular:
-          </span>
-          <Link to="/wedding-planner" className="hover:text-gold-light underline underline-offset-2">
-            Heritage Rajbari Weddings
-          </Link>
-          <span>•</span>
-          <Link to="/catering" className="hover:text-gold-light underline underline-offset-2">
-            Awadhi & Bengali Banquets
-          </Link>
-          <span>•</span>
-          <Link to="/events" className="hover:text-gold-light underline underline-offset-2">
-            3D Stage Architecture
-          </Link>
-          <span>•</span>
-          <Link to="/wedding-planner" className="hover:text-gold-light underline underline-offset-2">
-            Complete Bridal Package
-          </Link>
         </div>
       </div>
     </section>

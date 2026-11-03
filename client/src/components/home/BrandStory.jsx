@@ -1,77 +1,86 @@
 import React from 'react';
-import { ShieldCheck, Utensils, Sparkles, MapPin, HeartHandshake, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { COMPANY_INFO } from '../../data/mockData';
 
 const BrandStory = () => {
   return (
-    <section className="py-20 sm:py-24 bg-white text-[#1F2937] border-b border-slate-200">
+    <section className="py-20 sm:py-24 bg-white border-b border-[#E5DED3]">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Heading & Subtitle (WedMeGood Screenshot 4 Editorial Style) */}
-          <div className="lg:col-span-5 space-y-4">
-            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-roseBrand block">
-              The Royal Standard
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Column: Founder Photo & Credibility Card */}
+          <div className="lg:col-span-5 relative">
+            <div className="rounded-lg overflow-hidden border border-[#E5DED3] bg-[#FAF7F2] p-2 shadow-paper-md">
+              <img
+                src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=800&q=80"
+                alt={`${COMPANY_INFO.founder}, Founder of Royal Enterprise`}
+                className="w-full h-80 sm:h-96 object-cover rounded"
+              />
+              <div className="p-3 text-left">
+                <span className="font-serif text-base font-bold text-[#1F1D1A] block">
+                  {COMPANY_INFO.founder}
+                </span>
+                <span className="text-xs text-[#6E1423] font-medium block">
+                  {COMPANY_INFO.founderTitle}
+                </span>
+                <span className="text-[11px] text-[#7D756A] block mt-0.5">
+                  Started Royal Enterprise in {COMPANY_INFO.foundedYear} in North Kolkata
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: The Honest Story (No AI generic copy) */}
+          <div className="lg:col-span-7 space-y-6">
+            <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] block">
+              Behind Royal Enterprise
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1F2937] tracking-tight leading-snug">
-              Royal Enterprise — Your Personal Event & Wedding Atelier
+
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F1D1A] tracking-tight leading-tight">
+              Started with two tandoor ovens and a family kitchen in 2014.
             </h2>
-            <p className="text-sm font-semibold text-roseBrand">
-              Planning seamless celebrations across Kolkata & Eastern India since 2014
-            </p>
-            <div className="pt-2">
-              <p className="text-sm sm:text-base text-[#4B5563] font-light leading-relaxed">
-                Royal Enterprise is an integrated luxury atelier where you find premier event architects, award-winning culinary maestros, and complete turnkey wedding planners under single-point accountability.
+
+            <div className="space-y-4 text-sm sm:text-base text-[#524C44] leading-relaxed">
+              <p>
+                {COMPANY_INFO.founder} started Royal Enterprise in {COMPANY_INFO.foundedYear} catering neighborhood family weddings in North Kolkata. He believed that the single biggest fear families have when hosting an event is inconsistent food and irresponsible third-party contractors.
+              </p>
+              <p>
+                Today there are {COMPANY_INFO.teamSize}, and we have delivered over {COMPANY_INFO.eventsCount} events at venues like The Rajbari Bawali, ITC Royal Bengal, and PC Chandra Garden.
+              </p>
+              <p className="font-medium text-[#1F1D1A]">
+                We have never used third-party food contractors. The same cooks who prepare the food in our central prep kitchen supervise the service on your wedding floor.
               </p>
             </div>
-          </div>
 
-          {/* Right Column: 4 Trust Badges & Editorial Detail */}
-          <div className="lg:col-span-7 space-y-6">
-            <p className="text-sm sm:text-base text-[#4B5563] font-light leading-relaxed">
-              Whether you are planning a corporate leadership summit at a 5-star banquet, a grand multi-day wedding across Kolkata's heritage rajbaris, or an artisanal Awadhi banquet, our directors manage every detail with military precision and family warmth.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="flex items-start space-x-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="w-8 h-8 rounded-full bg-roseBrand-light text-roseBrand flex items-center justify-center shrink-0">
-                  <ShieldCheck className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-[#1F2937]">Guaranteed Transparency</h4>
-                  <p className="text-xs text-[#6B7280] font-light mt-0.5">Itemized quotes, zero hidden charges</p>
-                </div>
+            {/* Facts Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-[#E5DED3]">
+              <div>
+                <span className="font-serif text-2xl font-bold text-[#6E1423] block">750+</span>
+                <span className="text-xs text-[#524C44]">Events run</span>
               </div>
-
-              <div className="flex items-start space-x-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="w-8 h-8 rounded-full bg-roseBrand-light text-roseBrand flex items-center justify-center shrink-0">
-                  <Utensils className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-[#1F2937]">Master Chef Tastings</h4>
-                  <p className="text-xs text-[#6B7280] font-light mt-0.5">Personalized food tasting sessions</p>
-                </div>
+              <div>
+                <span className="font-serif text-2xl font-bold text-[#6E1423] block">2,500</span>
+                <span className="text-xs text-[#524C44]">Largest single banquet</span>
               </div>
-
-              <div className="flex items-start space-x-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="w-8 h-8 rounded-full bg-roseBrand-light text-roseBrand flex items-center justify-center shrink-0">
-                  <Sparkles className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-[#1F2937]">Turnkey Production</h4>
-                  <p className="text-xs text-[#6B7280] font-light mt-0.5">3D stage design, mandap & sound</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="w-8 h-8 rounded-full bg-roseBrand-light text-roseBrand flex items-center justify-center shrink-0">
-                  <HeartHandshake className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-[#1F2937]">Dedicated Concierge</h4>
-                  <p className="text-xs text-[#6B7280] font-light mt-0.5">24/7 on-ground event floor directors</p>
-                </div>
+              <div>
+                <span className="font-serif text-2xl font-bold text-[#6E1423] block">28</span>
+                <span className="text-xs text-[#524C44]">Full-time staff</span>
               </div>
             </div>
+
+            <div className="pt-2">
+              <Link
+                to="/about"
+                className="text-xs font-semibold text-[#6E1423] hover:underline inline-flex items-center space-x-1.5"
+              >
+                <span>Read our full story and meet the team</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
           </div>
+
         </div>
       </div>
     </section>

@@ -23,46 +23,51 @@ const Catering = () => {
     'Package B: The Grand Imperial Royal Spread (Premium Non-Veg)'
   );
 
-  // 1. Culinary Styles & Formats Offered
+  // 1. Culinary Styles & Formats Offered (No duplicate phrases, honest specifics)
   const culinaryStyles = [
     {
-      title: 'Traditional Bengali Wedding Feasts (Biye Bari & Boubhat)',
-      subtitle: 'Heritage sequencing & authentic Kolkata recipes',
+      title: 'Traditional Bengali Wedding Feasts',
+      subtitle: 'Biye Bari and Boubhat banquets',
       description:
-        'Authentic sequencing from Gondhoraj drinks to pure Bhetki fry, Basanti pulao, slow-simmered mutton kosha, and seasonal artisanal mishti.',
+        'Sequenced with cold-pressed mustard oil and fresh fish. Gondhoraj coolers, pure Kolkata Bhetki fry with kasundi, Basanti pulao, slow-simmered Kosha Mangsho, and hot Nolen gur mishti.',
       badge: 'Heritage Bengal',
+      price: '₹1,150 – ₹1,850 / plate',
       icon: Utensils,
     },
     {
-      title: 'North Indian, Mughlai & Awadhi Banquets',
-      subtitle: 'Royal clay-oven kebabs & fragrant dum biryanis',
+      title: 'North Indian & Awadhi Banquets',
+      subtitle: 'Clay-oven grills and dum biryanis',
       description:
-        'Charcoal tandoori grills, dum biryanis sealed with dough, slow-cooked royal kormas, and rich velvety cashew gravies.',
+        'Charcoal tandoori kebabs, fragrant dum biryanis sealed with dough, slow-cooked mutton rogan josh, and overnight charcoal-simmered Dal Bukhara.',
       badge: 'Awadhi Royalty',
+      price: '₹1,450 – ₹2,400 / plate',
       icon: Flame,
     },
     {
       title: 'Marwari & Pure Vegetarian Feasts',
-      subtitle: 'Dedicated separate-kitchen setups & sattvic purity',
+      subtitle: 'Dedicated separate-kitchen setups',
       description:
-        'Dedicated separate-kitchen setups with Jodhpuri Dal Baati Churma, Ker Sangri, Shahi Paneer, and live sweet kesariya jalebi counters.',
+        'Prepared using dedicated vegetarian cookware and staff. Authentic Rajasthani Dal Baati Churma with pure desi ghee, Ker Sangri, Shahi Paneer, and live hot Kesariya jalebis.',
       badge: 'Pure Vegetarian',
+      price: '₹850 – ₹1,400 / plate',
       icon: Leaf,
     },
     {
-      title: 'Live Global Counters',
-      subtitle: 'Interactive live culinary theatres',
+      title: 'Live Chef Counters & Street Food',
+      subtitle: 'Freshly cooked to order',
       description:
-        'Wood-fired artisanal pizzas, toss-to-order Italian pasta bars, wok-tossed Pan-Asian noodles/dim sums, and street-style live chaat setups.',
-      badge: 'World Cuisine',
+        'Live Kolkata puchka counters with 4 flavored waters, tossed-to-order Italian pastas, wok-prepared Asian delicacies, and live hot malpua and rabdi stations.',
+      badge: 'Interactive Counters',
+      price: 'Add-on from ₹180 / plate',
       icon: ChefHat,
     },
     {
       title: 'Corporate Executive Buffets',
-      subtitle: 'Pristine hygiene & executive health menus',
+      subtitle: 'Pristine hygiene and punctual service',
       description:
-        'Balanced, hygienic, and calorie-conscious boxed and buffet meals for summits, seminars, board meetings, and corporate galas.',
+        'Nutritionally balanced hot buffet spreads and boxed executive meals for leadership summits, shareholder meetings, and corporate award dinners.',
       badge: 'Corporate Standard',
+      price: '₹650 – ₹1,200 / plate',
       icon: ShieldCheck,
     },
   ];

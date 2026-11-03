@@ -1,139 +1,136 @@
 import React from 'react';
-import { Crown, UtensilsCrossed, Layers, ShieldCheck, Sparkles, HeartHandshake } from 'lucide-react';
+import { Calendar, Users, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
+import { RECENT_EVENTS } from '../../data/mockData';
 
-const processSteps = [
-  {
-    step: '01',
-    title: 'Consultation & Discovery',
-    description: 'We listen to your vision, guest count, culinary preferences, and family traditions.',
-  },
-  {
-    step: '02',
-    title: '3D Concept & Itemized Quote',
-    description: 'Transparent blueprint covering 3D stage/mandap design, per-plate menus, and logistics.',
-  },
-  {
-    step: '03',
-    title: 'Tasting & Rehearsals',
-    description: 'Live food tastings with master chefs, bridal styling coordination, and sound run-throughs.',
-  },
-  {
-    step: '04',
-    title: 'Flawless Execution',
-    description: 'On-ground floor directors manage every minute, while you enjoy unconditional celebration.',
-  },
-];
+const WhyChooseUs = ({ onOpenQuote }) => {
+  const steps = [
+    {
+      num: '1',
+      title: 'You call or WhatsApp us.',
+      detail: 'We ask who is coming, what you eat, and what you can comfortably spend. No sales pitch, just honest options.',
+    },
+    {
+      num: '2',
+      title: 'We meet you with actual sample menus and a floor plan.',
+      detail: 'You taste the food prepared by our chefs before you pay an advance. We confirm the portions, spices, and service style.',
+    },
+    {
+      num: '3',
+      title: 'We lock the vendors, time-slots, and kitchen logistics.',
+      detail: 'Itemized written estimate with no hidden add-ons, extra per-plate surprises, or unexpected midnight bills.',
+    },
+    {
+      num: '4',
+      title: 'On the day, a floor manager stays with you from the first guest to the last plate.',
+      detail: 'Our floor lead coordinates the halwais, servers, sound, and rituals while your family attends to your guests.',
+    },
+  ];
 
-const pillars = [
-  {
-    icon: Crown,
-    title: 'The Royal Standard',
-    description: 'Unmatched poise and protocol brought to every wedding mandap, gala stage, and banquet.',
-  },
-  {
-    icon: UtensilsCrossed,
-    title: 'Culinary Maestros',
-    description: 'Master chefs specializing in authentic Awadhi, Mughlai, Continental, and pure Jain feasts.',
-  },
-  {
-    icon: Layers,
-    title: 'Turnkey Architecture',
-    description: 'From 3D stage fabrication to VIP security and artist management under single-point care.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Unwavering Reliability',
-    description: 'Precision timelines, strict food safety protocols, transparent pricing, and zero surprises.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Bespoke Customization',
-    description: 'No template monotony. Every floral canopy, lighting sequence, and course is curated for you.',
-  },
-  {
-    icon: HeartHandshake,
-    title: 'Personal Concierge',
-    description: 'A dedicated event director and 24/7 coordinator assigned to oversee every micro-detail.',
-  },
-];
-
-const WhyChooseUs = () => {
   return (
-    <div className="bg-[#FAF9F6] border-b border-slate-200">
-      {/* 1. Signature Process Band (WedMeGood Process Strip) */}
-      <section className="py-20 max-w-[1240px] mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-[11px] uppercase tracking-[0.2em] text-roseBrand font-bold block mb-1">
-            Our Proven Methodology
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#1F2937] tracking-tight">
-            From First Call to Last Dance
-          </h2>
-          <p className="text-xs sm:text-sm text-[#6B7280] font-light mt-2">
-            A transparent 4-stage journey that eliminates operational anxiety
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {processSteps.map((p, idx) => (
-            <div
-              key={p.step}
-              className="bg-white rounded-xl p-6 border border-slate-200 hover:border-roseBrand/40 hover:shadow-md transition-all duration-300 relative flex flex-col justify-between"
-            >
-              <div>
-                <span className="text-2xl font-bold text-roseBrand/40 block mb-3 font-mono">
-                  {p.step}
-                </span>
-                <h3 className="text-lg font-bold text-[#1F2937] mb-2">
-                  {p.title}
-                </h3>
-                <p className="text-xs text-[#4B5563] font-light leading-relaxed">
-                  {p.description}
-                </p>
-              </div>
-              <div className="pt-4 mt-4 border-t border-slate-100 text-[10px] uppercase font-bold tracking-wider text-roseBrand">
-                Step {idx + 1} of 4
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 2. Core Pillars Grid */}
-      <section className="py-16 bg-white border-t border-slate-200">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-          <div className="max-w-2xl text-left mb-12">
-            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-roseBrand block mb-1">
-              Why Patrons Trust Us
+    <div className="bg-[#FAF7F2] border-b border-[#E5DED3]">
+      
+      {/* ========================================================================= */}
+      {/* 1. LEFT-ALIGNED VERTICAL EDITORIAL TIMELINE */}
+      {/* ========================================================================= */}
+      <section className="py-20 sm:py-24 max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          
+          {/* Left Intro */}
+          <div className="lg:col-span-5 space-y-4">
+            <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] block">
+              How we work with you
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#1F2937] tracking-tight">
-              Six Foundations of the Royal Experience
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F1D1A] tracking-tight leading-tight">
+              A straightforward process without corporate jargon.
             </h2>
+            <p className="text-sm sm:text-base text-[#524C44] leading-relaxed">
+              Planning a wedding or major event shouldn't feel like wrestling with a contract. Here is how we take you from the first conversation to a completed celebration.
+            </p>
+            <div className="pt-2">
+              <button
+                type="button"
+                onClick={onOpenQuote}
+                className="btn-maroon px-6 py-2.5 text-xs font-semibold"
+              >
+                Start with a conversation
+              </button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {pillars.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={idx}
-                  className="p-6 bg-slate-50/60 rounded-xl border border-slate-200/80 hover:bg-white hover:border-roseBrand/40 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="w-10 h-10 rounded-full bg-roseBrand-light text-roseBrand flex items-center justify-center mb-4">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <h4 className="text-base font-bold text-[#1F2937] mb-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-xs sm:text-[13px] text-[#4B5563] font-light leading-relaxed">
-                    {item.description}
+          {/* Right Vertical Timeline Steps */}
+          <div className="lg:col-span-7 space-y-8 relative pl-4 border-l-2 border-[#E5DED3]">
+            {steps.map((step) => (
+              <div key={step.num} className="relative pl-6">
+                {/* Step Marker Badge */}
+                <span className="absolute -left-[27px] top-0 w-8 h-8 rounded-full bg-[#6E1423] text-white flex items-center justify-center font-serif text-sm font-bold border-4 border-[#FAF7F2]">
+                  {step.num}
+                </span>
+
+                <div className="space-y-1">
+                  <h3 className="font-serif text-lg sm:text-xl font-bold text-[#1F1D1A]">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#524C44] leading-relaxed">
+                    {step.detail}
                   </p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. RECENT EVENTS LOG (Human Details Requirement) */}
+      {/* ========================================================================= */}
+      <section className="py-16 sm:py-20 bg-white border-t border-[#E5DED3]">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
+            <div>
+              <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] block mb-1">
+                Field log
+              </span>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F1D1A] tracking-tight">
+                Recent events handled across Kolkata
+              </h2>
+            </div>
+            <span className="text-xs text-[#7D756A] font-mono">
+              Real venues • Real dates • Real guest counts
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {RECENT_EVENTS.map((event, idx) => (
+              <div
+                key={idx}
+                className="bg-[#FAF7F2] border border-[#E5DED3] rounded-lg p-5 sm:p-6 space-y-3 hover:border-[#6E1423]/40 transition-colors"
+              >
+                <div className="flex items-center justify-between text-xs text-[#7D756A]">
+                  <div className="flex items-center space-x-1.5 font-semibold text-[#6E1423]">
+                    <MapPin className="w-3.5 h-3.5" />
+                    <span>{event.venue}</span>
+                  </div>
+                  <div className="flex items-center space-x-3 font-mono">
+                    <span>{event.date}</span>
+                    <span>•</span>
+                    <span>{event.guests}</span>
+                  </div>
+                </div>
+
+                <h3 className="font-serif text-lg font-bold text-[#1F1D1A]">
+                  {event.title}
+                </h3>
+
+                <p className="text-xs sm:text-sm text-[#524C44] leading-relaxed">
+                  {event.handled}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
     </div>
   );
 };

@@ -7,66 +7,77 @@ export default {
   theme: {
     extend: {
       colors: {
-        ivory: {
-          DEFAULT: '#F6F3EE',
-          light: '#FAF8F4',
-          surface: '#FFFDF9',
-          border: '#E8E1D5',
-        },
-        blush: {
-          DEFAULT: '#F6E4E1',
-          light: '#FAF0EE',
-          surface: '#FDF7F6',
-          border: '#ECD6D2',
-        },
+        // Handcrafted Kolkata Palette
         maroon: {
           DEFAULT: '#6E1423',
           dark: '#540D1A',
-          deep: '#3A0610',
-          light: '#851C2D',
+          deep: '#3E0812',
+          light: '#8B1E32',
         },
-        roseBrand: {
-          DEFAULT: '#E72E77',
-          dark: '#D81B60',
-          deep: '#9F1239',
-          light: '#FFF0F3',
-          tint: '#FDF2F4',
-          border: '#FFE4E8',
+        marigold: {
+          DEFAULT: '#D97706',
+          dark: '#B45309',
+          light: '#F59E0B',
+          pale: '#FEF3C7',
+          border: 'rgba(217, 119, 6, 0.35)',
         },
-        gold: {
-          DEFAULT: '#B8934A',
-          dark: '#8A6A2C', // AA compliant on ivory
-          light: '#E2C27D', // on maroon/charcoal
-          satin: '#C5A059',
-          border: 'rgba(184, 147, 74, 0.35)',
+        paper: {
+          DEFAULT: '#FAF7F2',
+          sand: '#F0ECE1',
+          surface: '#FFFDF9',
+          border: '#E5DED3',
+          card: '#F6F2E9',
         },
         charcoal: {
-          DEFAULT: '#141414',
-          surface: '#1C1C1C',
-          muted: '#2A2A2A',
+          DEFAULT: '#1F1D1A',
+          surface: '#292522',
+          muted: '#524C44',
+          soft: '#7D756A',
+        },
+        // Compatibility aliases for clean transition
+        ivory: {
+          DEFAULT: '#FAF7F2',
+          light: '#FFFDF9',
+          surface: '#FFFDF9',
+          border: '#E5DED3',
+        },
+        blush: {
+          DEFAULT: '#F8EFEA',
+          light: '#FCF8F5',
+          surface: '#FFFDF9',
+          border: '#EFE2DA',
+        },
+        roseBrand: {
+          DEFAULT: '#6E1423',
+          dark: '#540D1A',
+          deep: '#3E0812',
+          light: '#FAF2F3',
+          tint: '#FBF5F5',
+          border: '#ECD0D5',
+        },
+        gold: {
+          DEFAULT: '#D97706',
+          dark: '#B45309',
+          light: '#F59E0B',
+          satin: '#C27803',
+          border: 'rgba(217, 119, 6, 0.35)',
         },
         warmgrey: {
-          DEFAULT: '#6B645C',
-          body: '#3A352F',
-          dark: '#26221D',
-          light: '#9E968D',
+          DEFAULT: '#524C44',
+          body: '#1F1D1A',
+          dark: '#141311',
+          light: '#7D756A',
         },
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'Cinzel', 'Playfair Display', 'serif'],
-        editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        cinzel: ['Cinzel', 'serif'],
-        sans: ['Jost', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        serif: ['Lora', 'Georgia', 'serif'],
+        editorial: ['Lora', 'Georgia', 'serif'],
+        sans: ['"Hind Siliguri"', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'theevexa': '0 30px 60px -30px rgba(0, 0, 0, 0.25)',
-        'theevexa-soft': '0 12px 35px -10px rgba(40, 25, 20, 0.08)',
-        'card-hover': '0 20px 40px -15px rgba(110, 20, 35, 0.12), 0 0 1px 1px rgba(184, 147, 74, 0.25)',
-      },
-      backgroundImage: {
-        'gold-btn': 'linear-gradient(135deg, #D4B36A 0%, #A67C32 100%)',
-        'maroon-btn': 'linear-gradient(135deg, #6E1423 0%, #540D1A 100%)',
-        'hero-gradient': 'linear-gradient(180deg, rgba(10,6,4,0.55) 0%, rgba(10,6,4,0.35) 40%, rgba(10,6,4,0.92) 100%)',
+        'paper-sm': '0 1px 3px rgba(31, 29, 26, 0.05), 0 1px 2px rgba(31, 29, 26, 0.03)',
+        'paper-md': '0 8px 24px -6px rgba(31, 29, 26, 0.08), 0 2px 6px -2px rgba(31, 29, 26, 0.04)',
+        'paper-lg': '0 16px 36px -10px rgba(31, 29, 26, 0.12), 0 4px 12px -3px rgba(31, 29, 26, 0.05)',
       },
     },
   },

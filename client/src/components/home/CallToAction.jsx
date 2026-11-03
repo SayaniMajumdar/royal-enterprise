@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Phone, MessageSquare, CheckCircle2, ArrowRight } from 'lucide-react';
 import { COMPANY_INFO } from '../../data/mockData';
 import { useNotification } from '../../context/NotificationContext';
 import { submitContactEnquiry } from '../../services/api';
@@ -12,8 +12,8 @@ const CallToAction = ({ onOpenQuote }) => {
 
   const handleQuickCallback = async (e) => {
     e.preventDefault();
-    if (!phoneInput.trim() || phoneInput.length < 10) {
-      showToast('Please enter a valid 10-digit phone number.', 'error');
+    if (!phoneInput.trim() || phoneInput.length < 8) {
+      showToast('Please enter a valid phone number.', 'error');
       return;
     }
 
@@ -22,15 +22,18 @@ const CallToAction = ({ onOpenQuote }) => {
       await submitContactEnquiry({
         customerName: 'Quick Callback Request',
         phone: phoneInput,
-        email: 'callback@royalenterprise.com',
+        email: 'callback@royalenterprisekolkata.com',
         subject: 'Quick Callback Request from Website Banner',
         message: 'Client requested an immediate consultation callback via homepage banner.',
       });
       setSubmitted(true);
-      showToast('Thank you! Our concierge director will call you shortly.', 'success');
+      showToast(
+        "Got it. We'll call you within 2 hours between 10:00 AM and 8:30 PM IST.",
+        'success'
+      );
       setPhoneInput('');
     } catch (err) {
-      showToast('Unable to request callback. Opening quote modal...', 'info');
+      showToast('Unable to request callback. Opening quote form...', 'info');
       onOpenQuote();
     } finally {
       setSubmitting(false);
@@ -38,93 +41,67 @@ const CallToAction = ({ onOpenQuote }) => {
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-white">
+    <section className="py-16 sm:py-20 bg-[#FAF7F2]">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        {/* WedMeGood Mobile App / Quick Consultation Band Style (Screenshot 3) */}
-        <div className="bg-[#FFF0F3] border border-[#FFE4E8] rounded-2xl p-8 sm:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-[#540D1A] text-white rounded-lg p-8 sm:p-12 shadow-paper-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-[#3E0812]">
           
           <div className="lg:col-span-7 space-y-4">
-            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-roseBrand block">
-              Direct Concierge Support
+            <span className="text-xs uppercase font-bold tracking-wider text-amber-300 block">
+              Have a date in mind?
             </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#1F2937] tracking-tight">
-              Plan Your Celebration with Royal Enterprise Today!
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
+              Let's talk through your guest list, menus, and venue options.
             </h2>
-            
-            {/* 3 Value Points (Screenshot 3 style) */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-6 pt-2 text-xs sm:text-sm font-semibold text-[#374151]">
-              <span className="flex items-center space-x-1.5 text-roseBrand">
-                <CheckCircle2 className="w-4 h-4" />
-                <span>Save Celebration Ideas</span>
-              </span>
-              <span className="flex items-center space-x-1.5 text-roseBrand">
-                <CheckCircle2 className="w-4 h-4" />
-                <span>Live Menu Tastings</span>
-              </span>
-              <span className="flex items-center space-x-1.5 text-roseBrand">
-                <CheckCircle2 className="w-4 h-4" />
-                <span>Free Checklist & Budget</span>
-              </span>
-            </div>
-
-            <p className="text-xs sm:text-sm text-[#4B5563] font-light leading-relaxed pt-1">
-              Enter your mobile number below to receive an instant call from our chief event director.
+            <p className="text-sm sm:text-base text-white/90 leading-relaxed max-w-xl font-light">
+              Dates during the Kolkata wedding seasons (November–February) fill up quickly. Give us a call or drop your number below, and we'll check our kitchen availability.
             </p>
 
-            {/* Quick Callback Input (Screenshot 3) */}
             {submitted ? (
-              <div className="p-3 bg-white border border-emerald-300 rounded-lg text-emerald-800 text-xs sm:text-sm font-semibold flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Callback request received! A director will phone you within 15 minutes.</span>
+              <div className="p-4 bg-emerald-950/80 border border-emerald-400/40 rounded text-emerald-200 text-xs sm:text-sm font-medium flex items-center space-x-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>Got it. We'll call you within 2 hours between 10:00 AM and 8:30 PM IST.</span>
               </div>
             ) : (
               <form onSubmit={handleQuickCallback} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-2 max-w-md">
-                <div className="flex-1 flex items-center bg-white border border-slate-300 rounded-lg overflow-hidden px-3 py-2 shadow-inner focus-within:border-roseBrand">
-                  <span className="text-sm font-bold text-[#374151] mr-2">🇮🇳 +91</span>
+                <div className="flex-1 flex items-center bg-white border border-[#E5DED3] rounded px-3 py-2 text-[#1F1D1A]">
+                  <span className="text-xs font-bold text-[#7D756A] mr-2">🇮🇳 +91</span>
                   <input
                     type="tel"
-                    placeholder="Enter 10-digit mobile number"
+                    placeholder="Enter phone number"
                     value={phoneInput}
                     onChange={(e) => setPhoneInput(e.target.value)}
-                    className="w-full text-xs sm:text-sm focus:outline-none bg-transparent font-medium"
-                    maxLength={14}
+                    className="w-full text-sm focus:outline-none bg-transparent font-medium"
+                    maxLength={15}
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="btn-brand px-6 py-2.5 text-xs uppercase font-bold rounded-lg shadow-sm shrink-0"
+                  className="btn-marigold px-6 py-2.5 text-xs font-semibold whitespace-nowrap shadow-sm shrink-0"
                 >
-                  {submitting ? 'Sending...' : 'Request Call'}
+                  {submitting ? 'Sending...' : 'Request callback'}
                 </button>
               </form>
             )}
           </div>
 
-          {/* Right Column: Direct Telephone & Action */}
-          <div className="lg:col-span-5 bg-white border border-slate-200 rounded-xl p-6 sm:p-8 space-y-4 text-center sm:text-left shadow-sm">
-            <h4 className="font-serif text-xl font-bold text-[#1F2937]">
-              Prefer an In-Person Consultation?
-            </h4>
-            <p className="text-xs sm:text-sm text-[#6B7280] font-light leading-relaxed">
-              Visit our executive design atelier in Kolkata or speak with our planning director right now.
-            </p>
-            <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
-              <a
-                href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-                className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-lg border border-slate-300 text-xs font-bold text-[#1F2937] hover:border-roseBrand hover:text-roseBrand transition-colors"
-              >
-                <Phone className="w-4 h-4 text-roseBrand" />
-                <span>{COMPANY_INFO.phone}</span>
-              </a>
-              <button
-                type="button"
-                onClick={onOpenQuote}
-                className="w-full sm:w-auto btn-brand px-6 py-2.5 text-xs uppercase font-semibold rounded-lg shadow-sm"
-              >
-                Plan An Event
-              </button>
-            </div>
+          <div className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+            <a
+              href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hello%20Royal%20Enterprise,%20I%20would%20like%20to%20discuss%20an%20event.`}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-whatsapp py-3 px-5 text-sm font-semibold flex items-center justify-center space-x-2 shadow-sm text-center"
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span>Chat on WhatsApp</span>
+            </a>
+            <a
+              href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
+              className="bg-white/10 hover:bg-white/15 text-white border border-white/20 py-3 px-5 text-sm font-semibold rounded flex items-center justify-center space-x-2 transition-colors text-center"
+            >
+              <Phone className="w-4 h-4 text-amber-300" />
+              <span>Direct call: {COMPANY_INFO.displayPhone}</span>
+            </a>
           </div>
 
         </div>

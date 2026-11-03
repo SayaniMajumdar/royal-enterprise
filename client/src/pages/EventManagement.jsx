@@ -371,9 +371,9 @@ const EventManagement = () => {
       <section className="bg-charcoal text-[#FFF8F0] relative py-24 sm:py-32 overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1920&q=80"
-            alt="Royal Enterprise Event Management Hero"
-            className="w-full h-full object-cover filter brightness-[0.38] contrast-[1.08] scale-[1.02]"
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1920&q=80"
+            alt="Royal Enterprise Event Management & Stage Production in Kolkata"
+            className="w-full h-full object-cover filter brightness-[0.42] contrast-[1.08] scale-[1.02]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/80" />
         </div>
@@ -381,20 +381,20 @@ const EventManagement = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 text-center">
           <div className="inline-flex items-center space-x-2.5 mb-5">
             <span className="w-5 h-px bg-gold-light/60" />
-            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.26em] text-gold-light font-medium">
-              Division I • Turnkey Event Production & Management
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.2em] text-amber-200 font-semibold">
+              Kolkata • Corporate Summits • Stage Fabrication
             </span>
             <span className="w-5 h-px bg-gold-light/60" />
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-normal text-[#FFF8F0] tracking-tight leading-[1.12] mb-4">
-            Event Management
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-[#FFF8F0] tracking-tight leading-[1.12] mb-4">
+            Event Management & Stagecraft
           </h1>
-          <p className="font-editorial italic text-gold-light text-xl sm:text-2xl md:text-3xl font-normal mb-6">
-            "We Make Every Event Memorable."
+          <p className="font-serif text-lg sm:text-2xl text-amber-200 font-normal mb-6">
+            Conferences, leadership summits, dealer meets, and stage fabrication for 100 to 3,000 attendees.
           </p>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/80 font-light leading-relaxed mb-9">
-            From Fortune 500 corporate summits and luxury product activations to cherished family milestone celebrations and megascale public festivals, Royal Enterprise provides comprehensive turnkey production with master craftsmanship.
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/90 font-light leading-relaxed mb-9">
+            We build custom 3D LED stages, engineer concert acoustic sound, and run delegate logistics across Kolkata’s top hotel convention centers and public exhibition grounds. Direct technical crew under one transparent invoice.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">

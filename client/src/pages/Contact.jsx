@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SectionHeader from '../components/common/SectionHeader';
 import Input from '../components/common/Input';
+import Select from '../components/common/Select';
 import Textarea from '../components/common/Textarea';
 import Button from '../components/common/Button';
 import { submitContactEnquiry } from '../services/api';
@@ -13,6 +14,8 @@ import {
   Clock,
   Send,
   CheckCircle2,
+  MessageSquare,
+  ExternalLink,
   Instagram,
   Facebook,
   Linkedin,
@@ -28,8 +31,10 @@ const Contact = () => {
     customerName: '',
     phone: '',
     email: '',
-    subject: '',
-    message: '',
+    eventType: 'Wedding Ceremony & Reception',
+    eventDate: '',
+    guestCount: '',
+    notes: '',
   });
 
   const [errors, setErrors] = useState({});
@@ -47,10 +52,7 @@ const Contact = () => {
     if (!formData.customerName.trim()) newErrors.customerName = 'Full name is required.';
     if (!formData.phone.trim()) newErrors.phone = 'Phone number is required.';
     if (!formData.email.trim()) newErrors.email = 'Email address is required.';
-    if (!formData.subject.trim()) newErrors.subject = 'Subject is required.';
-    if (!formData.message.trim() || formData.message.trim().length < 5) {
-      newErrors.message = 'Message must be at least 5 characters.';
-    }
+    if (!formData.eventDate) newErrors.eventDate = 'Event date (or target month) is required.';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -59,21 +61,38 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) {
-      showToast('Please correct the highlighted fields.', 'error');
+      showToast('Please fill in the required fields.', 'error');
       return;
     }
 
     setLoading(true);
     try {
-      const response = await submitContactEnquiry(formData);
-      showToast(response.message || 'Thank you! Your enquiry has been received.', 'success');
+      const subject = `Enquiry for ${formData.eventType} (${formData.eventDate})`;
+      const message = `Event Type: ${formData.eventType}\nDate: ${formData.eventDate}\nApproximate Guests: ${
+        formData.guestCount || 'Not specified'
+      }\nDetails: ${formData.notes || 'Please contact me to discuss options.'}`;
+
+      const response = await submitContactEnquiry({
+        customerName: formData.customerName,
+        phone: formData.phone,
+        email: formData.email,
+        subject,
+        message,
+      });
+
+      showToast(
+        "Got it. We'll call you within 2 hours between 10:00 AM and 8:30 PM IST.",
+        'success'
+      );
       setSubmitted(true);
       setFormData({
         customerName: '',
         phone: '',
         email: '',
-        subject: '',
-        message: '',
+        eventType: 'Wedding Ceremony & Reception',
+        eventDate: '',
+        guestCount: '',
+        notes: '',
       });
     } catch (err) {
       if (err.validationErrors && err.validationErrors.length > 0) {
@@ -93,256 +112,302 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen text-[#1F2937]">
+    <div className="bg-[#FAF7F2] min-h-screen text-[#1F1D1A]">
+      
       {/* Hero Banner */}
-      <section className="bg-slate-900 text-white relative py-20 sm:py-28 overflow-hidden border-b border-white/10">
-        <div className="max-w-[1180px] mx-auto px-5 sm:px-6 text-center relative z-10">
-          <div className="inline-flex items-center space-x-2.5 mb-3">
-            <span className="text-[11px] uppercase tracking-[0.2em] text-roseBrand font-bold">
-              Concierge & Executive Desk
-            </span>
+      <section className="bg-white pt-32 sm:pt-40 pb-14 sm:pb-20 border-b border-[#E5DED3]">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+          <div className="max-w-3xl space-y-3">
+            <span className="stamp-tag">Direct Desk • Kolkata</span>
+            <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#1F1D1A] leading-tight">
+              Get in touch with Royal Enterprise.
+            </h1>
+            <p className="text-base sm:text-lg text-[#524C44] leading-relaxed">
+              Tell us about your date and guest count. We'll check our central kitchen calendar and call you back directly.
+            </p>
           </div>
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-white mb-4 tracking-tight leading-tight">
-            Contact Royal Enterprise
-          </h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-300 font-light leading-relaxed">
-            Connect with our leadership team for corporate partnerships, service consultations, or event reservations.
-          </p>
         </div>
       </section>
 
-      <section className="py-20 max-w-[1180px] mx-auto px-5 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
-          {/* Company Details Column */}
-          <div className="lg:col-span-5 space-y-8 bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-sm">
-            <div>
-              <h3 className="font-serif text-2xl font-bold text-[#1F2937] mb-1.5 tracking-wide">
-                {COMPANY_INFO.name}
-              </h3>
-              <p className="text-[10.5px] text-roseBrand uppercase tracking-[0.2em] font-bold mb-4">
-                Corporate Headquarters & Concierge
+      {/* Main Content */}
+      <section className="py-16 sm:py-24 max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+          
+          {/* Left Column: Real Address, Phone, Hours, Google Maps */}
+          <div className="lg:col-span-5 space-y-6">
+            
+            {/* Direct WhatsApp Callout Banner */}
+            <div className="p-6 bg-[#E8F5E9] border border-emerald-300 rounded-lg space-y-3">
+              <div className="flex items-center space-x-2 text-emerald-900 font-bold text-sm">
+                <MessageSquare className="w-5 h-5 text-emerald-700" />
+                <span>Prefer a quick WhatsApp chat?</span>
+              </div>
+              <p className="text-xs text-emerald-800 leading-relaxed">
+                Send us a message directly with your event date and estimated guests. We respond during business hours within minutes.
               </p>
-              <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed font-light">
-                We invite you to connect with our client relationship managers to discuss your forthcoming celebration, corporate summit, or catering requirement.
-              </p>
+              <a
+                href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hello%20Royal%20Enterprise,%20I%20would%20like%20to%20discuss%20an%20event.`}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-whatsapp py-2.5 px-4 text-xs font-semibold inline-flex items-center space-x-2 rounded shadow-sm"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>Message us on WhatsApp: {COMPANY_INFO.displayPhone}</span>
+              </a>
             </div>
 
-            <div className="space-y-5 border-y border-slate-200 py-6">
-              <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-full bg-roseBrand-light border border-roseBrand/20 flex items-center justify-center text-roseBrand shrink-0 mt-0.5">
-                  <MapPin className="w-4 h-4" />
+            {/* Address & Office Details */}
+            <div className="bg-white border border-[#E5DED3] rounded-lg p-6 sm:p-7 space-y-6 shadow-paper-sm">
+              <div className="space-y-1">
+                <h3 className="font-serif text-xl font-bold text-[#1F1D1A]">
+                  Royal Enterprise Office
+                </h3>
+                <span className="text-xs text-[#6E1423] font-medium">
+                  Events • Catering • Wedding Planning
+                </span>
+              </div>
+
+              <div className="space-y-4 text-xs sm:text-sm text-[#3B3630]">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block text-[#1F1D1A]">Address:</span>
+                    <span className="leading-relaxed block text-[#524C44]">{COMPANY_INFO.address}</span>
+                    <a
+                      href={COMPANY_INFO.mapUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[#6E1423] font-semibold hover:underline inline-flex items-center space-x-1 mt-1 text-xs"
+                    >
+                      <span>Open in Google Maps</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-[#6B7280] font-bold">Office Address</h5>
-                  <p className="text-xs sm:text-sm text-[#1F2937] mt-1 font-medium leading-relaxed">{COMPANY_INFO.address}</p>
+
+                <div className="flex items-start space-x-3">
+                  <Phone className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block text-[#1F1D1A]">Phone / WhatsApp:</span>
+                    <a
+                      href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
+                      className="text-[#6E1423] font-semibold hover:underline block"
+                    >
+                      {COMPANY_INFO.displayPhone}
+                    </a>
+                    <span className="text-xs text-[#7D756A] block">Alternate: {COMPANY_INFO.secondaryPhone}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <Mail className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block text-[#1F1D1A]">Email:</span>
+                    <a
+                      href={`mailto:${COMPANY_INFO.email}`}
+                      className="text-[#6E1423] font-semibold hover:underline"
+                    >
+                      {COMPANY_INFO.email}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <Clock className="w-4 h-4 text-[#6E1423] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block text-[#1F1D1A]">Working Hours:</span>
+                    <span className="text-[#524C44] block">{COMPANY_INFO.officeHours}</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-full bg-roseBrand-light border border-roseBrand/20 flex items-center justify-center text-roseBrand shrink-0 mt-0.5">
-                  <Phone className="w-4 h-4" />
-                </div>
-                <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-[#6B7280] font-bold">Telephone Desk</h5>
-                  <p className="text-xs sm:text-sm text-[#1F2937] mt-1 font-bold">{COMPANY_INFO.phone}</p>
-                  <p className="text-xs text-[#6B7280] font-light">{COMPANY_INFO.secondaryPhone}</p>
+              {/* Social Channels */}
+              <div className="pt-4 border-t border-[#E5DED3]">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#7D756A] block mb-2">
+                  Social Channels
+                </span>
+                <div className="flex items-center space-x-2 text-[#524C44]">
+                  <a
+                    href={COMPANY_INFO.socials.instagram}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2 bg-[#FAF7F2] rounded hover:text-[#6E1423] hover:bg-[#FAF2F3] transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={COMPANY_INFO.socials.facebook}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2 bg-[#FAF7F2] rounded hover:text-[#6E1423] hover:bg-[#FAF2F3] transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={COMPANY_INFO.socials.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2 bg-[#FAF7F2] rounded hover:text-[#6E1423] hover:bg-[#FAF2F3] transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={COMPANY_INFO.socials.youtube}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2 bg-[#FAF7F2] rounded hover:text-[#6E1423] hover:bg-[#FAF2F3] transition-colors"
+                    aria-label="YouTube"
+                  >
+                    <Youtube className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-full bg-roseBrand-light border border-roseBrand/20 flex items-center justify-center text-roseBrand shrink-0 mt-0.5">
-                  <Mail className="w-4 h-4" />
-                </div>
-                <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-[#6B7280] font-bold">Email Correspondence</h5>
-                  <p className="text-xs sm:text-sm text-[#1F2937] mt-1 font-medium">{COMPANY_INFO.email}</p>
-                  <p className="text-xs text-[#6B7280] font-light">{COMPANY_INFO.bookingEmail}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-full bg-roseBrand-light border border-roseBrand/20 flex items-center justify-center text-roseBrand shrink-0 mt-0.5">
-                  <Clock className="w-4 h-4" />
-                </div>
-                <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-[#6B7280] font-bold">Operating Hours</h5>
-                  <p className="text-xs sm:text-sm text-[#1F2937] mt-1 font-light">{COMPANY_INFO.officeHours}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div>
-              <h5 className="text-[10.5px] uppercase tracking-[0.16em] text-gold-dark font-semibold mb-3">
-                Follow Royal Enterprise
-              </h5>
-              <div className="flex items-center space-x-2.5">
-                <a
-                  href={COMPANY_INFO.socials.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-[#E8E1D5] flex items-center justify-center text-[#6B645C] hover:text-maroon hover:border-maroon/40 transition-colors"
-                >
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a
-                  href={COMPANY_INFO.socials.facebook}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-[#E8E1D5] flex items-center justify-center text-[#6B645C] hover:text-maroon hover:border-maroon/40 transition-colors"
-                >
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a
-                  href={COMPANY_INFO.socials.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-[#E8E1D5] flex items-center justify-center text-[#6B645C] hover:text-maroon hover:border-maroon/40 transition-colors"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a
-                  href={COMPANY_INFO.socials.youtube}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-[#E8E1D5] flex items-center justify-center text-[#6B645C] hover:text-maroon hover:border-maroon/40 transition-colors"
-                >
-                  <Youtube className="w-4 h-4" />
-                </a>
-              </div>
             </div>
           </div>
 
-          {/* Business Enquiry Form Column */}
+          {/* Right Column: Clean, Direct Contact Form */}
           <div className="lg:col-span-7">
-            <div className="bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-6 sm:p-10 shadow-sm relative overflow-hidden">
-              <div className="h-[2px] bg-gradient-to-r from-transparent via-gold-base/50 to-transparent -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
+            <div className="bg-white border border-[#E5DED3] rounded-lg p-7 sm:p-10 shadow-paper-sm">
+              <div className="border-b border-[#E5DED3] pb-4 mb-6">
+                <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] block mb-1">
+                  Enquiry Form
+                </span>
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F1D1A]">
+                  Check dates and ask questions
+                </h2>
+                <p className="text-xs text-[#524C44] mt-1">
+                  We ask only for what we need to verify dates and catering requirements.
+                </p>
+              </div>
+
               {submitted ? (
-                <div className="text-center py-12 space-y-4">
-                  <div className="w-14 h-14 bg-maroon/10 border border-maroon/30 rounded-full flex items-center justify-center mx-auto text-maroon">
+                <div className="text-center py-10 space-y-4">
+                  <div className="w-14 h-14 bg-emerald-50 border border-emerald-500 rounded-full flex items-center justify-center mx-auto text-emerald-700">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="font-serif text-2xl font-normal text-[#141414] tracking-wide">
-                    Message Sent Successfully
+                  <h3 className="font-serif text-2xl font-bold text-[#1F1D1A]">
+                    Got it. Your enquiry is received.
                   </h3>
-                  <p className="text-[#554F47] max-w-md mx-auto text-sm leading-relaxed font-light">
-                    Thank you for reaching out to Royal Enterprise. Your message has been stored in our Contact Enquiries registry. A representative will contact you within one business day.
+                  <p className="text-sm text-[#524C44] max-w-md mx-auto leading-relaxed">
+                    We will call you within <strong>2 hours</strong> between <strong>10:00 AM and 8:30 PM IST</strong> to confirm details.
                   </p>
-                  <div className="pt-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
+                  <div className="pt-3">
+                    <button
+                      type="button"
                       onClick={() => setSubmitted(false)}
+                      className="btn-outline px-5 py-2 text-xs font-semibold"
                     >
-                      Send Another Message
-                    </Button>
+                      Send another message
+                    </button>
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="border-b border-[#E8E1D5] pb-4 mb-4">
-                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] tracking-wide">
-                      Send a Business Enquiry
-                    </h3>
-                    <p className="text-xs sm:text-sm text-[#6B645C] mt-1 font-light">
-                      Fill out the form below. All messages are directly integrated with Google Sheets.
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <Input
-                      label="Full Name"
+                      label="Your Name"
                       name="customerName"
                       value={formData.customerName}
                       onChange={handleChange}
-                      placeholder="e.g. Mr. Rajesh Khanna"
+                      placeholder="e.g. Subir Mukherjee"
                       required
                       error={errors.customerName}
                     />
                     <Input
-                      label="Phone Number"
+                      label="Phone / WhatsApp Number"
                       name="phone"
+                      type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 98300 00000"
                       required
                       error={errors.phone}
                     />
                   </div>
 
-                  <Input
-                    label="Email Address"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="name@example.com"
-                    required
-                    error={errors.email}
-                  />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <Input
+                      label="Email Address"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="name@example.com"
+                      required
+                      error={errors.email}
+                    />
+                    <Select
+                      label="Event Type"
+                      name="eventType"
+                      value={formData.eventType}
+                      onChange={handleChange}
+                      options={[
+                        'Wedding Ceremony & Reception',
+                        'In-House Catering Banquet',
+                        'Corporate Conference & Summit',
+                        'Milestone Birthday / Anniversary',
+                        'Stage Design & Audio Setup',
+                        'General Question / Other',
+                      ]}
+                      required
+                    />
+                  </div>
 
-                  <Input
-                    label="Subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="e.g. Partnership inquiry, Wedding consultation, Media briefing"
-                    required
-                    error={errors.subject}
-                  />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <Input
+                      label="Event Date (or target month)"
+                      name="eventDate"
+                      type="text"
+                      value={formData.eventDate}
+                      onChange={handleChange}
+                      placeholder="e.g. 15 Dec 2026 or Jan 2027"
+                      required
+                      error={errors.eventDate}
+                    />
+                    <Input
+                      label="Approximate Guest Count"
+                      name="guestCount"
+                      type="text"
+                      value={formData.guestCount}
+                      onChange={handleChange}
+                      placeholder="e.g. 250 or 800"
+                    />
+                  </div>
 
                   <Textarea
-                    label="Message"
-                    name="message"
-                    value={formData.message}
+                    label="Notes or specific requests"
+                    name="notes"
+                    value={formData.notes}
                     onChange={handleChange}
-                    placeholder="Please specify your requirements, proposed dates, and any relevant details..."
-                    rows={5}
-                    required
-                    error={errors.message}
+                    placeholder="Tell us about the venue, dietary preferences (e.g. pure-veg Marwari or Bengali Biye Bari), or budget..."
+                    rows={4}
                   />
 
-                  <div className="flex items-center justify-end pt-2">
-                    <Button
+                  <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                    <span className="text-xs text-[#7D756A]">
+                      We respect your privacy. No promotional spam calls.
+                    </span>
+                    <button
                       type="submit"
-                      variant="primary"
-                      size="lg"
-                      loading={loading}
-                      icon={Send}
-                      iconPosition="right"
-                      className="w-full sm:w-auto"
+                      disabled={loading}
+                      className="btn-maroon px-7 py-3 text-xs font-semibold inline-flex items-center justify-center space-x-2 shadow-sm"
                     >
-                      Submit Message
-                    </Button>
+                      <Send className="w-3.5 h-3.5" />
+                      <span>{loading ? 'Submitting...' : 'Send enquiry'}</span>
+                    </button>
                   </div>
                 </form>
               )}
             </div>
           </div>
-        </div>
 
-        {/* Google Maps Embed Placeholder */}
-        <div className="mt-20">
-          <SectionHeader
-            badge="Find Our Headquarters"
-            title="Location Map"
-            subtitle="Visit our executive studio for personalized design and culinary menu tasting sessions."
-          />
-
-          <div className="relative rounded-[4px] overflow-hidden border border-[#E8E1D5] h-96 bg-[#FAF8F4] shadow-sm flex items-center justify-center text-center p-2">
-            <iframe
-              title="Royal Enterprise Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.21689648937!2d88.26495085845722!3d22.535564936991185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
         </div>
       </section>
+
     </div>
   );
 };

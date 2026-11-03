@@ -1,32 +1,21 @@
-import React, { useState } from 'react';
-import { STATS, TESTIMONIALS } from '../../data/mockData';
-import { Star, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
+import React from 'react';
+import { TESTIMONIALS, STATS } from '../../data/mockData';
+import { MessageSquare, MapPin, CheckCircle2 } from 'lucide-react';
 
 const ExperienceStats = () => {
-  const [activeIdx, setActiveIdx] = useState(0);
-
-  const prevTestimonial = () => {
-    setActiveIdx((prev) => (prev === 0 ? TESTIMONIALS.length - 1 : prev - 1));
-  };
-
-  const nextTestimonial = () => {
-    setActiveIdx((prev) => (prev === TESTIMONIALS.length - 1 ? 0 : prev + 1));
-  };
-
-  const current = TESTIMONIALS[activeIdx];
-
   return (
-    <div className="bg-white border-b border-slate-200">
-      {/* 1. Verified Stats Counter Strip */}
-      <section className="py-12 bg-slate-50 border-y border-slate-200/80">
+    <div className="bg-[#FAF7F2] border-b border-[#E5DED3]">
+      
+      {/* 1. Real Numbers Strip */}
+      <section className="py-12 bg-white border-b border-[#E5DED3]">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {STATS.map((stat, idx) => (
               <div key={idx} className="space-y-1">
-                <span className="text-3xl sm:text-4xl font-extrabold text-roseBrand tracking-tight block">
+                <span className="font-serif text-3xl sm:text-4xl font-bold text-[#6E1423] block">
                   {stat.value}
                 </span>
-                <span className="text-[11px] uppercase tracking-wider text-[#4B5563] font-semibold">
+                <span className="text-xs text-[#524C44] font-medium block">
                   {stat.label}
                 </span>
               </div>
@@ -35,71 +24,56 @@ const ExperienceStats = () => {
         </div>
       </section>
 
-      {/* 2. WedMeGood Verified Client Reviews Section */}
-      <section className="py-20 max-w-[900px] mx-auto px-4 sm:px-6 text-center">
-        <div className="inline-flex items-center space-x-1.5 text-roseBrand text-[11px] font-bold uppercase tracking-[0.2em] mb-2">
-          <span>Real Client Stories</span>
+      {/* 2. Three Real Client Testimonials (Ballygunge, Salt Lake, New Town) */}
+      <section className="py-20 sm:py-24 max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="max-w-2xl mb-12">
+          <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] block mb-1">
+            Word from families and clients
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F1D1A] tracking-tight">
+            What clients say after the guests leave.
+          </h2>
+          <p className="text-sm text-[#524C44] mt-2 leading-relaxed">
+            Unedited feedback from Kolkata hosts we have served over the past seasons.
+          </p>
         </div>
 
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#1F2937] tracking-tight mb-10">
-          Loved by Celebrants Across Kolkata & India
-        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          {TESTIMONIALS.map((t, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-lg border border-[#E5DED3] p-6 sm:p-7 flex flex-col justify-between shadow-paper-sm hover:border-[#6E1423]/40 transition-colors"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between text-xs text-[#7D756A]">
+                  <span className="font-mono">{t.guests}</span>
+                  <span className="inline-flex items-center text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded text-[11px] font-semibold border border-emerald-200">
+                    Verified Host
+                  </span>
+                </div>
 
-        {/* Review Card */}
-        <div className="bg-white border border-slate-200 p-8 sm:p-12 rounded-2xl shadow-sm relative text-left sm:text-center">
-          {/* 5 Stars + Verified Badge */}
-          <div className="flex items-center justify-start sm:justify-center space-x-2 mb-6">
-            <div className="flex items-center space-x-1 text-amber-500">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-current" />
-              ))}
+                <p className="font-serif text-base sm:text-lg text-[#1F1D1A] italic leading-relaxed">
+                  "{t.quote}"
+                </p>
+              </div>
+
+              <div className="pt-5 mt-6 border-t border-[#E5DED3]">
+                <h4 className="font-bold text-sm text-[#1F1D1A]">
+                  {t.name}
+                </h4>
+                <div className="flex items-center space-x-1 text-xs text-[#6E1423] mt-0.5">
+                  <MapPin className="w-3 h-3" />
+                  <span>{t.area}</span>
+                </div>
+                <span className="text-[11px] text-[#7D756A] block mt-1">
+                  {t.event}
+                </span>
+              </div>
             </div>
-            <span className="inline-flex items-center space-x-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-              <CheckCircle2 className="w-3 h-3" />
-              <span>Verified Patron</span>
-            </span>
-          </div>
-
-          <p className="font-serif text-xl sm:text-2xl text-[#1F2937] font-normal leading-relaxed mb-8 italic">
-            "{current.quote}"
-          </p>
-
-          <div className="pt-6 border-t border-slate-100 max-w-sm mx-auto sm:text-center">
-            <h4 className="font-bold text-base text-[#1F2937]">
-              {current.name}
-            </h4>
-            <p className="text-xs text-roseBrand font-medium mt-0.5">
-              {current.role}
-            </p>
-            <span className="inline-block mt-2 text-[10px] uppercase font-bold tracking-wider text-[#6B7280] bg-slate-100 px-3 py-1 rounded-full">
-              {current.division}
-            </span>
-          </div>
-
-          {/* Carousel Arrows */}
-          <div className="flex items-center justify-center space-x-4 mt-8">
-            <button
-              type="button"
-              onClick={prevTestimonial}
-              className="w-9 h-9 rounded-full border border-slate-300 hover:border-roseBrand text-[#4B5563] hover:text-roseBrand flex items-center justify-center transition-colors"
-              aria-label="Previous review"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <span className="text-xs text-[#6B7280] font-mono">
-              {activeIdx + 1} / {TESTIMONIALS.length}
-            </span>
-            <button
-              type="button"
-              onClick={nextTestimonial}
-              className="w-9 h-9 rounded-full border border-slate-300 hover:border-roseBrand text-[#4B5563] hover:text-roseBrand flex items-center justify-center transition-colors"
-              aria-label="Next review"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
+          ))}
         </div>
       </section>
+
     </div>
   );
 };

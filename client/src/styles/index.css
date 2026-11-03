@@ -9,131 +9,156 @@
   }
 
   body {
-    background-color: #FFFFFF;
-    color: #1F2937;
-    font-family: 'Plus Jakarta Sans', 'Jost', system-ui, sans-serif;
+    background-color: #FAF7F2;
+    color: #1F1D1A;
+    font-family: 'Hind Siliguri', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    line-height: 1.65;
   }
 
   ::selection {
-    background-color: #FFE4E8;
-    color: #E72E77;
+    background-color: #FEF3C7;
+    color: #6E1423;
   }
 
-  /* Headings: never bold, maximum weight 500, sentence case */
+  /* Headings: Lora editorial serif with natural weight and human rhythm */
   h1, h2, h3, h4, .font-serif {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+    font-family: 'Lora', Georgia, serif;
+    font-feature-settings: 'lnum' 1;
+    letter-spacing: -0.015em;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer utilities {
-  /* Theevexa & White Tie fine hairline ornament */
-  .theevexa-divider {
+  /* Subtle handcrafted paper texture and divider */
+  .paper-divider {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 12px;
   }
-  .theevexa-divider::before,
-  .theevexa-divider::after {
+  .paper-divider::before,
+  .paper-divider::after {
     content: '';
     height: 1px;
-    width: 60px;
-    background: linear-gradient(90deg, transparent, rgba(184, 147, 74, 0.45));
-  }
-  .theevexa-divider::after {
-    background: linear-gradient(90deg, rgba(184, 147, 74, 0.45), transparent);
+    flex: 1;
+    background: #E5DED3;
   }
 
-  /* Architectural image framing: 14px top, 4px bottom */
-  .theevexa-img {
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
-
-  /* Single luxury soft shadow */
-  .theevexa-shadow {
-    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.35);
-  }
-
-  /* Gold button hover lift */
-  .btn-gold {
-    background: linear-gradient(135deg, #D4B36A 0%, #A67C32 100%);
-    color: #1A1205;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    border-radius: 9999px;
-    transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
-  }
-  .btn-gold:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.06);
-    box-shadow: 0 8px 24px -4px rgba(184, 147, 74, 0.35);
-  }
-
-  .btn-maroon {
-    background: linear-gradient(135deg, #6E1423 0%, #540D1A 100%);
-    color: #FFF8F0;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    border-radius: 4px;
-    transition: transform 0.25s ease, filter 0.25s ease;
-  }
-  .btn-maroon:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.08);
-  }
-
-  /* WedMeGood style brand button */
+  /* Authentic Primary Button: Deep Heritage Maroon */
+  .btn-maroon,
   .btn-brand {
-    background-color: #E72E77;
+    background-color: #6E1423;
     color: #FFFFFF;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
     border-radius: 4px;
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #540D1A;
+    transition: background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
   }
+  .btn-maroon:hover,
   .btn-brand:hover {
-    background-color: #D81B60;
+    background-color: #540D1A;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(231, 46, 119, 0.3);
+    box-shadow: 0 4px 12px rgba(110, 20, 35, 0.2);
   }
 
-  /* Underline-only minimal luxury input */
-  .input-underline {
-    border: none;
-    border-bottom: 1px solid #D5CCC0;
-    border-radius: 0;
-    background: transparent;
-    padding-left: 0;
-    padding-right: 0;
-    transition: border-color 0.2s ease;
+  /* Accent Button: Marigold / Turmeric Yellow */
+  .btn-marigold,
+  .btn-gold {
+    background-color: #D97706;
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 4px;
+    border: 1px solid #B45309;
+    transition: background-color 0.18s ease, transform 0.18s ease;
   }
-  .input-underline:focus {
+  .btn-marigold:hover,
+  .btn-gold:hover {
+    background-color: #B45309;
+    transform: translateY(-1px);
+  }
+
+  /* Secondary Outline Button */
+  .btn-outline {
+    background-color: transparent;
+    color: #1F1D1A;
+    font-weight: 600;
+    border: 1.5px solid #D5CCC0;
+    border-radius: 4px;
+    transition: all 0.18s ease;
+  }
+  .btn-outline:hover {
+    background-color: #F0ECE1;
+    border-color: #1F1D1A;
+  }
+
+  /* Direct WhatsApp Button */
+  .btn-whatsapp {
+    background-color: #128C7E;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.18s ease;
+  }
+  .btn-whatsapp:hover {
+    background-color: #075E54;
+  }
+
+  /* High-contrast form inputs */
+  .input-clean {
+    border: 1.5px solid #D5CCC0;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #1F1D1A;
+    padding: 10px 14px;
+    font-size: 15px;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .input-clean:focus {
     outline: none;
-    border-bottom: 2px solid #B8934A;
+    border-color: #6E1423;
+    box-shadow: 0 0 0 2px rgba(110, 20, 35, 0.15);
+  }
+
+  /* Editorial stamp tag */
+  .stamp-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid #6E1423;
+    color: #6E1423;
+    background-color: #FAF2F3;
+    border-radius: 2px;
   }
 }
 
-/* Custom Minimal Gold Scrollbar */
+/* Minimal subtle scrollbar */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F6F3EE;
+  background: #FAF7F2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #B8934A;
-  border-radius: 4px;
+  background: #D5CCC0;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8A6A2C;
+  background: #6E1423;
 }

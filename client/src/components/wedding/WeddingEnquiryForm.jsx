@@ -143,7 +143,10 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
       };
 
       const response = await submitWeddingEnquiry(payload);
-      showToast(response.message || 'Wedding planner enquiry submitted successfully!', 'success');
+      showToast(
+        "Got it. We'll call you within 2 hours between 10:00 AM and 8:30 PM IST.",
+        'success'
+      );
       setSubmittedData({
         submissionId: response.submissionId,
         customerName: formData.customerName,
@@ -212,8 +215,8 @@ const WeddingEnquiryForm = ({ initialPackageType = 'Complete Wedding Package' })
           <div className="inline-block bg-[#F6F3EE] border border-[#E8E1D5] px-4 py-2 rounded-[2px] text-xs text-[#3A352F]">
             Tracking ID: <span className="font-mono text-gold-dark font-bold">{submittedData.submissionId}</span>
           </div>
-          <p className="text-xs text-[#6B645C] font-light">
-            Our Senior Wedding Architect will connect with your family within 24 hours.
+          <p className="text-xs text-[#524C44] font-medium">
+            Got it. We will call you within 2 hours between 10:00 AM and 8:30 PM IST to discuss dates and venue possibilities.
           </p>
           <div className="pt-4">
             <Button
