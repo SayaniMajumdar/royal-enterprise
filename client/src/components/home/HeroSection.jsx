@@ -5,35 +5,35 @@ import Button from '../common/Button';
 
 const HeroSection = ({ onOpenQuote }) => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16 pb-24">
+    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-16 pb-24">
       {/* Background Image with Deep Luxury Gradient Overlays */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85"
           alt="Royal Enterprise Grand Celebration"
-          className="w-full h-full object-cover object-center scale-[1.02] filter brightness-[0.38] contrast-[1.08]"
+          className="w-full h-full object-cover object-center scale-[1.02] filter brightness-[0.42] contrast-[1.06]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#060A13] via-[#060A13]/75 to-[#060A13]/85" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#060A13_85%)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#060A13] via-[#060A13]/70 to-[#060A13]/80" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#060A13_80%)]" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Royal Crest / Badge */}
-        <div className="inline-flex items-center space-x-2.5 bg-[#090E1B]/85 border border-gold-400/30 px-4 py-1.5 rounded-[2px] mb-8 shadow-sm">
+        <div className="inline-flex items-center space-x-2.5 bg-[#090E1B]/85 border border-gold-400/35 px-4 py-1.5 rounded-[2px] mb-8 shadow-sm">
           <Crown className="w-3.5 h-3.5 text-gold-400" />
-          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-gold-300 font-semibold">
+          <span className="text-[10px] sm:text-[10.5px] uppercase tracking-[0.25em] text-gold-300 font-semibold">
             Royal Enterprise • The Sovereign of Grandeur
           </span>
           <Sparkles className="w-3.5 h-3.5 text-gold-400/80" />
         </div>
 
         {/* Main Headline */}
-        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold text-slate-100 tracking-tight leading-[1.12] mb-6">
+        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-bold text-slate-100 tracking-tight leading-[1.12] mb-6">
           Architects of <span className="font-editorial italic font-normal text-gold-300">Extraordinary</span> Memories & Imperial Celebrations
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-slate-300 font-light leading-relaxed mb-10">
+        <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-slate-300/90 font-light leading-relaxed mb-10">
           Uniting premier <span className="text-gold-300 font-medium">Event Management</span>, artisanal <span className="text-gold-300 font-medium">Gourmet Catering</span>, and breathtaking <span className="text-gold-300 font-medium">Bespoke Wedding Planning</span> under one royal canopy.
         </p>
 
@@ -43,7 +43,7 @@ const HeroSection = ({ onOpenQuote }) => {
             variant="primary"
             size="lg"
             onClick={onOpenQuote}
-            className="w-full sm:w-auto px-8 py-3.5"
+            className="w-full sm:w-auto px-8 py-3.5 shadow-md"
           >
             Plan Your Event
           </Button>
