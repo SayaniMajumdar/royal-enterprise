@@ -9,17 +9,17 @@
   }
 
   body {
-    background-color: #F6F3EE;
-    color: #141414;
-    font-family: 'Jost', 'Plus Jakarta Sans', sans-serif;
+    background-color: #FFFFFF;
+    color: #1F2937;
+    font-family: 'Plus Jakarta Sans', 'Jost', system-ui, sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background-color: #E2C27D;
-    color: #141414;
+    background-color: #FFE4E8;
+    color: #E72E77;
   }
 
   /* Headings: never bold, maximum weight 500, sentence case */
@@ -90,6 +90,21 @@
   .btn-maroon:hover {
     transform: translateY(-2px);
     filter: brightness(1.08);
+  }
+
+  /* WedMeGood style brand button */
+  .btn-brand {
+    background-color: #E72E77;
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-brand:hover {
+    background-color: #D81B60;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(231, 46, 119, 0.3);
   }
 
   /* Underline-only minimal luxury input */

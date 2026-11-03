@@ -204,7 +204,7 @@ const WeddingPlanner = () => {
   };
 
   return (
-    <div className="bg-[#F6F3EE] min-h-screen text-[#141414]">
+    <div className="bg-white min-h-screen text-[#1F2937]">
       {/* ========================================================================= */}
       {/* HERO BANNER */}
       {/* ========================================================================= */}

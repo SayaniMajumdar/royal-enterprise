@@ -93,22 +93,20 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#F6F3EE] min-h-screen text-[#141414]">
+    <div className="bg-white min-h-screen text-[#1F2937]">
       {/* Hero Banner */}
-      <section className="bg-charcoal text-[#FFF8F0] relative py-20 sm:py-28 overflow-hidden border-b border-white/10">
+      <section className="bg-slate-900 text-white relative py-20 sm:py-28 overflow-hidden border-b border-white/10">
         <div className="max-w-[1180px] mx-auto px-5 sm:px-6 text-center relative z-10">
           <div className="inline-flex items-center space-x-2.5 mb-3">
-            <span className="w-5 h-px bg-gold-light/60" />
-            <span className="text-[11px] uppercase tracking-[0.26em] text-gold-light font-medium">
+            <span className="text-[11px] uppercase tracking-[0.2em] text-roseBrand font-bold">
               Concierge & Executive Desk
             </span>
-            <span className="w-5 h-px bg-gold-light/60" />
           </div>
-          <h1 className="font-serif text-3xl sm:text-5xl font-normal text-[#FFF8F0] mb-4 tracking-tight leading-tight">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-white mb-4 tracking-tight leading-tight">
             Contact Royal Enterprise
           </h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/80 font-light leading-relaxed">
-            Connect with our management team for corporate partnerships, service consultations, or general inquiries.
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-300 font-light leading-relaxed">
+            Connect with our leadership team for corporate partnerships, service consultations, or event reservations.
           </p>
         </div>
       </section>
@@ -116,59 +114,59 @@ const Contact = () => {
       <section className="py-20 max-w-[1180px] mx-auto px-5 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* Company Details Column */}
-          <div className="lg:col-span-5 space-y-8 bg-[#FFFDF9] border border-[#E8E1D5] rounded-[4px] p-8 shadow-sm">
+          <div className="lg:col-span-5 space-y-8 bg-slate-50 border border-slate-200 rounded-xl p-8 shadow-sm">
             <div>
-              <h3 className="font-serif text-2xl font-normal text-[#141414] mb-1.5 tracking-wide">
+              <h3 className="font-serif text-2xl font-bold text-[#1F2937] mb-1.5 tracking-wide">
                 {COMPANY_INFO.name}
               </h3>
-              <p className="text-[10.5px] text-gold-dark uppercase tracking-[0.2em] font-semibold mb-4">
+              <p className="text-[10.5px] text-roseBrand uppercase tracking-[0.2em] font-bold mb-4">
                 Corporate Headquarters & Concierge
               </p>
-              <p className="text-xs sm:text-sm text-[#554F47] leading-relaxed font-light">
+              <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed font-light">
                 We invite you to connect with our client relationship managers to discuss your forthcoming celebration, corporate summit, or catering requirement.
               </p>
             </div>
 
-            <div className="space-y-5 border-y border-[#E8E1D5] py-6">
+            <div className="space-y-5 border-y border-slate-200 py-6">
               <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark shrink-0 mt-0.5">
+                <div className="w-9 h-9 rounded-full bg-roseBrand-light border border-roseBrand/20 flex items-center justify-center text-roseBrand shrink-0 mt-0.5">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-gold-dark font-semibold">Office Address</h5>
-                  <p className="text-xs sm:text-sm text-[#141414] mt-1 font-light leading-relaxed">{COMPANY_INFO.address}</p>
+                  <h5 className="text-[10.5px] uppercase tracking-wider text-[#6B7280] font-bold">Office Address</h5>
+                  <p className="text-xs sm:text-sm text-[#1F2937] mt-1 font-medium leading-relaxed">{COMPANY_INFO.address}</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark shrink-0 mt-0.5">
+                <div className="w-9 h-9 rounded-full bg-roseBrand-light border border-roseBrand/20 flex items-center justify-center text-roseBrand shrink-0 mt-0.5">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-gold-dark font-semibold">Telephone Desk</h5>
-                  <p className="text-xs sm:text-sm text-[#141414] mt-1 font-medium">{COMPANY_INFO.phone}</p>
-                  <p className="text-xs text-[#6B645C] font-light">{COMPANY_INFO.secondaryPhone}</p>
+                  <h5 className="text-[10.5px] uppercase tracking-wider text-[#6B7280] font-bold">Telephone Desk</h5>
+                  <p className="text-xs sm:text-sm text-[#1F2937] mt-1 font-bold">{COMPANY_INFO.phone}</p>
+                  <p className="text-xs text-[#6B7280] font-light">{COMPANY_INFO.secondaryPhone}</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark shrink-0 mt-0.5">
+                <div className="w-9 h-9 rounded-full bg-roseBrand-light border border-roseBrand/20 flex items-center justify-center text-roseBrand shrink-0 mt-0.5">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-gold-dark font-semibold">Email Correspondence</h5>
-                  <p className="text-xs sm:text-sm text-[#141414] mt-1 font-light">{COMPANY_INFO.email}</p>
-                  <p className="text-xs text-[#6B645C] font-light">{COMPANY_INFO.bookingEmail}</p>
+                  <h5 className="text-[10.5px] uppercase tracking-wider text-[#6B7280] font-bold">Email Correspondence</h5>
+                  <p className="text-xs sm:text-sm text-[#1F2937] mt-1 font-medium">{COMPANY_INFO.email}</p>
+                  <p className="text-xs text-[#6B7280] font-light">{COMPANY_INFO.bookingEmail}</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3.5">
-                <div className="w-9 h-9 rounded-full bg-[#FAF8F4] border border-gold-dark/30 flex items-center justify-center text-gold-dark shrink-0 mt-0.5">
+                <div className="w-9 h-9 rounded-full bg-roseBrand-light border border-roseBrand/20 flex items-center justify-center text-roseBrand shrink-0 mt-0.5">
                   <Clock className="w-4 h-4" />
                 </div>
                 <div>
-                  <h5 className="text-[10.5px] uppercase tracking-wider text-gold-dark font-semibold">Operating Hours</h5>
-                  <p className="text-xs sm:text-sm text-[#141414] mt-1 font-light">{COMPANY_INFO.officeHours}</p>
+                  <h5 className="text-[10.5px] uppercase tracking-wider text-[#6B7280] font-bold">Operating Hours</h5>
+                  <p className="text-xs sm:text-sm text-[#1F2937] mt-1 font-light">{COMPANY_INFO.officeHours}</p>
                 </div>
               </div>
             </div>

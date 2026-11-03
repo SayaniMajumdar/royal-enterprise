@@ -11,7 +11,7 @@ const Home = () => {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   return (
-    <div className="bg-[#F6F3EE] min-h-screen">
+    <div className="bg-white min-h-screen text-[#1F2937]">
       <HeroSection onOpenQuote={() => setIsQuoteOpen(true)} />
       <BrandStory />
       <DivisionOverview onOpenQuote={() => setIsQuoteOpen(true)} />

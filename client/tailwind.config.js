@@ -25,6 +25,14 @@ export default {
           deep: '#3A0610',
           light: '#851C2D',
         },
+        roseBrand: {
+          DEFAULT: '#E72E77',
+          dark: '#D81B60',
+          deep: '#9F1239',
+          light: '#FFF0F3',
+          tint: '#FDF2F4',
+          border: '#FFE4E8',
+        },
         gold: {
           DEFAULT: '#B8934A',
           dark: '#8A6A2C', // AA compliant on ivory

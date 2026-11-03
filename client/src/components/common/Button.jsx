@@ -15,19 +15,21 @@ const Button = ({
   ...props
 }) => {
   const baseStyles =
-    'relative inline-flex items-center justify-center font-medium transition-all duration-300 focus:outline-none uppercase tracking-[0.16em] text-xs font-semibold select-none';
+    'relative inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none tracking-wider text-xs select-none rounded-md';
 
   const variants = {
     primary:
-      'btn-gold text-[#1A1205] shadow-sm active:translate-y-0',
+      'btn-brand shadow-sm active:translate-y-0',
+    gold:
+      'btn-gold text-[#1A1205] shadow-sm active:translate-y-0 rounded-full',
     maroon:
       'btn-maroon text-[#FFF8F0] shadow-sm active:translate-y-0',
     outline:
-      'border border-[#B8934A]/70 text-[#141414] hover:bg-[#B8934A]/10 hover:border-[#B8934A] rounded-full active:translate-y-0',
+      'border border-slate-300 text-[#374151] hover:border-roseBrand hover:text-roseBrand hover:bg-roseBrand/5 active:translate-y-0',
     dark:
-      'bg-charcoal hover:bg-charcoal-surface text-[#FFF8F0] border border-white/20 rounded-full active:translate-y-0',
+      'bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 active:translate-y-0',
     ghost:
-      'text-gold-dark hover:text-maroon tracking-[0.16em] active:translate-y-0',
+      'text-roseBrand hover:text-roseBrand-dark active:translate-y-0',
   };
 
   const sizes = {

@@ -1,113 +1,193 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ChevronRight, Sparkles } from 'lucide-react';
 
-const servicesData = [
+const venueSearches = [
   {
-    number: '01',
-    title: 'Décor & Stage Architecture',
-    subtitle: 'Event Management & Turnkey Sets',
-    description:
-      'From 3D custom stage sets and concert audio to corporate summits and VIP media galas, our team crafts flawless environments.',
-    image:
-      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
-    link: '/events',
-  },
-  {
-    number: '02',
-    title: 'Gourmet Catering & Banquets',
-    subtitle: 'Artisanal Culinary Mastery',
-    description:
-      'Authentic Awadhi dum biryanis, Mughlai feasts, continental courses, and interactive live culinary stations served with royal hospitality.',
-    image:
-      'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80',
-    link: '/catering',
-  },
-  {
-    number: '03',
-    title: 'Bespoke Wedding Planning',
-    subtitle: 'Turnkey 360° Royal Weddings',
-    description:
-      'Complete responsibility from heritage palace venue scouting, bridal couture, and jewellery to photography and Vedic ritual coordination.',
-    image:
-      'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80',
+    title: 'Heritage Rajbaris & Palaces',
+    subtitle: 'Bawali, Sovabazar, Itachuna & Destination Hubs',
+    image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80',
+    locations: ['Kolkata', 'Burdwan', 'Murshidabad', 'Udaipur'],
     link: '/wedding-planner',
   },
   {
-    number: '04',
-    title: 'Cinematography & Styling',
-    subtitle: 'Visuals of Eternal Grace',
-    description:
-      'Cinematic 4K wedding films, candid storytelling, high-definition bridal makeup artists, and coordinated groom styling.',
-    image:
-      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+    title: '5-Star Banquet Halls',
+    subtitle: 'ITC Royal Bengal, JW Marriott, Taj Bengal & Hyatt',
+    image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80',
+    locations: ['EM Bypass', 'Salt Lake', 'Rajarhat', 'Alipore'],
+    link: '/events',
+  },
+  {
+    title: 'Marriage Gardens & Waterfront Lawns',
+    subtitle: 'Open-air riverside mandaps & evening fairy-light sets',
+    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80',
+    locations: ['Ganges Riverfront', 'New Town', 'Vedic Village', 'Howrah'],
+    link: '/wedding-planner',
+  },
+];
+
+const bannerServices = [
+  {
+    title: 'Turnkey Wedding Planning',
+    subtitle: 'Venue Scouting, Rituals, Trousseau & Family Concierge',
+    tag: 'Full 360° Management',
+    image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80',
+    bgColor: 'bg-[#FFF0F3] border-[#FFE4E8]',
+    textColor: 'text-roseBrand',
+    link: '/wedding-planner',
+  },
+  {
+    title: 'Artisanal Gourmet Catering',
+    subtitle: 'Awadhi Dum Biryani, Pure Bhetki Paturi & Live Sweet Stations',
+    tag: 'Master Chef Banquets',
+    image: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80',
+    bgColor: 'bg-[#FFF7ED] border-[#FFEDD5]',
+    textColor: 'text-amber-800',
+    link: '/catering',
+  },
+  {
+    title: 'Event Management & Sets',
+    subtitle: 'Leadership Summits, 3D Laser Stage Fabrication & AV Sound',
+    tag: 'Corporate & Media Standard',
+    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80',
+    bgColor: 'bg-[#F0FDF4] border-[#DCFCE7]',
+    textColor: 'text-emerald-800',
+    link: '/events',
+  },
+  {
+    title: 'Bridal Styling & Cinema',
+    subtitle: 'Celebrity Makeup Artists, Candid 4K Films & Pre-Wedding Shoots',
+    tag: 'Visual Storytelling',
+    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80',
+    bgColor: 'bg-[#FAF5FF] border-[#F3E8FF]',
+    textColor: 'text-purple-800',
     link: '/wedding-planner',
   },
 ];
 
 const DivisionOverview = ({ onOpenQuote }) => {
   return (
-    <section className="py-24 sm:py-32 bg-[#F6E4E1] text-[#141414] relative border-b border-[#ECD6D2]">
-      <div className="max-w-[1180px] mx-auto px-5 sm:px-6">
-        {/* Section Header */}
-        <div className="max-w-2xl mb-14 text-left">
-          <div className="inline-flex items-center space-x-2 text-gold-dark text-[11px] font-semibold uppercase tracking-[0.24em] mb-3">
-            <span className="w-5 h-px bg-gold-dark/60" />
-            <span>Our Expertise</span>
+    <section className="py-20 sm:py-28 bg-white text-[#1F2937] border-b border-slate-200">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 space-y-20">
+        
+        {/* ========================================================================= */}
+        {/* 1. POPULAR SEARCHES & VENUES (WedMeGood Screenshot 2 Reference) */}
+        {/* ========================================================================= */}
+        <div>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-roseBrand block mb-1">
+                Curated Spaces
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#1F2937] tracking-tight">
+                Popular Venue & Celebration Searches
+              </h2>
+            </div>
+            <Link
+              to="/wedding-planner"
+              className="text-xs sm:text-sm font-semibold text-roseBrand hover:underline inline-flex items-center space-x-1"
+            >
+              <span>Explore All Venues</span>
+              <ChevronRight className="w-4 h-4" />
+            </Link>
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#141414] tracking-tight leading-[1.12]">
-            Universal <span className="font-editorial italic font-normal text-maroon">elegance</span> for every milestone
-          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {venueSearches.map((item, idx) => (
+              <Link
+                key={idx}
+                to={item.link}
+                className="group bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
+              >
+                <div className="relative h-48 overflow-hidden bg-slate-100">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-[10px] font-bold text-[#1F2937] uppercase tracking-wider px-2.5 py-1 rounded-full">
+                    Kolkata & Beyond
+                  </div>
+                </div>
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-serif text-lg sm:text-xl font-bold text-[#1F2937] group-hover:text-roseBrand transition-colors mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-[#6B7280] font-light leading-relaxed mb-4">
+                      {item.subtitle}
+                    </p>
+                  </div>
+                  <div className="pt-3 border-t border-slate-100 flex flex-wrap gap-1.5 text-[11px] text-[#4B5563]">
+                    {item.locations.map((loc, locIdx) => (
+                      <span key={locIdx} className="bg-slate-50 px-2 py-0.5 rounded text-roseBrand font-medium">
+                        {loc}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
 
-        {/* 4 Portrait Cards Grid (Exactly like Theevexa Image 2) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {servicesData.map((svc) => (
-            <Link
-              key={svc.number}
-              to={svc.link}
-              className="group bg-[#FFFDF9] rounded-[3px] overflow-hidden border border-[#ECD6D2] hover:border-gold-base/60 transition-all duration-300 flex flex-col justify-between shadow-sm hover:-translate-y-1 hover:shadow-md"
+        {/* ========================================================================= */}
+        {/* 2. INHOUSE SERVICES BANNERS (WedMeGood Screenshot 3 Reference) */}
+        {/* ========================================================================= */}
+        <div>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-roseBrand block mb-1">
+                Atelier Divisions
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#1F2937] tracking-tight">
+                Royal Enterprise Signature Services
+              </h2>
+            </div>
+            <button
+              type="button"
+              onClick={onOpenQuote}
+              className="btn-brand px-5 py-2 text-xs uppercase font-semibold rounded-md shadow-sm self-start sm:self-auto"
             >
-              <div>
-                {/* Portrait Photo Container */}
-                <div className="relative aspect-[4/5] overflow-hidden bg-slate-200">
-                  <img
-                    src={svc.image}
-                    alt={svc.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-maroon">
-                    <ArrowUpRight className="w-4 h-4" />
+              Get Custom Quote
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {bannerServices.map((svc, idx) => (
+              <Link
+                key={idx}
+                to={svc.link}
+                className={`group border rounded-2xl p-6 ${svc.bgColor} hover:shadow-md transition-all duration-300 flex items-center justify-between gap-4`}
+              >
+                <div className="flex-1 space-y-2">
+                  <span className={`text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-white/80 ${svc.textColor}`}>
+                    {svc.tag}
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#1F2937] group-hover:text-roseBrand transition-colors">
+                    {svc.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#4B5563] font-light leading-relaxed">
+                    {svc.subtitle}
+                  </p>
+                  <div className={`text-xs font-bold pt-2 flex items-center space-x-1 ${svc.textColor}`}>
+                    <span>Explore details</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
 
-                {/* Content Box */}
-                <div className="p-6">
-                  {/* Number Indicator */}
-                  <span className="block text-[11px] font-medium tracking-[0.2em] text-gold-dark mb-2">
-                    {svc.number}
-                  </span>
-
-                  {/* Title */}
-                  <h3 className="font-serif text-xl font-normal text-[#141414] mb-2.5 group-hover:text-maroon transition-colors leading-snug">
-                    {svc.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-xs sm:text-[13px] text-[#554F47] font-light leading-relaxed">
-                    {svc.description}
-                  </p>
+                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 shadow-sm border-2 border-white">
+                  <img
+                    src={svc.image}
+                    alt={svc.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-              </div>
-
-              {/* Bottom Subtle Action */}
-              <div className="px-6 pb-6 pt-1 flex items-center justify-between text-[11px] uppercase tracking-[0.16em] font-semibold text-gold-dark group-hover:text-maroon transition-colors">
-                <span>Explore Details</span>
-                <span>→</span>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
+
       </div>
     </section>
   );

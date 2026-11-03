@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { STATS, TESTIMONIALS } from '../../data/mockData';
-import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
 
 const ExperienceStats = () => {
   const [activeIdx, setActiveIdx] = useState(0);
@@ -16,17 +16,17 @@ const ExperienceStats = () => {
   const current = TESTIMONIALS[activeIdx];
 
   return (
-    <div>
-      {/* 1. Charcoal Stats Strip (Reference A & C: narrow band directly contrasting with ivory) */}
-      <section className="py-14 bg-charcoal text-[#FFF8F0] border-y border-white/10">
-        <div className="max-w-[1180px] mx-auto px-5 sm:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div className="bg-white border-b border-slate-200">
+      {/* 1. Verified Stats Counter Strip */}
+      <section className="py-12 bg-slate-50 border-y border-slate-200/80">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {STATS.map((stat, idx) => (
               <div key={idx} className="space-y-1">
-                <span className="font-serif text-3xl sm:text-5xl font-light text-gold-light tracking-tight block">
+                <span className="text-3xl sm:text-4xl font-extrabold text-roseBrand tracking-tight block">
                   {stat.value}
                 </span>
-                <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-white/70 font-medium">
+                <span className="text-[11px] uppercase tracking-wider text-[#4B5563] font-semibold">
                   {stat.label}
                 </span>
               </div>
@@ -35,68 +35,68 @@ const ExperienceStats = () => {
         </div>
       </section>
 
-      {/* 2. Testimonials Carousel / Pull Quote Section (Warm Ivory) */}
-      <section className="py-24 sm:py-32 bg-[#F6F3EE] text-[#141414] border-b border-[#E8E1D5]">
-        <div className="max-w-[900px] mx-auto px-5 sm:px-6 text-center">
-          <div className="inline-flex items-center space-x-2 text-gold-dark text-[11px] font-semibold uppercase tracking-[0.24em] mb-4">
-            <span className="w-5 h-px bg-gold-dark/60" />
-            <span>Patron Reflections</span>
-            <span className="w-5 h-px bg-gold-dark/60" />
-          </div>
+      {/* 2. WedMeGood Verified Client Reviews Section */}
+      <section className="py-20 max-w-[900px] mx-auto px-4 sm:px-6 text-center">
+        <div className="inline-flex items-center space-x-1.5 text-roseBrand text-[11px] font-bold uppercase tracking-[0.2em] mb-2">
+          <span>Real Client Stories</span>
+        </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#141414] tracking-tight mb-12">
-            Cherished by connoisseurs of <span className="font-editorial italic font-normal text-maroon">grandeur</span>
-          </h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1F2937] tracking-tight mb-10">
+          Loved by Celebrants Across Kolkata & India
+        </h2>
 
-          {/* Testimonial Quote Card */}
-          <div className="bg-[#FFFDF9] border border-[#E8E1D5] p-8 sm:p-14 rounded-[4px] shadow-sm relative">
-            <Quote className="w-10 h-10 text-gold-base/30 mx-auto mb-6" />
-
-            {/* 5 Gold Stars */}
-            <div className="flex items-center justify-center space-x-1.5 mb-6 text-gold-dark">
+        {/* Review Card */}
+        <div className="bg-white border border-slate-200 p-8 sm:p-12 rounded-2xl shadow-sm relative text-left sm:text-center">
+          {/* 5 Stars + Verified Badge */}
+          <div className="flex items-center justify-start sm:justify-center space-x-2 mb-6">
+            <div className="flex items-center space-x-1 text-amber-500">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-current stroke-[1.5]" />
+                <Star key={i} className="w-4 h-4 fill-current" />
               ))}
             </div>
+            <span className="inline-flex items-center space-x-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+              <CheckCircle2 className="w-3 h-3" />
+              <span>Verified Patron</span>
+            </span>
+          </div>
 
-            <p className="font-serif text-xl sm:text-2xl md:text-3xl text-[#141414] font-normal leading-relaxed mb-8 italic">
-              "{current.quote}"
+          <p className="font-serif text-xl sm:text-2xl text-[#1F2937] font-normal leading-relaxed mb-8 italic">
+            "{current.quote}"
+          </p>
+
+          <div className="pt-6 border-t border-slate-100 max-w-sm mx-auto sm:text-center">
+            <h4 className="font-bold text-base text-[#1F2937]">
+              {current.name}
+            </h4>
+            <p className="text-xs text-roseBrand font-medium mt-0.5">
+              {current.role}
             </p>
+            <span className="inline-block mt-2 text-[10px] uppercase font-bold tracking-wider text-[#6B7280] bg-slate-100 px-3 py-1 rounded-full">
+              {current.division}
+            </span>
+          </div>
 
-            <div className="pt-6 border-t border-[#E8E1D5]/60 max-w-sm mx-auto">
-              <h4 className="font-serif text-lg font-medium text-[#141414] tracking-wide">
-                {current.name}
-              </h4>
-              <p className="text-xs text-gold-dark font-medium mt-0.5">
-                {current.role}
-              </p>
-              <span className="inline-block mt-2 text-[10px] uppercase tracking-[0.2em] text-[#6B645C] bg-[#F6F3EE] px-3 py-1 rounded-full border border-[#E8E1D5]">
-                {current.division}
-              </span>
-            </div>
-
-            {/* Carousel Navigation Arrows */}
-            <div className="flex items-center justify-center space-x-4 mt-8">
-              <button
-                type="button"
-                onClick={prevTestimonial}
-                className="w-10 h-10 rounded-full border border-[#D5CCC0] text-[#141414] hover:border-maroon hover:text-maroon flex items-center justify-center transition-colors"
-                aria-label="Previous review"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <span className="text-xs text-[#6B645C] font-mono">
-                {activeIdx + 1} / {TESTIMONIALS.length}
-              </span>
-              <button
-                type="button"
-                onClick={nextTestimonial}
-                className="w-10 h-10 rounded-full border border-[#D5CCC0] text-[#141414] hover:border-maroon hover:text-maroon flex items-center justify-center transition-colors"
-                aria-label="Next review"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
+          {/* Carousel Arrows */}
+          <div className="flex items-center justify-center space-x-4 mt-8">
+            <button
+              type="button"
+              onClick={prevTestimonial}
+              className="w-9 h-9 rounded-full border border-slate-300 hover:border-roseBrand text-[#4B5563] hover:text-roseBrand flex items-center justify-center transition-colors"
+              aria-label="Previous review"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <span className="text-xs text-[#6B7280] font-mono">
+              {activeIdx + 1} / {TESTIMONIALS.length}
+            </span>
+            <button
+              type="button"
+              onClick={nextTestimonial}
+              className="w-9 h-9 rounded-full border border-slate-300 hover:border-roseBrand text-[#4B5563] hover:text-roseBrand flex items-center justify-center transition-colors"
+              aria-label="Next review"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </section>

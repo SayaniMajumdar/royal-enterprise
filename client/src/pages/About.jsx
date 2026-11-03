@@ -5,7 +5,7 @@ import { COMPANY_INFO } from '../data/mockData';
 
 const About = () => {
   return (
-    <div className="bg-[#F6F3EE] min-h-screen text-[#141414]">
+    <div className="bg-white min-h-screen text-[#1F2937]">
       {/* Hero Banner */}
       <section className="bg-charcoal text-[#FFF8F0] relative py-24 sm:py-32 overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 z-0">

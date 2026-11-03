@@ -4,23 +4,23 @@ import { Crown, UtensilsCrossed, Layers, ShieldCheck, Sparkles, HeartHandshake }
 const processSteps = [
   {
     step: '01',
-    title: 'Share Your Vision',
-    description: 'We listen to your desires, family traditions, event scope, and culinary preferences.',
+    title: 'Consultation & Discovery',
+    description: 'We listen to your vision, guest count, culinary preferences, and family traditions.',
   },
   {
     step: '02',
-    title: 'Bespoke Proposal',
-    description: 'A transparent blueprint covering venue layout, customized menus, and 3D mandate decor.',
+    title: '3D Concept & Itemized Quote',
+    description: 'Transparent blueprint covering 3D stage/mandap design, per-plate menus, and logistics.',
   },
   {
     step: '03',
-    title: 'Design & Tasting',
-    description: 'Live food tastings with our master chefs, bridal styling trials, and acoustic run-throughs.',
+    title: 'Tasting & Rehearsals',
+    description: 'Live food tastings with master chefs, bridal styling coordination, and sound run-throughs.',
   },
   {
     step: '04',
-    title: 'Flawless Celebration',
-    description: 'Our floor directors manage every minute, while you immerse in unconditional joy.',
+    title: 'Flawless Execution',
+    description: 'On-ground floor directors manage every minute, while you enjoy unconditional celebration.',
   },
 ];
 
@@ -59,68 +59,73 @@ const pillars = [
 
 const WhyChooseUs = () => {
   return (
-    <div>
-      {/* 1. Signature Process Band (Theevexa & White Tie Maroon Band) */}
-      <section className="py-20 sm:py-24 bg-maroon text-[#FFF8F0] relative overflow-hidden">
-        <div className="max-w-[1180px] mx-auto px-5 sm:px-6 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-[11px] uppercase tracking-[0.26em] text-gold-light font-medium block mb-3">
-              The Sovereign Pathway
-            </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#FFF8F0] tracking-tight">
-              From First Call to <span className="font-editorial italic font-normal text-gold-light">Last Dance</span>
-            </h2>
-          </div>
+    <div className="bg-[#FAF9F6] border-b border-slate-200">
+      {/* 1. Signature Process Band (WedMeGood Process Strip) */}
+      <section className="py-20 max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <span className="text-[11px] uppercase tracking-[0.2em] text-roseBrand font-bold block mb-1">
+            Our Proven Methodology
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#1F2937] tracking-tight">
+            From First Call to Last Dance
+          </h2>
+          <p className="text-xs sm:text-sm text-[#6B7280] font-light mt-2">
+            A transparent 4-stage journey that eliminates operational anxiety
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-            {processSteps.map((p, idx) => (
-              <div key={p.step} className="relative space-y-3">
-                <span className="font-serif text-3xl sm:text-4xl text-gold-light/60 block font-light">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {processSteps.map((p, idx) => (
+            <div
+              key={p.step}
+              className="bg-white rounded-xl p-6 border border-slate-200 hover:border-roseBrand/40 hover:shadow-md transition-all duration-300 relative flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-2xl font-bold text-roseBrand/40 block mb-3 font-mono">
                   {p.step}
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#FFF8F0]">
+                <h3 className="text-lg font-bold text-[#1F2937] mb-2">
                   {p.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+                <p className="text-xs text-[#4B5563] font-light leading-relaxed">
                   {p.description}
                 </p>
-                {idx < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-6 right-0 w-8 h-px bg-gold-light/30" />
-                )}
               </div>
-            ))}
-          </div>
+              <div className="pt-4 mt-4 border-t border-slate-100 text-[10px] uppercase font-bold tracking-wider text-roseBrand">
+                Step {idx + 1} of 4
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* 2. Why Couples & Corporate Clients Choose Us (Warm Ivory Section) */}
-      <section className="py-24 sm:py-32 bg-[#F6F3EE] text-[#141414] border-b border-[#E8E1D5]">
-        <div className="max-w-[1180px] mx-auto px-5 sm:px-6">
-          <div className="max-w-2xl text-left mb-16">
-            <div className="inline-flex items-center space-x-2 text-gold-dark text-[11px] font-semibold uppercase tracking-[0.24em] mb-3">
-              <span className="w-5 h-px bg-gold-dark/60" />
-              <span>Core Values</span>
-            </div>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#141414] tracking-tight leading-[1.12]">
-              Why patrons choose <span className="font-editorial italic font-normal text-maroon">Royal Enterprise</span>
+      {/* 2. Core Pillars Grid */}
+      <section className="py-16 bg-white border-t border-slate-200">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+          <div className="max-w-2xl text-left mb-12">
+            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-roseBrand block mb-1">
+              Why Patrons Trust Us
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1F2937] tracking-tight">
+              Six Foundations of the Royal Experience
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {pillars.map((item, idx) => {
               const Icon = item.icon;
               return (
                 <div
                   key={idx}
-                  className="p-8 bg-[#FFFDF9] rounded-[3px] border border-[#E8E1D5] hover:border-gold-base/50 transition-all duration-300 shadow-sm"
+                  className="p-6 bg-slate-50/60 rounded-xl border border-slate-200/80 hover:bg-white hover:border-roseBrand/40 hover:shadow-md transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-full border border-gold-dark/40 flex items-center justify-center text-gold-dark mb-5 bg-[#FAF8F4]">
-                    <Icon className="w-4 h-4 stroke-[1.5]" />
+                  <div className="w-10 h-10 rounded-full bg-roseBrand-light text-roseBrand flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5" />
                   </div>
-                  <h4 className="font-serif text-xl font-normal text-[#141414] mb-2.5">
+                  <h4 className="text-base font-bold text-[#1F2937] mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-xs sm:text-[13px] text-[#554F47] font-light leading-relaxed">
+                  <p className="text-xs sm:text-[13px] text-[#4B5563] font-light leading-relaxed">
                     {item.description}
                   </p>
                 </div>

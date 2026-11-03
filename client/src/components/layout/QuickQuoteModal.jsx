@@ -141,9 +141,9 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
         <button
           type="button"
           onClick={() => setActiveTab('events')}
-          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-medium ${
+          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-semibold ${
             activeTab === 'events'
-              ? 'bg-maroon text-[#FFF8F0] shadow-sm'
+              ? 'bg-roseBrand text-white shadow-sm'
               : 'text-[#6B645C] hover:text-[#141414] hover:bg-white/60'
           }`}
         >
@@ -152,9 +152,9 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
         <button
           type="button"
           onClick={() => setActiveTab('catering')}
-          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-medium ${
+          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-semibold ${
             activeTab === 'catering'
-              ? 'bg-maroon text-[#FFF8F0] shadow-sm'
+              ? 'bg-roseBrand text-white shadow-sm'
               : 'text-[#6B645C] hover:text-[#141414] hover:bg-white/60'
           }`}
         >
@@ -163,9 +163,9 @@ const QuickQuoteModal = ({ isOpen, onClose }) => {
         <button
           type="button"
           onClick={() => setActiveTab('wedding')}
-          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-medium ${
+          className={`py-2 text-[11px] uppercase tracking-[0.16em] rounded-[2px] transition-all font-semibold ${
             activeTab === 'wedding'
-              ? 'bg-maroon text-[#FFF8F0] shadow-sm'
+              ? 'bg-roseBrand text-white shadow-sm'
               : 'text-[#6B645C] hover:text-[#141414] hover:bg-white/60'
           }`}
         >
