@@ -1,98 +1,131 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageSquare, ArrowRight, CheckCircle2, ShieldCheck, Utensils } from 'lucide-react';
+import { MessageSquare, ArrowRight, ChevronDown, Utensils, Building2, HeartHandshake } from 'lucide-react';
 import { COMPANY_INFO } from '../../data/mockData';
 
 const HeroSection = ({ onOpenQuote }) => {
+  const scrollToServices = () => {
+    const el = document.getElementById('services-overview');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative bg-[#FAF8F5] dark:bg-[#141210] pt-32 sm:pt-40 pb-16 sm:pb-24 border-b border-[#E8E0D5] dark:border-[#38312B] overflow-hidden transition-colors">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+    <section className="relative min-h-[95vh] lg:min-h-screen flex flex-col justify-between bg-[#141210] text-white overflow-hidden">
+      {/* Background Cinematic Event Photography with Subtle Parallax/Zoom */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/hero-stage.png"
+          alt="Royal Enterprise Luxury Event Management & Stage Production in Kolkata"
+          className="w-full h-full object-cover object-center scale-105 animate-fade-in filter brightness-[0.45] contrast-[1.12]"
+        />
+        {/* Layered Cinematic Vignette & Ambient Glow */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#141210] via-black/50 to-black/75" />
+        <div className="absolute inset-0 bg-radial from-transparent via-black/30 to-black/80" />
+      </div>
+
+      {/* Spacer for Fixed Transparent Nav */}
+      <div className="pt-28 sm:pt-36" />
+
+      {/* Hero Center Content */}
+      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 text-center my-auto py-12">
+        <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
           
-          {/* Left Column: Bold, Asymmetric Headline & Direct Local Copy */}
-          <div className="lg:col-span-7 space-y-6">
-            
-            {/* Small stamp label */}
-            <div className="inline-flex items-center space-x-2">
-              <span className="stamp-tag">
-                Kolkata & Eastern India
-              </span>
-              <span className="text-xs text-[#827771] dark:text-[#9E9488] font-medium hidden sm:inline">
-                Our own kitchen, our own team, your peace of mind
-              </span>
-            </div>
-
-            {/* Main Headline: Confident, specific, human */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#2B2625] dark:text-[#FAF8F5] font-bold tracking-tight leading-[1.12]">
-              Weddings and events in Kolkata, cooked and run by one team.
-            </h1>
-
-            {/* Sub-line: Direct and concrete */}
-            <p className="text-lg sm:text-xl text-[#5A524E] dark:text-[#D4CCC2] font-normal leading-relaxed max-w-2xl">
-              From a 100-guest Biye Bari to a 1,000-guest reception, we plan it, decorate it, and feed everyone.
-            </p>
-
-            {/* Action Buttons: Honest labels */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={onOpenQuote}
-                className="btn-maroon px-7 py-3 text-sm font-semibold tracking-wide shadow-sm"
-              >
-                Plan Your Event
-              </button>
-              <a
-                href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hello%20Royal%20Enterprise,%20I%20would%20like%20to%20discuss%20an%20event.`}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-whatsapp px-6 py-3 text-sm font-semibold inline-flex items-center space-x-2 shadow-sm"
-              >
-                <MessageSquare className="w-4 h-4" />
-                <span>WhatsApp us</span>
-              </a>
-              <Link
-                to="/catering"
-                className="btn-outline px-6 py-3 text-sm font-semibold inline-flex items-center space-x-1.5"
-              >
-                <span>See our menus</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            {/* Real concrete proofs (not generic buzzwords) */}
-            <div className="pt-6 border-t border-[#E8E0D5] dark:border-[#38312B] grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#5A524E] dark:text-[#D4CCC2]">
-              <div className="flex items-start space-x-2">
-                <Utensils className="w-4 h-4 text-[#6B1D2F] dark:text-[#E0CFA6] shrink-0 mt-0.5" />
-                <span>We cook our own food. Never outsourced.</span>
-              </div>
-              <div className="flex items-start space-x-2">
-                <ShieldCheck className="w-4 h-4 text-[#6B1D2F] dark:text-[#E0CFA6] shrink-0 mt-0.5" />
-                <span>Dedicated separate kitchen for pure-veg banquets.</span>
-              </div>
-              <div className="flex items-start space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-[#6B1D2F] dark:text-[#E0CFA6] shrink-0 mt-0.5" />
-                <span>One floor manager with you from first guest to last plate.</span>
-              </div>
-            </div>
-
+          {/* Subtle Editorial Pre-Heading */}
+          <div className="inline-flex items-center space-x-3 bg-black/40 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/15 text-[#E0CFA6]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059] animate-pulse" />
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold">
+              Kolkata & Eastern India • Established 2014
+            </span>
           </div>
 
-          {/* Right Column: Large Authentic Photograph */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden border border-[#E8E0D5] dark:border-[#38312B] bg-white dark:bg-[#1C1917] shadow-lg">
-              <img
-                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1000&q=80"
-                alt="Traditional Kolkata Indian wedding ceremony and mandap"
-                className="w-full h-[420px] sm:h-[480px] object-cover"
-              />
+          {/* Large Editorial Headline (Inspired by Twist Events & IDO Events) */}
+          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight leading-[1.08]">
+            Event Services Fit For <br className="hidden sm:inline" />
+            <span className="italic font-serif text-[#E0CFA6] font-normal">Royalty.</span>
+          </h1>
+
+          {/* Short, Professional Subtitle */}
+          <p className="text-base sm:text-lg md:text-xl text-white/85 font-light leading-relaxed max-w-2xl mx-auto">
+            From heritage rajbari weddings to high-impact corporate galas, our own kitchen and on-ground crew run your entire celebration with calm precision.
+          </p>
+
+          {/* Premium CTA Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <button
+              type="button"
+              onClick={onOpenQuote}
+              className="btn-maroon px-8 py-3.5 text-xs uppercase tracking-wider font-semibold shadow-lg hover:shadow-[#6B1D2F]/40"
+            >
+              Plan Your Event
+            </button>
+
+            <button
+              type="button"
+              onClick={scrollToServices}
+              className="px-7 py-3.5 text-xs uppercase tracking-wider font-semibold rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-sm transition-all duration-200 inline-flex items-center space-x-2"
+            >
+              <span>Explore Services</span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#E0CFA6]" />
+            </button>
+
+            <a
+              href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hello%20Royal%20Enterprise,%20I%20would%20like%20to%20discuss%20an%20event.`}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-whatsapp px-6 py-3.5 text-xs uppercase tracking-wider font-semibold inline-flex items-center space-x-2 shadow-md"
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span>WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Bottom Proof Strip & Scroll Indicator */}
+      <div className="relative z-10 max-w-[1280px] w-full mx-auto px-4 sm:px-6 pb-8 pt-4">
+        <div className="pt-6 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/80">
+          
+          {/* Three Direct Capability Anchors */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left w-full md:w-auto">
+            <div className="flex items-start space-x-3">
+              <Building2 className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
+              <div>
+                <span className="font-semibold text-white block">Event Management</span>
+                <span className="text-[11px] text-white/60">Corporate galas, media summits & stages</span>
+              </div>
             </div>
 
-            {/* Small floating assurance sticker breaking the corner */}
-            <div className="absolute -bottom-4 -left-4 bg-[#6B1D2F] dark:bg-[#9B2C42] text-white p-3.5 rounded-xl shadow-md hidden sm:block border border-[#541423] dark:border-[#C4435F]">
-              <span className="block font-serif text-xl font-bold leading-tight">Complete</span>
-              <span className="text-[10px] text-[#E0CFA6] uppercase tracking-wider block font-semibold">In-House Care</span>
+            <div className="flex items-start space-x-3">
+              <Utensils className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
+              <div>
+                <span className="font-semibold text-white block">In-House Catering</span>
+                <span className="text-[11px] text-white/60">Authentic live feasts, pure veg & Bengali</span>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-3">
+              <HeartHandshake className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
+              <div>
+                <span className="font-semibold text-white block">Wedding Planning</span>
+                <span className="text-[11px] text-white/60">Rajbaris, styling, mandaps & decor</span>
+              </div>
             </div>
           </div>
+
+          {/* Animated Scroll Indicator */}
+          <button
+            type="button"
+            onClick={scrollToServices}
+            className="flex items-center space-x-2 text-[11px] uppercase tracking-[0.2em] text-[#E0CFA6] hover:text-white transition-colors cursor-pointer group"
+          >
+            <span>Scroll to explore</span>
+            <div className="w-4 h-7 rounded-full border border-white/30 flex items-start justify-center p-1">
+              <span className="w-1 h-1.5 rounded-full bg-[#C5A059] animate-bounce" />
+            </div>
+          </button>
 
         </div>
       </div>
