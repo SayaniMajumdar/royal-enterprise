@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 /**
- * Royal Enterprise Official Crest Logo Component
- * Incorporates the authentic heraldic shield crest with cloche, wedding rings, and archway
+ * Royal Enterprise Official Monogram Crest Logo Component
+ * Incorporates the authentic royal crowned monogram crest with interlocking R & E,
+ * deep royal burgundy accents, and antique gold filigree.
  */
 const Logo = ({
   variant = 'full', // 'full' | 'icon' | 'stacked' | 'crest'
@@ -15,7 +16,7 @@ const Logo = ({
     <div className={`relative shrink-0 ${iconSize} flex items-center justify-center`}>
       <img
         src="/logo-crest.png"
-        alt="Royal Enterprise Crest"
+        alt="Royal Enterprise Monogram Crest"
         className="w-full h-full object-contain filter drop-shadow-sm transition-transform duration-200 group-hover:scale-105"
       />
     </div>
@@ -28,19 +29,19 @@ const Logo = ({
       {variant !== 'icon' && (
         <div className="flex flex-col text-left">
           {/* Main Brand Title */}
-          <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#1F1D1A] dark:text-[#FAF7F2] leading-tight transition-colors">
-            Royal <span className="text-[#6E1423] dark:text-[#F59E0B]">Enterprise</span>
+          <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#2B2625] dark:text-[#FAF8F5] leading-tight transition-colors">
+            Royal <span className="text-[#6B1D2F] dark:text-[#C5A059]">Enterprise</span>
           </span>
 
           {/* Subtitle / Divisions */}
           <div className="flex items-center space-x-1.5 mt-0.5">
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-semibold text-[#D97706] dark:text-[#FCD34D]">
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-semibold text-[#C5A059] dark:text-[#E0CFA6]">
               Events • Catering • Weddings
             </span>
           </div>
 
           {variant === 'stacked' && (
-            <span className="text-[9px] uppercase tracking-[0.16em] font-medium text-[#7D756A] dark:text-[#A89F91]">
+            <span className="text-[9px] uppercase tracking-[0.16em] font-medium text-[#827771] dark:text-[#A8A29E]">
               Kolkata • Est. 2014
             </span>
           )}
@@ -51,7 +52,7 @@ const Logo = ({
 
   if (linkToHome) {
     return (
-      <Link to="/" className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6E1423] rounded">
+      <Link to="/" className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B1D2F] rounded">
         {Content}
       </Link>
     );
