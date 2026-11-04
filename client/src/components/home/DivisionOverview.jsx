@@ -4,11 +4,11 @@ import { Building2, Utensils, HeartHandshake, ArrowRight, Check, Sparkles } from
 
 const DivisionOverview = ({ onOpenQuote }) => {
   return (
-    <section id="services-overview" className="py-24 sm:py-32 bg-[#FAF8F5] dark:bg-[#141210] border-b border-[#E8E0D5] dark:border-[#38312B] transition-colors overflow-hidden">
+    <section id="services-overview" className="py-12 sm:py-16 bg-[#FAF8F5] dark:bg-[#141210] border-b border-[#E8E0D5] dark:border-[#38312B] transition-colors overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
         
         {/* Section Header: Editorial & High-End */}
-        <div className="text-center max-w-3xl mx-auto mb-20 sm:mb-28 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-4">
           <div className="inline-flex items-center space-x-2">
             <span className="w-6 h-px bg-[#C5A059]" />
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#6B1D2F] dark:text-[#E0CFA6]">
@@ -30,7 +30,7 @@ const DivisionOverview = ({ onOpenQuote }) => {
         {/* ========================================================================= */}
         {/* PILLAR 01: EVENT MANAGEMENT (Image Left, Text Right) */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-28 sm:mb-36">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-12 sm:mb-16">
           {/* Visual Column */}
           <div className="lg:col-span-7 relative group">
             <div className="relative rounded-2xl overflow-hidden border border-[#E8E0D5] dark:border-[#38312B] bg-white dark:bg-[#1C1917] shadow-xl aspect-[16/10]">
@@ -125,7 +125,7 @@ const DivisionOverview = ({ onOpenQuote }) => {
         {/* ========================================================================= */}
         {/* PILLAR 02: IN-HOUSE CATERING (Text Left, Image Right) */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-28 sm:mb-36">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-12 sm:mb-16">
           {/* Editorial Content Column (Order 2 on mobile, 1 on LG) */}
           <div className="lg:col-span-5 space-y-6 order-2 lg:order-1">
             <div className="flex items-center justify-between">
@@ -220,7 +220,7 @@ const DivisionOverview = ({ onOpenQuote }) => {
         {/* ========================================================================= */}
         {/* PILLAR 03: WEDDING PLANNER (Image Left, Text Right) */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Visual Column */}
           <div className="lg:col-span-7 relative group">
             <div className="relative rounded-2xl overflow-hidden border border-[#E8E0D5] dark:border-[#38312B] bg-white dark:bg-[#1C1917] shadow-xl aspect-[16/10]">

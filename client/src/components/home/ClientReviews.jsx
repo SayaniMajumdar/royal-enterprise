@@ -4,11 +4,11 @@ import { MapPin, Star, Heart, Camera } from 'lucide-react';
 
 const ClientReviews = () => {
   return (
-    <section className="py-20 sm:py-24 bg-white dark:bg-[#1C1917] border-b border-[#E8E0D5] dark:border-[#38312B] transition-colors">
+    <section className="py-12 sm:py-16 bg-white dark:bg-[#1C1917] border-b border-[#E8E0D5] dark:border-[#38312B] transition-colors">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         
         {/* Section Header: Warm, personal, human */}
-        <div className="max-w-2xl mb-12 sm:mb-16">
+        <div className="max-w-2xl mb-8 sm:mb-10">
           <span className="text-xs uppercase font-semibold tracking-wider text-[#6B1D2F] dark:text-[#E0CFA6] block mb-2">
             Stories from Kolkata families
           </span>
@@ -21,7 +21,7 @@ const ClientReviews = () => {
         </div>
 
         {/* 3 Prominent Authentic Client Reviews */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-12">
           {TESTIMONIALS.map((t, idx) => (
             <div
               key={idx}

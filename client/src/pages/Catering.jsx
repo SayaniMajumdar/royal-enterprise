@@ -515,7 +515,7 @@ const Catering = () => {
       </section>
 
       {/* Main Content Flow */}
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-24 sm:py-32 space-y-28 sm:space-y-36">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-16 sm:space-y-20">
 
         {/* ========================================================================= */}
         {/* 2. LUXURY FOOD SHOWCASE SECTION */}
@@ -578,7 +578,7 @@ const Catering = () => {
             subtitle="From legendary Bengali Biye Bari courses to clay-oven grills, live theatres, and dedicated vegetarian kitchens."
           />
 
-          <div className="space-y-20 sm:space-y-28 pt-8">
+          <div className="space-y-12 sm:space-y-16 pt-4">
             {cateringDisciplines.map((item, idx) => {
               const isEven = idx % 2 === 1;
               return (

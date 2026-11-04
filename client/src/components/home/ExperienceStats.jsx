@@ -25,7 +25,7 @@ const ExperienceStats = () => {
       </section>
 
       {/* 2. Three Real Client Testimonials (Ballygunge, Salt Lake, New Town) */}
-      <section className="py-20 sm:py-24 max-w-[1240px] mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mb-12">
           <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] dark:text-[#F59E0B] block mb-1">
             Word from families and clients

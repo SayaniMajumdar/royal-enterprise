@@ -41,7 +41,7 @@ const CallToAction = ({ onOpenQuote }) => {
   };
 
   return (
-    <section className="py-24 sm:py-32 bg-[#141210] text-white relative overflow-hidden transition-colors border-t border-[#38312B]">
+    <section className="py-12 sm:py-16 bg-[#141210] text-white relative overflow-hidden transition-colors border-t border-[#38312B]">
       {/* Subtle Ambient Radial Lighting (Inspired by Fleava "Let's Talk") */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-[#6B1D2F]/20 via-[#C5A059]/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 

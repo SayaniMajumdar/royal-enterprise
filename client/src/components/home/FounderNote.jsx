@@ -5,7 +5,7 @@ import { ArrowRight, Heart } from 'lucide-react';
 
 const FounderNote = () => {
   return (
-    <section className="py-20 sm:py-24 bg-[#FAF8F5] dark:bg-[#141210] border-b border-[#E8E0D5] dark:border-[#38312B] transition-colors">
+    <section className="py-12 sm:py-16 bg-[#FAF8F5] dark:bg-[#141210] border-b border-[#E8E0D5] dark:border-[#38312B] transition-colors">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           

@@ -25,7 +25,7 @@ const About = () => {
       </section>
 
       {/* Main Narrative & Philosophy */}
-      <section className="py-20 sm:py-24 max-w-[1240px] mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Official Shield & Credentials Card (Contact info placeholders preserved) */}

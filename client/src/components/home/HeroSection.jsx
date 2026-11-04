@@ -12,7 +12,7 @@ const HeroSection = ({ onOpenQuote }) => {
   };
 
   return (
-    <section className="relative min-h-[95vh] lg:min-h-screen flex flex-col justify-between bg-[#141210] text-white overflow-hidden">
+    <section className="relative min-h-[88vh] lg:min-h-[92vh] flex flex-col justify-between bg-[#141210] text-white overflow-hidden">
       {/* Background Cinematic Event Photography with Subtle Parallax/Zoom */}
       <div className="absolute inset-0 z-0">
         <img
@@ -25,11 +25,11 @@ const HeroSection = ({ onOpenQuote }) => {
         <div className="absolute inset-0 bg-radial from-transparent via-black/30 to-black/80" />
       </div>
 
-      {/* Spacer for Fixed Transparent Nav */}
-      <div className="pt-28 sm:pt-36" />
+      {/* Spacer for Fixed Nav */}
+      <div className="pt-24 sm:pt-28" />
 
       {/* Hero Center Content */}
-      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 text-center my-auto py-12">
+      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 text-center my-auto py-8 sm:py-10">
         <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
           
           {/* Subtle Editorial Pre-Heading */}
@@ -85,8 +85,8 @@ const HeroSection = ({ onOpenQuote }) => {
       </div>
 
       {/* Bottom Proof Strip & Scroll Indicator */}
-      <div className="relative z-10 max-w-[1280px] w-full mx-auto px-4 sm:px-6 pb-8 pt-4">
-        <div className="pt-6 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/80">
+      <div className="relative z-10 max-w-[1280px] w-full mx-auto px-4 sm:px-6 pb-6 pt-2">
+        <div className="pt-4 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/80">
           
           {/* Three Direct Capability Anchors */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left w-full md:w-auto">

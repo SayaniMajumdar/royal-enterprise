@@ -5,7 +5,7 @@ import { COMPANY_INFO } from '../../data/mockData';
 
 const BrandStory = () => {
   return (
-    <section className="py-20 sm:py-24 bg-white dark:bg-[#1C1917] border-b border-[#E5DED3] dark:border-[#38312B] transition-colors">
+    <section className="py-12 sm:py-16 bg-white dark:bg-[#1C1917] border-b border-[#E5DED3] dark:border-[#38312B] transition-colors">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           

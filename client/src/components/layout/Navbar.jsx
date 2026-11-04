@@ -32,19 +32,12 @@ const Navbar = ({ onOpenQuoteModal }) => {
     { name: 'Contact', path: '/contact' },
   ];
 
-  // Dynamic styling based on scroll state & homepage
-  const isTransparent = isHome && !scrolled;
+  // Scrolled state
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Top Utility Bar: Clear Kolkata Helpline & WhatsApp */}
-      <div
-        className={`text-xs py-1.5 px-4 sm:px-6 border-b transition-colors duration-300 hidden md:block ${
-          isTransparent
-            ? 'bg-black/40 text-white/90 border-white/10 backdrop-blur-sm'
-            : 'bg-[#4A101D] dark:bg-[#24080E] text-white border-white/10'
-        }`}
-      >
+      <div className="text-xs py-1.5 px-4 sm:px-6 border-b transition-colors duration-300 hidden md:block bg-[#4A101D] dark:bg-[#24080E] text-white border-white/10">
         <div className="max-w-[1280px] mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3 text-white/90">
             <span className="font-medium text-[#E0CFA6]">Kolkata & Eastern India</span>
@@ -75,12 +68,10 @@ const Navbar = ({ onOpenQuoteModal }) => {
 
       {/* Main Navbar */}
       <div
-        className={`transition-all duration-300 ${
-          isTransparent
-            ? 'bg-gradient-to-b from-black/85 via-black/50 to-transparent text-white py-4 sm:py-5 border-b border-white/10'
-            : scrolled
-            ? 'bg-white/95 dark:bg-[#141210]/95 backdrop-blur-md text-[#2B2625] dark:text-[#FAF8F5] shadow-sm py-3 sm:py-3.5 border-b border-[#E8E0D5] dark:border-[#38312B]'
-            : 'bg-[#FAF8F5]/95 dark:bg-[#141210]/95 backdrop-blur-md text-[#2B2625] dark:text-[#FAF8F5] py-3.5 sm:py-4 border-b border-[#E8E0D5] dark:border-[#38312B]'
+        className={`transition-all duration-300 border-b ${
+          scrolled
+            ? 'bg-[#FAF8F5]/98 dark:bg-[#141210]/98 backdrop-blur-md text-[#2B2625] dark:text-[#FAF8F5] shadow-sm py-3 sm:py-3.5 border-[#E8E0D5] dark:border-[#38312B]'
+            : 'bg-[#FAF8F5]/95 dark:bg-[#141210]/95 backdrop-blur-md text-[#2B2625] dark:text-[#FAF8F5] py-3.5 sm:py-4 border-[#E8E0D5] dark:border-[#38312B]'
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
@@ -98,11 +89,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
                     to={link.path}
                     className={`text-[13.5px] uppercase tracking-[0.14em] font-medium whitespace-nowrap py-1 transition-all duration-200 relative group ${
                       isActive
-                        ? isTransparent
-                          ? 'text-[#E0CFA6] font-semibold'
-                          : 'text-[#6B1D2F] dark:text-[#E0CFA6] font-semibold'
-                        : isTransparent
-                        ? 'text-white/80 hover:text-white'
+                        ? 'text-[#6B1D2F] dark:text-[#E0CFA6] font-semibold'
                         : 'text-[#5A524E] dark:text-[#D4CCC2] hover:text-[#6B1D2F] dark:hover:text-[#E0CFA6]'
                     }`}
                   >
@@ -154,11 +141,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className={`p-2 rounded-lg transition-colors ${
-                  isTransparent
-                    ? 'text-white hover:bg-white/10'
-                    : 'text-[#2B2625] dark:text-[#FAF8F5] hover:bg-[#FAF8F5] dark:hover:bg-[#1C1917]'
-                }`}
+                className="p-2 rounded-lg transition-colors text-[#2B2625] dark:text-[#FAF8F5] hover:bg-[#FAF8F5] dark:hover:bg-[#1C1917]"
                 aria-label="Toggle navigation menu"
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

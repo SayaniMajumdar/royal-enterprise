@@ -96,11 +96,11 @@ const PortfolioGallery = () => {
   }, [lightboxIndex, filteredItems.length]);
 
   return (
-    <section className="py-24 sm:py-32 bg-[#FAF8F5] dark:bg-[#141210] border-b border-[#E8E0D5] dark:border-[#38312B] transition-colors">
+    <section className="py-12 sm:py-16 bg-[#FAF8F5] dark:bg-[#141210] border-b border-[#E8E0D5] dark:border-[#38312B] transition-colors">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
         
         {/* Editorial Section Header (Inspired by Bottega53 & IDO Events) */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 sm:mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
           <div className="space-y-4 max-w-2xl">
             <div className="inline-flex items-center space-x-2">
               <span className="w-6 h-px bg-[#C5A059]" />
