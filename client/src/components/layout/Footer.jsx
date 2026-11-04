@@ -6,7 +6,8 @@ import Logo from '../common/Logo';
 
 const Footer = ({ onOpenQuoteModal }) => {
   return (
-    <footer className="bg-white dark:bg-[#1C1917] text-[#1F1D1A] dark:text-[#F5EFE6] pt-16 pb-12 border-t border-[#E5DED3] dark:border-[#38312B] transition-colors">
+    <footer className="bg-[#FAF8F5] dark:bg-[#1C1917] text-[#2B2625] dark:text-[#FAF8F5] pt-16 pb-12 border-t border-[#E8E0D5] dark:border-[#38312B] transition-colors relative">
+      <div className="h-px bg-gradient-to-r from-transparent via-[#C5A059]/40 to-transparent absolute top-0 left-0 right-0" />
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         
         {/* Main 4-Column Grid */}

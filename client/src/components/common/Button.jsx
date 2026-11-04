@@ -15,27 +15,27 @@ const Button = ({
   ...props
 }) => {
   const baseStyles =
-    'relative inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none tracking-wider text-xs select-none rounded-md';
+    'relative inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none tracking-wide text-xs select-none rounded-lg cursor-pointer';
 
   const variants = {
     primary:
-      'btn-brand shadow-sm active:translate-y-0',
+      'btn-brand shadow-sm hover:shadow active:translate-y-0',
     gold:
-      'btn-gold text-[#1A1205] shadow-sm active:translate-y-0 rounded-full',
+      'btn-gold shadow-sm hover:shadow active:translate-y-0',
     maroon:
-      'btn-maroon text-[#FFF8F0] shadow-sm active:translate-y-0',
+      'btn-maroon shadow-sm hover:shadow active:translate-y-0',
     outline:
-      'border border-[#D5CCC0] dark:border-[#38312B] text-[#374151] dark:text-[#FAF7F2] hover:border-maroon dark:hover:border-gold-light hover:text-maroon dark:hover:text-gold-light hover:bg-maroon/5 dark:hover:bg-gold-light/10 active:translate-y-0',
+      'border border-[#D5C7B5] dark:border-[#38312B] text-[#2B2625] dark:text-[#FAF8F5] hover:border-[#6B1D2F] dark:hover:border-[#D4AF37] hover:text-[#6B1D2F] dark:hover:text-[#D4AF37] hover:bg-[#6B1D2F]/5 dark:hover:bg-[#D4AF37]/10 active:translate-y-0',
     dark:
-      'bg-stone-900 hover:bg-stone-800 text-white border border-stone-700 active:translate-y-0',
+      'bg-[#2B2625] hover:bg-[#1F1B1A] text-[#FAF8F5] border border-[#38312F] active:translate-y-0',
     ghost:
-      'text-maroon dark:text-gold-light hover:text-maroon-dark dark:hover:text-gold active:translate-y-0',
+      'text-[#6B1D2F] dark:text-[#D4AF37] hover:bg-[#6B1D2F]/5 dark:hover:bg-[#D4AF37]/10 active:translate-y-0',
   };
 
   const sizes = {
-    sm: 'px-5 py-2 text-[10.5px]',
-    md: 'px-7 py-3 text-xs',
-    lg: 'px-9 py-3.5 text-xs sm:text-[12.5px]',
+    sm: 'px-4 py-2 text-[11px]',
+    md: 'px-6 py-2.5 text-xs',
+    lg: 'px-8 py-3.5 text-[13px]',
   };
 
   return (

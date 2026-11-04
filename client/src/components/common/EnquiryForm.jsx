@@ -128,21 +128,21 @@ const EnquiryForm = ({
   };
 
   return (
-    <div id="event-enquiry-form" className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-[4px] p-6 sm:p-10 shadow-sm relative overflow-hidden">
-      <div className="h-[2px] bg-gradient-to-r from-transparent via-gold-base/50 to-transparent -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
+    <div id="event-enquiry-form" className="bg-white dark:bg-[#1C1917] border border-[#E8E0D5] dark:border-[#38312B] rounded-2xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
+      <div className="h-[2px] bg-gradient-to-r from-transparent via-[#C5A059]/60 to-transparent -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 sm:mb-8" />
       {submittedData ? (
         <div className="text-center py-12 space-y-4">
-          <div className="w-14 h-14 bg-maroon/10 border border-maroon/30 rounded-full flex items-center justify-center mx-auto text-maroon dark:text-gold-light">
+          <div className="w-14 h-14 bg-[#6B1D2F]/10 border border-[#6B1D2F]/20 rounded-full flex items-center justify-center mx-auto text-[#6B1D2F] dark:text-[#E0CFA6]">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="font-serif text-2xl font-normal text-[#141414] dark:text-[#FAF7F2] tracking-wide">
+          <h3 className="font-serif text-2xl font-bold text-[#2B2625] dark:text-[#FAF8F5] tracking-tight">
             Enquiry Successfully Submitted
           </h3>
-          <p className="text-[#554F47] dark:text-[#A8A29E] max-w-md mx-auto text-sm leading-relaxed font-light">
-            Thank you, <span className="text-maroon dark:text-gold-light font-semibold">{submittedData.customerName}</span>. Your event request has been logged into our master schedule.
+          <p className="text-[#5A524E] dark:text-[#D4CCC2] max-w-md mx-auto text-sm leading-relaxed font-normal">
+            Thank you, <span className="text-[#6B1D2F] dark:text-[#E0CFA6] font-semibold">{submittedData.customerName}</span>. Your event request has been received by our team.
           </p>
-          <div className="inline-block bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] px-4 py-2 rounded-[2px] text-xs text-[#141414] dark:text-[#FAF7F2]">
-            Tracking ID: <span className="font-mono text-gold-dark dark:text-gold-light font-bold">{submittedData.submissionId}</span>
+          <div className="inline-block bg-[#FAF8F5] dark:bg-[#141210] border border-[#E8E0D5] dark:border-[#38312B] px-4 py-2 rounded-lg text-xs text-[#2B2625] dark:text-[#FAF8F5]">
+            Reference ID: <span className="font-mono text-[#C5A059] dark:text-[#D4AF37] font-bold">{submittedData.submissionId}</span>
           </div>
           <div className="pt-4">
             <Button variant="outline" size="sm" onClick={handleReset}>
@@ -152,12 +152,12 @@ const EnquiryForm = ({
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="border-b border-[#E8E1D5] dark:border-[#38312B] pb-4 mb-6">
-            <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#141414] dark:text-[#FAF7F2] tracking-wide">
+          <div className="border-b border-[#E8E0D5] dark:border-[#38312B] pb-4 mb-6">
+            <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#2B2625] dark:text-[#FAF8F5] tracking-tight">
               {title}
             </h3>
             {subtitle && (
-              <p className="text-xs sm:text-sm text-[#6B645C] dark:text-[#A8A29E] mt-1 font-light">
+              <p className="text-xs sm:text-sm text-[#5A524E] dark:text-[#D4CCC2] mt-1 font-normal">
                 {subtitle}
               </p>
             )}

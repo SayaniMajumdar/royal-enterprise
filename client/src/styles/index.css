@@ -3,6 +3,85 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* =========================================================================
+       DESIGN TOKENS (60 - 30 - 10 Palette & Typography)
+       Mood: Luxury boutique wedding studio, warm, human-crafted, celebratory.
+       ========================================================================= */
+
+    /* 60% Neutral Base: Warm Ivory, Cream, Sandstone (Never harsh pure white) */
+    --bg-base: #FAF8F5;          /* Warm soft cream background */
+    --bg-surface: #FFFFFF;       /* Clean elevated content surface */
+    --bg-card: #FDFBF7;          /* Elevated card fill */
+    --bg-elevated: #F5EFE6;      /* Sub-card or inner panel fill */
+    --bg-warm-tint: #F7F1E8;     /* Subtle warm tinted section background */
+    
+    --border-subtle: #E8E0D5;    /* Soft, refined divider line */
+    --border-card: #E2D8CC;      /* Card outline */
+    --border-strong: #CFC2B0;    /* Interactive border */
+
+    /* 30% Primary Accent: Deep Muted Burgundy / Heritage Wine */
+    --primary: #6B1D2F;          /* Deep rich burgundy */
+    --primary-hover: #541423;    /* Darker burgundy on hover */
+    --primary-deep: #3E0C17;     /* Deepest shade for headers / dark accents */
+    --primary-light: #8E2B42;    /* Lighter rose-burgundy */
+    --primary-soft: #F9F1F3;     /* Ultra-soft pastel burgundy tint */
+    --primary-contrast: #FFFFFF; /* High contrast text on primary */
+
+    /* 10% Secondary Accent: Antique Champagne Gold */
+    --accent-gold: #C5A059;       /* Antique champagne gold */
+    --accent-gold-hover: #B08B44; /* Warm dark antique gold */
+    --accent-gold-light: #E0CFA6; /* Delicate pale gold highlight */
+    --accent-gold-soft: #FDF8EE;  /* Soft champagne tint */
+    --accent-gold-border: rgba(197, 160, 89, 0.4);
+
+    /* Text: Warm Charcoals (Never Pure Black, WCAG AA Compliant) */
+    --text-primary: #2B2625;     /* Warm deep charcoal (4.5:1+ contrast on base & surface) */
+    --text-secondary: #5A524E;   /* Warm medium charcoal for body copy */
+    --text-muted: #827771;       /* Refined muted metadata */
+    --text-on-dark: #FAF8F5;     /* Cream text on dark containers */
+
+    /* Shadows: Soft, natural diffuse paper shadows (no harsh AI glows) */
+    --shadow-sm: 0 1px 3px rgba(43, 38, 37, 0.04), 0 1px 2px rgba(43, 38, 37, 0.02);
+    --shadow-md: 0 4px 16px -2px rgba(43, 38, 37, 0.06), 0 2px 6px -1px rgba(43, 38, 37, 0.03);
+    --shadow-lg: 0 12px 32px -6px rgba(43, 38, 37, 0.09), 0 4px 12px -2px rgba(43, 38, 37, 0.04);
+  }
+
+  .dark {
+    /* Dark Mode: Warm Obsidian, Charcoal & Glowing Antique Gold */
+    --bg-base: #141210;
+    --bg-surface: #1C1917;
+    --bg-card: #231F1C;
+    --bg-elevated: #2C2622;
+    --bg-warm-tint: #1F1B18;
+
+    --border-subtle: #38312B;
+    --border-card: #453C35;
+    --border-strong: #5A4E45;
+
+    --primary: #9B2C42;
+    --primary-hover: #B43650;
+    --primary-deep: #1F070B;
+    --primary-light: #C4435F;
+    --primary-soft: #281216;
+    --primary-contrast: #FFFFFF;
+
+    --accent-gold: #D4AF37;
+    --accent-gold-hover: #E5C359;
+    --accent-gold-light: #F2DE92;
+    --accent-gold-soft: #2B2416;
+    --accent-gold-border: rgba(212, 175, 55, 0.45);
+
+    --text-primary: #FAF8F5;
+    --text-secondary: #D4CCC2;
+    --text-muted: #9E9488;
+    --text-on-dark: #FAF8F5;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 6px 20px -3px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 14px 36px -6px rgba(0, 0, 0, 0.65);
+  }
+
   html {
     scroll-behavior: smooth;
     color-scheme: light;
@@ -13,36 +92,36 @@
   }
 
   body {
-    background-color: #FAF7F2;
-    color: #1F1D1A;
-    font-family: 'Hind Siliguri', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.65;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    line-height: 1.7;
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
 
   .dark body {
-    background-color: #141210;
-    color: #F5EFE6;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
   }
 
   ::selection {
-    background-color: #FEF3C7;
-    color: #6E1423;
+    background-color: #F6E6B8;
+    color: #6B1D2F;
   }
 
   .dark ::selection {
-    background-color: #6E1423;
-    color: #FDE68A;
+    background-color: #6B1D2F;
+    color: #F8E3A1;
   }
 
-  /* Headings: Lora editorial serif with natural weight and human rhythm */
+  /* Headings: Cormorant Garamond & Lora editorial serifs with natural weight and human rhythm */
   h1, h2, h3, h4, .font-serif {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Cormorant Garamond', 'Lora', Georgia, serif;
     font-feature-settings: 'lnum' 1;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.012em;
   }
 
   /* Respect reduced motion preference */
@@ -61,153 +140,153 @@
   .paper-divider {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
   }
   .paper-divider::before,
   .paper-divider::after {
     content: '';
     height: 1px;
     flex: 1;
-    background: #E5DED3;
-  }
-  .dark .paper-divider::before,
-  .dark .paper-divider::after {
-    background: #38312B;
+    background: var(--border-subtle);
   }
 
-  /* Authentic Primary Button: Deep Heritage Maroon */
+  /* Authentic Primary Button: Deep Heritage Burgundy */
   .btn-maroon,
   .btn-brand {
-    background-color: #6E1423;
-    color: #FFFFFF;
+    background-color: var(--primary);
+    color: var(--primary-contrast);
     font-weight: 600;
     letter-spacing: 0.02em;
-    border-radius: 4px;
-    border: 1px solid #540D1A;
-    transition: background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    border-radius: 8px;
+    border: 1px solid var(--primary-hover);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
   .btn-maroon:hover,
   .btn-brand:hover {
-    background-color: #540D1A;
+    background-color: var(--primary-hover);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(110, 20, 35, 0.2);
+    box-shadow: 0 4px 14px rgba(107, 29, 47, 0.25);
   }
   .dark .btn-maroon,
   .dark .btn-brand {
-    background-color: #8B1E32;
-    border-color: #A72638;
+    background-color: var(--primary);
+    border-color: var(--primary-light);
   }
   .dark .btn-maroon:hover,
   .dark .btn-brand:hover {
-    background-color: #6E1423;
-    box-shadow: 0 4px 14px rgba(139, 30, 50, 0.4);
+    background-color: var(--primary-hover);
+    box-shadow: 0 4px 16px rgba(155, 44, 66, 0.4);
   }
 
-  /* Accent Button: Marigold / Turmeric Yellow */
+  /* Accent Button: Antique Champagne Gold */
   .btn-marigold,
   .btn-gold {
-    background-color: #D97706;
-    color: #FFFFFF;
+    background-color: var(--accent-gold);
+    color: #1F1D1A;
     font-weight: 600;
     letter-spacing: 0.02em;
-    border-radius: 4px;
-    border: 1px solid #B45309;
-    transition: background-color 0.18s ease, transform 0.18s ease;
+    border-radius: 8px;
+    border: 1px solid var(--accent-gold-hover);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
   .btn-marigold:hover,
   .btn-gold:hover {
-    background-color: #B45309;
+    background-color: var(--accent-gold-hover);
+    color: #FFFFFF;
     transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
   }
   .dark .btn-marigold,
   .dark .btn-gold {
-    background-color: #F59E0B;
+    background-color: var(--accent-gold);
     color: #141210;
-    border-color: #D97706;
+    border-color: var(--accent-gold-light);
     font-weight: 700;
   }
   .dark .btn-marigold:hover,
   .dark .btn-gold:hover {
-    background-color: #D97706;
+    background-color: var(--accent-gold-hover);
     color: #FFFFFF;
   }
 
   /* Secondary Outline Button */
   .btn-outline {
     background-color: transparent;
-    color: #1F1D1A;
+    color: var(--text-primary);
     font-weight: 600;
-    border: 1.5px solid #D5CCC0;
-    border-radius: 4px;
-    transition: all 0.18s ease;
+    border: 1.5px solid var(--border-strong);
+    border-radius: 8px;
+    transition: all 0.2s ease;
   }
   .btn-outline:hover {
-    background-color: #F0ECE1;
-    border-color: #1F1D1A;
+    background-color: var(--bg-elevated);
+    border-color: var(--primary);
+    color: var(--primary);
   }
   .dark .btn-outline {
-    color: #F5EFE6;
-    border-color: #38312B;
+    color: var(--text-primary);
+    border-color: var(--border-subtle);
   }
   .dark .btn-outline:hover {
-    background-color: #231F1C;
-    border-color: #F59E0B;
+    background-color: var(--bg-card);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
   }
 
   /* Direct WhatsApp Button */
   .btn-whatsapp {
-    background-color: #128C7E;
+    background-color: #1B8A5A;
     color: #FFFFFF;
     font-weight: 600;
-    border-radius: 4px;
-    transition: background-color 0.18s ease;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
   }
   .btn-whatsapp:hover {
-    background-color: #075E54;
+    background-color: #146D46;
+    transform: translateY(-1px);
   }
 
-  /* High-contrast form inputs */
+  /* High-contrast, soft rounded form inputs */
   .input-clean {
-    border: 1.5px solid #D5CCC0;
-    border-radius: 4px;
-    background-color: #FFFFFF;
-    color: #1F1D1A;
-    padding: 10px 14px;
+    border: 1.5px solid var(--border-card);
+    border-radius: 8px;
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    padding: 11px 16px;
     font-size: 15px;
-    transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   }
   .input-clean:focus {
     outline: none;
-    border-color: #6E1423;
-    box-shadow: 0 0 0 2px rgba(110, 20, 35, 0.15);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(107, 29, 47, 0.12);
   }
   .dark .input-clean {
-    background-color: #1C1917;
-    border-color: #38312B;
-    color: #F5EFE6;
+    background-color: var(--bg-surface);
+    border-color: var(--border-subtle);
+    color: var(--text-primary);
   }
   .dark .input-clean:focus {
-    border-color: #F59E0B;
-    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
   }
 
   /* Editorial stamp tag */
   .stamp-tag {
     display: inline-block;
-    padding: 3px 10px;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border: 1px solid #6E1423;
-    color: #6E1423;
-    background-color: #FAF2F3;
-    border-radius: 2px;
+    padding: 4px 12px;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--border-card);
+    color: var(--primary);
+    background-color: var(--primary-soft);
+    border-radius: 6px;
   }
   .dark .stamp-tag {
-    border-color: #D97706;
-    color: #FCD34D;
-    background-color: #241D17;
+    border-color: var(--accent-gold-border);
+    color: var(--accent-gold-light);
+    background-color: var(--accent-gold-soft);
   }
 }
 
@@ -216,21 +295,21 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF7F2;
+  background: var(--bg-base);
 }
 ::-webkit-scrollbar-thumb {
-  background: #D5CCC0;
+  background: var(--border-strong);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #6E1423;
+  background: var(--primary);
 }
 .dark ::-webkit-scrollbar-track {
-  background: #141210;
+  background: var(--bg-base);
 }
 .dark ::-webkit-scrollbar-thumb {
-  background: #38312B;
+  background: var(--border-subtle);
 }
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #F59E0B;
+  background: var(--accent-gold);
 }

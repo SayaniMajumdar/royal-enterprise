@@ -273,36 +273,36 @@ const Catering = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-[#141210] min-h-screen text-[#1F2937] dark:text-[#FAF7F2]">
+    <div className="bg-[#FAF8F5] dark:bg-[#141210] min-h-screen text-[#2B2625] dark:text-[#FAF8F5]">
       {/* ========================================================================= */}
       {/* HERO BANNER */}
       {/* ========================================================================= */}
-      <section className="bg-charcoal text-[#FFF8F0] relative py-24 sm:py-32 overflow-hidden border-b border-white/10">
+      <section className="bg-[#2B2625] text-[#FAF8F5] relative py-24 sm:py-32 overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1920&q=80"
             alt="Royal Enterprise Gourmet Catering Hero"
             className="w-full h-full object-cover filter brightness-[0.38] contrast-[1.08] scale-[1.02]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2B2625] via-[#2B2625]/75 to-[#2B2625]/85" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 text-center">
           <div className="inline-flex items-center space-x-2.5 mb-5">
-            <span className="w-5 h-px bg-gold-light/60" />
-            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.2em] text-amber-200 font-semibold">
+            <span className="w-5 h-px bg-[#E0CFA6]/60" />
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.2em] text-[#E0CFA6] font-semibold">
               Kolkata • Authentic In-House Cooking
             </span>
-            <span className="w-5 h-px bg-gold-light/60" />
+            <span className="w-5 h-px bg-[#E0CFA6]/60" />
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-[#FFF8F0] tracking-tight mb-4">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-[#FAF8F5] tracking-tight mb-4">
             Authentic feasts cooked by our own team
           </h1>
-          <p className="font-serif text-lg sm:text-2xl text-amber-200 font-normal mb-6">
+          <p className="font-serif text-lg sm:text-2xl text-[#E0CFA6] font-normal mb-6">
             "We cook the food ourselves. Nothing is outsourced to a stranger’s kitchen."
           </p>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/90 font-light leading-relaxed mb-9">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/90 font-normal leading-relaxed mb-9">
             From crispy Kolkata Bhetki fry and slow-cooked mutton kosha to fragrant Awadhi dum biryanis and dedicated pure-veg Marwari kitchens, our own veteran cooks prepare every course fresh on-site.
           </p>
 
@@ -324,6 +324,7 @@ const Catering = () => {
                 const el = document.getElementById('menu-explorer');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
+              className="border-white/30 text-white hover:bg-white/10 hover:border-white"
             >
               Browse dishes
             </Button>
@@ -348,29 +349,29 @@ const Catering = () => {
               return (
                 <div
                   key={idx}
-                  className="bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] rounded-xl p-7 hover:border-gold-base/50 dark:hover:border-gold-light/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
+                  className="bg-white dark:bg-[#1C1917] border border-[#E8E0D5] dark:border-[#38312B] rounded-2xl p-7 hover:border-[#6B1D2F]/40 dark:hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:-translate-y-1 hover:shadow-md"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <div className="w-10 h-10 rounded-full bg-[#FAF8F4] dark:bg-[#141210] border border-gold-dark/30 dark:border-gold-light/30 flex items-center justify-center text-gold-dark dark:text-gold-light">
+                      <div className="w-10 h-10 rounded-full bg-[#FAF8F5] dark:bg-[#141210] border border-[#E8E0D5] dark:border-[#38312B] flex items-center justify-center text-[#6B1D2F] dark:text-[#E0CFA6]">
                         <Icon className="w-5 h-5 stroke-[1.5]" />
                       </div>
-                      <span className="text-[11px] font-medium px-2.5 py-0.5 rounded bg-[#FAF8F4] dark:bg-[#141210] border border-[#E8E1D5] dark:border-[#38312B] text-gold-dark dark:text-gold-light">
+                      <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-[#FAF8F5] dark:bg-[#141210] border border-[#E8E0D5] dark:border-[#38312B] text-[#6B1D2F] dark:text-[#E0CFA6]">
                         {style.badge}
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-lg font-bold text-[#1F1D1A] dark:text-[#FAF7F2] mb-1.5 group-hover:text-maroon dark:group-hover:text-gold-light transition-colors">
+                    <h3 className="font-serif text-lg font-bold text-[#2B2625] dark:text-[#FAF8F5] mb-1.5 group-hover:text-[#6B1D2F] dark:group-hover:text-[#E0CFA6] transition-colors">
                       {style.title}
                     </h3>
-                    <p className="text-xs text-gold-dark dark:text-gold-light font-medium mb-3">
+                    <p className="text-xs text-[#C5A059] dark:text-[#D4AF37] font-semibold mb-3">
                       {style.subtitle}
                     </p>
-                    <p className="text-xs sm:text-[13px] text-[#4A433A] dark:text-[#A8A29E] leading-relaxed font-light">
+                    <p className="text-xs sm:text-[13px] text-[#5A524E] dark:text-[#D4CCC2] leading-relaxed font-normal">
                       {style.description}
                     </p>
                   </div>
-                  <div className="pt-4 mt-4 border-t border-[#E8E1D5]/60 dark:border-[#38312B] flex items-center text-[11px] text-[#6B645C] dark:text-[#A8A29E]">
+                  <div className="pt-4 mt-4 border-t border-[#E8E0D5]/60 dark:border-[#38312B] flex items-center text-[11px] text-[#827771] dark:text-[#9E9488]">
                     <span>Live chef counter available</span>
                   </div>
                 </div>
@@ -393,14 +394,14 @@ const Catering = () => {
             {signaturePackages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`relative rounded-xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
+                className={`relative rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                   pkg.popular
-                    ? 'bg-[#FFFDF9] dark:bg-[#1C1917] border-2 border-maroon dark:border-gold-light shadow-md'
-                    : 'bg-[#FFFDF9] dark:bg-[#1C1917] border border-[#E8E1D5] dark:border-[#38312B] hover:border-gold-base/50 dark:hover:border-gold-light/50 shadow-sm'
+                    ? 'bg-white dark:bg-[#1C1917] border-2 border-[#6B1D2F] dark:border-[#D4AF37] shadow-md'
+                    : 'bg-white dark:bg-[#1C1917] border border-[#E8E0D5] dark:border-[#38312B] hover:border-[#6B1D2F]/40 dark:hover:border-[#D4AF37]/50 shadow-sm'
                 }`}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-maroon text-[#FFF8F0] font-medium text-[11px] px-3.5 py-1 rounded-full shadow-sm flex items-center">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#6B1D2F] text-white font-medium text-[11px] px-3.5 py-1 rounded-full shadow-sm flex items-center">
                     <Crown className="w-3 h-3 mr-1" />
                     {pkg.badge}
                   </div>

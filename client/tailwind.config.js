@@ -8,28 +8,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Handcrafted Kolkata Palette
+        // Handcrafted Luxury Palette
         maroon: {
-          DEFAULT: '#6E1423',
-          dark: '#540D1A',
-          deep: '#3E0812',
-          light: '#8B1E32',
-          glow: '#A72638',
+          DEFAULT: '#6B1D2F',
+          dark: '#541423',
+          deep: '#3E0C17',
+          light: '#8E2B42',
+          glow: '#A8324C',
         },
         marigold: {
-          DEFAULT: '#D97706',
-          dark: '#B45309',
-          light: '#F59E0B',
-          pale: '#FEF3C7',
-          amber: '#FCD34D',
-          border: 'rgba(217, 119, 6, 0.35)',
+          DEFAULT: '#C5A059',
+          dark: '#B08B44',
+          light: '#E0CFA6',
+          pale: '#FDF8EE',
+          amber: '#F5D78E',
+          border: 'rgba(197, 160, 89, 0.4)',
         },
         paper: {
-          DEFAULT: '#FAF7F2',
-          sand: '#F0ECE1',
-          surface: '#FFFDF9',
-          border: '#E5DED3',
-          card: '#F6F2E9',
+          DEFAULT: '#FAF8F5',
+          sand: '#F5EFE6',
+          surface: '#FFFFFF',
+          border: '#E8E0D5',
+          card: '#FDFBF7',
         },
         // Dark Mode Obsidian & Warm Charcoal Palette
         night: {
@@ -37,54 +37,54 @@ export default {
           surface: '#1C1917',   // Elevated card background
           card: '#231F1C',      // Sub-card background
           border: '#38312B',    // Subtle warm border
-          muted: '#9E9487',     // Secondary text
-          text: '#F5EFE6',      // Primary light text
+          muted: '#9E9488',     // Secondary text
+          text: '#FAF8F5',      // Primary light text
           highlight: '#2A2420', // Hover background
         },
         charcoal: {
-          DEFAULT: '#1F1D1A',
-          surface: '#292522',
-          muted: '#524C44',
-          soft: '#7D756A',
+          DEFAULT: '#2B2625',
+          surface: '#38312F',
+          muted: '#5A524E',
+          soft: '#827771',
         },
         // Compatibility aliases for clean transition
         ivory: {
-          DEFAULT: '#FAF7F2',
-          light: '#FFFDF9',
-          surface: '#FFFDF9',
-          border: '#E5DED3',
+          DEFAULT: '#FAF8F5',
+          light: '#FFFFFF',
+          surface: '#FDFBF7',
+          border: '#E8E0D5',
         },
         blush: {
-          DEFAULT: '#F8EFEA',
-          light: '#FCF8F5',
-          surface: '#FFFDF9',
-          border: '#EFE2DA',
+          DEFAULT: '#F9F1F3',
+          light: '#FDF8F9',
+          surface: '#FFFFFF',
+          border: '#EED9DF',
         },
         roseBrand: {
-          DEFAULT: '#6E1423',
-          dark: '#540D1A',
-          deep: '#3E0812',
-          light: '#FAF2F3',
+          DEFAULT: '#6B1D2F',
+          dark: '#541423',
+          deep: '#3E0C17',
+          light: '#F9F1F3',
           tint: '#FBF5F5',
-          border: '#ECD0D5',
+          border: '#EED9DF',
         },
         gold: {
-          DEFAULT: '#D97706',
-          dark: '#B45309',
-          light: '#F59E0B',
-          satin: '#C27803',
-          border: 'rgba(217, 119, 6, 0.35)',
+          DEFAULT: '#C5A059',
+          dark: '#B08B44',
+          light: '#E0CFA6',
+          satin: '#B8934A',
+          border: 'rgba(197, 160, 89, 0.4)',
         },
         warmgrey: {
-          DEFAULT: '#524C44',
-          body: '#1F1D1A',
-          dark: '#141311',
-          light: '#7D756A',
+          DEFAULT: '#5A524E',
+          body: '#2B2625',
+          dark: '#141210',
+          light: '#827771',
         },
       },
       fontFamily: {
-        serif: ['Lora', 'Georgia', 'serif'],
-        editorial: ['Lora', 'Georgia', 'serif'],
+        serif: ['"Cormorant Garamond"', 'Lora', 'Georgia', 'serif'],
+        editorial: ['"Cormorant Garamond"', 'Lora', 'Georgia', 'serif'],
         sans: ['"Hind Siliguri"', 'system-ui', 'sans-serif'],
       },
       boxShadow: {

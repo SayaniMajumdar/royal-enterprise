@@ -15,8 +15,8 @@ const Textarea = ({
   return (
     <div className={`w-full ${className}`}>
       {label && (
-        <label htmlFor={name} className="block text-[11px] font-medium text-[#6B645C] dark:text-[#A8A29E] uppercase tracking-[0.2em] mb-1.5">
-          {label} {required && <span className="text-maroon font-bold">*</span>}
+        <label htmlFor={name} className="block text-xs font-semibold text-[#5A524E] dark:text-[#D4CCC2] mb-1.5">
+          {label} {required && <span className="text-[#6B1D2F] dark:text-[#E0CFA6] font-bold">*</span>}
         </label>
       )}
       <textarea
@@ -27,11 +27,11 @@ const Textarea = ({
         placeholder={placeholder}
         rows={rows}
         required={required}
-        className={`w-full bg-transparent border-b ${
+        className={`w-full bg-white dark:bg-[#1C1917] border ${
           error
-            ? 'border-[#B3261E] focus:border-[#B3261E]'
-            : 'border-[#D5CCC0] dark:border-[#38312B] focus:border-[#B8934A] dark:focus:border-gold-light'
-        } rounded-none px-1 py-2 text-sm text-[#141414] dark:text-[#FAF7F2] placeholder-[#9E968D] dark:placeholder-[#6B645C] focus:outline-none transition-colors duration-200 resize-y`}
+            ? 'border-[#B3261E] focus:border-[#B3261E] focus:ring-1 focus:ring-[#B3261E]'
+            : 'border-[#E8E0D5] dark:border-[#38312B] focus:border-[#6B1D2F] dark:focus:border-[#D4AF37] focus:ring-2 focus:ring-[#6B1D2F]/10 dark:focus:ring-[#D4AF37]/15'
+        } rounded-lg px-3.5 py-2.5 text-sm text-[#2B2625] dark:text-[#FAF8F5] placeholder-[#9E9488] dark:placeholder-[#6B645C] focus:outline-none transition-all duration-200 resize-y`}
         {...props}
       />
       {error && <p className="mt-1 text-xs text-[#B3261E] font-medium">{error}</p>}

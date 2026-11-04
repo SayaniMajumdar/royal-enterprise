@@ -27,7 +27,7 @@ const CheckboxGroup = ({
   return (
     <div className={`w-full ${className}`}>
       {label && (
-        <label className="block text-[11px] font-medium text-[#6B645C] dark:text-[#A8A29E] uppercase tracking-[0.2em] mb-3">
+        <label className="block text-xs font-semibold text-[#5A524E] dark:text-[#D4CCC2] mb-3">
           {label}
         </label>
       )}
@@ -40,17 +40,17 @@ const CheckboxGroup = ({
           return (
             <label
               key={val}
-              className={`flex items-center space-x-2.5 p-3 rounded-[3px] border cursor-pointer transition-all select-none text-xs ${
+              className={`flex items-center space-x-2.5 p-3 rounded-lg border cursor-pointer transition-all select-none text-xs ${
                 isChecked
-                  ? 'border-maroon/60 bg-maroon/5 dark:bg-maroon/20 text-maroon dark:text-gold-light font-medium'
-                  : 'border-[#E8E1D5] dark:border-[#38312B] bg-[#FFFDF9] dark:bg-[#1C1917] text-[#3A352F] dark:text-[#FAF7F2] hover:border-[#D5CCC0] dark:hover:border-[#524B42]'
+                  ? 'border-[#6B1D2F] bg-[#6B1D2F]/5 dark:bg-[#6B1D2F]/20 text-[#6B1D2F] dark:text-[#E0CFA6] font-medium shadow-sm'
+                  : 'border-[#E8E0D5] dark:border-[#38312B] bg-white dark:bg-[#1C1917] text-[#2B2625] dark:text-[#FAF8F5] hover:border-[#CFC2B0] dark:hover:border-[#524B42]'
               }`}
             >
               <input
                 type="checkbox"
                 checked={isChecked}
                 onChange={() => handleToggle(opt)}
-                className="w-4 h-4 rounded-[2px] border-[#D5CCC0] text-maroon focus:ring-maroon cursor-pointer"
+                className="w-4 h-4 rounded border-[#D5C7B5] text-[#6B1D2F] focus:ring-[#6B1D2F] cursor-pointer"
               />
               <span className="leading-snug">{lbl}</span>
             </label>

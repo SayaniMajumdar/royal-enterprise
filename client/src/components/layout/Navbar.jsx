@@ -34,10 +34,10 @@ const Navbar = ({ onOpenQuoteModal }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top Utility Bar: Clear Kolkata Helpline & WhatsApp */}
-      <div className="bg-[#540D1A] dark:bg-[#3E0812] text-white text-xs py-1.5 px-4 sm:px-6 border-b border-white/10 dark:border-white/5 hidden md:block transition-colors">
+      <div className="bg-[#4A101D] dark:bg-[#24080E] text-white text-xs py-1.5 px-4 sm:px-6 border-b border-white/10 dark:border-white/5 hidden md:block transition-colors">
         <div className="max-w-[1240px] mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3 text-white/90">
-            <span className="font-medium text-amber-200">Kolkata & Eastern India</span>
+            <span className="font-medium text-[#E0CFA6]">Kolkata & Eastern India</span>
             <span className="text-white/40">•</span>
             <span>Weddings, Corporate Events & In-House Catering</span>
           </div>
@@ -54,9 +54,9 @@ const Navbar = ({ onOpenQuoteModal }) => {
             <span className="text-white/30">|</span>
             <a
               href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-              className="inline-flex items-center space-x-1.5 hover:text-amber-200 transition-colors"
+              className="inline-flex items-center space-x-1.5 hover:text-[#E0CFA6] transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-amber-300" />
+              <Phone className="w-3.5 h-3.5 text-[#E0CFA6]" />
               <span>Call: {COMPANY_INFO.displayPhone}</span>
             </a>
           </div>
@@ -67,8 +67,8 @@ const Navbar = ({ onOpenQuoteModal }) => {
       <div
         className={`transition-all duration-200 ${
           scrolled
-            ? 'bg-white dark:bg-[#1C1917] text-[#1F1D1A] dark:text-[#F5EFE6] shadow-md dark:shadow-dark-card py-2.5 sm:py-3 border-b border-[#E5DED3] dark:border-[#38312B]'
-            : 'bg-[#FAF7F2] dark:bg-[#141210] text-[#1F1D1A] dark:text-[#F5EFE6] py-3 sm:py-3.5 border-b border-[#E5DED3] dark:border-[#38312B]'
+            ? 'bg-white/95 dark:bg-[#1C1917]/95 backdrop-blur-md text-[#2B2625] dark:text-[#FAF8F5] shadow-sm py-2.5 sm:py-3 border-b border-[#E8E0D5] dark:border-[#38312B]'
+            : 'bg-[#FAF8F5]/90 dark:bg-[#141210]/90 backdrop-blur-sm text-[#2B2625] dark:text-[#FAF8F5] py-3 sm:py-3.5 border-b border-[#E8E0D5]/70 dark:border-[#38312B]'
         }`}
       >
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
@@ -86,20 +86,20 @@ const Navbar = ({ onOpenQuoteModal }) => {
                     to={link.path}
                     className={`text-[14px] font-medium whitespace-nowrap py-1 transition-colors relative ${
                       isActive
-                        ? 'text-[#6E1423] dark:text-[#F59E0B] font-semibold'
-                        : 'text-[#3B3630] dark:text-[#D5CCC0] hover:text-[#6E1423] dark:hover:text-[#F59E0B]'
+                        ? 'text-[#6B1D2F] dark:text-[#E0CFA6] font-semibold'
+                        : 'text-[#5A524E] dark:text-[#D4CCC2] hover:text-[#6B1D2F] dark:hover:text-[#E0CFA6]'
                     }`}
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#6E1423] dark:bg-[#F59E0B] rounded-full" />
+                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#6B1D2F] dark:bg-[#D4AF37] rounded-full" />
                     )}
                   </Link>
                 );
               })}
             </nav>
 
-            {/* Desktop Action Buttons: Theme Toggle & "Get a quote" */}
+            {/* Desktop Action Buttons: Theme Toggle & "Plan Your Event" */}
             <div className="hidden lg:flex items-center space-x-3">
               <ThemeToggle size="md" />
 
@@ -118,7 +118,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
                 onClick={onOpenQuoteModal}
                 className="btn-maroon px-5 py-2 text-xs font-semibold tracking-wide whitespace-nowrap shadow-sm"
               >
-                Get a quote
+                Plan Your Event
               </button>
             </div>
 

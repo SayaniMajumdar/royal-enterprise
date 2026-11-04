@@ -112,17 +112,17 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#FAF7F2] dark:bg-[#141210] min-h-screen text-[#1F1D1A] dark:text-[#FAF7F2]">
+    <div className="bg-[#FAF8F5] dark:bg-[#141210] min-h-screen text-[#2B2625] dark:text-[#FAF8F5]">
       
       {/* Hero Banner */}
-      <section className="bg-white dark:bg-[#1C1917] pt-32 sm:pt-40 pb-14 sm:pb-20 border-b border-[#E5DED3] dark:border-[#38312B]">
+      <section className="bg-white dark:bg-[#1C1917] pt-32 sm:pt-40 pb-14 sm:pb-20 border-b border-[#E8E0D5] dark:border-[#38312B]">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="max-w-3xl space-y-3">
             <span className="stamp-tag">Direct Desk • Kolkata</span>
-            <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#1F1D1A] dark:text-[#FAF7F2] leading-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#2B2625] dark:text-[#FAF8F5] leading-tight">
               Get in touch with Royal Enterprise.
             </h1>
-            <p className="text-base sm:text-lg text-[#524C44] dark:text-[#A8A29E] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#5A524E] dark:text-[#D4CCC2] leading-relaxed">
               Tell us about your date and guest count. We'll check our central kitchen calendar and call you back directly.
             </p>
           </div>
@@ -157,12 +157,12 @@ const Contact = () => {
             </div>
 
             {/* Address & Office Details */}
-            <div className="bg-white dark:bg-[#1C1917] border border-[#E5DED3] dark:border-[#38312B] rounded-lg p-6 sm:p-7 space-y-6 shadow-paper-sm">
+            <div className="bg-white dark:bg-[#1C1917] border border-[#E8E0D5] dark:border-[#38312B] rounded-2xl p-6 sm:p-7 space-y-6 shadow-sm">
               <div className="space-y-1">
-                <h3 className="font-serif text-xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">
+                <h3 className="font-serif text-xl font-bold text-[#2B2625] dark:text-[#FAF8F5]">
                   Royal Enterprise Office
                 </h3>
-                <span className="text-xs text-[#6E1423] dark:text-gold-light font-medium">
+                <span className="text-xs text-[#6B1D2F] dark:text-[#E0CFA6] font-medium">
                   Events • Catering • Wedding Planning
                 </span>
               </div>
@@ -271,15 +271,15 @@ const Contact = () => {
 
           {/* Right Column: Clean, Direct Contact Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white dark:bg-[#1C1917] border border-[#E5DED3] dark:border-[#38312B] rounded-lg p-7 sm:p-10 shadow-paper-sm">
-              <div className="border-b border-[#E5DED3] dark:border-[#38312B] pb-4 mb-6">
-                <span className="text-xs uppercase font-bold tracking-wider text-[#6E1423] dark:text-gold-light block mb-1">
+            <div className="bg-white dark:bg-[#1C1917] border border-[#E8E0D5] dark:border-[#38312B] rounded-2xl p-7 sm:p-10 shadow-sm">
+              <div className="border-b border-[#E8E0D5] dark:border-[#38312B] pb-4 mb-6">
+                <span className="text-xs uppercase font-semibold tracking-wider text-[#6B1D2F] dark:text-[#E0CFA6] block mb-1">
                   Enquiry Form
                 </span>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F1D1A] dark:text-[#FAF7F2]">
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#2B2625] dark:text-[#FAF8F5]">
                   Check dates and ask questions
                 </h2>
-                <p className="text-xs text-[#524C44] dark:text-[#A8A29E] mt-1">
+                <p className="text-xs text-[#5A524E] dark:text-[#D4CCC2] mt-1">
                   We ask only for what we need to verify dates and catering requirements.
                 </p>
               </div>
