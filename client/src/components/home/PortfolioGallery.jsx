@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Plus, X, ChevronLeft, ChevronRight, Eye, Sparkles } from 'lucide-react';
+import { Plus, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const PortfolioGallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -96,25 +96,22 @@ const PortfolioGallery = () => {
   }, [lightboxIndex, filteredItems.length]);
 
   return (
-    <section className="py-12 sm:py-16 bg-[#FAF8F5] dark:bg-[#141210] border-b border-[#E8E0D5] dark:border-[#38312B] transition-colors">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
+    <section className="py-10 sm:py-16 bg-[#F6F0E7] dark:bg-[#191316] border-b border-[#E8DFD3] dark:border-[#3F3238] transition-colors">
+      <div className="max-w-[1280px] mx-auto px-5 sm:px-8">
         
-        {/* Editorial Section Header (Inspired by Bottega53 & IDO Events) */}
+        {/* Editorial Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
-          <div className="space-y-4 max-w-2xl">
-            <div className="inline-flex items-center space-x-2">
-              <span className="w-6 h-px bg-[#C5A059]" />
-              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#6B1D2F] dark:text-[#E0CFA6]">
-                Visual Journal
-              </span>
-            </div>
+          <div className="space-y-3 max-w-2xl">
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#401D2C] dark:text-[#E2CCA1] block">
+              Visual Journal
+            </span>
 
-            <h2 className="font-serif text-3xl sm:text-5xl text-[#2B2625] dark:text-[#FAF8F5] font-normal tracking-tight leading-[1.12]">
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-[#292323] dark:text-[#F6F0E7] font-normal tracking-tight leading-[1.08]">
               Capturing Moments of <br />
-              <span className="italic font-serif text-[#6B1D2F] dark:text-[#E0CFA6]">Grandeur & Intimacy.</span>
+              <span className="italic font-display text-[#401D2C] dark:text-[#E2CCA1]">Grandeur & Intimacy.</span>
             </h2>
 
-            <p className="text-sm sm:text-base text-[#5A524E] dark:text-[#D4CCC2] font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-[#665C5C] dark:text-[#D4CCC2] font-light leading-relaxed font-sans">
               An editorial look through our recent event stagecraft, bespoke mandap styling, and live culinary spreads.
             </p>
           </div>
@@ -126,10 +123,10 @@ const PortfolioGallery = () => {
                 key={cat}
                 type="button"
                 onClick={() => setSelectedCategory(cat)}
-                className={`text-xs uppercase tracking-[0.14em] font-medium px-4 py-2 rounded-full transition-all duration-200 ${
+                className={`text-xs uppercase tracking-[0.14em] font-medium px-4 py-2 rounded-lg transition-all duration-200 ${
                   selectedCategory === cat
-                    ? 'bg-[#6B1D2F] text-white shadow-sm'
-                    : 'bg-white dark:bg-[#1C1917] text-[#5A524E] dark:text-[#D4CCC2] border border-[#E8E0D5] dark:border-[#38312B] hover:border-[#6B1D2F] dark:hover:border-[#C5A059]'
+                    ? 'bg-[#401D2C] text-white shadow-sm'
+                    : 'bg-white/80 dark:bg-[#231B1F] text-[#665C5C] dark:text-[#D4CCC2] border border-[#E8DFD3] dark:border-[#3F3238] hover:border-[#401D2C] dark:hover:border-[#E2CCA1]'
                 }`}
               >
                 {cat}
@@ -144,7 +141,7 @@ const PortfolioGallery = () => {
             <div
               key={item.id}
               onClick={() => setLightboxIndex(idx)}
-              className={`group relative rounded-2xl overflow-hidden border border-[#E8E0D5] dark:border-[#38312B] bg-white dark:bg-[#1C1917] shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer ${item.aspect}`}
+              className={`group relative rounded-xl overflow-hidden border border-[#E8DFD3] dark:border-[#3F3238] bg-white dark:bg-[#231B1F] shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer ${item.aspect}`}
             >
               <img
                 src={item.image}
@@ -153,20 +150,20 @@ const PortfolioGallery = () => {
                 loading="lazy"
               />
 
-              {/* Dark Ambient Overlay on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6" />
+              {/* Ambient Overlay on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-              {/* Top Plus Icon Indicator (Bottega53 Inspiration) */}
-              <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md text-[#E0CFA6] border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
+              {/* Top Plus Indicator */}
+              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-black/60 backdrop-blur-md text-[#E2CCA1] border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
                 <Plus className="w-4 h-4 stroke-[2]" />
               </div>
 
               {/* Bottom Caption Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white translate-y-3 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#E0CFA6] block mb-1">
+              <div className="absolute bottom-0 left-0 right-0 p-5 text-white translate-y-3 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#E2CCA1] block mb-1">
                   {item.category} • {item.location}
                 </span>
-                <h3 className="font-serif text-lg sm:text-xl font-bold leading-snug">
+                <h3 className="font-display text-lg sm:text-xl font-normal leading-snug">
                   {item.title}
                 </h3>
               </div>
@@ -184,12 +181,12 @@ const PortfolioGallery = () => {
           className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col justify-between p-4 sm:p-8 animate-fade-in"
           onClick={() => setLightboxIndex(null)}
         >
-          {/* Top Bar: Counter & Close */}
+          {/* Top Bar */}
           <div
             className="flex items-center justify-between text-white/80 max-w-[1280px] w-full mx-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="text-xs uppercase tracking-[0.2em] text-[#E0CFA6] font-mono">
+            <div className="text-xs uppercase tracking-[0.2em] text-[#E2CCA1] font-mono">
               0{lightboxIndex + 1} / 0{filteredItems.length}
             </div>
 
@@ -203,7 +200,7 @@ const PortfolioGallery = () => {
             </button>
           </div>
 
-          {/* Center Image Container */}
+          {/* Center Image */}
           <div
             className="relative flex items-center justify-center my-auto max-w-5xl mx-auto w-full h-[70vh]"
             onClick={(e) => e.stopPropagation()}
@@ -240,15 +237,15 @@ const PortfolioGallery = () => {
             </button>
           </div>
 
-          {/* Bottom Title Bar */}
+          {/* Bottom Caption */}
           <div
             className="text-center text-white max-w-xl mx-auto pb-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <span className="text-xs uppercase tracking-[0.2em] text-[#E0CFA6] font-semibold block mb-1">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#E2CCA1] font-semibold block mb-1">
               {filteredItems[lightboxIndex].category} • {filteredItems[lightboxIndex].location}
             </span>
-            <h4 className="font-serif text-xl sm:text-2xl font-normal text-white">
+            <h4 className="font-display text-xl sm:text-2xl font-normal text-white">
               {filteredItems[lightboxIndex].title}
             </h4>
           </div>

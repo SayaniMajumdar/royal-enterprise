@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageSquare, ArrowRight, ChevronDown, Utensils, Building2, HeartHandshake } from 'lucide-react';
+import { MessageSquare, ArrowRight } from 'lucide-react';
 import { COMPANY_INFO } from '../../data/mockData';
 
 const HeroSection = ({ onOpenQuote }) => {
@@ -12,51 +12,51 @@ const HeroSection = ({ onOpenQuote }) => {
   };
 
   return (
-    <section className="relative min-h-[88vh] lg:min-h-[92vh] flex flex-col justify-between bg-[#141210] text-white overflow-hidden">
-      {/* Background Cinematic Event Photography with Subtle Parallax/Zoom */}
+    <section className="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between bg-[#191316] text-[#F6F0E7] overflow-hidden">
+      {/* Background Cinematic Event Photography with Subtle Contrast & Depth */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/hero-stage.png"
-          alt="Royal Enterprise Luxury Event Management & Stage Production in Kolkata"
-          className="w-full h-full object-cover object-center scale-105 animate-fade-in filter brightness-[0.45] contrast-[1.12]"
+          alt="Royal Enterprise Luxury Wedding Planning & Grand Event Production in Kolkata"
+          className="w-full h-full object-cover object-center filter brightness-[0.4] contrast-[1.15] scale-105 transition-transform duration-1000 ease-out"
         />
-        {/* Layered Cinematic Vignette & Ambient Glow */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#141210] via-black/50 to-black/75" />
-        <div className="absolute inset-0 bg-radial from-transparent via-black/30 to-black/80" />
+        {/* Layered Editorial Vignette & Warm Charcoal Depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#191316] via-black/45 to-black/75" />
+        <div className="absolute inset-0 bg-radial from-transparent via-black/25 to-[#191316]/90" />
       </div>
 
-      {/* Spacer for Fixed Nav */}
-      <div className="pt-24 sm:pt-28" />
+      {/* Top Spacer for Fixed Navigation */}
+      <div className="pt-28 sm:pt-36" />
 
-      {/* Hero Center Content */}
-      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 text-center my-auto py-8 sm:py-10">
+      {/* Hero Center Editorial Content */}
+      <div className="relative z-10 max-w-[1280px] w-full mx-auto px-5 sm:px-8 text-center my-auto py-10 sm:py-14">
         <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
           
-          {/* Subtle Editorial Pre-Heading */}
-          <div className="inline-flex items-center space-x-3 bg-black/40 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/15 text-[#E0CFA6]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059] animate-pulse" />
-            <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold">
+          {/* Refined Architectural Pre-Heading (No floating AI sparkles or emojis) */}
+          <div className="inline-flex items-center space-x-3 px-4 py-1.5 rounded-full border border-white/20 bg-black/40 backdrop-blur-md">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C49A53]" />
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.24em] font-medium text-[#E2CCA1]">
               Kolkata & Eastern India • Established 2014
             </span>
           </div>
 
-          {/* Large Editorial Headline (Inspired by Twist Events & IDO Events) */}
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight leading-[1.08]">
+          {/* Large High-Contrast Display Headline (Instrument Serif) */}
+          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight leading-[1.05]">
             Event Services Fit For <br className="hidden sm:inline" />
-            <span className="italic font-serif text-[#E0CFA6] font-normal">Royalty.</span>
+            <span className="italic font-display text-[#E2CCA1]">Royalty.</span>
           </h1>
 
-          {/* Short, Professional Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl text-white/85 font-light leading-relaxed max-w-2xl mx-auto">
+          {/* Authentic, Human Subtitle */}
+          <p className="text-sm sm:text-base md:text-lg text-[#F6F0E7]/85 font-light leading-relaxed max-w-2xl mx-auto font-sans">
             From heritage rajbari weddings to high-impact corporate galas, our own kitchen and on-ground crew run your entire celebration with calm precision.
           </p>
 
-          {/* Premium CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          {/* Action Triggers: Deliberate Hierarchy */}
+          <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
             <button
               type="button"
               onClick={onOpenQuote}
-              className="btn-maroon px-8 py-3.5 text-xs uppercase tracking-wider font-semibold shadow-lg hover:shadow-[#6B1D2F]/40"
+              className="px-8 py-3.5 text-xs uppercase tracking-wider font-semibold rounded-lg bg-[#D65B43] hover:bg-[#B84630] text-white shadow-lg shadow-[#D65B43]/25 transition-all duration-200"
             >
               Plan Your Event
             </button>
@@ -67,7 +67,7 @@ const HeroSection = ({ onOpenQuote }) => {
               className="px-7 py-3.5 text-xs uppercase tracking-wider font-semibold rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-sm transition-all duration-200 inline-flex items-center space-x-2"
             >
               <span>Explore Services</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#E0CFA6]" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#E2CCA1]" />
             </button>
 
             <a
@@ -84,46 +84,49 @@ const HeroSection = ({ onOpenQuote }) => {
         </div>
       </div>
 
-      {/* Bottom Proof Strip & Scroll Indicator */}
-      <div className="relative z-10 max-w-[1280px] w-full mx-auto px-4 sm:px-6 pb-6 pt-2">
-        <div className="pt-4 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/80">
+      {/* Bottom Proof Strip & Subtle Scroll Indicator (Editorial Typographic Layout) */}
+      <div className="relative z-10 max-w-[1280px] w-full mx-auto px-5 sm:px-8 pb-8 pt-4">
+        <div className="pt-6 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/80 font-sans">
           
           {/* Three Direct Capability Anchors */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left w-full md:w-auto">
-            <div className="flex items-start space-x-3">
-              <Building2 className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
-              <div>
-                <span className="font-semibold text-white block">Event Management</span>
-                <span className="text-[11px] text-white/60">Corporate galas, media summits & stages</span>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-10 text-left w-full md:w-auto">
+            <div className="space-y-1">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-[#C49A53] font-semibold block">
+                01 / Event Management
+              </span>
+              <span className="font-medium text-white block text-xs">
+                Corporate galas, media summits & stages
+              </span>
             </div>
 
-            <div className="flex items-start space-x-3">
-              <Utensils className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
-              <div>
-                <span className="font-semibold text-white block">In-House Catering</span>
-                <span className="text-[11px] text-white/60">Authentic live feasts, pure veg & Bengali</span>
-              </div>
+            <div className="space-y-1">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-[#C49A53] font-semibold block">
+                02 / In-House Catering
+              </span>
+              <span className="font-medium text-white block text-xs">
+                Authentic live feasts, pure veg & Bengali
+              </span>
             </div>
 
-            <div className="flex items-start space-x-3">
-              <HeartHandshake className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
-              <div>
-                <span className="font-semibold text-white block">Wedding Planning</span>
-                <span className="text-[11px] text-white/60">Rajbaris, styling, mandaps & decor</span>
-              </div>
+            <div className="space-y-1">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-[#C49A53] font-semibold block">
+                03 / Wedding Planning
+              </span>
+              <span className="font-medium text-white block text-xs">
+                Rajbaris, styling, mandaps & decor
+              </span>
             </div>
           </div>
 
-          {/* Animated Scroll Indicator */}
+          {/* Minimalist Scroll Indicator */}
           <button
             type="button"
             onClick={scrollToServices}
-            className="flex items-center space-x-2 text-[11px] uppercase tracking-[0.2em] text-[#E0CFA6] hover:text-white transition-colors cursor-pointer group"
+            className="hidden md:flex items-center space-x-2 text-[11px] uppercase tracking-[0.2em] text-[#E2CCA1] hover:text-white transition-colors cursor-pointer group shrink-0"
           >
             <span>Scroll to explore</span>
             <div className="w-4 h-7 rounded-full border border-white/30 flex items-start justify-center p-1">
-              <span className="w-1 h-1.5 rounded-full bg-[#C5A059] animate-bounce" />
+              <span className="w-1 h-1.5 rounded-full bg-[#C49A53] animate-bounce" />
             </div>
           </button>
 

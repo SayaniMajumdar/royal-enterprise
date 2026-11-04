@@ -8,84 +8,115 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Handcrafted Luxury Palette
-        maroon: {
-          DEFAULT: '#6B1D2F',
-          dark: '#541423',
-          deep: '#3E0C17',
-          light: '#8E2B42',
-          glow: '#A8324C',
+        // Contemporary Indian Celebration Studio Palette
+        wine: {
+          DEFAULT: '#401D2C', // Deep Wine primary contrast
+          dark: '#2A101C',
+          deep: '#1F0B14',
+          light: '#5C283F',
+          soft: '#F4ECEF',
+          border: 'rgba(64, 29, 44, 0.25)',
         },
-        marigold: {
-          DEFAULT: '#C5A059',
-          dark: '#B08B44',
-          light: '#E0CFA6',
+        terracotta: {
+          DEFAULT: '#D65B43', // Celebratory Terracotta
+          dark: '#B84630',
+          light: '#E2745E',
+          soft: '#FDF1EE',
+          border: 'rgba(214, 91, 67, 0.3)',
+        },
+        brass: {
+          DEFAULT: '#C49A53', // Muted Brass / Antique Gold
+          dark: '#A8813D',
+          light: '#E2CCA1',
           pale: '#FDF8EE',
-          amber: '#F5D78E',
-          border: 'rgba(197, 160, 89, 0.4)',
+          border: 'rgba(196, 154, 83, 0.35)',
         },
-        paper: {
-          DEFAULT: '#FAF8F5',
-          sand: '#F5EFE6',
-          surface: '#FFFFFF',
-          border: '#E8E0D5',
-          card: '#FDFBF7',
+        botanical: {
+          DEFAULT: '#526C55', // Botanical Green
+          dark: '#3D5240',
+          light: '#6D8B71',
+          soft: '#EFF4F0',
         },
-        // Dark Mode Obsidian & Warm Charcoal Palette
-        night: {
-          DEFAULT: '#141210',   // Main dark background
-          surface: '#1C1917',   // Elevated card background
-          card: '#231F1C',      // Sub-card background
-          border: '#38312B',    // Subtle warm border
-          muted: '#9E9488',     // Secondary text
-          text: '#FAF8F5',      // Primary light text
-          highlight: '#2A2420', // Hover background
+        ivory: {
+          DEFAULT: '#F6F0E7', // Warm Ivory primary canvas
+          pure: '#FFFFFF',
+          surface: '#FAF7F2',
+          border: '#E8DFD3',
+          card: '#FAF6F0',
         },
         charcoal: {
-          DEFAULT: '#2B2625',
-          surface: '#38312F',
-          muted: '#5A524E',
-          soft: '#827771',
+          DEFAULT: '#292323', // Primary Dark Charcoal text
+          muted: '#665C5C',   // Secondary body text
+          soft: '#8C8282',    // Subtle metadata
+          surface: '#362E2E',
         },
-        // Compatibility aliases for clean transition
-        ivory: {
-          DEFAULT: '#FAF8F5',
-          light: '#FFFFFF',
-          surface: '#FDFBF7',
-          border: '#E8E0D5',
+
+        // Backward compatibility mappings
+        maroon: {
+          DEFAULT: '#401D2C',
+          dark: '#2A101C',
+          deep: '#1F0B14',
+          light: '#5C283F',
+          glow: '#D65B43',
+        },
+        marigold: {
+          DEFAULT: '#C49A53',
+          dark: '#A8813D',
+          light: '#E2CCA1',
+          pale: '#FDF8EE',
+          amber: '#E8B359',
+          border: 'rgba(196, 154, 83, 0.35)',
+        },
+        paper: {
+          DEFAULT: '#F6F0E7',
+          sand: '#EFE7DA',
+          surface: '#FFFFFF',
+          border: '#E8DFD3',
+          card: '#FAF6F0',
+        },
+        night: {
+          DEFAULT: '#191316',
+          surface: '#231B1F',
+          card: '#2D2328',
+          border: '#3F3238',
+          muted: '#9E9488',
+          text: '#F6F0E7',
+          highlight: '#3A2E34',
         },
         blush: {
-          DEFAULT: '#F9F1F3',
-          light: '#FDF8F9',
+          DEFAULT: '#F4ECEF',
+          light: '#FAF5F7',
           surface: '#FFFFFF',
-          border: '#EED9DF',
+          border: '#EADCE1',
         },
         roseBrand: {
-          DEFAULT: '#6B1D2F',
-          dark: '#541423',
-          deep: '#3E0C17',
-          light: '#F9F1F3',
-          tint: '#FBF5F5',
-          border: '#EED9DF',
+          DEFAULT: '#401D2C',
+          dark: '#2A101C',
+          deep: '#1F0B14',
+          light: '#F4ECEF',
+          tint: '#FAF5F7',
+          border: '#EADCE1',
         },
         gold: {
-          DEFAULT: '#C5A059',
-          dark: '#B08B44',
-          light: '#E0CFA6',
-          satin: '#B8934A',
-          border: 'rgba(197, 160, 89, 0.4)',
+          DEFAULT: '#C49A53',
+          dark: '#A8813D',
+          light: '#E2CCA1',
+          satin: '#B58D47',
+          border: 'rgba(196, 154, 83, 0.35)',
         },
         warmgrey: {
-          DEFAULT: '#5A524E',
-          body: '#2B2625',
-          dark: '#141210',
-          light: '#827771',
+          DEFAULT: '#665C5C',
+          body: '#292323',
+          dark: '#191316',
+          light: '#8C8282',
         },
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'Lora', 'Georgia', 'serif'],
-        editorial: ['"Cormorant Garamond"', 'Lora', 'Georgia', 'serif'],
-        sans: ['"Hind Siliguri"', 'system-ui', 'sans-serif'],
+        display: ['"Instrument Serif"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        serif: ['"Instrument Serif"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+        body: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
         'paper-sm': '0 1px 3px rgba(31, 29, 26, 0.05), 0 1px 2px rgba(31, 29, 26, 0.03)',

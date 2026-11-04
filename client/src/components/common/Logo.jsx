@@ -29,19 +29,19 @@ const Logo = ({
       {variant !== 'icon' && (
         <div className="flex flex-col text-left">
           {/* Main Brand Title */}
-          <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#2B2625] dark:text-[#FAF8F5] leading-tight transition-colors">
-            Royal <span className="text-[#6B1D2F] dark:text-[#C5A059]">Enterprise</span>
+          <span className="font-serif text-xl sm:text-2xl font-normal tracking-tight text-[#292323] dark:text-[#F6F0E7] leading-tight transition-colors">
+            Royal <span className="font-serif italic text-[#401D2C] dark:text-[#E2CCA1]">Enterprise</span>
           </span>
 
           {/* Subtitle / Divisions */}
           <div className="flex items-center space-x-1.5 mt-0.5">
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-semibold text-[#C5A059] dark:text-[#E0CFA6]">
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] font-medium text-[#C49A53] dark:text-[#E2CCA1]">
               Events • Catering • Weddings
             </span>
           </div>
 
           {variant === 'stacked' && (
-            <span className="text-[9px] uppercase tracking-[0.16em] font-medium text-[#827771] dark:text-[#A8A29E]">
+            <span className="text-[9px] uppercase tracking-[0.16em] font-medium text-[#8C8282] dark:text-[#9E9488]">
               Kolkata • Est. 2014
             </span>
           )}

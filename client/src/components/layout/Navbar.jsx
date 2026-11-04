@@ -37,10 +37,10 @@ const Navbar = ({ onOpenQuoteModal }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Top Utility Bar: Clear Kolkata Helpline & WhatsApp */}
-      <div className="text-xs py-1.5 px-4 sm:px-6 border-b transition-colors duration-300 hidden md:block bg-[#4A101D] dark:bg-[#24080E] text-white border-white/10">
+      <div className="text-xs py-1.5 px-4 sm:px-6 border-b transition-colors duration-300 hidden md:block bg-[#401D2C] dark:bg-[#1F0B14] text-white border-[#5A263D]/40">
         <div className="max-w-[1280px] mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3 text-white/90">
-            <span className="font-medium text-[#E0CFA6]">Kolkata & Eastern India</span>
+            <span className="font-medium text-[#E2CCA1]">Kolkata & Eastern India</span>
             <span className="text-white/40">•</span>
             <span>Weddings, Corporate Galas & In-House Catering</span>
           </div>
@@ -57,9 +57,9 @@ const Navbar = ({ onOpenQuoteModal }) => {
             <span className="text-white/30">|</span>
             <a
               href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-              className="inline-flex items-center space-x-1.5 hover:text-[#E0CFA6] transition-colors"
+              className="inline-flex items-center space-x-1.5 hover:text-[#E2CCA1] transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#E0CFA6]" />
+              <Phone className="w-3.5 h-3.5 text-[#E2CCA1]" />
               <span>Call: {COMPANY_INFO.displayPhone}</span>
             </a>
           </div>
@@ -70,8 +70,8 @@ const Navbar = ({ onOpenQuoteModal }) => {
       <div
         className={`transition-all duration-300 border-b ${
           scrolled
-            ? 'bg-[#FAF8F5]/98 dark:bg-[#141210]/98 backdrop-blur-md text-[#2B2625] dark:text-[#FAF8F5] shadow-sm py-3 sm:py-3.5 border-[#E8E0D5] dark:border-[#38312B]'
-            : 'bg-[#FAF8F5]/95 dark:bg-[#141210]/95 backdrop-blur-md text-[#2B2625] dark:text-[#FAF8F5] py-3.5 sm:py-4 border-[#E8E0D5] dark:border-[#38312B]'
+            ? 'bg-[#F6F0E7]/98 dark:bg-[#191316]/98 backdrop-blur-md text-[#292323] dark:text-[#F6F0E7] shadow-sm py-3 sm:py-3.5 border-[#E8DFD3] dark:border-[#3F3238]'
+            : 'bg-[#F6F0E7]/95 dark:bg-[#191316]/95 backdrop-blur-md text-[#292323] dark:text-[#F6F0E7] py-3.5 sm:py-4 border-[#E8DFD3] dark:border-[#3F3238]'
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
@@ -87,17 +87,17 @@ const Navbar = ({ onOpenQuoteModal }) => {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`text-[13.5px] uppercase tracking-[0.14em] font-medium whitespace-nowrap py-1 transition-all duration-200 relative group ${
+                    className={`text-[13px] uppercase tracking-[0.16em] font-medium whitespace-nowrap py-1 transition-all duration-200 relative group ${
                       isActive
-                        ? 'text-[#6B1D2F] dark:text-[#E0CFA6] font-semibold'
-                        : 'text-[#5A524E] dark:text-[#D4CCC2] hover:text-[#6B1D2F] dark:hover:text-[#E0CFA6]'
+                        ? 'text-[#401D2C] dark:text-[#E2CCA1] font-semibold'
+                        : 'text-[#665C5C] dark:text-[#D4CCC2] hover:text-[#401D2C] dark:hover:text-[#E2CCA1]'
                     }`}
                   >
                     {link.name}
                     {isActive ? (
-                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#C5A059] rounded-full shadow-sm" />
+                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#C49A53] rounded-full shadow-sm" />
                     ) : (
-                      <span className="absolute -bottom-1 left-1/2 right-1/2 h-[1.5px] bg-[#C5A059] rounded-full transition-all duration-300 group-hover:left-0 group-hover:right-0 opacity-0 group-hover:opacity-100" />
+                      <span className="absolute -bottom-1 left-1/2 right-1/2 h-[1.5px] bg-[#C49A53] rounded-full transition-all duration-300 group-hover:left-0 group-hover:right-0 opacity-0 group-hover:opacity-100" />
                     )}
                   </Link>
                 );
@@ -121,7 +121,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
               <button
                 type="button"
                 onClick={onOpenQuoteModal}
-                className="btn-maroon px-5 py-2.5 text-xs font-semibold tracking-wide whitespace-nowrap shadow-sm"
+                className="px-5 py-2.5 text-xs font-semibold tracking-wide whitespace-nowrap rounded-lg bg-[#401D2C] hover:bg-[#2A101C] text-[#F6F0E7] transition-all shadow-sm"
               >
                 Plan Your Event
               </button>
@@ -153,7 +153,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
 
       {/* Mobile Navigation Drawer */}
       {isOpen && (
-        <div className="lg:hidden bg-white/98 dark:bg-[#141210]/98 backdrop-blur-lg border-b border-[#E8E0D5] dark:border-[#38312B] px-6 pt-4 pb-6 space-y-4 shadow-2xl text-[#2B2625] dark:text-[#FAF8F5]">
+        <div className="lg:hidden bg-[#F6F0E7]/98 dark:bg-[#191316]/98 backdrop-blur-lg border-b border-[#E8DFD3] dark:border-[#3F3238] px-6 pt-4 pb-6 space-y-4 shadow-2xl text-[#292323] dark:text-[#F6F0E7]">
           <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
@@ -163,8 +163,8 @@ const Navbar = ({ onOpenQuoteModal }) => {
                   to={link.path}
                   className={`px-3.5 py-3 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-[#FAF2F3] dark:bg-[#28080F] text-[#6B1D2F] dark:text-[#E0CFA6] font-semibold border-l-2 border-[#6B1D2F] dark:border-[#C5A059]'
-                      : 'text-[#5A524E] dark:text-[#D4CCC2] hover:bg-[#FAF8F5] dark:hover:bg-[#1C1917]'
+                      ? 'bg-[#F4ECEF] dark:bg-[#2A101C] text-[#401D2C] dark:text-[#E2CCA1] font-semibold border-l-2 border-[#401D2C] dark:border-[#C49A53]'
+                      : 'text-[#665C5C] dark:text-[#D4CCC2] hover:bg-[#EFE7DA] dark:hover:bg-[#231B1F]'
                   }`}
                 >
                   {link.name}
@@ -172,14 +172,14 @@ const Navbar = ({ onOpenQuoteModal }) => {
               );
             })}
           </nav>
-          <div className="pt-3 border-t border-[#E8E0D5] dark:border-[#38312B] space-y-2.5">
+          <div className="pt-3 border-t border-[#E8DFD3] dark:border-[#3F3238] space-y-2.5">
             <button
               type="button"
               onClick={() => {
                 setIsOpen(false);
                 onOpenQuoteModal();
               }}
-              className="w-full btn-maroon py-3 text-xs uppercase font-semibold"
+              className="w-full py-3 text-xs uppercase tracking-wider font-semibold rounded-lg bg-[#401D2C] hover:bg-[#2A101C] text-[#F6F0E7] shadow-sm"
             >
               Plan Your Event
             </button>

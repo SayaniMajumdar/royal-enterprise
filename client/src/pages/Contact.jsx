@@ -112,17 +112,17 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#FAF8F5] dark:bg-[#141210] min-h-screen text-[#2B2625] dark:text-[#FAF8F5]">
+    <div className="bg-[#F6F0E7] dark:bg-[#191316] min-h-screen text-[#292323] dark:text-[#F6F0E7] font-sans transition-colors">
       
       {/* Hero Banner */}
-      <section className="bg-white dark:bg-[#1C1917] pt-32 sm:pt-40 pb-14 sm:pb-20 border-b border-[#E8E0D5] dark:border-[#38312B]">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+      <section className="bg-[#FAF6F0] dark:bg-[#231B1F] pt-32 sm:pt-40 pb-14 sm:pb-20 border-b border-[#E8DFD3] dark:border-[#3F3238]">
+        <div className="max-w-[1280px] mx-auto px-5 sm:px-8">
           <div className="max-w-3xl space-y-3">
-            <span className="stamp-tag">Direct Desk • Kolkata</span>
-            <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#2B2625] dark:text-[#FAF8F5] leading-tight">
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.24em] font-semibold text-[#401D2C] dark:text-[#E2CCA1] block">Direct Desk • Kolkata</span>
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#292323] dark:text-[#F6F0E7] leading-tight">
               Get in touch with Royal Enterprise.
             </h1>
-            <p className="text-base sm:text-lg text-[#5A524E] dark:text-[#D4CCC2] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#665C5C] dark:text-[#D4CCC2] font-light leading-relaxed">
               Tell us about your date and guest count. We'll check our central kitchen calendar and call you back directly.
             </p>
           </div>
@@ -130,7 +130,7 @@ const Contact = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-12 sm:py-16 max-w-[1240px] mx-auto px-4 sm:px-6">
+      <section className="py-10 sm:py-14 max-w-[1280px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
           
           {/* Left Column: Real Address, Phone, Hours, Google Maps */}
@@ -157,27 +157,27 @@ const Contact = () => {
             </div>
 
             {/* Address & Office Details */}
-            <div className="bg-white dark:bg-[#1C1917] border border-[#E8E0D5] dark:border-[#38312B] rounded-2xl p-6 sm:p-7 space-y-6 shadow-sm">
+            <div className="bg-white/70 dark:bg-[#231B1F] border border-[#E8DFD3] dark:border-[#3F3238] rounded-xl p-6 sm:p-7 space-y-6 shadow-sm">
               <div className="space-y-1">
-                <h3 className="font-serif text-xl font-bold text-[#2B2625] dark:text-[#FAF8F5]">
+                <h3 className="font-display text-2xl text-[#292323] dark:text-[#F6F0E7]">
                   Royal Enterprise Office
                 </h3>
-                <span className="text-xs text-[#6B1D2F] dark:text-[#E0CFA6] font-medium">
+                <span className="text-xs text-[#C49A53] dark:text-[#E2CCA1] font-semibold uppercase tracking-wider">
                   Events • Catering • Wedding Planning
                 </span>
               </div>
 
-              <div className="space-y-4 text-xs sm:text-sm text-[#3B3630] dark:text-[#D5CCC0]">
+              <div className="space-y-4 text-xs sm:text-sm text-[#292323] dark:text-[#D4CCC2]">
                 <div className="flex items-start space-x-3">
-                  <MapPin className="w-4 h-4 text-[#6E1423] dark:text-gold-light shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#C49A53] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block text-[#1F1D1A] dark:text-[#FAF7F2]">Address:</span>
-                    <span className="leading-relaxed block text-[#524C44] dark:text-[#A8A29E]">{COMPANY_INFO.address}</span>
+                    <span className="font-semibold block text-[#292323] dark:text-[#F6F0E7]">Address:</span>
+                    <span className="leading-relaxed block text-[#665C5C] dark:text-[#D4CCC2]">{COMPANY_INFO.address}</span>
                     <a
                       href={COMPANY_INFO.mapUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-[#6E1423] dark:text-gold-light font-semibold hover:underline inline-flex items-center space-x-1 mt-1 text-xs"
+                      className="text-[#401D2C] dark:text-[#E2CCA1] font-semibold hover:underline inline-flex items-center space-x-1 mt-1 text-xs"
                     >
                       <span>Open in Google Maps</span>
                       <ExternalLink className="w-3 h-3" />
@@ -186,26 +186,26 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-3">
-                  <Phone className="w-4 h-4 text-[#6E1423] dark:text-gold-light shrink-0 mt-0.5" />
+                  <Phone className="w-4 h-4 text-[#C49A53] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block text-[#1F1D1A] dark:text-[#FAF7F2]">Phone / WhatsApp:</span>
+                    <span className="font-semibold block text-[#292323] dark:text-[#F6F0E7]">Phone / WhatsApp:</span>
                     <a
                       href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-                      className="text-[#6E1423] dark:text-gold-light font-semibold hover:underline block"
+                      className="text-[#401D2C] dark:text-[#E2CCA1] font-semibold hover:underline block"
                     >
                       {COMPANY_INFO.displayPhone}
                     </a>
-                    <span className="text-xs text-[#7D756A] dark:text-[#8C827A] block">Alternate: {COMPANY_INFO.secondaryPhone}</span>
+                    <span className="text-xs text-[#8C8282] dark:text-[#9E9488] block">Alternate: {COMPANY_INFO.secondaryPhone}</span>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-3">
-                  <Mail className="w-4 h-4 text-[#6E1423] dark:text-gold-light shrink-0 mt-0.5" />
+                  <Mail className="w-4 h-4 text-[#C49A53] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block text-[#1F1D1A] dark:text-[#FAF7F2]">Email:</span>
+                    <span className="font-semibold block text-[#292323] dark:text-[#F6F0E7]">Email:</span>
                     <a
                       href={`mailto:${COMPANY_INFO.email}`}
-                      className="text-[#6E1423] dark:text-gold-light font-semibold hover:underline"
+                      className="text-[#401D2C] dark:text-[#E2CCA1] font-semibold hover:underline"
                     >
                       {COMPANY_INFO.email}
                     </a>
@@ -213,25 +213,25 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-3">
-                  <Clock className="w-4 h-4 text-[#6E1423] dark:text-gold-light shrink-0 mt-0.5" />
+                  <Clock className="w-4 h-4 text-[#C49A53] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block text-[#1F1D1A] dark:text-[#FAF7F2]">Working Hours:</span>
-                    <span className="text-[#524C44] dark:text-[#A8A29E] block">{COMPANY_INFO.officeHours}</span>
+                    <span className="font-semibold block text-[#292323] dark:text-[#F6F0E7]">Working Hours:</span>
+                    <span className="text-[#665C5C] dark:text-[#D4CCC2] block">{COMPANY_INFO.officeHours}</span>
                   </div>
                 </div>
               </div>
 
               {/* Social Channels */}
-              <div className="pt-4 border-t border-[#E5DED3] dark:border-[#38312B]">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#7D756A] dark:text-[#8C827A] block mb-2">
+              <div className="pt-4 border-t border-[#E8DFD3] dark:border-[#3F3238]">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#8C8282] dark:text-[#9E9488] block mb-2">
                   Social Channels
                 </span>
-                <div className="flex items-center space-x-2 text-[#524C44] dark:text-[#A8A29E]">
+                <div className="flex items-center space-x-2 text-[#665C5C] dark:text-[#D4CCC2]">
                   <a
                     href={COMPANY_INFO.socials.instagram}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 bg-[#FAF7F2] dark:bg-[#141210] rounded hover:text-[#6E1423] dark:hover:text-gold-light hover:bg-[#FAF2F3] dark:hover:bg-[#2A1D1D] transition-colors"
+                    className="p-2 bg-[#FAF6F0] dark:bg-[#191316] rounded-lg hover:text-[#401D2C] dark:hover:text-[#E2CCA1] transition-colors"
                     aria-label="Instagram"
                   >
                     <Instagram className="w-4 h-4" />
@@ -240,7 +240,7 @@ const Contact = () => {
                     href={COMPANY_INFO.socials.facebook}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 bg-[#FAF7F2] dark:bg-[#141210] rounded hover:text-[#6E1423] dark:hover:text-gold-light hover:bg-[#FAF2F3] dark:hover:bg-[#2A1D1D] transition-colors"
+                    className="p-2 bg-[#FAF6F0] dark:bg-[#191316] rounded-lg hover:text-[#401D2C] dark:hover:text-[#E2CCA1] transition-colors"
                     aria-label="Facebook"
                   >
                     <Facebook className="w-4 h-4" />
@@ -249,7 +249,7 @@ const Contact = () => {
                     href={COMPANY_INFO.socials.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 bg-[#FAF7F2] dark:bg-[#141210] rounded hover:text-[#6E1423] dark:hover:text-gold-light hover:bg-[#FAF2F3] dark:hover:bg-[#2A1D1D] transition-colors"
+                    className="p-2 bg-[#FAF6F0] dark:bg-[#191316] rounded-lg hover:text-[#401D2C] dark:hover:text-[#E2CCA1] transition-colors"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="w-4 h-4" />
@@ -258,7 +258,7 @@ const Contact = () => {
                     href={COMPANY_INFO.socials.youtube}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 bg-[#FAF7F2] dark:bg-[#141210] rounded hover:text-[#6E1423] dark:hover:text-gold-light hover:bg-[#FAF2F3] dark:hover:bg-[#2A1D1D] transition-colors"
+                    className="p-2 bg-[#FAF6F0] dark:bg-[#191316] rounded-lg hover:text-[#401D2C] dark:hover:text-[#E2CCA1] transition-colors"
                     aria-label="YouTube"
                   >
                     <Youtube className="w-4 h-4" />
@@ -271,15 +271,15 @@ const Contact = () => {
 
           {/* Right Column: Clean, Direct Contact Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white dark:bg-[#1C1917] border border-[#E8E0D5] dark:border-[#38312B] rounded-2xl p-7 sm:p-10 shadow-sm">
-              <div className="border-b border-[#E8E0D5] dark:border-[#38312B] pb-4 mb-6">
-                <span className="text-xs uppercase font-semibold tracking-wider text-[#6B1D2F] dark:text-[#E0CFA6] block mb-1">
+            <div className="bg-white/70 dark:bg-[#231B1F] border border-[#E8DFD3] dark:border-[#3F3238] rounded-xl p-7 sm:p-10 shadow-sm">
+              <div className="border-b border-[#E8DFD3] dark:border-[#3F3238] pb-4 mb-6">
+                <span className="text-[11px] uppercase tracking-wider font-semibold text-[#401D2C] dark:text-[#E2CCA1] block mb-1">
                   Enquiry Form
                 </span>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#2B2625] dark:text-[#FAF8F5]">
+                <h2 className="font-display text-3xl font-normal text-[#292323] dark:text-[#F6F0E7]">
                   Check dates and ask questions
                 </h2>
-                <p className="text-xs text-[#5A524E] dark:text-[#D4CCC2] mt-1">
+                <p className="text-xs text-[#665C5C] dark:text-[#D4CCC2] mt-1">
                   We ask only for what we need to verify dates and catering requirements.
                 </p>
               </div>
@@ -394,7 +394,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="btn-maroon px-7 py-3 text-xs font-semibold inline-flex items-center justify-center space-x-2 shadow-sm"
+                      className="px-7 py-3 text-xs uppercase tracking-wider font-semibold rounded-lg bg-[#401D2C] hover:bg-[#2A101C] text-[#F6F0E7] shadow-sm inline-flex items-center justify-center space-x-2 transition-colors"
                     >
                       <Send className="w-3.5 h-3.5" />
                       <span>{loading ? 'Submitting...' : 'Send enquiry'}</span>

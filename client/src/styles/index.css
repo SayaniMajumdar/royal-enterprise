@@ -5,41 +5,44 @@
 @layer base {
   :root {
     /* =========================================================================
-       DESIGN TOKENS (60 - 30 - 10 Palette & Typography)
-       Mood: Luxury boutique wedding studio, warm, human-crafted, celebratory.
+       DESIGN TOKENS — Contemporary Indian Celebration Studio
+       Palette: Warm Ivory, Deep Wine, Terracotta, Muted Brass, Botanical Green
        ========================================================================= */
 
-    /* 60% Neutral Base: Warm Ivory, Cream, Sandstone (Never harsh pure white) */
-    --bg-base: #FAF8F5;          /* Warm soft cream background */
-    --bg-surface: #FFFFFF;       /* Clean elevated content surface */
-    --bg-card: #FDFBF7;          /* Elevated card fill */
-    --bg-elevated: #F5EFE6;      /* Sub-card or inner panel fill */
-    --bg-warm-tint: #F7F1E8;     /* Subtle warm tinted section background */
+    /* Primary Canvas & Neutral Base: Warm Ivory */
+    --bg-base: #F6F0E7;          /* Warm Ivory primary canvas */
+    --bg-surface: #FFFFFF;       /* Clean elevated surface */
+    --bg-card: #FAF6F0;          /* Sub-card fill */
+    --bg-elevated: #EFE7DA;      /* Elevated component background */
+    --bg-warm-tint: #F3ECE1;     /* Tinted container */
     
-    --border-subtle: #E8E0D5;    /* Soft, refined divider line */
-    --border-card: #E2D8CC;      /* Card outline */
-    --border-strong: #CFC2B0;    /* Interactive border */
+    --border-subtle: #E8DFD3;    /* Refined subtle divider */
+    --border-card: #DFD5C7;      /* Card outline */
+    --border-strong: #C8BCAF;    /* Interactive border */
 
-    /* 30% Primary Accent: Deep Muted Burgundy / Heritage Wine */
-    --primary: #6B1D2F;          /* Deep rich burgundy */
-    --primary-hover: #541423;    /* Darker burgundy on hover */
-    --primary-deep: #3E0C17;     /* Deepest shade for headers / dark accents */
-    --primary-light: #8E2B42;    /* Lighter rose-burgundy */
-    --primary-soft: #F9F1F3;     /* Ultra-soft pastel burgundy tint */
+    /* Primary Contrast: Deep Wine */
+    --primary: #401D2C;          /* Deep rich wine */
+    --primary-hover: #2A101C;    /* Darker wine on hover */
+    --primary-deep: #1F0B14;     /* Deepest shade for dramatic sections */
+    --primary-light: #5C283F;    /* Soft wine */
+    --primary-soft: #F4ECEF;     /* Subtle wine pastel tint */
     --primary-contrast: #FFFFFF; /* High contrast text on primary */
 
-    /* 10% Secondary Accent: Antique Champagne Gold */
-    --accent-gold: #C5A059;       /* Antique champagne gold */
-    --accent-gold-hover: #B08B44; /* Warm dark antique gold */
-    --accent-gold-light: #E0CFA6; /* Delicate pale gold highlight */
+    /* Celebration Accents */
+    --accent-terracotta: #D65B43; /* Terracotta CTA & energy accent */
+    --accent-terracotta-hover: #B84630;
+    --accent-gold: #C49A53;       /* Muted Brass / Antique Gold */
+    --accent-gold-hover: #A8813D; /* Deep antique brass */
+    --accent-gold-light: #E2CCA1; /* Pale brass highlight */
     --accent-gold-soft: #FDF8EE;  /* Soft champagne tint */
-    --accent-gold-border: rgba(197, 160, 89, 0.4);
+    --accent-gold-border: rgba(196, 154, 83, 0.35);
+    --accent-botanical: #526C55;  /* Botanical Green */
 
-    /* Text: Warm Charcoals (Never Pure Black, WCAG AA Compliant) */
-    --text-primary: #2B2625;     /* Warm deep charcoal (4.5:1+ contrast on base & surface) */
-    --text-secondary: #5A524E;   /* Warm medium charcoal for body copy */
-    --text-muted: #827771;       /* Refined muted metadata */
-    --text-on-dark: #FAF8F5;     /* Cream text on dark containers */
+    /* Text Hierarchy: Dark Charcoal */
+    --text-primary: #292323;     /* Dark Charcoal primary text (WCAG AAA compliant) */
+    --text-secondary: #665C5C;   /* Medium charcoal for body copy */
+    --text-muted: #8C8282;       /* Metadata / subtle caption */
+    --text-on-dark: #F6F0E7;     /* Warm Ivory text on Deep Wine */
 
     /* Shadows: Soft, natural diffuse paper shadows (no harsh AI glows) */
     --shadow-sm: 0 1px 3px rgba(43, 38, 37, 0.04), 0 1px 2px rgba(43, 38, 37, 0.02);
@@ -94,7 +97,7 @@
   body {
     background-color: var(--bg-base);
     color: var(--text-primary);
-    font-family: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -108,20 +111,20 @@
   }
 
   ::selection {
-    background-color: #F6E6B8;
-    color: #6B1D2F;
+    background-color: #F4D3C4;
+    color: #401D2C;
   }
 
   .dark ::selection {
-    background-color: #6B1D2F;
-    color: #F8E3A1;
+    background-color: #401D2C;
+    color: #E2CCA1;
   }
 
-  /* Headings: Cormorant Garamond & Lora editorial serifs with natural weight and human rhythm */
-  h1, h2, h3, h4, .font-serif {
-    font-family: 'Cormorant Garamond', 'Lora', Georgia, serif;
+  /* Headings: Instrument Serif display & Cormorant Garamond editorial serifs */
+  h1, h2, h3, h4, .font-serif, .font-display {
+    font-family: 'Instrument Serif', 'Cormorant Garamond', Georgia, serif;
     font-feature-settings: 'lnum' 1;
-    letter-spacing: -0.012em;
+    letter-spacing: -0.015em;
   }
 
   /* Respect reduced motion preference */
